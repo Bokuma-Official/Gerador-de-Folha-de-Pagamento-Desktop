@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "protótipo_da_folha_de_pagamento", "protótipo_da_folha_de_pagamento.csproj", "{E4BA1C55-2434-47CE-90D2-23D2CDC9FFAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gerador_de_Folha_de_Pagamento_Desktop", "Gerador_de_Folha_de_Pagamento_Desktop.csproj", "{E4BA1C55-2434-47CE-90D2-23D2CDC9FFAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
