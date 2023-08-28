@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lbl_Login = new System.Windows.Forms.Label();
-            this.lbl_Email = new System.Windows.Forms.Label();
-            this.txb_Email = new System.Windows.Forms.TextBox();
+            this.lbl_CPF = new System.Windows.Forms.Label();
+            this.txb_CPF = new System.Windows.Forms.TextBox();
             this.lbl_Senha = new System.Windows.Forms.Label();
             this.txb_Senha = new System.Windows.Forms.TextBox();
             this.lnk_Redefinir = new System.Windows.Forms.LinkLabel();
@@ -45,16 +45,16 @@
             this.lbl_Login.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbl_Login.Name = "lbl_Login";
             // 
-            // lbl_Email
+            // lbl_CPF
             // 
-            resources.ApplyResources(this.lbl_Email, "lbl_Email");
-            this.lbl_Email.Name = "lbl_Email";
+            resources.ApplyResources(this.lbl_CPF, "lbl_CPF");
+            this.lbl_CPF.Name = "lbl_CPF";
             // 
-            // txb_Email
+            // txb_CPF
             // 
-            resources.ApplyResources(this.txb_Email, "txb_Email");
-            this.txb_Email.Name = "txb_Email";
-            this.txb_Email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Email_KeyDown);
+            resources.ApplyResources(this.txb_CPF, "txb_CPF");
+            this.txb_CPF.Name = "txb_CPF";
+            this.txb_CPF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Email_KeyDown);
             // 
             // lbl_Senha
             // 
@@ -100,8 +100,8 @@
             this.Controls.Add(this.lnk_Redefinir);
             this.Controls.Add(this.txb_Senha);
             this.Controls.Add(this.lbl_Senha);
-            this.Controls.Add(this.txb_Email);
-            this.Controls.Add(this.lbl_Email);
+            this.Controls.Add(this.txb_CPF);
+            this.Controls.Add(this.lbl_CPF);
             this.Controls.Add(this.lbl_Login);
             this.Name = "Form1";
             this.Shown += new System.EventHandler(this.Form1_Shown);
@@ -113,8 +113,8 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Login;
-        private System.Windows.Forms.Label lbl_Email;
-        private System.Windows.Forms.TextBox txb_Email;
+        private System.Windows.Forms.Label lbl_CPF;
+        private System.Windows.Forms.TextBox txb_CPF;
         private System.Windows.Forms.Label lbl_Senha;
         private System.Windows.Forms.TextBox txb_Senha;
         private System.Windows.Forms.LinkLabel lnk_Redefinir;

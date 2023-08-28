@@ -53,35 +53,31 @@
     <Compile Include="Apresentacao\frm_Cadastrar_Funcionário.Designer.cs">
       <DependentUpon>frm_Cadastrar_Funcionário.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Cadastrar_Empresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Apresentacao\frm_Cadastrar_Empresa.Designer.cs">
-      <DependentUpon>frm_Cadastrar_Empresa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Apresentacao\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentacao\frm_Menu_Auxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frm_Menu_Auxiliar.Designer.cs">
+      <DependentUpon>frm_Menu_Auxiliar.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\Cargo_DAO.cs" />
     <Compile Include="DAL\Conexao.cs" />
-    <Compile Include="DAL\Contrato_Ataron_DAO.cs" />
     <Compile Include="DAL\Contrato_Empresa_DAO.cs" />
     <Compile Include="DAL\Departamento_DAO.cs" />
     <Compile Include="DAL\Dependente_DAO.cs" />
-    <Compile Include="DAL\Empresa_DAO.cs" />
     <Compile Include="DAL\Endereco_DAO.cs" />
     <Compile Include="DAL\Folha_Pagamento_DAO.cs" />
     <Compile Include="DAL\Funcionario_DAO.cs" />
     <Compile Include="Modelo\Cargo.cs" />
-    <Compile Include="Modelo\Contrato_Ataron.cs" />
     <Compile Include="Modelo\Contrato_Empresa.cs" />
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\Departamento.cs" />
     <Compile Include="Modelo\Dependente.cs" />
-    <Compile Include="Modelo\Empresa.cs" />
     <Compile Include="Modelo\Endereco.cs" />
     <Compile Include="Modelo\Folha_Pagamento.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
@@ -100,11 +96,11 @@
     <Compile Include="Apresentacao\frm_Cadastrar_Conta_RH.Designer.cs">
       <DependentUpon>frm_Cadastrar_Conta_RH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Menu.cs">
+    <Compile Include="Apresentacao\frm_Menu_Gerente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Menu.Designer.cs">
-      <DependentUpon>frm_Menu.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Menu_Gerente.Designer.cs">
+      <DependentUpon>frm_Menu_Gerente.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frm_Redefinir_Senha.cs">
       <SubType>Form</SubType>
@@ -133,9 +129,6 @@
     <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Funcionário.resx">
       <DependentUpon>frm_Cadastrar_Funcionário.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Empresa.resx">
-      <DependentUpon>frm_Cadastrar_Empresa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\Form1.ccp-Cakm-IN.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frm_Menu_Auxiliar.resx">
+      <DependentUpon>frm_Menu_Auxiliar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,8 +157,8 @@
     <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Conta_RH.resx">
       <DependentUpon>frm_Cadastrar_Conta_RH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Menu.resx">
-      <DependentUpon>frm_Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Menu_Gerente.resx">
+      <DependentUpon>frm_Menu_Gerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frm_Redefinir_Senha.resx">
       <DependentUpon>frm_Redefinir_Senha.cs</DependentUpon>
@@ -194,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\images-Copia.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

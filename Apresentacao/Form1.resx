@@ -126,14 +126,10 @@
     <value>Impact, 36pt</value>
   </data>
   <data name="lbl_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 37</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>95, 30</value>
   </data>
   <data name="lbl_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 75</value>
+    <value>131, 60</value>
   </data>
   <data name="lbl_Login.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -156,61 +152,55 @@
   <data name="&gt;&gt;lbl_Login.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="lbl_Email.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbl_CPF.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_Email.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbl_CPF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12.25pt</value>
   </data>
-  <data name="lbl_Email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 166</value>
+  <data name="lbl_CPF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 135</value>
   </data>
-  <data name="lbl_Email.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="lbl_CPF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 19</value>
   </data>
-  <data name="lbl_Email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 24</value>
-  </data>
-  <data name="lbl_Email.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbl_CPF.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="lbl_Email.Text" xml:space="preserve">
-    <value>Email:</value>
+  <data name="lbl_CPF.Text" xml:space="preserve">
+    <value>CPF:</value>
   </data>
-  <data name="&gt;&gt;lbl_Email.Name" xml:space="preserve">
-    <value>lbl_Email</value>
+  <data name="&gt;&gt;lbl_CPF.Name" xml:space="preserve">
+    <value>lbl_CPF</value>
   </data>
-  <data name="&gt;&gt;lbl_Email.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_CPF.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_Email.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_CPF.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbl_Email.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbl_CPF.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="txb_Email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 193</value>
+  <data name="txb_CPF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 157</value>
   </data>
-  <data name="txb_Email.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="txb_CPF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 20</value>
   </data>
-  <data name="txb_Email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 22</value>
-  </data>
-  <data name="txb_Email.TabIndex" type="System.Int32, mscorlib">
+  <data name="txb_CPF.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;txb_Email.Name" xml:space="preserve">
-    <value>txb_Email</value>
+  <data name="&gt;&gt;txb_CPF.Name" xml:space="preserve">
+    <value>txb_CPF</value>
   </data>
-  <data name="&gt;&gt;txb_Email.Type" xml:space="preserve">
+  <data name="&gt;&gt;txb_CPF.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txb_Email.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txb_CPF.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txb_Email.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txb_CPF.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="lbl_Senha.AutoSize" type="System.Boolean, mscorlib">
@@ -220,13 +210,10 @@
     <value>Arial, 12pt</value>
   </data>
   <data name="lbl_Senha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 241</value>
-  </data>
-  <data name="lbl_Senha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>44, 196</value>
   </data>
   <data name="lbl_Senha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 23</value>
+    <value>57, 18</value>
   </data>
   <data name="lbl_Senha.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -247,13 +234,10 @@
     <value>4</value>
   </data>
   <data name="txb_Senha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 267</value>
-  </data>
-  <data name="txb_Senha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>47, 217</value>
   </data>
   <data name="txb_Senha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 22</value>
+    <value>242, 20</value>
   </data>
   <data name="txb_Senha.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -277,13 +261,10 @@
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="lnk_Redefinir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 295</value>
-  </data>
-  <data name="lnk_Redefinir.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>44, 240</value>
   </data>
   <data name="lnk_Redefinir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 18</value>
+    <value>230, 15</value>
   </data>
   <data name="lnk_Redefinir.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -307,13 +288,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="btn_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 450</value>
-  </data>
-  <data name="btn_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>123, 366</value>
   </data>
   <data name="btn_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 55</value>
+    <value>88, 45</value>
   </data>
   <data name="btn_Login.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -340,13 +318,10 @@
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="lnk_Cadastrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 350</value>
-  </data>
-  <data name="lnk_Cadastrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>44, 284</value>
   </data>
   <data name="lnk_Cadastrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 18</value>
+    <value>182, 15</value>
   </data>
   <data name="lnk_Cadastrar.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -370,10 +345,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>448, 554</value>
+    <value>336, 450</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1373,9 +1348,7 @@
         AAAAAAAA
 </value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>

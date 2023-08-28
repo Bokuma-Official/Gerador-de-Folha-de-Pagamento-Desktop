@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace protótipo_da_folha_de_pagamento
 {
-    public partial class frm_Cadastrar_Empresa : Form
+    public partial class frm_Menu_Auxiliar : Form
     {
-        public frm_Cadastrar_Empresa()
+        public frm_Menu_Auxiliar()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace protótipo_da_folha_de_pagamento
 {
     public partial class Form1 : Form
@@ -23,14 +24,14 @@ namespace protótipo_da_folha_de_pagamento
         private void btn_Login_Click(object sender, EventArgs e)
         {
             // se o campo email e senha ficarem vazios
-            if (txb_Email.Text == "" && txb_Senha.Text == "")
+            if (txb_CPF.Text == "" && txb_Senha.Text == "")
             {
                 MessageBox.Show("O campo email e senha são obrigatórios!",
                     "Dados Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             // se o campo email ficar vazio
-            else if (txb_Email.Text == "")
+            else if (txb_CPF.Text == "")
             {
                 MessageBox.Show("O campo email é obrigatório!", "Dados Vazios",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -59,27 +60,27 @@ namespace protótipo_da_folha_de_pagamento
         private void Abrir_Tela()
         {
             // abrir tela de menu
-            Application.Run(new frm_Menu());
+            Application.Run(new frm_Menu_Gerente());
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
             // iniciar a tela com o foco do mouse no campo de email
-            txb_Email.Focus();
+            txb_CPF.Focus();
         }
 
         private void txb_Email_KeyDown(object sender, KeyEventArgs e)
         {
             // pressionar a tecla enter sem preencher o campo de email não vai pro campo de senha
-            if (txb_Email.Text == "" && e.KeyCode == Keys.Enter)
+            if (txb_CPF.Text == "" && e.KeyCode == Keys.Enter)
             {
-                txb_Email.Focus();
+                txb_CPF.Focus();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
 
             // pressionar a tecla enter quando preencher as email vai pro campo de senha
-            else if (txb_Email.Text != "" && e.KeyCode == Keys.Enter)
+            else if (txb_CPF.Text != "" && e.KeyCode == Keys.Enter)
             {
                 txb_Senha.Focus();
                 e.Handled = true;

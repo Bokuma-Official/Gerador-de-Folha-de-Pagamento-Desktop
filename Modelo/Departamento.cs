@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace protótipo_da_folha_de_pagamento.Modelo
 {
-    internal class Departamento
+    public class Departamento
     {
+        int ID_Departamento { get; set; }
+        string Nome { get; set; }
+        string CPF_Funcionario { get; set; }
+        string CBO_Cargo { get; set; }
+
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace protótipo_da_folha_de_pagamento.Modelo
 {
-    internal class Cargo
+    public class Cargo
     {
+        string CBO_Cargo { get; set; }
+        string Nome { get; set; }
+        string CPF_Funcionario { get; set; }
+
     }
 }
