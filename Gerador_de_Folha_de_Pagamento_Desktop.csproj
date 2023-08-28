@@ -69,7 +69,8 @@
       <DependentUpon>frm_Menu_Auxiliar.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Cargo_DAO.cs" />
-    <Compile Include="DAL\Conexao.cs" />
+    <Compile Include="DAL\Conexao_DAO_Banco_Folha.cs" />
+    <Compile Include="DAL\Conexao_DAO_Banco_Login.cs" />
     <Compile Include="DAL\Contrato_Empresa_DAO.cs" />
     <Compile Include="DAL\Departamento_DAO.cs" />
     <Compile Include="DAL\Endereco_DAO.cs" />
