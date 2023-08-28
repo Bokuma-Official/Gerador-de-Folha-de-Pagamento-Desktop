@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
-    internal class Validacao
+    public class Validacao
     {
+
     }
 }

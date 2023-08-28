@@ -16,10 +16,5 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             InitializeComponent();
         }
-
-        private void Cadastrar_Funcionário_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

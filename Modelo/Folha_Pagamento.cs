@@ -35,15 +35,15 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         {
 
         }
-        public void editar_Folha_Pagamento()
+
+        public void Editar_Folha_Pagamento()
         {
 
         }
+
         public void Visualizar_Folha_Pagamento()
         {
 
         }
-
-
     }
 }

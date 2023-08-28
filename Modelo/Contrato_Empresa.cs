@@ -13,13 +13,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         string Numero_Conta { get; set; }
         int Numero_Agencia { get; set; }
         string Nome_Agencia { get; set; }
-        string Funcao_Varchar { get; set; }
         string Tipo_Contrato { get; set; }
         string CPF_Funcionario { get; set; }
         string CBO_Cargo { get; set; }
         int ID_Departamento { get; set; }
-
-
-
     }
 }

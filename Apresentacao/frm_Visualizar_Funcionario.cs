@@ -16,15 +16,5 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             InitializeComponent();
         }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Vizualização_funcionários_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

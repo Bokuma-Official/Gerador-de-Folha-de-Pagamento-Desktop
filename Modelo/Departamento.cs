@@ -12,6 +12,5 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         string Nome { get; set; }
         string CPF_Funcionario { get; set; }
         string CBO_Cargo { get; set; }
-
     }
 }

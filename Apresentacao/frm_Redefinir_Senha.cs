@@ -16,10 +16,5 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

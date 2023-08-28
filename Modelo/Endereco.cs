@@ -17,6 +17,5 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         string Cidade { get; set; }
         string Estado { get; set; }
         string CPF_Funcionario { get; set; }
-
     }
 }

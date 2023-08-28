@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 {
-    internal class Endereco_DAO
+    public class Endereco_DAO
     {
+
     }
 }

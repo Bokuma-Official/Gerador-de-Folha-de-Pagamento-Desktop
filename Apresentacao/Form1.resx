@@ -126,10 +126,14 @@
     <value>Impact, 36pt</value>
   </data>
   <data name="lbl_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 30</value>
+    <value>144, 36</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lbl_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 60</value>
+    <value>164, 75</value>
   </data>
   <data name="lbl_Login.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -150,7 +154,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Login.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="lbl_CPF.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -159,10 +163,13 @@
     <value>Arial, 12.25pt</value>
   </data>
   <data name="lbl_CPF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 135</value>
+    <value>59, 141</value>
+  </data>
+  <data name="lbl_CPF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lbl_CPF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 19</value>
+    <value>58, 24</value>
   </data>
   <data name="lbl_CPF.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -180,13 +187,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_CPF.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="txb_CPF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 157</value>
+    <value>65, 168</value>
+  </data>
+  <data name="txb_CPF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txb_CPF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="txb_CPF.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -201,7 +211,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txb_CPF.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="lbl_Senha.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -210,10 +220,13 @@
     <value>Arial, 12pt</value>
   </data>
   <data name="lbl_Senha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 196</value>
+    <value>61, 216</value>
+  </data>
+  <data name="lbl_Senha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lbl_Senha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 18</value>
+    <value>71, 23</value>
   </data>
   <data name="lbl_Senha.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -231,13 +244,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Senha.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="txb_Senha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 217</value>
+    <value>65, 242</value>
+  </data>
+  <data name="txb_Senha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txb_Senha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="txb_Senha.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -252,7 +268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txb_Senha.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="lnk_Redefinir.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -261,10 +277,13 @@
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="lnk_Redefinir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 240</value>
+    <value>62, 315</value>
+  </data>
+  <data name="lnk_Redefinir.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lnk_Redefinir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 15</value>
+    <value>271, 18</value>
   </data>
   <data name="lnk_Redefinir.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -282,16 +301,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lnk_Redefinir.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="btn_Login.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
   <data name="btn_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 366</value>
+    <value>157, 376</value>
+  </data>
+  <data name="btn_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btn_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 45</value>
+    <value>117, 55</value>
   </data>
   <data name="btn_Login.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -309,46 +331,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_Login.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lnk_Cadastrar.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lnk_Cadastrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="lnk_Cadastrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 284</value>
-  </data>
-  <data name="lnk_Cadastrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 15</value>
-  </data>
-  <data name="lnk_Cadastrar.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lnk_Cadastrar.Text" xml:space="preserve">
-    <value>Não possui cadastro? Cadastrar</value>
-  </data>
-  <data name="&gt;&gt;lnk_Cadastrar.Name" xml:space="preserve">
-    <value>lnk_Cadastrar</value>
-  </data>
-  <data name="&gt;&gt;lnk_Cadastrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lnk_Cadastrar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lnk_Cadastrar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>336, 450</value>
+    <value>448, 444</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1348,7 +1340,9 @@
         AAAAAAAA
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>

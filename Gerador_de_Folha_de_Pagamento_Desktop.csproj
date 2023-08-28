@@ -72,7 +72,6 @@
     <Compile Include="DAL\Conexao.cs" />
     <Compile Include="DAL\Contrato_Empresa_DAO.cs" />
     <Compile Include="DAL\Departamento_DAO.cs" />
-    <Compile Include="DAL\Dependente_DAO.cs" />
     <Compile Include="DAL\Endereco_DAO.cs" />
     <Compile Include="DAL\Folha_Pagamento_DAO.cs" />
     <Compile Include="DAL\Funcionario_DAO.cs" />
@@ -80,7 +79,6 @@
     <Compile Include="Modelo\Contrato_Empresa.cs" />
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\Departamento.cs" />
-    <Compile Include="Modelo\Dependente.cs" />
     <Compile Include="Modelo\Endereco.cs" />
     <Compile Include="Modelo\Folha_Pagamento.cs" />
     <Compile Include="Modelo\Funcionario.cs" />

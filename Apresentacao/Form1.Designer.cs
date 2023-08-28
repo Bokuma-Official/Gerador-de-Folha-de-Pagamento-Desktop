@@ -36,7 +36,6 @@
             this.txb_Senha = new System.Windows.Forms.TextBox();
             this.lnk_Redefinir = new System.Windows.Forms.LinkLabel();
             this.btn_Login = new System.Windows.Forms.Button();
-            this.lnk_Cadastrar = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lbl_Login
@@ -84,18 +83,10 @@
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // lnk_Cadastrar
-            // 
-            this.lnk_Cadastrar.ActiveLinkColor = System.Drawing.Color.Cyan;
-            resources.ApplyResources(this.lnk_Cadastrar, "lnk_Cadastrar");
-            this.lnk_Cadastrar.Name = "lnk_Cadastrar";
-            this.lnk_Cadastrar.TabStop = true;
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lnk_Cadastrar);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.lnk_Redefinir);
             this.Controls.Add(this.txb_Senha);
@@ -119,7 +110,6 @@
         private System.Windows.Forms.TextBox txb_Senha;
         private System.Windows.Forms.LinkLabel lnk_Redefinir;
         private System.Windows.Forms.Button btn_Login;
-        private System.Windows.Forms.LinkLabel lnk_Cadastrar;
     }
 }
 
