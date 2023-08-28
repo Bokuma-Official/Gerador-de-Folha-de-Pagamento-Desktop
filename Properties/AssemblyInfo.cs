@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("protótipo_da_folha_de_pagamento")]
+[assembly: AssemblyTitle("Gerador_de_Folha_de_Pagamento_Desktop")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("protótipo_da_folha_de_pagamento")]
+[assembly: AssemblyCompany("Bokuma")]
+[assembly: AssemblyProduct("Gerador_de_Folha_de_Pagamento_Desktop")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

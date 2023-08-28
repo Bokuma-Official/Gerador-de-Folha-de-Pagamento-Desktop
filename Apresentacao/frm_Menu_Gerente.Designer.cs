@@ -1,6 +1,6 @@
-﻿namespace protótipo_da_folha_de_pagamento
+﻿namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    partial class frm_Menu_Auxiliar
+    partial class frm_Menu_Gerente
     {
         /// <summary>
         /// Required designer variable.

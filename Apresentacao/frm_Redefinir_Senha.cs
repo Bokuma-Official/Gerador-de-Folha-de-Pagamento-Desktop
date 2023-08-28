@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace protótipo_da_folha_de_pagamento
+namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Redefinir_Senha : Form
     {

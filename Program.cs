@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace protótipo_da_folha_de_pagamento
+namespace Gerador_de_Folha_de_Pagamento_Desktop
 {
     internal static class Program
     {
@@ -24,7 +25,7 @@ namespace protótipo_da_folha_de_pagamento
 
             else
             {
-                MessageBox.Show("Uma janela do Programa já esta aberta!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Uma janela do programa já esta aberta!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

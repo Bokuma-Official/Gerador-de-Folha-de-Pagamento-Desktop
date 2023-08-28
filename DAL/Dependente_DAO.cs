@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace protótipo_da_folha_de_pagamento.DAL
+namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 {
     internal class Dependente_DAO
     {
