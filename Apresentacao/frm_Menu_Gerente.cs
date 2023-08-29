@@ -28,7 +28,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            // fechar o programa
+            // voltar a tela de login
             DialogResult pergunta = MessageBox.Show("Deseja realmente encerrar esta sessão?", "Encerrar Sessão", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
             if (pergunta == DialogResult.Yes)
