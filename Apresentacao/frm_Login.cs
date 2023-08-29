@@ -113,9 +113,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void btnFechar_Click(object sender, EventArgs e)
         {
             // fechar o programa
-            DialogResult dialogo = MessageBox.Show("Deseja realmente fechar o programa?", "Fechar o programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult pergunta = MessageBox.Show("Deseja realmente fechar o programa?", "Fechar o programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-            if (dialogo == DialogResult.Yes)
+            if (pergunta == DialogResult.Yes)
             {
                 Application.Exit();
             }
