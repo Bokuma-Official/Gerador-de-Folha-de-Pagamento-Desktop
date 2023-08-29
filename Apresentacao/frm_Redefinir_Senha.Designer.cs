@@ -56,17 +56,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(193, 103);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(197, 102);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 18);
+            this.label3.Size = new System.Drawing.Size(58, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "CPF:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(197, 125);
+            this.textBox2.Location = new System.Drawing.Point(199, 142);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(233, 22);
@@ -75,28 +75,28 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(194, 164);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(197, 184);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 18);
+            this.label4.Size = new System.Drawing.Size(127, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Nova Senha:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(194, 222);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(197, 250);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 18);
+            this.label5.Size = new System.Drawing.Size(190, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "Repetir nova Senha:";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(197, 186);
+            this.textBox3.Location = new System.Drawing.Point(199, 213);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(233, 22);
@@ -105,17 +105,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(295, 164);
+            this.label6.Location = new System.Drawing.Point(332, 184);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 16);
+            this.label6.Size = new System.Drawing.Size(164, 20);
             this.label6.TabIndex = 9;
-            this.label6.Text = "(Máx. 20 caractéres)";
+            this.label6.Text = "(Máx. 20 caracteres)";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(196, 244);
+            this.textBox4.Location = new System.Drawing.Point(202, 279);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(233, 22);
@@ -126,7 +127,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(381, 309);
+            this.button2.Location = new System.Drawing.Point(381, 327);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 52);
@@ -139,12 +140,12 @@
             this.button3.BackColor = System.Drawing.SystemColors.GrayText;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(137, 309);
+            this.button3.Location = new System.Drawing.Point(140, 327);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 52);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Cancelar";
+            this.button3.Text = "Voltar";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // frm_Redefinir_Senha

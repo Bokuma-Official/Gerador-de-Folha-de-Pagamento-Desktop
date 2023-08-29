@@ -9,21 +9,21 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
     public class Funcionario
     {
-        string CPF_Funcionario { get; set; }
-        string Nome { get; set; }
-        string Data_Nascimento { get; set; }
-        string Sexo { get; set; }
-        string PCD { get; set; }
-        string PIS { get; set; }
-        string RG { get; set; }
-        string Carteira_Trabalho { get; set; }
-        string Titulo_Eleitor { get; set; }
-        string Certificado_Militar { get; set; }
-        int Matricula { get; set; }
-        string Telefone_Fixo { get; set; }
-        string Telefone_Celular { get; set; }
-        string Email { get; set; }
-        int Dependentes { get; set; }
+        public string CPF_Funcionario { get; set; }
+        public string Nome { get; set; }
+        public string Data_Nascimento { get; set; }
+        public string Sexo { get; set; }
+        public string PCD { get; set; }
+        public string PIS { get; set; }
+        public string RG { get; set; }
+        public string Carteira_Trabalho { get; set; }
+        public string Titulo_Eleitor { get; set; }
+        public string Certificado_Militar { get; set; }
+        public int Matricula { get; set; }
+        public string Telefone_Fixo { get; set; }
+        public string Telefone_Celular { get; set; }
+        public string Email { get; set; }
+        public int Dependentes { get; set; }
         
         public void Cadastrar_Funcionario()
         {

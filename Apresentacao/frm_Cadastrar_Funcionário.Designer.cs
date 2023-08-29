@@ -81,7 +81,6 @@
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -267,7 +266,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 70);
             this.button2.TabIndex = 78;
-            this.button2.Text = "Cadastrar atual";
+            this.button2.Text = "Cadastrar";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
@@ -280,7 +279,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 70);
             this.button1.TabIndex = 77;
-            this.button1.Text = "Cancelar";
+            this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox11
@@ -630,19 +629,6 @@
             this.textBox21.Size = new System.Drawing.Size(196, 22);
             this.textBox21.TabIndex = 105;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(441, 697);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 70);
-            this.button3.TabIndex = 110;
-            this.button3.Text = "Cadastrar e criar Novo";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -897,7 +883,6 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.textBox21);
@@ -1016,7 +1001,6 @@
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;

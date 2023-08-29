@@ -154,7 +154,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Login.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lbl_CPF.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -187,7 +187,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_CPF.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txb_CPF.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 168</value>
@@ -211,7 +211,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txb_CPF.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lbl_Senha.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -244,7 +244,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Senha.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txb_Senha.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 242</value>
@@ -268,22 +268,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txb_Senha.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lnk_Redefinir.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lnk_Redefinir.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="lnk_Redefinir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 315</value>
+    <value>39, 314</value>
   </data>
   <data name="lnk_Redefinir.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="lnk_Redefinir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 18</value>
+    <value>364, 25</value>
   </data>
   <data name="lnk_Redefinir.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -301,19 +301,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lnk_Redefinir.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btn_Login.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9.75pt</value>
   </data>
   <data name="btn_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 376</value>
+    <value>257, 367</value>
   </data>
   <data name="btn_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="btn_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 55</value>
+    <value>129, 64</value>
   </data>
   <data name="btn_Login.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -331,6 +331,36 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_Login.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnFechar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="btnFechar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 367</value>
+  </data>
+  <data name="btnFechar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnFechar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 62</value>
+  </data>
+  <data name="btnFechar.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="btnFechar.Text" xml:space="preserve">
+    <value>Fechar Programa</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Name" xml:space="preserve">
+    <value>btnFechar</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1350,7 +1380,7 @@
     <value>Folha de pagamentos Ataron™</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
+    <value>frm_Login</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

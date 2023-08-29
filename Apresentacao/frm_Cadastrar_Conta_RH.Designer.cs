@@ -199,7 +199,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 16);
             this.label6.TabIndex = 8;
-            this.label6.Text = "(Máx. 20 caractéres)";
+            this.label6.Text = "(Máx. 20 caracteres)";
             // 
             // label7
             // 
@@ -420,7 +420,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 57);
             this.button1.TabIndex = 31;
-            this.button1.Text = "Cancelar";
+            this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2

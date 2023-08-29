@@ -8,28 +8,28 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
     public class Folha_Pagamento
     {
-        int ID_Folha_Pagamento { get; set; }
-        string Data_Pagamento { get; set; }
-        int Horas_Trabalhadas { get; set; }
-        decimal Valor_Hora { get; set; }
-        int Horas_Faltas { get; set; }
-        decimal Desconto_Horas_Faltas {get; set; }
-        int Horas_Extras { get; set; }
-        decimal Valor_Horas_Extras { get; set; }
-        decimal Valor_Vale_Transporte { get; set; }
-        decimal Valor_Vale_Alimentacao { get; set; }
-        decimal Desconto_INSS { get; set; }
-        decimal Desconto_FGTS { get; set; }
-        decimal Desconto_IRRF { get; set; }
-        decimal Desconto_Vale_Transporte { get; set; }
-        decimal Desconto_Vale_Alimentacao { get; set; }
-        decimal Desconto_Seguro_Vida { get; set; }
-        int Dias_Ferias { get; set; }
-        decimal Valor_Ferias { get; set; }
-        decimal Valor_13_Salario { get; set; }
-        decimal Salario_Bruto { get; set; }
-        decimal Salario_Liquido { get; set; }
-        int CPF_Funcionario { get; set; }
+        public int ID_Folha_Pagamento { get; set; }
+        public string Data_Pagamento { get; set; }
+        public int Horas_Trabalhadas { get; set; }
+        public decimal Valor_Hora { get; set; }
+        public int Horas_Faltas { get; set; }
+        public decimal Desconto_Horas_Faltas {get; set; }
+        public int Horas_Extras { get; set; }
+        public decimal Valor_Horas_Extras { get; set; }
+        public decimal Valor_Vale_Transporte { get; set; }
+        public decimal Valor_Vale_Alimentacao { get; set; }
+        public decimal Desconto_INSS { get; set; }
+        public decimal Desconto_FGTS { get; set; }
+        public decimal Desconto_IRRF { get; set; }
+        public decimal Desconto_Vale_Transporte { get; set; }
+        public decimal Desconto_Vale_Alimentacao { get; set; }
+        public decimal Desconto_Seguro_Vida { get; set; }
+        public int Dias_Ferias { get; set; }
+        public decimal Valor_Ferias { get; set; }
+        public decimal Valor_13_Salario { get; set; }
+        public decimal Salario_Bruto { get; set; }
+        public decimal Salario_Liquido { get; set; }
+        public int CPF_Funcionario { get; set; }
 
         public void Cadastrar_Folha_Pagamento()
         {

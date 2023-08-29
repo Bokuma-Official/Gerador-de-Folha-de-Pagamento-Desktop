@@ -56,11 +56,11 @@
     <Compile Include="Apresentacao\frm_Cadastrar_Funcionário.Designer.cs">
       <DependentUpon>frm_Cadastrar_Funcionário.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\Form1.cs">
+    <Compile Include="Apresentacao\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frm_Menu_Auxiliar.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
       <DependentUpon>frm_Menu_Auxiliar.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Cargo_DAO.cs" />
-    <Compile Include="DAL\Conexao_DAO_Banco_Folha.cs" />
-    <Compile Include="DAL\Conexao_DAO_Banco_Login.cs" />
+    <Compile Include="DAL\Conexao_Banco_Folha.cs" />
+    <Compile Include="DAL\Conexao_Banco_Login.cs" />
     <Compile Include="DAL\Contrato_Empresa_DAO.cs" />
     <Compile Include="DAL\Departamento_DAO.cs" />
     <Compile Include="DAL\Endereco_DAO.cs" />
@@ -131,14 +131,14 @@
     <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Funcionário.resx">
       <DependentUpon>frm_Cadastrar_Funcionário.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\Form1.ccp-Cakm-IN.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Login.ccp-Cakm-IN.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\Form1.pt-BR.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Login.pt-BR.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frm_Menu_Auxiliar.resx">
       <DependentUpon>frm_Menu_Auxiliar.cs</DependentUpon>

@@ -8,14 +8,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
     public class Contrato_Empresa
     {
-        int ID_Contrato_Empresa { get; set; }
-        string Data_Admissao { get; set; }
-        string Numero_Conta { get; set; }
-        int Numero_Agencia { get; set; }
-        string Nome_Agencia { get; set; }
-        string Tipo_Contrato { get; set; }
-        string CPF_Funcionario { get; set; }
-        string CBO_Cargo { get; set; }
-        int ID_Departamento { get; set; }
+        public int ID_Contrato_Empresa { get; set; }
+        public string Data_Admissao { get; set; }
+        public string Numero_Conta { get; set; }
+        public int Numero_Agencia { get; set; }
+        public string Nome_Agencia { get; set; }
+        public string Tipo_Contrato { get; set; }
+        public string CPF_Funcionario { get; set; }
+        public string CBO_Cargo { get; set; }
+        public int ID_Departamento { get; set; }
     }
 }

@@ -8,8 +8,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
     public class Cargo
     {
-        string CBO_Cargo { get; set; }
-        string Nome { get; set; }
-        string CPF_Funcionario { get; set; }
+        public string CBO_Cargo { get; set; }
+        public string Nome { get; set; }
+        public string CPF_Funcionario { get; set; }
     }
 }

@@ -75,7 +75,6 @@
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox22 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox29 = new System.Windows.Forms.TextBox();
@@ -546,19 +545,6 @@
             this.textBox22.Size = new System.Drawing.Size(132, 22);
             this.textBox22.TabIndex = 100;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(413, 639);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 70);
-            this.button3.TabIndex = 121;
-            this.button3.Text = "Registrar e criar Nova";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
@@ -569,7 +555,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 70);
             this.button2.TabIndex = 120;
-            this.button2.Text = "Registrar atual";
+            this.button2.Text = "Registrar";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
@@ -582,7 +568,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 70);
             this.button1.TabIndex = 119;
-            this.button1.Text = "Cancelar";
+            this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox29
@@ -729,7 +715,6 @@
             this.Controls.Add(this.textBox26);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox29);
@@ -847,7 +832,6 @@
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox29;
