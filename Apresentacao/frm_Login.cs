@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gerador_de_Folha_de_Pagamento_Desktop.DAL;
+using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +15,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Login : Form
     {
-        Thread Abrir_Tela;
-
         public frm_Login()
         {
             InitializeComponent();
@@ -44,27 +44,21 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             }
 
             // se o campo cpf e senha não estiverem vazios
-            else if (MessageBox.Show(this, "Deseja realmente fazer o login?", "Confirmação",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            else
             {
-                // depois de checar os dados do banco vai abrir a tela de menu
-                this.Close();
-                Abrir_Tela = new Thread(Abrir_frm_Menu_Gerente);
-                Abrir_Tela.SetApartmentState(ApartmentState.STA);
-                Abrir_Tela.Start();
+                Acesso acesso = new Acesso();
+                acesso.CPF = txb_CPF.Text;
+                acesso.Senha = txb_Senha.Text;
+
+                // Cria uma instância da classe Acesso_DAO e verifica se o acesso é válido usando o método Verificar_Acesso
+                Acesso_DAO acesso_DAO = new Acesso_DAO();
+                bool acesso_valido = acesso_DAO.Verificar_Acesso(acesso.CPF, acesso.Senha);
+
+                if (acesso_valido)
+                {
+                    this.Close();
+                }
             }
-        }
-
-        private void Abrir_frm_Menu_Gerente()
-        {
-            // abrir tela de menu para o gerente de rh
-            Application.Run(new frm_Menu_Gerente());
-        }
-
-        private void Abrir_frm_Menu_Auxiliar()
-        {
-            // abrir tela de menu para auxiliares de rh
-            Application.Run(new frm_Menu_Auxiliar());
         }
 
         private void Form1_Shown(object sender, EventArgs e)

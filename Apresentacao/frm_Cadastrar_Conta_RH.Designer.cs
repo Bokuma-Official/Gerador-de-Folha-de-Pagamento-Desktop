@@ -48,17 +48,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
@@ -73,7 +64,6 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
@@ -83,29 +73,8 @@
             this.label31 = new System.Windows.Forms.Label();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -294,29 +263,18 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label12.Location = new System.Drawing.Point(828, 98);
+            this.label12.Location = new System.Drawing.Point(548, 371);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 22);
             this.label12.TabIndex = 18;
             this.label12.Text = "Endereço:";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(828, 391);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 18);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Número:";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(828, 137);
+            this.label14.Location = new System.Drawing.Point(578, 410);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 18);
@@ -325,97 +283,18 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(832, 156);
+            this.textBox8.Location = new System.Drawing.Point(582, 429);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(196, 22);
             this.textBox8.TabIndex = 22;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(829, 185);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 18);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Estado:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "São Paulo (SP)"});
-            this.comboBox2.Location = new System.Drawing.Point(832, 210);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(196, 24);
-            this.comboBox2.TabIndex = 24;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(829, 240);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 18);
-            this.label16.TabIndex = 25;
-            this.label16.Text = "Cidade:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(832, 262);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(196, 22);
-            this.textBox9.TabIndex = 26;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(829, 290);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 18);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "Bairro:";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(832, 313);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(196, 22);
-            this.textBox10.TabIndex = 28;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(829, 341);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(89, 18);
-            this.label18.TabIndex = 29;
-            this.label18.Text = "Logradouro:";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(832, 363);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(196, 22);
-            this.textBox11.TabIndex = 30;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GrayText;
             this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(340, 570);
+            this.button1.Location = new System.Drawing.Point(158, 559);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 57);
@@ -428,7 +307,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
             this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button2.Location = new System.Drawing.Point(811, 570);
+            this.button2.Location = new System.Drawing.Point(452, 559);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 57);
@@ -555,14 +434,6 @@
             this.comboBox3.Size = new System.Drawing.Size(219, 24);
             this.comboBox3.TabIndex = 45;
             // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(832, 414);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(112, 22);
-            this.textBox17.TabIndex = 46;
-            // 
             // textBox21
             // 
             this.textBox21.Location = new System.Drawing.Point(583, 329);
@@ -654,39 +525,6 @@
             this.label29.TabIndex = 119;
             this.label29.Text = "Data de Nascimento:";
             // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(643, 457);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(55, 20);
-            this.checkBox3.TabIndex = 123;
-            this.checkBox3.Text = "Não";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(583, 457);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(52, 20);
-            this.checkBox2.TabIndex = 122;
-            this.checkBox2.Text = "Sim";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(580, 421);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(44, 18);
-            this.label32.TabIndex = 121;
-            this.label32.Text = "PCD:";
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -705,190 +543,6 @@
             this.comboBox4.Size = new System.Drawing.Size(196, 24);
             this.comboBox4.TabIndex = 125;
             // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label34.Location = new System.Drawing.Point(947, 446);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(74, 17);
-            this.label34.TabIndex = 129;
-            this.label34.Text = "(Opcional)";
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(833, 463);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(196, 22);
-            this.textBox22.TabIndex = 128;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(829, 443);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(106, 18);
-            this.label33.TabIndex = 127;
-            this.label33.Text = "Complemento:";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(583, 391);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(196, 24);
-            this.comboBox6.TabIndex = 131;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(579, 363);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(109, 18);
-            this.label35.TabIndex = 130;
-            this.label35.Text = "Tipo de salário:";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(1055, 375);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(153, 18);
-            this.label41.TabIndex = 148;
-            this.label41.Text = "Possui Dependentes?";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(1113, 398);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(55, 20);
-            this.checkBox4.TabIndex = 147;
-            this.checkBox4.Text = "Não";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(1060, 398);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(52, 20);
-            this.checkBox5.TabIndex = 146;
-            this.checkBox5.Text = "Sim";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(1053, 462);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(212, 22);
-            this.textBox18.TabIndex = 145;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(1051, 439);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(177, 18);
-            this.label39.TabIndex = 144;
-            this.label39.Text = "Número de Dependentes:";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label42.Location = new System.Drawing.Point(1055, 350);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(203, 24);
-            this.label42.TabIndex = 143;
-            this.label42.Text = "Pessoas dependentes:";
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(1055, 262);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(212, 22);
-            this.textBox28.TabIndex = 142;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(1051, 244);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(130, 18);
-            this.label36.TabIndex = 141;
-            this.label36.Text = "Número da Conta:";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(1053, 212);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(212, 22);
-            this.textBox27.TabIndex = 140;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(1051, 192);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(141, 18);
-            this.label37.TabIndex = 139;
-            this.label37.Text = "Número da agência:";
-            // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(1053, 158);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(212, 22);
-            this.textBox26.TabIndex = 138;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(1049, 138);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(128, 18);
-            this.label38.TabIndex = 137;
-            this.label38.Text = "Nome da agência:";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label43.Location = new System.Drawing.Point(1049, 97);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(204, 24);
-            this.label43.TabIndex = 136;
-            this.label43.Text = "Informações bancárias:";
-            // 
             // label44
             // 
             this.label44.AutoSize = true;
@@ -905,31 +559,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 658);
+            this.ClientSize = new System.Drawing.Size(820, 658);
             this.Controls.Add(this.label44);
-            this.Controls.Add(this.label41);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.label42);
-            this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label43);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.label33);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.label32);
             this.Controls.Add(this.textBox23);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.textBox21);
@@ -939,7 +572,6 @@
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.textBox17);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox16);
@@ -954,17 +586,8 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label11);
@@ -1015,17 +638,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label19;
@@ -1040,7 +654,6 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox20;
@@ -1050,29 +663,8 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
     }
 }

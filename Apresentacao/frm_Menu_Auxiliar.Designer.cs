@@ -151,7 +151,7 @@
             this.button3.Location = new System.Drawing.Point(43, 316);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 83);
+            this.button3.Size = new System.Drawing.Size(172, 85);
             this.button3.TabIndex = 24;
             this.button3.Text = "Registrar folhas de pagamento";
             this.button3.UseVisualStyleBackColor = true;
@@ -163,9 +163,9 @@
             this.button2.Location = new System.Drawing.Point(43, 207);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 85);
+            this.button2.Size = new System.Drawing.Size(172, 85);
             this.button2.TabIndex = 23;
-            this.button2.Text = "Cadastrar funcionário";
+            this.button2.Text = "Cadastrar funcionários";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -214,6 +214,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Menu_Auxiliar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
