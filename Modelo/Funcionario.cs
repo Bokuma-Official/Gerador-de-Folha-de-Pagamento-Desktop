@@ -24,31 +24,5 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public string Telefone_Celular { get; set; }
         public string Email { get; set; }
         public int Dependentes { get; set; }
-        
-        public void Cadastrar_Funcionario()
-        {
-
-        }
-
-        public void Editar_Funcionario()
-        {
-
-        }
-
-        public void Visualizar_Funcionario()
-        {
-
-        }
-
-        public void Fazer_Login()
-        {
-
-        }
-
-        public void Redefinir_Senha()
-        {
-
-        }
-
     }
 }

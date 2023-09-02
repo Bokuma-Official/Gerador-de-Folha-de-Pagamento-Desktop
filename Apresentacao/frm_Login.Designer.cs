@@ -36,7 +36,7 @@
             this.txb_Senha = new System.Windows.Forms.TextBox();
             this.lnk_Redefinir = new System.Windows.Forms.LinkLabel();
             this.btn_Login = new System.Windows.Forms.Button();
-            this.btnFechar = new System.Windows.Forms.Button();
+            this.btn_Fechar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_Login
@@ -54,7 +54,8 @@
             // 
             resources.ApplyResources(this.txb_CPF, "txb_CPF");
             this.txb_CPF.Name = "txb_CPF";
-            this.txb_CPF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Email_KeyDown);
+            this.txb_CPF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_CPF_KeyDown);
+            this.txb_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CPF_KeyPress);
             // 
             // lbl_Senha
             // 
@@ -74,6 +75,7 @@
             this.lnk_Redefinir.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lnk_Redefinir.Name = "lnk_Redefinir";
             this.lnk_Redefinir.TabStop = true;
+            this.lnk_Redefinir.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Redefinir_LinkClicked);
             // 
             // btn_Login
             // 
@@ -84,20 +86,20 @@
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // btnFechar
+            // btn_Fechar
             // 
-            this.btnFechar.BackColor = System.Drawing.SystemColors.GrayText;
-            resources.ApplyResources(this.btnFechar, "btnFechar");
-            this.btnFechar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.UseVisualStyleBackColor = false;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btn_Fechar.BackColor = System.Drawing.SystemColors.GrayText;
+            resources.ApplyResources(this.btn_Fechar, "btn_Fechar");
+            this.btn_Fechar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_Fechar.Name = "btn_Fechar";
+            this.btn_Fechar.UseVisualStyleBackColor = false;
+            this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
             // 
             // frm_Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.btn_Fechar);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.lnk_Redefinir);
             this.Controls.Add(this.txb_Senha);
@@ -106,7 +108,7 @@
             this.Controls.Add(this.lbl_CPF);
             this.Controls.Add(this.lbl_Login);
             this.Name = "frm_Login";
-            this.Shown += new System.EventHandler(this.Form1_Shown);
+            this.Shown += new System.EventHandler(this.frm_Login_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +123,7 @@
         private System.Windows.Forms.TextBox txb_Senha;
         private System.Windows.Forms.LinkLabel lnk_Redefinir;
         private System.Windows.Forms.Button btn_Login;
-        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btn_Fechar;
     }
 }
 

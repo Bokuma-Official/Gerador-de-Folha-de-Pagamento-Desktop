@@ -50,23 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apresentacao\frm_Cadastrar_Funcionário.cs">
+    <Compile Include="Apresentacao\frm_Cadastrar_Funcionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Cadastrar_Funcionário.Designer.cs">
-      <DependentUpon>frm_Cadastrar_Funcionário.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Cadastrar_Funcionarios.Designer.cs">
+      <DependentUpon>frm_Cadastrar_Funcionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Apresentacao\frm_Menu_Auxiliar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Apresentacao\frm_Menu_Auxiliar.Designer.cs">
-      <DependentUpon>frm_Menu_Auxiliar.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Acesso_DAO.cs" />
     <Compile Include="DAL\Cargo_DAO.cs" />
@@ -88,23 +82,23 @@
     <Compile Include="Modelo\Validacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Apresentacao\frm_Registrar_Folha_Pagamento.cs">
+    <Compile Include="Apresentacao\frm_Cadastrar_Folhas_Pagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Registrar_Folha_Pagamento.Designer.cs">
-      <DependentUpon>frm_Registrar_Folha_Pagamento.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Cadastrar_Folhas_Pagamento.Designer.cs">
+      <DependentUpon>frm_Cadastrar_Folhas_Pagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Cadastrar_Conta_RH.cs">
+    <Compile Include="Apresentacao\frm_Cadastrar_Perfis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Cadastrar_Conta_RH.Designer.cs">
-      <DependentUpon>frm_Cadastrar_Conta_RH.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Cadastrar_Perfis.Designer.cs">
+      <DependentUpon>frm_Cadastrar_Perfis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Menu_Gerente.cs">
+    <Compile Include="Apresentacao\frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Menu_Gerente.Designer.cs">
-      <DependentUpon>frm_Menu_Gerente.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Menu.Designer.cs">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frm_Redefinir_Senha.cs">
       <SubType>Form</SubType>
@@ -112,26 +106,26 @@
     <Compile Include="Apresentacao\frm_Redefinir_Senha.Designer.cs">
       <DependentUpon>frm_Redefinir_Senha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Folha_Pagamento.cs">
+    <Compile Include="Apresentacao\frm_Visualizar_Folhas_Pagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Folha_Pagamento.Designer.cs">
-      <DependentUpon>frm_Visualizar_Folha_Pagamento.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Visualizar_Folhas_Pagamento.Designer.cs">
+      <DependentUpon>frm_Visualizar_Folhas_Pagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Perfil.cs">
+    <Compile Include="Apresentacao\frm_Visualizar_Perfis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Perfil.Designer.cs">
-      <DependentUpon>frm_Visualizar_Perfil.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Visualizar_Perfis.Designer.cs">
+      <DependentUpon>frm_Visualizar_Perfis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Funcionario.cs">
+    <Compile Include="Apresentacao\frm_Visualizar_Funcionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Funcionario.Designer.cs">
-      <DependentUpon>frm_Visualizar_Funcionario.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Visualizar_Funcionarios.Designer.cs">
+      <DependentUpon>frm_Visualizar_Funcionarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Funcionário.resx">
-      <DependentUpon>frm_Cadastrar_Funcionário.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Funcionarios.resx">
+      <DependentUpon>frm_Cadastrar_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frm_Login.ccp-Cakm-IN.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -141,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Menu_Auxiliar.resx">
-      <DependentUpon>frm_Menu_Auxiliar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -155,26 +146,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Apresentacao\frm_Registrar_Folha_Pagamento.resx">
-      <DependentUpon>frm_Registrar_Folha_Pagamento.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Folhas_Pagamento.resx">
+      <DependentUpon>frm_Cadastrar_Folhas_Pagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Conta_RH.resx">
-      <DependentUpon>frm_Cadastrar_Conta_RH.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Perfis.resx">
+      <DependentUpon>frm_Cadastrar_Perfis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Menu_Gerente.resx">
-      <DependentUpon>frm_Menu_Gerente.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Menu.resx">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frm_Redefinir_Senha.resx">
       <DependentUpon>frm_Redefinir_Senha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Folha_Pagamento.resx">
-      <DependentUpon>frm_Visualizar_Folha_Pagamento.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Folhas_Pagamento.resx">
+      <DependentUpon>frm_Visualizar_Folhas_Pagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Perfil.resx">
-      <DependentUpon>frm_Visualizar_Perfil.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Perfis.resx">
+      <DependentUpon>frm_Visualizar_Perfis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Funcionario.resx">
-      <DependentUpon>frm_Visualizar_Funcionario.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Funcionarios.resx">
+      <DependentUpon>frm_Visualizar_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

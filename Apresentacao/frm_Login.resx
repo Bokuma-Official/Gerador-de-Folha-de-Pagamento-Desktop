@@ -126,7 +126,7 @@
     <value>Impact, 36pt</value>
   </data>
   <data name="lbl_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 36</value>
+    <value>144, 29</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbl_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -274,16 +274,16 @@
     <value>True</value>
   </data>
   <data name="lnk_Redefinir.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="lnk_Redefinir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 314</value>
+    <value>50, 313</value>
   </data>
   <data name="lnk_Redefinir.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="lnk_Redefinir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 25</value>
+    <value>311, 20</value>
   </data>
   <data name="lnk_Redefinir.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -307,13 +307,13 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="btn_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 367</value>
+    <value>231, 369</value>
   </data>
   <data name="btn_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="btn_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 64</value>
+    <value>155, 62</value>
   </data>
   <data name="btn_Login.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -333,34 +333,34 @@
   <data name="&gt;&gt;btn_Login.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnFechar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="btn_Fechar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="btnFechar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 367</value>
+  <data name="btn_Fechar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 369</value>
   </data>
-  <data name="btnFechar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btn_Fechar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="btnFechar.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btn_Fechar.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 62</value>
   </data>
-  <data name="btnFechar.TabIndex" type="System.Int32, mscorlib">
+  <data name="btn_Fechar.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="btnFechar.Text" xml:space="preserve">
+  <data name="btn_Fechar.Text" xml:space="preserve">
     <value>Fechar Programa</value>
   </data>
-  <data name="&gt;&gt;btnFechar.Name" xml:space="preserve">
-    <value>btnFechar</value>
+  <data name="&gt;&gt;btn_Fechar.Name" xml:space="preserve">
+    <value>btn_Fechar</value>
   </data>
-  <data name="&gt;&gt;btnFechar.Type" xml:space="preserve">
+  <data name="&gt;&gt;btn_Fechar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnFechar.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btn_Fechar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnFechar.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btn_Fechar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

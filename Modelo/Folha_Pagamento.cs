@@ -30,20 +30,5 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public decimal Salario_Bruto { get; set; }
         public decimal Salario_Liquido { get; set; }
         public int CPF_Funcionario { get; set; }
-
-        public void Cadastrar_Folha_Pagamento()
-        {
-
-        }
-
-        public void Editar_Folha_Pagamento()
-        {
-
-        }
-
-        public void Visualizar_Folha_Pagamento()
-        {
-
-        }
     }
 }

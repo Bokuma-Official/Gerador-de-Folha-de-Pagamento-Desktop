@@ -1,6 +1,6 @@
 ﻿namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    partial class frm_Registrar_Folha_Pagamento
+    partial class frm_Cadastrar_Folhas_Pagamento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Registrar_Folha_Pagamento));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Cadastrar_Folhas_Pagamento));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,7 +65,6 @@
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -75,8 +74,8 @@
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox22 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Cadastrar = new System.Windows.Forms.Button();
+            this.btn_Voltar = new System.Windows.Forms.Button();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -98,19 +97,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(86, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(599, 54);
+            this.label1.Size = new System.Drawing.Size(592, 54);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Registrar folhas de pagamentos";
+            this.label1.Text = "Cadastrar Folhas de Pagamento";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(24, 65);
+            this.label2.Location = new System.Drawing.Point(8, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(243, 24);
@@ -251,9 +250,9 @@
             this.label12.Location = new System.Drawing.Point(296, 223);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 24);
+            this.label12.Size = new System.Drawing.Size(212, 24);
             this.label12.TabIndex = 70;
-            this.label12.Text = "Benefícios:";
+            this.label12.Text = "Benefícios e Descontos:";
             // 
             // label13
             // 
@@ -445,23 +444,11 @@
             this.label22.TabIndex = 90;
             this.label22.Text = "Desconto IRRF:";
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label23.Location = new System.Drawing.Point(580, 341);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(163, 24);
-            this.label23.TabIndex = 91;
-            this.label23.Text = "Outros descontos:";
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(580, 373);
+            this.label24.Location = new System.Drawing.Point(580, 345);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(92, 18);
@@ -470,7 +457,7 @@
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(584, 395);
+            this.textBox19.Location = new System.Drawing.Point(583, 373);
             this.textBox19.Margin = new System.Windows.Forms.Padding(4);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(132, 22);
@@ -480,7 +467,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(580, 423);
+            this.label25.Location = new System.Drawing.Point(581, 410);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(158, 18);
@@ -489,7 +476,7 @@
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(584, 443);
+            this.textBox20.Location = new System.Drawing.Point(583, 442);
             this.textBox20.Margin = new System.Windows.Forms.Padding(4);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(132, 22);
@@ -500,7 +487,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label26.Location = new System.Drawing.Point(580, 490);
+            this.label26.Location = new System.Drawing.Point(579, 479);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(65, 24);
@@ -545,31 +532,32 @@
             this.textBox22.Size = new System.Drawing.Size(132, 22);
             this.textBox22.TabIndex = 100;
             // 
-            // button2
+            // btn_Cadastrar
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button2.Location = new System.Drawing.Point(577, 639);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 70);
-            this.button2.TabIndex = 120;
-            this.button2.Text = "Registrar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Cadastrar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_Cadastrar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cadastrar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_Cadastrar.Location = new System.Drawing.Point(427, 639);
+            this.btn_Cadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Cadastrar.Name = "btn_Cadastrar";
+            this.btn_Cadastrar.Size = new System.Drawing.Size(135, 70);
+            this.btn_Cadastrar.TabIndex = 120;
+            this.btn_Cadastrar.Text = "Cadastrar";
+            this.btn_Cadastrar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_Voltar
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GrayText;
-            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(128, 639);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 70);
-            this.button1.TabIndex = 119;
-            this.button1.Text = "Voltar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Voltar.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_Voltar.Location = new System.Drawing.Point(173, 639);
+            this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Voltar.Name = "btn_Voltar";
+            this.btn_Voltar.Size = new System.Drawing.Size(135, 70);
+            this.btn_Voltar.TabIndex = 119;
+            this.btn_Voltar.Text = "Voltar";
+            this.btn_Voltar.UseVisualStyleBackColor = false;
+            this.btn_Voltar.Click += new System.EventHandler(this.btn_Voltar_Click);
             // 
             // textBox29
             // 
@@ -707,16 +695,16 @@
             this.textBox26.Size = new System.Drawing.Size(197, 22);
             this.textBox26.TabIndex = 219;
             // 
-            // frm_Registrar_Folha_Pagamento
+            // frm_Cadastrar_Folhas_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 724);
+            this.ClientSize = new System.Drawing.Size(785, 718);
             this.Controls.Add(this.textBox26);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Cadastrar);
+            this.Controls.Add(this.btn_Voltar);
             this.Controls.Add(this.textBox29);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.label32);
@@ -733,7 +721,6 @@
             this.Controls.Add(this.label25);
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox17);
@@ -776,7 +763,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frm_Registrar_Folha_Pagamento";
+            this.Name = "frm_Cadastrar_Folhas_Pagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
             this.ResumeLayout(false);
@@ -822,7 +809,6 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label25;
@@ -832,8 +818,8 @@
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Cadastrar;
+        private System.Windows.Forms.Button btn_Voltar;
         private System.Windows.Forms.TextBox textBox29;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
