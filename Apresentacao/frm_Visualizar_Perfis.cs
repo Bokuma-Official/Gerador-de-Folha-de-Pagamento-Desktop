@@ -41,7 +41,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             // se a variavel cargo da classe Acesso_DAO for diferente de gerente, muda elementos da tela
             if (Acesso_DAO.Cargo != "Gerente")
             {
-                lbl_Visualizar.Text = "Visualizar Perfis";
+                lbl_Visualizar.Text = "Visualizar Perfil";
                 lbl_Visualizar.Location = new Point (175, 25);
                 lbl_Selecionar_Perfil.Visible = false;
                 cmb_Selecionar_Perfil.Visible = false;
