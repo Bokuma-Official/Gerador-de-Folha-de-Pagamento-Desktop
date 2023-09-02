@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient; // biblioteca para conectar o banco de dados
+using System.Data.SqlClient;
 using Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao;
 using System.Windows.Forms;
 using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;

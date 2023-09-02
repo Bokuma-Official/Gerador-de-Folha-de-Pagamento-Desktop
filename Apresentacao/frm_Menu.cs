@@ -119,7 +119,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void frm_Menu_Load(object sender, EventArgs e)
         {
-            if (Acesso_DAO.Cargo == "Auxiliar")
+            // se a variavel cargo da classe Acesso_DAO for diferente de gerente, muda elementos da tela
+            if (Acesso_DAO.Cargo != "Gerente")
             {
                 btn_Cadastrar_Perfis.Visible = false;
             }

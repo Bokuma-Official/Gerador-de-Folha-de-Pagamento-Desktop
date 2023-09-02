@@ -1,5 +1,4 @@
 ﻿using Gerador_de_Folha_de_Pagamento_Desktop.DAL;
-using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,10 +78,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 Acesso_DAO acesso_DAO = new Acesso_DAO();
                 acesso_DAO.Verificar_Acesso(listaDadosPessoa);
 
-                /* verifica se a variavel cargo da classe Acesso_DAO conseguiu pegar
-                os valores gerente ou auxiliar para fechar a tela de login e chamar
+                /* verifica se a variavel cargo da classe Acesso_DAO tem
+                algum valor para fechar a tela de login e chamar
                 o método para abrir a tela de menu */
-                if (Acesso_DAO.Cargo == "Gerente" || Acesso_DAO.Cargo == "Auxiliar")
+                if (Acesso_DAO.Cargo != null)
                 {
                     this.Close();
                     Abrir_Tela = new Thread(Abrir_frm_Menu);

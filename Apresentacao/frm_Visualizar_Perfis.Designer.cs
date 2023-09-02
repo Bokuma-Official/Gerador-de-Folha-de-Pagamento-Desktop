@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Perfis));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Visualizar = new System.Windows.Forms.Label();
             this.btn_Voltar = new System.Windows.Forms.Button();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
@@ -82,17 +82,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_Visualizar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(155, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(497, 59);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Visualizar e editar Perfis";
+            this.lbl_Visualizar.AutoSize = true;
+            this.lbl_Visualizar.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Visualizar.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_Visualizar.Location = new System.Drawing.Point(155, 9);
+            this.lbl_Visualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Visualizar.Name = "lbl_Visualizar";
+            this.lbl_Visualizar.Size = new System.Drawing.Size(497, 59);
+            this.lbl_Visualizar.TabIndex = 3;
+            this.lbl_Visualizar.Text = "Visualizar e editar Perfis";
             // 
             // btn_Voltar
             // 
@@ -662,7 +662,7 @@
             this.Controls.Add(this.btn_Voltar);
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.btn_Editar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Visualizar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Visualizar_Perfis";
@@ -676,7 +676,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Visualizar;
         private System.Windows.Forms.Button btn_Voltar;
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Editar;
