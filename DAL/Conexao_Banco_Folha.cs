@@ -12,8 +12,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         {
             get
             {
-                return $"Data Source=MATHEUS-C5\\SQLEXPRESS;Initial Catalog=Folha_Pagamento_Ataron;" +
-                    $"Persist Security Info=True;User ID=bokumatm;Password=bokumatm";
+                return $"Data Source=bokumatm.database.windows.net;Initial Catalog=Folha_Pagamento_Ataron;" +
+                    $"Persist Security Info=True;User ID=bokumatm;Password=BkmFPRH@9";
             }
         }
     }
