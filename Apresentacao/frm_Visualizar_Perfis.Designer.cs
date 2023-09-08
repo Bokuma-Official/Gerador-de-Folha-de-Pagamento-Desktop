@@ -37,7 +37,7 @@
             this.lbl_Selecionar_Perfil = new System.Windows.Forms.Label();
             this.cmb_Selecionar_Perfil = new System.Windows.Forms.ComboBox();
             this.btn_Deletar = new System.Windows.Forms.Button();
-            this.label44 = new System.Windows.Forms.Label();
+            this.lbl_Feminino = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
@@ -180,17 +180,17 @@
             this.btn_Deletar.Text = "Deletar";
             this.btn_Deletar.UseVisualStyleBackColor = false;
             // 
-            // label44
+            // lbl_Feminino
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label44.Location = new System.Drawing.Point(57, 534);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(197, 17);
-            this.label44.TabIndex = 411;
-            this.label44.Text = "(Opcional para sexo feminino)";
+            this.lbl_Feminino.AutoSize = true;
+            this.lbl_Feminino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Feminino.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_Feminino.Location = new System.Drawing.Point(57, 534);
+            this.lbl_Feminino.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Feminino.Name = "lbl_Feminino";
+            this.lbl_Feminino.Size = new System.Drawing.Size(197, 17);
+            this.lbl_Feminino.TabIndex = 411;
+            this.lbl_Feminino.Text = "(Opcional para sexo feminino)";
             // 
             // comboBox4
             // 
@@ -612,7 +612,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 677);
-            this.Controls.Add(this.label44);
+            this.Controls.Add(this.lbl_Feminino);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox23);
@@ -684,7 +684,7 @@
         private System.Windows.Forms.Label lbl_Selecionar_Perfil;
         private System.Windows.Forms.ComboBox cmb_Selecionar_Perfil;
         private System.Windows.Forms.Button btn_Deletar;
-        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label lbl_Feminino;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox23;

@@ -13,8 +13,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Redefinir_Senha : Form
     {
-        Thread Abrir_Tela;
-
         public frm_Redefinir_Senha()
         {
             InitializeComponent();
@@ -22,15 +20,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Voltar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Abrir_Tela = new Thread(Abrir_frm_Login);
-            Abrir_Tela.SetApartmentState(ApartmentState.STA);
-            Abrir_Tela.Start();
-        }
-
-        private void Abrir_frm_Login()
-        {
-            Application.Run(new frm_Login());
+            this.Hide();
+            frm_Login frm_login = new frm_Login();
+            frm_login.Show();
         }
     }
 }

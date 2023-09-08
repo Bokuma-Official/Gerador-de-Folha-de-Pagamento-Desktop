@@ -13,8 +13,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Cadastrar_Funcionarios : Form
     {
-        Thread Abrir_Tela;
-
         public frm_Cadastrar_Funcionarios()
         {
             InitializeComponent();
@@ -22,15 +20,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Voltar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Abrir_Tela = new Thread(Abrir_frm_Menu);
-            Abrir_Tela.SetApartmentState(ApartmentState.STA);
-            Abrir_Tela.Start();
-        }
-
-        private void Abrir_frm_Menu()
-        {
-            Application.Run(new frm_Menu());
+            this.Hide();
+            frm_Menu frm_menu = new frm_Menu();
+            frm_menu.Show();
         }
     }
 }

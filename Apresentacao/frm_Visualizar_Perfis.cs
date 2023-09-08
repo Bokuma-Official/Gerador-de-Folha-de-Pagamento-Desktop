@@ -16,8 +16,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Visualizar_Perfis : Form
     {
-        Thread Abrir_Tela;
-
         public frm_Visualizar_Perfis()
         {
             InitializeComponent();
@@ -25,26 +23,22 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Voltar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Abrir_Tela = new Thread(Abrir_frm_Menu);
-            Abrir_Tela.SetApartmentState(ApartmentState.STA);
-            Abrir_Tela.Start();
-        }
-
-        private void Abrir_frm_Menu()
-        {
-            Application.Run(new frm_Menu());
+            this.Hide();
+            frm_Menu frm_menu = new frm_Menu();
+            frm_menu.Show();
         }
 
         private void frm_Visualizar_Perfis_Load(object sender, EventArgs e)
         {
-            // se a variavel cargo da classe Acesso_DAO for diferente de gerente, muda elementos da tela
+            /* se a variavel cargo da classe acesso_dao for diferente de gerente,
+            muda ou oculta elementos da tela */
             if (Acesso_DAO.Cargo != "Gerente")
             {
                 lbl_Visualizar.Text = "Visualizar Perfil";
                 lbl_Visualizar.Location = new Point (175, 25);
                 lbl_Selecionar_Perfil.Visible = false;
                 cmb_Selecionar_Perfil.Visible = false;
+                lbl_Feminino.Visible = false;
                 lbl_Senha.Visible = false;
                 txb_Senha.Visible = false;
                 lbl_Maximo.Visible = false;

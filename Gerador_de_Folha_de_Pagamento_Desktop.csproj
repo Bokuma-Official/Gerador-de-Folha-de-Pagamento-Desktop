@@ -209,12 +209,11 @@
     <Compile Include="Modelo\Acesso.cs" />
     <Compile Include="Modelo\Cargo.cs" />
     <Compile Include="Modelo\Contrato_Empresa.cs" />
-    <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\Departamento.cs" />
     <Compile Include="Modelo\Endereco.cs" />
     <Compile Include="Modelo\Folha_Pagamento.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
-    <Compile Include="Modelo\Validacao.cs" />
+    <Compile Include="Modelo\Controle_Validacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Apresentacao\frm_Cadastrar_Folhas_Pagamento.cs">
