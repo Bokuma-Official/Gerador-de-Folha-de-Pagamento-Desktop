@@ -43,5 +43,21 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             // fecha a conexão com o banco de dados
             conexao.Close(); 
         }
+        public void Redefinir_Senha(Acesso acesso)
+        {
+            SqlConnection conexao = new SqlConnection(Conexao_Banco_Funcionarios.String_Conexao);
+
+            conexao.Open();
+
+            SqlCommand cmd = new SqlCommand("update Acesso set Senha = @Senha  where CPF = @CPF", conexao);
+            cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
+            cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("A Senha foi redefinida com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            conexao.Close();
+
+        }
     }
 }

@@ -91,7 +91,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         }
         private void txb_Senha_KeyDown(object sender, KeyEventArgs e)
         {
-            // pressionar a tecla enter sem preencher a senha não vai exibir a mensagem de confirmação
+            // pressionar a tecla enter sem preencher a senha não vai automaticamente tentar efetuar o login
             if (txb_Senha.Text == "" && e.KeyCode == Keys.Enter)
             {
                 txb_Senha.Focus();
@@ -99,7 +99,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 e.SuppressKeyPress = true;
             }
 
-            // pressionar a tecla enter quando preencher a senha vai exibir a mensagem de confirmação
+            // pressionar a tecla enter quando preencher a senha vai automaticamente tentar efetuar o login
             else if (txb_Senha.Text != "" && e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true;
