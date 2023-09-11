@@ -15,49 +15,91 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
     {
         // variável estática
         public static string Cargo { get; set; }
+        public static bool Mudanca { get; set; }
 
         public void Verificar_Acesso(Acesso acesso)
         {
             // pegar a string de conexão na classe conexão na camada dal
             SqlConnection conexao = new SqlConnection(Conexao_Banco_Funcionarios.String_Conexao);
-            
-            // abre a conexão com o banco de dados
-            conexao.Open();
 
-            // selecionar colunas da tabela acesso
-            SqlCommand cmd = new SqlCommand("Select Cargo from Acesso where CPF = @CPF AND Senha = @Senha", conexao);
-
-            // adiciona os parâmetros à consulta e verifica se os valores são iguais
-            cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
-            cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
-
-            // obter o valor da coluna cargo
-            Cargo = (string)cmd.ExecuteScalar();
-
-            // se cargo for nulo, também não conseguiu validar os valores de cpf e senha com o banco
-            if (Cargo == null)
+            try
             {
-                MessageBox.Show("CPF ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // abre a conexão com o banco de dados
+                conexao.Open();
+
+                // selecionar colunas da tabela acesso
+                SqlCommand cmd = new SqlCommand("Select Cargo from Acesso where CPF = @CPF AND Senha = @Senha", conexao);
+
+                // adiciona os parâmetros à consulta e verifica se os valores são iguais
+                cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
+                cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
+
+                // obter o valor da coluna cargo
+                Cargo = (string)cmd.ExecuteScalar();
+
+                // se cargo for nulo, também não conseguiu validar os valores de cpf e senha com o banco
+                if (Cargo == null)
+                {
+                    MessageBox.Show("CPF ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            catch (SqlException ex)
+            {
+                throw new Exception("Servidor SQL erro: " + ex.Number);
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
 
             // fecha a conexão com o banco de dados
-            conexao.Close(); 
+            finally
+            {
+                conexao.Close();
+            }
         }
+
         public void Redefinir_Senha(Acesso acesso)
         {
             SqlConnection conexao = new SqlConnection(Conexao_Banco_Funcionarios.String_Conexao);
 
-            conexao.Open();
+            try
+            {
+                conexao.Open();
 
-            SqlCommand cmd = new SqlCommand("update Acesso set Senha = @Senha  where CPF = @CPF", conexao);
-            cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
-            cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
-            cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand("update Acesso set Senha = @Senha where CPF = @CPF", conexao);
+                cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
+                cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
+                int linhas_afetadas = cmd.ExecuteNonQuery();
 
-            MessageBox.Show("A Senha foi redefinida com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
-            conexao.Close();
+                if (linhas_afetadas > 0)
+                {
+                    MessageBox.Show("A Senha foi redefinida com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Mudanca = true;
+                }
 
+                else
+                {
+                    MessageBox.Show("Nenhum registro encontrado com esse CPF!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            catch (SqlException ex)
+            {
+                throw new Exception("Servidor SQL erro: " + ex.Number);
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }

@@ -11,7 +11,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
     public class Controle_Validacao
     {
- 
         public void Verificar_Tela_Login(Acesso acesso)
         {
             // se cpf e senha ficarem vazios
@@ -63,19 +62,51 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 acesso_DAO.Verificar_Acesso(acesso);
             }
         }
+
         public void Verificar_Tela_Redefinir_Senha(Acesso acesso, string Repetir_Senha)
         {
-            if (acesso.Senha != Repetir_Senha) 
+            if (acesso.CPF == "" && acesso.Senha == "" && Repetir_Senha == "")
             {
-                MessageBox.Show("As Senhas não coincidem", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha todos os campos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if(Repetir_Senha == "")
+
+            else if (acesso.CPF == "")
+            {
+                MessageBox.Show("CPF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (acesso.Senha == "")
+            {
+                MessageBox.Show("Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (Repetir_Senha == "")
             {
                 MessageBox.Show("Repetir a Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            else if (acesso.CPF.Length > 14)
+            {
+                MessageBox.Show("CPF deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (acesso.Senha.Length > 20)
+            {
+                MessageBox.Show("Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             else if (Repetir_Senha.Length > 20)
             {
                 MessageBox.Show("Campo de repetição de Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (acesso.Senha.Contains("Select") || acesso.Senha.Contains("select") || acesso.Senha.Contains("SELECT") ||
+                acesso.Senha.Contains("Insert") || acesso.Senha.Contains("insert") || acesso.Senha.Contains("INSERT") ||
+                acesso.Senha.Contains("Update") || acesso.Senha.Contains("update") || acesso.Senha.Contains("UPDATE") ||
+                acesso.Senha.Contains("Delete") || acesso.Senha.Contains("delete") || acesso.Senha.Contains("DELETE") ||
+                acesso.Senha.Contains("Drop") || acesso.Senha.Contains("drop") || acesso.Senha.Contains("DROP"))
+            {
+                MessageBox.Show("Campos inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else if (Repetir_Senha.Contains("Select") || Repetir_Senha.Contains("select") || Repetir_Senha.Contains("SELECT") ||
@@ -86,53 +117,22 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             {
                 MessageBox.Show("campos inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (acesso.CPF == "" && acesso.Senha == "")
+
+            else if (acesso.Senha != Repetir_Senha)
             {
-                MessageBox.Show("CPF e senha são obrigatórios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("As Senhas não coincidem", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-          
-            else if (acesso.CPF == "")
-            {
-                MessageBox.Show("CPF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            
-            else if (acesso.Senha == "")
-            {
-                MessageBox.Show("Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            
-            else if (acesso.CPF.Length > 14)
-            {
-                MessageBox.Show("CPF deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            
-            else if (acesso.Senha.Length > 20)
-            {
-                MessageBox.Show("Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-           
-            else if (acesso.Senha.Contains("Select") || acesso.Senha.Contains("select") || acesso.Senha.Contains("SELECT") ||
-                acesso.Senha.Contains("Insert") || acesso.Senha.Contains("insert") || acesso.Senha.Contains("INSERT") ||
-                acesso.Senha.Contains("Update") || acesso.Senha.Contains("update") || acesso.Senha.Contains("UPDATE") ||
-                acesso.Senha.Contains("Delete") || acesso.Senha.Contains("delete") || acesso.Senha.Contains("DELETE") ||
-                acesso.Senha.Contains("Drop") || acesso.Senha.Contains("drop") || acesso.Senha.Contains("DROP"))
-            {
-                MessageBox.Show("CPF ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            
             else
             {
-                Acesso_DAO acesso_DAO = new Acesso_DAO();
-                acesso_DAO.Redefinir_Senha(acesso);
-            }
+                DialogResult pergunta = MessageBox.Show("Deseja redefinir a senha?", "Redefinição de senha", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-        }
-        
+                if (pergunta == DialogResult.Yes)
+                {
+                    Acesso_DAO acesso_DAO = new Acesso_DAO();
+                    acesso_DAO.Redefinir_Senha(acesso);
+                }
+            }
+        } 
     }
 }
