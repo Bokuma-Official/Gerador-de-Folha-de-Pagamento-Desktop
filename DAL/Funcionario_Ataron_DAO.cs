@@ -11,16 +11,16 @@ using System.Threading;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 {
-    public class Acesso_DAO
+    public class Funcionario_Ataron_DAO
     {
         // variável estática
         public static string Cargo { get; set; }
         public static bool Mudanca { get; set; }
 
-        public void Verificar_Acesso(Acesso acesso)
+        public void Verificar_Acesso(Funcionario_Ataron acesso)
         {
             // pegar a string de conexão na classe conexão na camada dal
-            SqlConnection conexao = new SqlConnection(Conexao_Banco_Funcionarios.String_Conexao);
+            SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
 
             try
             {
@@ -61,9 +61,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             }
         }
 
-        public void Redefinir_Senha(Acesso acesso)
+        public void Redefinir_Senha(Funcionario_Ataron acesso)
         {
-            SqlConnection conexao = new SqlConnection(Conexao_Banco_Funcionarios.String_Conexao);
+            SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
 
             try
             {

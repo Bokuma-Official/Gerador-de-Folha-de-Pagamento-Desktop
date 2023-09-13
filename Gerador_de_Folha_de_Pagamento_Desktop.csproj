@@ -197,16 +197,16 @@
     <Compile Include="Apresentacao\frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Acesso_DAO.cs" />
+    <Compile Include="DAL\Funcionario_Ataron_DAO.cs" />
     <Compile Include="DAL\Cargo_DAO.cs" />
     <Compile Include="DAL\Conexao_Banco_Folha.cs" />
-    <Compile Include="DAL\Conexao_Banco_Funcionarios.cs" />
+    <Compile Include="DAL\Conexao_Banco_Acesso.cs" />
     <Compile Include="DAL\Contrato_Empresa_DAO.cs" />
     <Compile Include="DAL\Departamento_DAO.cs" />
     <Compile Include="DAL\Endereco_DAO.cs" />
     <Compile Include="DAL\Folha_Pagamento_DAO.cs" />
     <Compile Include="DAL\Funcionario_DAO.cs" />
-    <Compile Include="Modelo\Acesso.cs" />
+    <Compile Include="Modelo\Funcionario_Ataron.cs" />
     <Compile Include="Modelo\Cargo.cs" />
     <Compile Include="Modelo\Contrato_Empresa.cs" />
     <Compile Include="Modelo\Departamento.cs" />

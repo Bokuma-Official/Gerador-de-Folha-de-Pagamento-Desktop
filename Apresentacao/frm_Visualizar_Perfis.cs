@@ -30,9 +30,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void frm_Visualizar_Perfis_Load(object sender, EventArgs e)
         {
-            /* se a variavel cargo da classe acesso_dao for diferente de gerente,
+            /* se a variavel cargo da classe funcionario_ataron_dao for diferente de gerente,
             muda ou oculta elementos da tela */
-            if (Acesso_DAO.Cargo != "Gerente")
+            if (Funcionario_Ataron_DAO.Cargo != "Gerente" || Funcionario_Ataron_DAO.Cargo != "gerente")
             {
                 lbl_Visualizar.Text = "Visualizar Perfil";
                 lbl_Visualizar.Location = new Point (175, 25);

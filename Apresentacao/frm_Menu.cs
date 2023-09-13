@@ -75,8 +75,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void frm_Menu_Load(object sender, EventArgs e)
         {
-            // se a variavel cargo da classe acesso_dao for diferente de gerente, oculta um botão do menu
-            if (Acesso_DAO.Cargo != "Gerente")
+            // se a variavel cargo da classe funcionario_ataron_dao for diferente de gerente, oculta um botão do menu
+            if (Funcionario_Ataron_DAO.Cargo != "Gerente" || Funcionario_Ataron_DAO.Cargo != "gerente")
             {
                 btn_Cadastrar_Perfis.Visible = false;
             }

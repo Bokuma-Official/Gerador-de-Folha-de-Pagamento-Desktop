@@ -103,6 +103,11 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label41 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -859,11 +864,65 @@
             this.label43.TabIndex = 317;
             this.label43.Text = "(Opcional para sexo feminino)";
             // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(851, 411);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(212, 22);
+            this.textBox19.TabIndex = 322;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(846, 389);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(105, 18);
+            this.label26.TabIndex = 321;
+            this.label26.Text = "Repetir Senha:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label30.Location = new System.Drawing.Point(916, 341);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(127, 16);
+            this.label30.TabIndex = 320;
+            this.label30.Text = "(Máx. 20 caracteres)";
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(851, 361);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(212, 22);
+            this.textBox24.TabIndex = 319;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(847, 338);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(54, 18);
+            this.label32.TabIndex = 318;
+            this.label32.Text = "Senha:";
+            // 
             // frm_Cadastrar_Funcionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 735);
+            this.Controls.Add(this.textBox19);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.textBox24);
+            this.Controls.Add(this.label32);
             this.Controls.Add(this.label43);
             this.Controls.Add(this.label41);
             this.Controls.Add(this.checkBox4);
@@ -1024,5 +1083,10 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.Label label32;
     }
 }

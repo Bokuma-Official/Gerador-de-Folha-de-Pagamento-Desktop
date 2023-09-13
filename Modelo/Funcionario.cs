@@ -9,7 +9,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
     public class Funcionario
     {
-        public string CPF_Funcionario { get; set; }
+        public string CPF { get; set; }
+        public string Senha { get; set; }
         public string Nome { get; set; }
         public string Data_Nascimento { get; set; }
         public string Sexo { get; set; }

@@ -24,21 +24,21 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            /* cria uma instância da classe acesso na camada modelo e os atributos de cpf e senha
+            /* cria uma instância da classe funcionario_ataron na camada modelo e os atributos de cpf e senha
             passam a ter o mesmo valor que o valor dos textos das textbox cpf e senha */
-            Acesso acesso = new Acesso();
-            acesso.CPF = txb_CPF.Text;
-            acesso.Senha = txb_Senha.Text;
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+            funcionario_ataron.CPF = txb_CPF.Text;
+            funcionario_ataron.Senha = txb_Senha.Text;
 
             /* cria uma instância da classe controle_validacao na camada modelo e chama o método
-            verificar_tela_login, passando os valores da variável acesso para checar se
+            verificar_tela_login, passando os valores da variável funcionario_ataron para checar se
             os textos digitados não contém erros */
-            Controle_Validacao validacao = new Controle_Validacao();
-            validacao.Verificar_Tela_Login(acesso);
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Tela_Login(funcionario_ataron);
 
-            /* verifica se a variavel estática cargo da classe acesso_dao na camada dal tem
+            /* verifica se a variavel estática cargo da classe funcionario_ataron_dao na camada dal tem
             o valor diferente de nulo para fechar a tela de login e abrir a tela de menu */
-            if (Acesso_DAO.Cargo != null)
+            if (Funcionario_Ataron_DAO.Cargo != null)
             {
                 this.Hide();
                 frm_Menu frm_menu = new frm_Menu();

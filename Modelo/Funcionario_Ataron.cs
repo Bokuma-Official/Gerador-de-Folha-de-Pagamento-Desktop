@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
-    public class Acesso
+    public class Funcionario_Ataron
     {
         public string CPF { get; set; }
         public string Senha { get; set; }
@@ -15,8 +15,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public string PIS { get; set; }
         public string Carteira_Trabalho { get; set; }
         public string Titulo_Eleitor { get; set; }
-        public string Certificado_Militar { get; set; }
         public string Sexo { get; set; }
+        public string Certificado_Militar { get; set; }
         public string Data_Nascimento { get; set; }
         public string Telefone_Fixo { get; set; }
         public string Telefone_Celular { get; set; }

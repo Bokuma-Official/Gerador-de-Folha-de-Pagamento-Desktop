@@ -33,14 +33,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             Repetir_Senha = txb_Repetir_Senha.Text;
 
-            Acesso acesso = new Acesso();
-            acesso.CPF = txb_CPF.Text;
-            acesso.Senha = txb_Senha.Text;
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+            funcionario_ataron.CPF = txb_CPF.Text;
+            funcionario_ataron.Senha = txb_Senha.Text;
 
             Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Tela_Redefinir_Senha(acesso, Repetir_Senha);
+            controle_validacao.Verificar_Tela_Redefinir_Senha(funcionario_ataron, Repetir_Senha);
             
-            if (Acesso_DAO.Mudanca == true)
+            if (Funcionario_Ataron_DAO.Mudanca == true)
             {
                 this.Hide();
                 frm_Login frm_login = new frm_Login();
