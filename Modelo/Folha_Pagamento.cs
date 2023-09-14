@@ -29,6 +29,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public decimal Valor_13_Salario { get; set; }
         public decimal Salario_Bruto { get; set; }
         public decimal Salario_Liquido { get; set; }
-        public int CPF_Funcionario { get; set; }
+        public int CPF { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public int Numero_Agencia { get; set; }
         public string Nome_Agencia { get; set; }
         public string Tipo_Contrato { get; set; }
-        public string CPF_Funcionario { get; set; }
+        public string CPF { get; set; }
         public string CBO_Cargo { get; set; }
         public int ID_Departamento { get; set; }
     }

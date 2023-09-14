@@ -16,6 +16,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public string Complemento { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-        public string CPF_Funcionario { get; set; }
+        public string CPF { get; set; }
     }
 }

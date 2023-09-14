@@ -34,8 +34,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
                 cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
 
-                // obter o valor da coluna cargo
+                // obter o valor da coluna cargo e atribui a variável cargo
                 Cargo = (string)cmd.ExecuteScalar();
+
+                conexao.Close();
 
                 // se cargo for nulo, também não conseguiu validar os valores de cpf e senha com o banco
                 if (Cargo == null)
@@ -44,20 +46,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 }
             }
 
-            catch (SqlException ex)
-            {
-                throw new Exception("Servidor SQL erro: " + ex.Number);
-            }
-
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
-            }
-
-            // fecha a conexão com o banco de dados
-            finally
-            {
-                conexao.Close();
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -70,9 +61,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 conexao.Open();
 
                 SqlCommand cmd = new SqlCommand("update Acesso set Senha = @Senha where CPF = @CPF", conexao);
+
                 cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
                 cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
+
                 int linhas_afetadas = cmd.ExecuteNonQuery();
+
+                conexao.Close();
 
                 if (linhas_afetadas > 0)
                 {
@@ -86,19 +81,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 }
             }
 
-            catch (SqlException ex)
-            {
-                throw new Exception("Servidor SQL erro: " + ex.Number);
-            }
-
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
-            }
-
-            finally
-            {
-                conexao.Close();
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
