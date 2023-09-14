@@ -12,9 +12,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         {
             get
             {
-                return $"Data Source=127.0.0.1;Initial Catalog=Folha_Pagamento_Ataron;" +
-                    $"Persist Security Info=True;User ID=bokumatm;Password=bokumatm;" +
-                    $"TrustServerCertificate=true;MultipleActiveResultSets=true";
+                return @"Data Source=MATHEUS-C5\SQLEXPRESS;" +
+                        @"Initial Catalog=Folha_Pagamento_Ataron;" +
+                        @"TrustServerCertificate=True;" +
+                        @"Integrated Security=True";
             }
         }
     }

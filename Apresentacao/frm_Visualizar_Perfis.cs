@@ -32,7 +32,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             /* se a variavel cargo da classe funcionario_ataron_dao for diferente de gerente,
             muda ou oculta elementos da tela */
-            if (Funcionario_Ataron_DAO.Cargo != "Gerente" || Funcionario_Ataron_DAO.Cargo != "gerente")
+            if (!Funcionario_Ataron_DAO.Cargo.ToLower().Contains("gerente"))
             {
                 lbl_Visualizar.Text = "Visualizar Perfil";
                 lbl_Visualizar.Location = new Point (175, 25);

@@ -17,26 +17,27 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         public static string Cargo { get; set; }
         public static bool Mudanca { get; set; }
 
-        public void Verificar_Acesso(Funcionario_Ataron acesso)
+        public void Verificar_Acesso(Funcionario_Ataron funcionario_ataron)
         {
-            // pegar a string de conexão na classe conexão na camada dal
-            SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
-
             try
             {
+                // pegar a string de conexão na classe conexão_banco_acesso na camada dal
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
+
                 // abre a conexão com o banco de dados
                 conexao.Open();
 
-                // selecionar colunas da tabela acesso
-                SqlCommand cmd = new SqlCommand("Select Cargo from Acesso where CPF = @CPF AND Senha = @Senha", conexao);
+                // selecionar tabela funcionario_ataron
+                SqlCommand command = new SqlCommand("Select Cargo from Funcionario_Ataron where CPF = @CPF AND Senha = @Senha", conexao);
 
-                // adiciona os parâmetros à consulta e verifica se os valores são iguais
-                cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
-                cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
+                // adiciona os parâmetros à consulta
+                command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
+                command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
 
-                // obter o valor da coluna cargo e atribui a variável cargo
-                Cargo = (string)cmd.ExecuteScalar();
+                // obter o valor da coluna cargo e atribuir a variável cargo
+                Cargo = (string)command.ExecuteScalar();
 
+                // fecha a conexão com o banco de dados
                 conexao.Close();
 
                 // se cargo for nulo, também não conseguiu validar os valores de cpf e senha com o banco
@@ -52,20 +53,20 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             }
         }
 
-        public void Redefinir_Senha(Funcionario_Ataron acesso)
+        public void Redefinir_Senha(Funcionario_Ataron funcionario_ataron)
         {
-            SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
-
             try
             {
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
+
                 conexao.Open();
 
-                SqlCommand cmd = new SqlCommand("update Acesso set Senha = @Senha where CPF = @CPF", conexao);
+                SqlCommand command = new SqlCommand("update Funcionario_Ataron set Senha = @Senha where CPF = @CPF", conexao);
 
-                cmd.Parameters.AddWithValue("@CPF", acesso.CPF);
-                cmd.Parameters.AddWithValue("@Senha", acesso.Senha);
+                command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
+                command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
 
-                int linhas_afetadas = cmd.ExecuteNonQuery();
+                int linhas_afetadas = command.ExecuteNonQuery();
 
                 conexao.Close();
 

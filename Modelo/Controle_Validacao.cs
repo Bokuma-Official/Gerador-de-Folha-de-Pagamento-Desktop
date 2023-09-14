@@ -44,22 +44,22 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
 
             // se colocar palavras do banco de dados na senha
-            else if (funcionario_ataron.Senha.Contains("Select") || funcionario_ataron.Senha.Contains("select") || funcionario_ataron.Senha.Contains("SELECT") ||
-                funcionario_ataron.Senha.Contains("Insert") || funcionario_ataron.Senha.Contains("insert") || funcionario_ataron.Senha.Contains("INSERT") ||
-                funcionario_ataron.Senha.Contains("Update") || funcionario_ataron.Senha.Contains("update") || funcionario_ataron.Senha.Contains("UPDATE") ||
-                funcionario_ataron.Senha.Contains("Delete") || funcionario_ataron.Senha.Contains("delete") || funcionario_ataron.Senha.Contains("DELETE") ||
-                funcionario_ataron.Senha.Contains("Drop") || funcionario_ataron.Senha.Contains("drop") || funcionario_ataron.Senha.Contains("DROP"))
+            else if (funcionario_ataron.Senha.ToLower().Contains("select") ||
+                    funcionario_ataron.Senha.ToLower().Contains("insert") || 
+                    funcionario_ataron.Senha.ToLower().Contains("update") ||
+                    funcionario_ataron.Senha.ToLower().Contains("delete") ||
+                    funcionario_ataron.Senha.ToLower().Contains("drop"))
             {
                 MessageBox.Show("CPF ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            /* cria uma instância da classe acesso_dao na canada dal e chama o método
-            verificar_acesso, passando os valores da variável acesso para checar se
+            /* cria uma instância da classe funcionario_ataron_dao na canada dal e chama o método
+            verificar_acesso, passando os valores da variável funcionario_ataron para checar se
             o acesso é válido */
             else
             {
-                Funcionario_Ataron_DAO acesso_DAO = new Funcionario_Ataron_DAO();
-                acesso_DAO.Verificar_Acesso(funcionario_ataron);
+                Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
+                funcionario_ataron_dao.Verificar_Acesso(funcionario_ataron);
             }
         }
 
@@ -100,22 +100,22 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Campo de repetição de Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.Senha.Contains("Select") || funcionario_ataron.Senha.Contains("select") || funcionario_ataron.Senha.Contains("SELECT") ||
-                funcionario_ataron.Senha.Contains("Insert") || funcionario_ataron.Senha.Contains("insert") || funcionario_ataron.Senha.Contains("INSERT") ||
-                funcionario_ataron.Senha.Contains("Update") || funcionario_ataron.Senha.Contains("update") || funcionario_ataron.Senha.Contains("UPDATE") ||
-                funcionario_ataron.Senha.Contains("Delete") || funcionario_ataron.Senha.Contains("delete") || funcionario_ataron.Senha.Contains("DELETE") ||
-                funcionario_ataron.Senha.Contains("Drop") || funcionario_ataron.Senha.Contains("drop") || funcionario_ataron.Senha.Contains("DROP"))
+            else if (funcionario_ataron.Senha.ToLower().Contains("select") ||
+                    funcionario_ataron.Senha.ToLower().Contains("insert") ||
+                    funcionario_ataron.Senha.ToLower().Contains("update") ||
+                    funcionario_ataron.Senha.ToLower().Contains("delete") ||
+                    funcionario_ataron.Senha.ToLower().Contains("drop"))
             {
                 MessageBox.Show("Campos inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            else if (Repetir_Senha.Contains("Select") || Repetir_Senha.Contains("select") || Repetir_Senha.Contains("SELECT") ||
-                Repetir_Senha.Contains("Insert") || Repetir_Senha.Contains("insert") || Repetir_Senha.Contains("INSERT") ||
-                Repetir_Senha.Contains("Update") || Repetir_Senha.Contains("update") || Repetir_Senha.Contains("UPDATE") ||
-                Repetir_Senha.Contains("Delete") || Repetir_Senha.Contains("delete") || Repetir_Senha.Contains("DELETE") ||
-                Repetir_Senha.Contains("Drop") || Repetir_Senha.Contains("drop") || Repetir_Senha.Contains("DROP"))
+            else if (Repetir_Senha.ToLower().Contains("select") ||
+                    Repetir_Senha.ToLower().Contains("insert") ||
+                    Repetir_Senha.ToLower().Contains("update") ||
+                    Repetir_Senha.ToLower().Contains("delete") ||
+                    Repetir_Senha.ToLower().Contains("drop"))
             {
-                MessageBox.Show("campos inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Campos inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else if (funcionario_ataron.Senha != Repetir_Senha)
