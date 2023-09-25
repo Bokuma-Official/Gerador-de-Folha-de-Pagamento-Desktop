@@ -6,21 +6,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao;
+using System.Net.Mail;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Net;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
     public class Controle_Validacao
     {
-        public void Verificar_Tela_Login(Funcionario_Ataron funcionario_ataron)
-        {
-            // se cpf e senha ficarem vazios
-            if (funcionario_ataron.CPF == "" && funcionario_ataron.Senha == "")
-            {
-                MessageBox.Show("CPF e senha são obrigatórios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+        public static bool Email_Validado { get; set; }
+        public static int Codigo_Gerado { get; set; }
+        public static int Codigo_Seguranca { get; set; }
+        public static bool Codigo_Validado { get; set; }
 
+        public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
+        {
             // se cpf ficar vazio
-            else if (funcionario_ataron.CPF == "")
+            if (funcionario_ataron.CPF == "")
             {
                 MessageBox.Show("CPF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -63,14 +65,87 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
         }
 
-        public void Verificar_Tela_Redefinir_Senha(Funcionario_Ataron funcionario_ataron, string Repetir_Senha)
+        public void Verificar_Email(Funcionario_Ataron funcionario_email)
         {
-            if (funcionario_ataron.CPF == "" && funcionario_ataron.Senha == "" && Repetir_Senha == "")
+            if (funcionario_email.Email == "")
             {
-                MessageBox.Show("Preencha todos os campos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Email é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.CPF == "")
+            else if (funcionario_email.Email.Length > 40)
+            {
+                MessageBox.Show("Email deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_email.Email.ToLower().Contains("select") ||
+                    funcionario_email.Email.ToLower().Contains("insert") ||
+                    funcionario_email.Email.ToLower().Contains("update") ||
+                    funcionario_email.Email.ToLower().Contains("delete") ||
+                    funcionario_email.Email.ToLower().Contains("drop"))
+            {
+                MessageBox.Show("Email inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (!funcionario_email.Email.ToLower().Contains("@") || !funcionario_email.Email.ToLower().Contains("."))
+            {
+                MessageBox.Show("Email precisa ter @ e .", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                // gerar o código
+                Random random = new Random();
+                Codigo_Gerado = random.Next(100000, 999999);
+                Codigo_Seguranca = Codigo_Gerado;
+
+                try
+                {
+                    // Enviar o e-mail com o código
+                    MailMessage mailMessage = new MailMessage();
+                    mailMessage.From = new MailAddress("bokuranteoficial@gmail.com");
+                    mailMessage.To.Add(funcionario_email.Email);
+                    mailMessage.Subject = "Ataron - Código de Segurança - Redefinição de Senha ";
+                    mailMessage.Body = $"Seu Código de Segurança é: {Codigo_Gerado}";
+
+                    SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
+                    smtpClient.Credentials = new NetworkCredential("bokuranteoficial@gmail.com", "vdfyziwpuwxerzzv");
+                    smtpClient.EnableSsl = true;
+                    smtpClient.Send(mailMessage);
+
+                    MessageBox.Show("Email enviado com sucesso!\nDigite o Código de Segurança enviado no seu Email" +
+                        "\npara Redefinir a Senha", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Email_Validado = true;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Email inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        public void Verificar_Codigo(int codigo_seguranca)
+        {
+            if (codigo_seguranca.ToString() == "")
+            {
+                MessageBox.Show("Código de segurança é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (codigo_seguranca.ToString() == $"{Codigo_Seguranca}")
+            {
+                Codigo_Validado = true;
+            }
+
+            else
+            {
+                MessageBox.Show("Código de segurança inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Verificar_Senha(Funcionario_Ataron funcionario_ataron, string Repetir_Senha)
+        {
+            if (funcionario_ataron.CPF == "")
             {
                 MessageBox.Show("CPF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -85,7 +160,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Repetir a Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.CPF.Length > 14)
+            else if(funcionario_ataron.CPF.Length > 14)
             {
                 MessageBox.Show("CPF deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

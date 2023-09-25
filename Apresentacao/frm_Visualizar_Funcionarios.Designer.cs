@@ -33,7 +33,6 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.btn_Editar = new System.Windows.Forms.Button();
-            this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Voltar = new System.Windows.Forms.Button();
             this.label43 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
@@ -149,36 +148,23 @@
             // 
             // btn_Editar
             // 
-            this.btn_Editar.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Editar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Editar.Location = new System.Drawing.Point(590, 711);
+            this.btn_Editar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_Editar.Location = new System.Drawing.Point(834, 711);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(135, 70);
-            this.btn_Editar.TabIndex = 173;
-            this.btn_Editar.Text = "Editar informações";
+            this.btn_Editar.TabIndex = 174;
+            this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
-            // 
-            // btn_Salvar
-            // 
-            this.btn_Salvar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Salvar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Salvar.Location = new System.Drawing.Point(842, 711);
-            this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(135, 70);
-            this.btn_Salvar.TabIndex = 174;
-            this.btn_Salvar.Text = "Salvar";
-            this.btn_Salvar.UseVisualStyleBackColor = false;
             // 
             // btn_Voltar
             // 
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Voltar.Location = new System.Drawing.Point(98, 711);
+            this.btn_Voltar.Location = new System.Drawing.Point(114, 711);
             this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(121, 70);
@@ -807,7 +793,7 @@
             this.textBox6.Location = new System.Drawing.Point(602, 265);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(169, 22);
+            this.textBox6.Size = new System.Drawing.Size(185, 22);
             this.textBox6.TabIndex = 327;
             // 
             // label10
@@ -826,7 +812,7 @@
             this.textBox5.Location = new System.Drawing.Point(602, 211);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 22);
+            this.textBox5.Size = new System.Drawing.Size(185, 22);
             this.textBox5.TabIndex = 325;
             // 
             // label9
@@ -907,7 +893,7 @@
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(332, 711);
+            this.button1.Location = new System.Drawing.Point(463, 711);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 70);
@@ -1047,7 +1033,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.btn_Voltar);
-            this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.comboBox4);
@@ -1067,7 +1052,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button btn_Editar;
-        private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Voltar;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label41;

@@ -460,7 +460,7 @@
             this.textBox19.Location = new System.Drawing.Point(583, 373);
             this.textBox19.Margin = new System.Windows.Forms.Padding(4);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(132, 22);
+            this.textBox19.Size = new System.Drawing.Size(154, 22);
             this.textBox19.TabIndex = 93;
             // 
             // label25
@@ -479,7 +479,7 @@
             this.textBox20.Location = new System.Drawing.Point(583, 442);
             this.textBox20.Margin = new System.Windows.Forms.Padding(4);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(132, 22);
+            this.textBox20.Size = new System.Drawing.Size(154, 22);
             this.textBox20.TabIndex = 95;
             // 
             // label26
@@ -510,7 +510,7 @@
             this.textBox21.Location = new System.Drawing.Point(584, 534);
             this.textBox21.Margin = new System.Windows.Forms.Padding(4);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(132, 22);
+            this.textBox21.Size = new System.Drawing.Size(153, 22);
             this.textBox21.TabIndex = 98;
             // 
             // label28
@@ -529,7 +529,7 @@
             this.textBox22.Location = new System.Drawing.Point(584, 585);
             this.textBox22.Margin = new System.Windows.Forms.Padding(4);
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(132, 22);
+            this.textBox22.Size = new System.Drawing.Size(153, 22);
             this.textBox22.TabIndex = 100;
             // 
             // btn_Cadastrar

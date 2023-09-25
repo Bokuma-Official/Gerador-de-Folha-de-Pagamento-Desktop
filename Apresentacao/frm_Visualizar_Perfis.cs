@@ -47,7 +47,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 btn_Voltar.Location = new Point (260, 460);
                 btn_Deletar.Visible = false;
                 btn_Editar.Visible = false;
-                btn_Salvar.Visible = false;
+                btn_Editar.Visible = false;
             }
         }
     }

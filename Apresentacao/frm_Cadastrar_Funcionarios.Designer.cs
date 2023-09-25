@@ -414,7 +414,7 @@
             this.textBox7.Location = new System.Drawing.Point(619, 106);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 22);
+            this.textBox7.Size = new System.Drawing.Size(196, 22);
             this.textBox7.TabIndex = 64;
             // 
             // label11
@@ -433,7 +433,7 @@
             this.textBox6.Location = new System.Drawing.Point(619, 214);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(169, 22);
+            this.textBox6.Size = new System.Drawing.Size(195, 22);
             this.textBox6.TabIndex = 62;
             // 
             // label10
@@ -452,7 +452,7 @@
             this.textBox5.Location = new System.Drawing.Point(619, 160);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 22);
+            this.textBox5.Size = new System.Drawing.Size(196, 22);
             this.textBox5.TabIndex = 60;
             // 
             // label9

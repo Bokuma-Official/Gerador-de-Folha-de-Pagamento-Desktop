@@ -286,7 +286,7 @@
             this.textBox8.Location = new System.Drawing.Point(319, 471);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(196, 22);
+            this.textBox8.Size = new System.Drawing.Size(219, 22);
             this.textBox8.TabIndex = 22;
             // 
             // btn_Voltar
@@ -389,7 +389,7 @@
             this.textBox15.Location = new System.Drawing.Point(43, 418);
             this.textBox15.Margin = new System.Windows.Forms.Padding(4);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(219, 22);
+            this.textBox15.Size = new System.Drawing.Size(230, 22);
             this.textBox15.TabIndex = 41;
             // 
             // label23
@@ -408,7 +408,7 @@
             this.textBox16.Location = new System.Drawing.Point(43, 472);
             this.textBox16.Margin = new System.Windows.Forms.Padding(4);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(219, 22);
+            this.textBox16.Size = new System.Drawing.Size(230, 22);
             this.textBox16.TabIndex = 43;
             // 
             // label24
@@ -432,7 +432,7 @@
             this.comboBox3.Location = new System.Drawing.Point(315, 154);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(219, 24);
+            this.comboBox3.Size = new System.Drawing.Size(223, 24);
             this.comboBox3.TabIndex = 45;
             // 
             // textBox21
@@ -512,7 +512,7 @@
             this.textBox23.Location = new System.Drawing.Point(315, 205);
             this.textBox23.Margin = new System.Windows.Forms.Padding(4);
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(219, 22);
+            this.textBox23.Size = new System.Drawing.Size(223, 22);
             this.textBox23.TabIndex = 120;
             // 
             // label29

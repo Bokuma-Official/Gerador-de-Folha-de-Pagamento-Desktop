@@ -34,7 +34,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             verificar_tela_login, passando os valores da variável funcionario_ataron para checar se
             os textos digitados não contém erros */
             Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Tela_Login(funcionario_ataron);
+            controle_validacao.Verificar_Login(funcionario_ataron);
 
             /* verifica se a variavel estática cargo da classe funcionario_ataron_dao na camada dal tem
             o valor diferente de nulo para fechar a tela de login e abrir a tela de menu */

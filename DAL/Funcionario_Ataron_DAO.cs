@@ -15,7 +15,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
     {
         // variável estática
         public static string Cargo { get; set; }
-        public static bool Mudanca { get; set; }
+        public static string CPF { get; set; }
+        public static bool Senha_Mudada { get; set; }
 
         public void Verificar_Acesso(Funcionario_Ataron funcionario_ataron)
         {
@@ -36,6 +37,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 // obter o valor da coluna cargo e atribuir a variável cargo
                 Cargo = (string)command.ExecuteScalar();
+                CPF = funcionario_ataron.CPF;
 
                 // fecha a conexão com o banco de dados
                 conexao.Close();
@@ -53,7 +55,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             }
         }
 
-        public void Redefinir_Senha(Funcionario_Ataron funcionario_ataron)
+        public void Redefinir_Senha(Funcionario_Ataron funcionario_senha)
         {
             try
             {
@@ -63,8 +65,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 SqlCommand command = new SqlCommand("update Funcionario_Ataron set Senha = @Senha where CPF = @CPF", conexao);
 
-                command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
-                command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
+                command.Parameters.AddWithValue("@CPF", funcionario_senha.CPF);
+                command.Parameters.AddWithValue("@Senha", funcionario_senha.Senha);
 
                 int linhas_afetadas = command.ExecuteNonQuery();
 
@@ -73,7 +75,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 if (linhas_afetadas > 0)
                 {
                     MessageBox.Show("A Senha foi redefinida com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Mudanca = true;
+                    Senha_Mudada = true;
                 }
 
                 else
