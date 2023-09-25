@@ -72,10 +72,10 @@
             // 
             // txb_Email
             // 
-            this.txb_Email.Location = new System.Drawing.Point(140, 92);
+            this.txb_Email.Location = new System.Drawing.Point(119, 92);
             this.txb_Email.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Email.Name = "txb_Email";
-            this.txb_Email.Size = new System.Drawing.Size(233, 22);
+            this.txb_Email.Size = new System.Drawing.Size(254, 22);
             this.txb_Email.TabIndex = 5;
             this.txb_Email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Email_KeyDown);
             // 
@@ -103,10 +103,10 @@
             // 
             // txb_Senha
             // 
-            this.txb_Senha.Location = new System.Drawing.Point(140, 314);
+            this.txb_Senha.Location = new System.Drawing.Point(119, 314);
             this.txb_Senha.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Senha.Name = "txb_Senha";
-            this.txb_Senha.Size = new System.Drawing.Size(233, 22);
+            this.txb_Senha.Size = new System.Drawing.Size(254, 22);
             this.txb_Senha.TabIndex = 8;
             this.txb_Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Senha_KeyDown);
             // 
@@ -124,10 +124,10 @@
             // 
             // txb_Repetir_Senha
             // 
-            this.txb_Repetir_Senha.Location = new System.Drawing.Point(140, 379);
+            this.txb_Repetir_Senha.Location = new System.Drawing.Point(119, 379);
             this.txb_Repetir_Senha.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Repetir_Senha.Name = "txb_Repetir_Senha";
-            this.txb_Repetir_Senha.Size = new System.Drawing.Size(233, 22);
+            this.txb_Repetir_Senha.Size = new System.Drawing.Size(254, 22);
             this.txb_Repetir_Senha.TabIndex = 10;
             this.txb_Repetir_Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Repetir_Senha_KeyDown);
             // 
@@ -161,10 +161,10 @@
             // 
             // txb_Codigo
             // 
-            this.txb_Codigo.Location = new System.Drawing.Point(140, 157);
+            this.txb_Codigo.Location = new System.Drawing.Point(119, 157);
             this.txb_Codigo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Codigo.Name = "txb_Codigo";
-            this.txb_Codigo.Size = new System.Drawing.Size(233, 22);
+            this.txb_Codigo.Size = new System.Drawing.Size(254, 22);
             this.txb_Codigo.TabIndex = 17;
             this.txb_Codigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Codigo_KeyDown);
             this.txb_Codigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Codigo_KeyPress);
@@ -185,7 +185,7 @@
             this.btn_Enviar_Email.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Enviar_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Enviar_Email.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Enviar_Email.Location = new System.Drawing.Point(393, 78);
+            this.btn_Enviar_Email.Location = new System.Drawing.Point(393, 84);
             this.btn_Enviar_Email.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Enviar_Email.Name = "btn_Enviar_Email";
             this.btn_Enviar_Email.Size = new System.Drawing.Size(168, 36);
@@ -199,7 +199,7 @@
             this.btn_Validar_Codigo.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Validar_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Validar_Codigo.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Validar_Codigo.Location = new System.Drawing.Point(393, 143);
+            this.btn_Validar_Codigo.Location = new System.Drawing.Point(393, 149);
             this.btn_Validar_Codigo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Validar_Codigo.Name = "btn_Validar_Codigo";
             this.btn_Validar_Codigo.Size = new System.Drawing.Size(168, 36);
@@ -210,10 +210,10 @@
             // 
             // txb_CPF
             // 
-            this.txb_CPF.Location = new System.Drawing.Point(140, 245);
+            this.txb_CPF.Location = new System.Drawing.Point(119, 245);
             this.txb_CPF.Margin = new System.Windows.Forms.Padding(4);
             this.txb_CPF.Name = "txb_CPF";
-            this.txb_CPF.Size = new System.Drawing.Size(233, 22);
+            this.txb_CPF.Size = new System.Drawing.Size(254, 22);
             this.txb_CPF.TabIndex = 20;
             this.txb_CPF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_CPF_KeyDown);
             this.txb_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CPF_KeyPress);

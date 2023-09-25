@@ -105,7 +105,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     mailMessage.From = new MailAddress("bokuranteoficial@gmail.com");
                     mailMessage.To.Add(funcionario_email.Email);
                     mailMessage.Subject = "Ataron - Código de Segurança - Redefinição de Senha ";
-                    mailMessage.Body = $"Seu Código de Segurança é: {Codigo_Gerado}";
+                    mailMessage.Body = $"Seu Código de Segurança é: {Codigo_Seguranca}";
 
                     SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
                     smtpClient.Credentials = new NetworkCredential("bokuranteoficial@gmail.com", "vdfyziwpuwxerzzv");
@@ -120,7 +120,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Email inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erro ao enviar Email!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
