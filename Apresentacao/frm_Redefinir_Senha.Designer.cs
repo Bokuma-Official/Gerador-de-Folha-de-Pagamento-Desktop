@@ -43,8 +43,6 @@
             this.lbl_Codigo = new System.Windows.Forms.Label();
             this.btn_Enviar_Email = new System.Windows.Forms.Button();
             this.btn_Validar_Codigo = new System.Windows.Forms.Button();
-            this.txb_CPF = new System.Windows.Forms.TextBox();
-            this.lbl_CPF = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Redefinicao
@@ -63,7 +61,7 @@
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.Location = new System.Drawing.Point(135, 63);
+            this.lbl_Email.Location = new System.Drawing.Point(135, 78);
             this.lbl_Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(66, 25);
@@ -72,10 +70,10 @@
             // 
             // txb_Email
             // 
-            this.txb_Email.Location = new System.Drawing.Point(119, 92);
+            this.txb_Email.Location = new System.Drawing.Point(119, 107);
             this.txb_Email.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Email.Name = "txb_Email";
-            this.txb_Email.Size = new System.Drawing.Size(254, 22);
+            this.txb_Email.Size = new System.Drawing.Size(298, 22);
             this.txb_Email.TabIndex = 5;
             this.txb_Email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Email_KeyDown);
             // 
@@ -83,7 +81,7 @@
             // 
             this.lbl_Senha.AutoSize = true;
             this.lbl_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Senha.Location = new System.Drawing.Point(135, 282);
+            this.lbl_Senha.Location = new System.Drawing.Point(193, 205);
             this.lbl_Senha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Senha.Name = "lbl_Senha";
             this.lbl_Senha.Size = new System.Drawing.Size(127, 25);
@@ -94,7 +92,7 @@
             // 
             this.lbl_Repetir_Senha.AutoSize = true;
             this.lbl_Repetir_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Repetir_Senha.Location = new System.Drawing.Point(135, 350);
+            this.lbl_Repetir_Senha.Location = new System.Drawing.Point(193, 273);
             this.lbl_Repetir_Senha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Repetir_Senha.Name = "lbl_Repetir_Senha";
             this.lbl_Repetir_Senha.Size = new System.Drawing.Size(190, 25);
@@ -103,10 +101,10 @@
             // 
             // txb_Senha
             // 
-            this.txb_Senha.Location = new System.Drawing.Point(119, 314);
+            this.txb_Senha.Location = new System.Drawing.Point(177, 237);
             this.txb_Senha.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Senha.Name = "txb_Senha";
-            this.txb_Senha.Size = new System.Drawing.Size(254, 22);
+            this.txb_Senha.Size = new System.Drawing.Size(298, 22);
             this.txb_Senha.TabIndex = 8;
             this.txb_Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Senha_KeyDown);
             // 
@@ -115,7 +113,7 @@
             this.lbl_Maximo.AutoSize = true;
             this.lbl_Maximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Maximo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Maximo.Location = new System.Drawing.Point(269, 286);
+            this.lbl_Maximo.Location = new System.Drawing.Point(327, 209);
             this.lbl_Maximo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Maximo.Name = "lbl_Maximo";
             this.lbl_Maximo.Size = new System.Drawing.Size(164, 20);
@@ -124,10 +122,10 @@
             // 
             // txb_Repetir_Senha
             // 
-            this.txb_Repetir_Senha.Location = new System.Drawing.Point(119, 379);
+            this.txb_Repetir_Senha.Location = new System.Drawing.Point(177, 302);
             this.txb_Repetir_Senha.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Repetir_Senha.Name = "txb_Repetir_Senha";
-            this.txb_Repetir_Senha.Size = new System.Drawing.Size(254, 22);
+            this.txb_Repetir_Senha.Size = new System.Drawing.Size(298, 22);
             this.txb_Repetir_Senha.TabIndex = 10;
             this.txb_Repetir_Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Repetir_Senha_KeyDown);
             // 
@@ -136,7 +134,7 @@
             this.btn_Redefinir.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Redefinir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Redefinir.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Redefinir.Location = new System.Drawing.Point(381, 426);
+            this.btn_Redefinir.Location = new System.Drawing.Point(268, 351);
             this.btn_Redefinir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Redefinir.Name = "btn_Redefinir";
             this.btn_Redefinir.Size = new System.Drawing.Size(115, 52);
@@ -150,7 +148,7 @@
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_Voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Voltar.Location = new System.Drawing.Point(140, 426);
+            this.btn_Voltar.Location = new System.Drawing.Point(268, 423);
             this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(115, 52);
@@ -161,10 +159,10 @@
             // 
             // txb_Codigo
             // 
-            this.txb_Codigo.Location = new System.Drawing.Point(119, 157);
+            this.txb_Codigo.Location = new System.Drawing.Point(119, 172);
             this.txb_Codigo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Codigo.Name = "txb_Codigo";
-            this.txb_Codigo.Size = new System.Drawing.Size(254, 22);
+            this.txb_Codigo.Size = new System.Drawing.Size(298, 22);
             this.txb_Codigo.TabIndex = 17;
             this.txb_Codigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_Codigo_KeyDown);
             this.txb_Codigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Codigo_KeyPress);
@@ -173,7 +171,7 @@
             // 
             this.lbl_Codigo.AutoSize = true;
             this.lbl_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Codigo.Location = new System.Drawing.Point(135, 128);
+            this.lbl_Codigo.Location = new System.Drawing.Point(135, 143);
             this.lbl_Codigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Codigo.Name = "lbl_Codigo";
             this.lbl_Codigo.Size = new System.Drawing.Size(209, 25);
@@ -185,10 +183,10 @@
             this.btn_Enviar_Email.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Enviar_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Enviar_Email.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Enviar_Email.Location = new System.Drawing.Point(393, 84);
+            this.btn_Enviar_Email.Location = new System.Drawing.Point(425, 99);
             this.btn_Enviar_Email.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Enviar_Email.Name = "btn_Enviar_Email";
-            this.btn_Enviar_Email.Size = new System.Drawing.Size(168, 36);
+            this.btn_Enviar_Email.Size = new System.Drawing.Size(145, 36);
             this.btn_Enviar_Email.TabIndex = 18;
             this.btn_Enviar_Email.Text = "Enviar Email";
             this.btn_Enviar_Email.UseVisualStyleBackColor = false;
@@ -199,43 +197,20 @@
             this.btn_Validar_Codigo.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Validar_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Validar_Codigo.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Validar_Codigo.Location = new System.Drawing.Point(393, 149);
+            this.btn_Validar_Codigo.Location = new System.Drawing.Point(425, 164);
             this.btn_Validar_Codigo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Validar_Codigo.Name = "btn_Validar_Codigo";
-            this.btn_Validar_Codigo.Size = new System.Drawing.Size(168, 36);
+            this.btn_Validar_Codigo.Size = new System.Drawing.Size(145, 36);
             this.btn_Validar_Codigo.TabIndex = 19;
             this.btn_Validar_Codigo.Text = "Validar Código";
             this.btn_Validar_Codigo.UseVisualStyleBackColor = false;
             this.btn_Validar_Codigo.Click += new System.EventHandler(this.btn_Validar_Codigo_Click);
             // 
-            // txb_CPF
-            // 
-            this.txb_CPF.Location = new System.Drawing.Point(119, 245);
-            this.txb_CPF.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_CPF.Name = "txb_CPF";
-            this.txb_CPF.Size = new System.Drawing.Size(254, 22);
-            this.txb_CPF.TabIndex = 20;
-            this.txb_CPF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_CPF_KeyDown);
-            this.txb_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CPF_KeyPress);
-            // 
-            // lbl_CPF
-            // 
-            this.lbl_CPF.AutoSize = true;
-            this.lbl_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CPF.Location = new System.Drawing.Point(135, 206);
-            this.lbl_CPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_CPF.Name = "lbl_CPF";
-            this.lbl_CPF.Size = new System.Drawing.Size(58, 25);
-            this.lbl_CPF.TabIndex = 21;
-            this.lbl_CPF.Text = "CPF:";
-            // 
             // frm_Redefinir_Senha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 503);
-            this.Controls.Add(this.lbl_CPF);
-            this.Controls.Add(this.txb_CPF);
+            this.ClientSize = new System.Drawing.Size(671, 488);
             this.Controls.Add(this.btn_Validar_Codigo);
             this.Controls.Add(this.btn_Enviar_Email);
             this.Controls.Add(this.txb_Codigo);
@@ -278,7 +253,5 @@
         private System.Windows.Forms.Label lbl_Codigo;
         private System.Windows.Forms.Button btn_Enviar_Email;
         private System.Windows.Forms.Button btn_Validar_Codigo;
-        private System.Windows.Forms.TextBox txb_CPF;
-        private System.Windows.Forms.Label lbl_CPF;
     }
 }

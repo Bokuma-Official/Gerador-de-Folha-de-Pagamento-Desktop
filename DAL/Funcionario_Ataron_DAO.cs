@@ -18,7 +18,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         public static string CPF { get; set; }
         public static bool Senha_Mudada { get; set; }
 
-        public void Verificar_Acesso(Funcionario_Ataron funcionario_ataron)
+        public void Fazer_Login(Funcionario_Ataron funcionario_ataron)
         {
             try
             {
@@ -63,12 +63,20 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 conexao.Open();
 
-                SqlCommand command = new SqlCommand("update Funcionario_Ataron set Senha = @Senha where CPF = @CPF", conexao);
+                // selecionar o cpf que tenha o mesmo email digitado e salvar na variavel cpf
+                SqlCommand command1 = new SqlCommand("select CPF from Funcionario_Ataron where Email = @Email", conexao);
 
-                command.Parameters.AddWithValue("@CPF", funcionario_senha.CPF);
-                command.Parameters.AddWithValue("@Senha", funcionario_senha.Senha);
+                command1.Parameters.AddWithValue("@Email", funcionario_senha.Email);
 
-                int linhas_afetadas = command.ExecuteNonQuery();
+                CPF = (string)command1.ExecuteScalar();
+
+                // atualizar a senha que tenha o mesmo cpf salvo na variável
+                SqlCommand command2 = new SqlCommand("update Funcionario_Ataron set Senha = @Senha where CPF = @CPF", conexao);
+
+                command2.Parameters.AddWithValue("@Senha", funcionario_senha.Senha);
+                command2.Parameters.AddWithValue("@CPF", CPF);
+
+                int linhas_afetadas = command2.ExecuteNonQuery();
 
                 conexao.Close();
 
@@ -76,11 +84,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 {
                     MessageBox.Show("A Senha foi redefinida com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Senha_Mudada = true;
-                }
-
-                else
-                {
-                    MessageBox.Show("Nenhum registro encontrado com esse CPF!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

@@ -16,7 +16,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
     {
         public static bool Email_Validado { get; set; }
         public static int Codigo_Gerado { get; set; }
-        public static int Codigo_Seguranca { get; set; }
+        public static string Codigo_Seguranca { get; set; }
         public static bool Codigo_Validado { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
@@ -61,7 +61,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             else
             {
                 Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
-                funcionario_ataron_dao.Verificar_Acesso(funcionario_ataron);
+                funcionario_ataron_dao.Fazer_Login(funcionario_ataron);
             }
         }
 
@@ -96,7 +96,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 // gerar o código
                 Random random = new Random();
                 Codigo_Gerado = random.Next(100000, 999999);
-                Codigo_Seguranca = Codigo_Gerado;
+                Codigo_Seguranca = Codigo_Gerado.ToString();
 
                 try
                 {
@@ -113,7 +113,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     smtpClient.Send(mailMessage);
 
                     MessageBox.Show("Email enviado com sucesso!\nDigite o Código de Segurança enviado no seu Email" +
-                        "\npara Redefinir a Senha", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        "\npara Redefinir a Senha.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Email_Validado = true;
                 }
@@ -125,32 +125,32 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
         }
 
-        public void Verificar_Codigo(int codigo_seguranca)
+        public void Verificar_Codigo(string codigo_seguranca)
         {
             if (codigo_seguranca.ToString() == "")
             {
                 MessageBox.Show("Código de segurança é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (codigo_seguranca.ToString() == $"{Codigo_Seguranca}")
+            else if (codigo_seguranca.ToString().Length > 6)
             {
-                Codigo_Validado = true;
+                MessageBox.Show("O Código de segurança deve ter menos que 6 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (Codigo_Seguranca != codigo_seguranca)
+            {
+                MessageBox.Show("Código de segurança inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
             {
-                MessageBox.Show("Código de segurança inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Codigo_Validado = true;
             }
         }
 
         public void Verificar_Senha(Funcionario_Ataron funcionario_ataron, string Repetir_Senha)
         {
-            if (funcionario_ataron.CPF == "")
-            {
-                MessageBox.Show("CPF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            else if (funcionario_ataron.Senha == "")
+            if (funcionario_ataron.Senha == "")
             {
                 MessageBox.Show("Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -158,11 +158,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             else if (Repetir_Senha == "")
             {
                 MessageBox.Show("Repetir a Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            else if(funcionario_ataron.CPF.Length > 14)
-            {
-                MessageBox.Show("CPF deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (funcionario_ataron.Senha.Length > 20)

@@ -16,7 +16,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
     public partial class frm_Redefinir_Senha : Form
     {
         public string Repetir_Senha { get; set; }
-        public int Codigo_Seguranca { get; set; }
+        public string Codigo_Seguranca { get; set; }
 
         public frm_Redefinir_Senha()
         {
@@ -28,8 +28,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             lbl_Codigo.Visible = false;
             txb_Codigo.Visible = false;
             btn_Validar_Codigo.Visible = false;
-            lbl_CPF.Visible = false;
-            txb_CPF.Visible = false;
             lbl_Senha.Visible = false;
             txb_Senha.Visible = false;
             lbl_Maximo.Visible = false;
@@ -60,13 +58,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 btn_Enviar_Email.Visible = false;
                 lbl_Codigo.Visible = true;
                 txb_Codigo.Visible = true;
+                txb_Codigo.Focus();
                 btn_Validar_Codigo.Visible = true;
             }
         }
 
         private void btn_Validar_Codigo_Click(object sender, EventArgs e)
         {
-            Codigo_Seguranca = Convert.ToInt32(txb_Codigo.Text);
+            Codigo_Seguranca = txb_Codigo.Text;
 
             Controle_Validacao validar_codigo = new Controle_Validacao();
             validar_codigo.Verificar_Codigo(Codigo_Seguranca);
@@ -76,10 +75,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 lbl_Codigo.Visible = false;
                 txb_Codigo.Visible = false;
                 btn_Validar_Codigo.Visible = false;
-                lbl_CPF.Visible = true;
-                txb_CPF.Visible = true;
                 lbl_Senha.Visible = true;
                 txb_Senha.Visible = true;
+                txb_Senha.Focus();
                 lbl_Maximo.Visible = true;
                 lbl_Repetir_Senha.Visible = true;
                 txb_Repetir_Senha.Visible = true;
@@ -92,7 +90,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             Repetir_Senha = txb_Repetir_Senha.Text;
 
             Funcionario_Ataron funcionario_senha = new Funcionario_Ataron();
-            funcionario_senha.CPF = txb_CPF.Text;
+            funcionario_senha.Email = txb_Email.Text;
             funcionario_senha.Senha = txb_Senha.Text;
 
             Controle_Validacao redefinir_senha = new Controle_Validacao();
@@ -114,14 +112,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void txb_Codigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_CPF_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != '-')
             {
                 e.Handled = true;
             }
@@ -156,23 +146,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             {
                 e.SuppressKeyPress = true;
                 btn_Validar_Codigo.PerformClick();
-            }
-        }
-
-        private void txb_CPF_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (txb_CPF.Text == "" && e.KeyCode == Keys.Enter)
-            {
-                txb_CPF.Focus();
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
-
-            else if (txb_CPF.Text != "" && e.KeyCode == Keys.Enter)
-            {
-                txb_Senha.Focus();
-                e.Handled = true;
-                e.SuppressKeyPress = true;
             }
         }
 
