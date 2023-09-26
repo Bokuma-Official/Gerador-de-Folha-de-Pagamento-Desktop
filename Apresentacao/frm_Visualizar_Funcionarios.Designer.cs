@@ -106,8 +106,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
@@ -901,25 +899,6 @@
             this.button1.Text = "Deletar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(837, 407);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(209, 22);
-            this.textBox19.TabIndex = 394;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(832, 385);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 18);
-            this.label2.TabIndex = 393;
-            this.label2.Text = "Repetir Senha:";
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -955,8 +934,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 794);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.textBox24);
             this.Controls.Add(this.label40);
@@ -1125,8 +1102,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.Label label40;

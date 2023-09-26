@@ -70,8 +70,6 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txb_Repetir_Senha = new System.Windows.Forms.TextBox();
-            this.lbl_Repetir_Senha = new System.Windows.Forms.Label();
             this.lbl_Maximo = new System.Windows.Forms.Label();
             this.txb_Senha = new System.Windows.Forms.TextBox();
             this.lbl_Senha = new System.Windows.Forms.Label();
@@ -506,25 +504,6 @@
             this.label8.TabIndex = 378;
             this.label8.Text = "Contato:";
             // 
-            // txb_Repetir_Senha
-            // 
-            this.txb_Repetir_Senha.Location = new System.Drawing.Point(562, 486);
-            this.txb_Repetir_Senha.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_Repetir_Senha.Name = "txb_Repetir_Senha";
-            this.txb_Repetir_Senha.Size = new System.Drawing.Size(223, 22);
-            this.txb_Repetir_Senha.TabIndex = 377;
-            // 
-            // lbl_Repetir_Senha
-            // 
-            this.lbl_Repetir_Senha.AutoSize = true;
-            this.lbl_Repetir_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Repetir_Senha.Location = new System.Drawing.Point(557, 464);
-            this.lbl_Repetir_Senha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Repetir_Senha.Name = "lbl_Repetir_Senha";
-            this.lbl_Repetir_Senha.Size = new System.Drawing.Size(105, 18);
-            this.lbl_Repetir_Senha.TabIndex = 376;
-            this.lbl_Repetir_Senha.Text = "Repetir Senha:";
-            // 
             // lbl_Maximo
             // 
             this.lbl_Maximo.AutoSize = true;
@@ -632,8 +611,6 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txb_Repetir_Senha);
-            this.Controls.Add(this.lbl_Repetir_Senha);
             this.Controls.Add(this.lbl_Maximo);
             this.Controls.Add(this.txb_Senha);
             this.Controls.Add(this.lbl_Senha);
@@ -702,8 +679,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txb_Repetir_Senha;
-        private System.Windows.Forms.Label lbl_Repetir_Senha;
         private System.Windows.Forms.Label lbl_Maximo;
         private System.Windows.Forms.TextBox txb_Senha;
         private System.Windows.Forms.Label lbl_Senha;

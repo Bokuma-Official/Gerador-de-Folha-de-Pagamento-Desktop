@@ -42,8 +42,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 lbl_Senha.Visible = false;
                 txb_Senha.Visible = false;
                 lbl_Maximo.Visible = false;
-                lbl_Repetir_Senha.Visible = false;
-                txb_Repetir_Senha.Visible = false;
                 btn_Voltar.Location = new Point (260, 460);
                 btn_Deletar.Visible = false;
                 btn_Editar.Visible = false;
