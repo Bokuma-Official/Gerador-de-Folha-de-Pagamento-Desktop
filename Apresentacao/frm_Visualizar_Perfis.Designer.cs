@@ -86,19 +86,19 @@
             this.lbl_Visualizar.AutoSize = true;
             this.lbl_Visualizar.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Visualizar.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_Visualizar.Location = new System.Drawing.Point(155, 9);
+            this.lbl_Visualizar.Location = new System.Drawing.Point(69, 9);
             this.lbl_Visualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Visualizar.Name = "lbl_Visualizar";
-            this.lbl_Visualizar.Size = new System.Drawing.Size(497, 59);
+            this.lbl_Visualizar.Size = new System.Drawing.Size(644, 59);
             this.lbl_Visualizar.TabIndex = 3;
-            this.lbl_Visualizar.Text = "Visualizar e editar Perfis";
+            this.lbl_Visualizar.Text = "Visualizar, editar e excluir Perfis";
             // 
             // btn_Voltar
             // 
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Voltar.Location = new System.Drawing.Point(79, 594);
+            this.btn_Voltar.Location = new System.Drawing.Point(346, 597);
             this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(121, 70);
@@ -112,7 +112,7 @@
             this.btn_Editar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Editar.Location = new System.Drawing.Point(619, 597);
+            this.btn_Editar.Location = new System.Drawing.Point(603, 597);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(135, 70);
@@ -158,7 +158,7 @@
             this.btn_Deletar.BackColor = System.Drawing.Color.Red;
             this.btn_Deletar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Deletar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Deletar.Location = new System.Drawing.Point(350, 597);
+            this.btn_Deletar.Location = new System.Drawing.Point(60, 597);
             this.btn_Deletar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Deletar.Name = "btn_Deletar";
             this.btn_Deletar.Size = new System.Drawing.Size(135, 70);

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Folhas_Pagamento));
             this.btn_Voltar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -98,7 +97,7 @@
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Voltar.Location = new System.Drawing.Point(26, 640);
+            this.btn_Voltar.Location = new System.Drawing.Point(315, 641);
             this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(135, 70);
@@ -110,39 +109,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Location = new System.Drawing.Point(40, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(721, 53);
+            this.label1.Size = new System.Drawing.Size(673, 42);
             this.label1.TabIndex = 176;
-            this.label1.Text = "Visualizar e editar Folhas de Pagamento";
-            // 
-            // btn_Salvar
-            // 
-            this.btn_Salvar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Salvar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Salvar.Location = new System.Drawing.Point(623, 640);
-            this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(135, 70);
-            this.btn_Salvar.TabIndex = 238;
-            this.btn_Salvar.Text = "Salvar";
-            this.btn_Salvar.UseVisualStyleBackColor = false;
+            this.label1.Text = "Visualizar, editar e excluir Folhas de Pagamento";
             // 
             // btn_Editar
             // 
-            this.btn_Editar.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Editar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Editar.Location = new System.Drawing.Point(425, 640);
+            this.btn_Editar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_Editar.Location = new System.Drawing.Point(616, 641);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(135, 70);
-            this.btn_Editar.TabIndex = 237;
-            this.btn_Editar.Text = "Editar informações";
+            this.btn_Editar.TabIndex = 238;
+            this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
             // 
             // textBox26
@@ -702,7 +688,7 @@
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(231, 640);
+            this.button1.Location = new System.Drawing.Point(47, 641);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 70);
@@ -773,7 +759,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Voltar);
             this.Controls.Add(this.label1);
@@ -791,7 +776,6 @@
 
         private System.Windows.Forms.Button btn_Voltar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.TextBox textBox26;
         private System.Windows.Forms.Label label33;
