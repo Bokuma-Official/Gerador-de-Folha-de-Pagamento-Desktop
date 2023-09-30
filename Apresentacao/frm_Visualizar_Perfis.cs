@@ -38,10 +38,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 lbl_Visualizar.Location = new Point (175, 25);
                 lbl_Selecionar_Perfil.Visible = false;
                 cmb_Selecionar_Perfil.Visible = false;
-                lbl_Feminino.Visible = false;
-                lbl_Senha.Visible = false;
-                txb_Senha.Visible = false;
-                lbl_Maximo.Visible = false;
                 btn_Voltar.Location = new Point (260, 460);
                 btn_Deletar.Visible = false;
                 btn_Editar.Visible = false;
