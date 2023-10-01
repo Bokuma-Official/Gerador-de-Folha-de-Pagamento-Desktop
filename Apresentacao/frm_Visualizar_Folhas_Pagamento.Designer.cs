@@ -402,6 +402,7 @@
             this.txb_Dias_Ferias.Location = new System.Drawing.Point(18, 604);
             this.txb_Dias_Ferias.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Dias_Ferias.Name = "txb_Dias_Ferias";
+            this.txb_Dias_Ferias.ReadOnly = true;
             this.txb_Dias_Ferias.Size = new System.Drawing.Size(153, 22);
             this.txb_Dias_Ferias.TabIndex = 397;
             this.txb_Dias_Ferias.TextChanged += new System.EventHandler(this.txb_Dias_Ferias_TextChanged);
@@ -517,6 +518,7 @@
             this.txb_Valor_Ferias.Name = "txb_Valor_Ferias";
             this.txb_Valor_Ferias.Size = new System.Drawing.Size(153, 22);
             this.txb_Valor_Ferias.TabIndex = 386;
+            this.txb_Valor_Ferias.TextChanged += new System.EventHandler(this.txb_Valor_Ferias_TextChanged);
             this.txb_Valor_Ferias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Valor_Ferias_KeyPress);
             // 
             // lbl_Valor_Ferias

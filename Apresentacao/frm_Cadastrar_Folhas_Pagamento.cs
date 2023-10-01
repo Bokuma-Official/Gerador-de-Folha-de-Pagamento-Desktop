@@ -311,5 +311,20 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 }
             }
         }
+
+        private void txb_Valor_Ferias_TextChanged(object sender, EventArgs e)
+        {
+            // quando o campo de valor de férias for alterado, o campo de dias de férias será liberado
+            if (txb_Valor_Ferias.Text != "")
+            {
+                txb_Dias_Ferias.ReadOnly = false;
+            }
+
+            else
+            {
+                txb_Dias_Ferias.ReadOnly = true;
+                txb_Dias_Ferias.Text = "";
+            }
+        }
     }
 }

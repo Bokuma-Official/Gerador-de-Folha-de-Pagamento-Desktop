@@ -307,5 +307,19 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 }
             }
         }
+
+        private void txb_Valor_Ferias_TextChanged(object sender, EventArgs e)
+        {
+            if (txb_Valor_Ferias.Text != "")
+            {
+                txb_Dias_Ferias.ReadOnly = false;
+            }
+
+            else
+            {
+                txb_Dias_Ferias.ReadOnly = true;
+                txb_Dias_Ferias.Text = "";
+            }
+        }
     }
 }
