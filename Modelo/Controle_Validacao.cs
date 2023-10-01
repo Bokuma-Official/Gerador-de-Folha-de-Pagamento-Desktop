@@ -170,6 +170,16 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Campo de repetição de Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+            else if (funcionario_ataron.Senha.Length < 8)
+            {
+                MessageBox.Show("Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (Repetir_Senha.Length < 8)
+            {
+                MessageBox.Show("Campo de repetição de Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             else if (funcionario_ataron.Senha.ToLower().Contains("select") ||
                     funcionario_ataron.Senha.ToLower().Contains("insert") ||
                     funcionario_ataron.Senha.ToLower().Contains("update") ||
