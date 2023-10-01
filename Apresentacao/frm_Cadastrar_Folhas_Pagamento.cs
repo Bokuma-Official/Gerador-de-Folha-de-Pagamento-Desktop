@@ -28,6 +28,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Horas_Trabalhadas_TextChanged(object sender, EventArgs e)
         {
+            // quando o campo de horas trabalhadas for alterado, outros campos também serão alterados
             int maximo = 200;
 
             if (int.TryParse(txb_Horas_Trabalhadas.Text, out int valor) && valor >= 0)
@@ -90,6 +91,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Hora_TextChanged(object sender, EventArgs e)
         {
+            // quando o campo de valor por hora trabalhado for alterado, outros campos também serão alterados
             decimal valor_hora;
             int horas_faltas;
 
@@ -115,6 +117,198 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             else
             {
                 txb_Desconto_Horas_Faltas.Text = "";
+            }
+        }
+
+        private void frm_Cadastrar_Folhas_Pagamento_Shown(object sender, EventArgs e)
+        {
+            txb_Data_Pagamento.Focus();
+        }
+
+        private void txb_Data_Pagamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '/')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Valor_Hora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Horas_Trabalhadas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Horas_Extras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Valor_Horas_Extras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Valor_Ferias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Dias_Ferias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Valor_Vale_Transporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Desconto_Vale_Transporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Valor_Vale_Alimentacao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Desconto_Vale_Alimentacao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_13_Salario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Desconto_Seguro_Vida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Desconto_INSS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Desconto_FGTS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Desconto_IRRF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Horas_Faltas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Desconto_Horas_Faltas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Salario_Bruto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Salario_Liquido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
+                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Dias_Ferias_TextChanged(object sender, EventArgs e)
+        {
+            // quando o campo de dias de férias for maior que 30, voltará a ficar no valor máximo permitido que é 30
+            if (int.TryParse(txb_Dias_Ferias.Text, out int valor) && valor >= 0)
+            {
+                if (valor > 30)
+                {
+                    txb_Dias_Ferias.Text = "30";
+                }
             }
         }
     }

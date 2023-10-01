@@ -102,6 +102,8 @@
             this.txb_Sexo = new System.Windows.Forms.TextBox();
             this.chk_Nao = new System.Windows.Forms.CheckBox();
             this.chk_Sim = new System.Windows.Forms.CheckBox();
+            this.txb_CBO_Cargo = new System.Windows.Forms.TextBox();
+            this.lbl_CBO = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Cadastrar
@@ -123,6 +125,7 @@
             this.txb_Numero.Name = "txb_Numero";
             this.txb_Numero.Size = new System.Drawing.Size(196, 22);
             this.txb_Numero.TabIndex = 92;
+            this.txb_Numero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Numero_KeyPress);
             // 
             // lbl_Sexo
             // 
@@ -142,6 +145,7 @@
             this.txb_RA_Militar.Name = "txb_RA_Militar";
             this.txb_RA_Militar.Size = new System.Drawing.Size(213, 22);
             this.txb_RA_Militar.TabIndex = 89;
+            this.txb_RA_Militar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_RA_Militar_KeyPress);
             // 
             // lbl_RA
             // 
@@ -161,6 +165,7 @@
             this.txb_Titulo_Eleitor.Name = "txb_Titulo_Eleitor";
             this.txb_Titulo_Eleitor.Size = new System.Drawing.Size(213, 22);
             this.txb_Titulo_Eleitor.TabIndex = 87;
+            this.txb_Titulo_Eleitor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Titulo_Eleitor_KeyPress);
             // 
             // lbl_Titulo
             // 
@@ -180,6 +185,7 @@
             this.txb_Carteira_Trabalho.Name = "txb_Carteira_Trabalho";
             this.txb_Carteira_Trabalho.Size = new System.Drawing.Size(213, 22);
             this.txb_Carteira_Trabalho.TabIndex = 85;
+            this.txb_Carteira_Trabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Carteira_Trabalho_KeyPress);
             // 
             // lbl_Carteira
             // 
@@ -199,6 +205,7 @@
             this.txb_PIS.Name = "txb_PIS";
             this.txb_PIS.Size = new System.Drawing.Size(213, 22);
             this.txb_PIS.TabIndex = 82;
+            this.txb_PIS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_PIS_KeyPress);
             // 
             // lbl_PIS
             // 
@@ -218,6 +225,7 @@
             this.txb_RG.Name = "txb_RG";
             this.txb_RG.Size = new System.Drawing.Size(213, 22);
             this.txb_RG.TabIndex = 80;
+            this.txb_RG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_RG_KeyPress);
             // 
             // lbl_RG
             // 
@@ -332,6 +340,7 @@
             this.txb_CEP.Name = "txb_CEP";
             this.txb_CEP.Size = new System.Drawing.Size(196, 22);
             this.txb_CEP.TabIndex = 68;
+            this.txb_CEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CEP_KeyPress);
             // 
             // lbl_CEP
             // 
@@ -393,6 +402,7 @@
             this.txb_Telefone_Fixo.Name = "txb_Telefone_Fixo";
             this.txb_Telefone_Fixo.Size = new System.Drawing.Size(195, 22);
             this.txb_Telefone_Fixo.TabIndex = 62;
+            this.txb_Telefone_Fixo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Telefone_Fixo_KeyPress);
             // 
             // lbl_Fixo
             // 
@@ -412,6 +422,7 @@
             this.txb_Telefone_Celular.Name = "txb_Telefone_Celular";
             this.txb_Telefone_Celular.Size = new System.Drawing.Size(196, 22);
             this.txb_Telefone_Celular.TabIndex = 60;
+            this.txb_Telefone_Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Telefone_Celular_KeyPress);
             // 
             // lbl_Celular
             // 
@@ -443,6 +454,7 @@
             this.txb_CPF.Name = "txb_CPF";
             this.txb_CPF.Size = new System.Drawing.Size(213, 22);
             this.txb_CPF.TabIndex = 52;
+            this.txb_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CPF_KeyPress);
             // 
             // lbl_CPF
             // 
@@ -504,6 +516,7 @@
             this.txb_Data_Nascimento.Name = "txb_Data_Nascimento";
             this.txb_Data_Nascimento.Size = new System.Drawing.Size(213, 22);
             this.txb_Data_Nascimento.TabIndex = 94;
+            this.txb_Data_Nascimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Data_Nascimento_KeyPress);
             // 
             // lbl_Profissionais
             // 
@@ -573,6 +586,7 @@
             this.txb_Matricula.Name = "txb_Matricula";
             this.txb_Matricula.Size = new System.Drawing.Size(196, 22);
             this.txb_Matricula.TabIndex = 103;
+            this.txb_Matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Matricula_KeyPress);
             // 
             // lbl_Admissao
             // 
@@ -592,6 +606,7 @@
             this.txb_Admissao.Name = "txb_Admissao";
             this.txb_Admissao.Size = new System.Drawing.Size(196, 22);
             this.txb_Admissao.TabIndex = 105;
+            this.txb_Admissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Admissao_KeyPress);
             // 
             // lbl_PCD
             // 
@@ -641,6 +656,7 @@
             this.txb_Numero_Conta.Name = "txb_Numero_Conta";
             this.txb_Numero_Conta.Size = new System.Drawing.Size(212, 22);
             this.txb_Numero_Conta.TabIndex = 124;
+            this.txb_Numero_Conta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Numero_Conta_KeyPress);
             // 
             // lbl_Conta
             // 
@@ -660,6 +676,7 @@
             this.txb_Numero_Agencia.Name = "txb_Numero_Agencia";
             this.txb_Numero_Agencia.Size = new System.Drawing.Size(212, 22);
             this.txb_Numero_Agencia.TabIndex = 122;
+            this.txb_Numero_Agencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Numero_Agencia_KeyPress);
             // 
             // lbl_Numero_Agencia
             // 
@@ -710,6 +727,7 @@
             this.txb_Dependentes.Name = "txb_Dependentes";
             this.txb_Dependentes.Size = new System.Drawing.Size(212, 22);
             this.txb_Dependentes.TabIndex = 131;
+            this.txb_Dependentes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Dependentes_KeyPress);
             // 
             // lbl_Numero_Dependentes
             // 
@@ -827,11 +845,33 @@
             this.chk_Sim.Text = "Sim";
             this.chk_Sim.UseVisualStyleBackColor = true;
             // 
+            // txb_CBO_Cargo
+            // 
+            this.txb_CBO_Cargo.Location = new System.Drawing.Point(294, 503);
+            this.txb_CBO_Cargo.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_CBO_Cargo.Name = "txb_CBO_Cargo";
+            this.txb_CBO_Cargo.Size = new System.Drawing.Size(196, 22);
+            this.txb_CBO_Cargo.TabIndex = 330;
+            this.txb_CBO_Cargo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CBO_Cargo_KeyPress);
+            // 
+            // lbl_CBO
+            // 
+            this.lbl_CBO.AutoSize = true;
+            this.lbl_CBO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CBO.Location = new System.Drawing.Point(292, 481);
+            this.lbl_CBO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_CBO.Name = "lbl_CBO";
+            this.lbl_CBO.Size = new System.Drawing.Size(111, 18);
+            this.lbl_CBO.TabIndex = 329;
+            this.lbl_CBO.Text = "CBO do Cargo:";
+            // 
             // frm_Cadastrar_Funcionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 735);
+            this.Controls.Add(this.txb_CBO_Cargo);
+            this.Controls.Add(this.lbl_CBO);
             this.Controls.Add(this.chk_Sim);
             this.Controls.Add(this.chk_Nao);
             this.Controls.Add(this.txb_Sexo);
@@ -910,6 +950,7 @@
             this.Name = "frm_Cadastrar_Funcionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
+            this.Shown += new System.EventHandler(this.frm_Cadastrar_Funcionarios_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -990,5 +1031,7 @@
         private System.Windows.Forms.TextBox txb_Sexo;
         private System.Windows.Forms.CheckBox chk_Nao;
         private System.Windows.Forms.CheckBox chk_Sim;
+        private System.Windows.Forms.TextBox txb_CBO_Cargo;
+        private System.Windows.Forms.Label lbl_CBO;
     }
 }
