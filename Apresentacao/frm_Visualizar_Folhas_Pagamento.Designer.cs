@@ -30,67 +30,67 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Folhas_Pagamento));
             this.btn_Voltar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Visualizar_Editar_Excluir = new System.Windows.Forms.Label();
             this.btn_Editar = new System.Windows.Forms.Button();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txb_Dependentes = new System.Windows.Forms.TextBox();
+            this.lbl_Selecionar_Funcionario = new System.Windows.Forms.Label();
+            this.cmb_Selecionar_Funcionario = new System.Windows.Forms.ComboBox();
+            this.txb_Matricula = new System.Windows.Forms.TextBox();
+            this.lbl_Matricula = new System.Windows.Forms.Label();
+            this.lbl_Numero_Dependentes = new System.Windows.Forms.Label();
+            this.lbl_Cargo = new System.Windows.Forms.Label();
+            this.txb_Cargo = new System.Windows.Forms.TextBox();
+            this.lbl_Departamento = new System.Windows.Forms.Label();
+            this.txb_Departamento = new System.Windows.Forms.TextBox();
+            this.txb_Salario_Liquido = new System.Windows.Forms.TextBox();
+            this.lbl_Salario_Liquido = new System.Windows.Forms.Label();
+            this.txb_Salario_Bruto = new System.Windows.Forms.TextBox();
+            this.lbl_Salario_Bruto = new System.Windows.Forms.Label();
+            this.lbl_Totais = new System.Windows.Forms.Label();
+            this.txb_Desconto_Horas_Faltas = new System.Windows.Forms.TextBox();
+            this.lbl_Desconto_Horas_Faltas = new System.Windows.Forms.Label();
+            this.txb_Horas_Faltas = new System.Windows.Forms.TextBox();
+            this.lbl_Horas_Faltas = new System.Windows.Forms.Label();
+            this.lbl_Desconto_IRRF = new System.Windows.Forms.Label();
+            this.txb_Desconto_IRRF = new System.Windows.Forms.TextBox();
+            this.txb_Desconto_FGTS = new System.Windows.Forms.TextBox();
+            this.lbl_Desconto_FGTS = new System.Windows.Forms.Label();
+            this.txb_Desconto_INSS = new System.Windows.Forms.TextBox();
+            this.lbl_Desconto_INSS = new System.Windows.Forms.Label();
+            this.lbl_Desconto_Seguro_Vida = new System.Windows.Forms.Label();
+            this.txb_Desconto_Seguro_Vida = new System.Windows.Forms.TextBox();
+            this.lbl_13_Salario = new System.Windows.Forms.Label();
+            this.txb_13_Salario = new System.Windows.Forms.TextBox();
+            this.txb_Dias_Ferias = new System.Windows.Forms.TextBox();
+            this.lbl_Dias_Ferias = new System.Windows.Forms.Label();
+            this.txb_Desconto_Vale_Alimentacao = new System.Windows.Forms.TextBox();
+            this.lbl_Desconto_Vale_Alimentacao = new System.Windows.Forms.Label();
+            this.txb_Desconto_Vale_Transporte = new System.Windows.Forms.TextBox();
+            this.lbl_Desconto_Vale_Transporte = new System.Windows.Forms.Label();
+            this.txb_Valor_Vale_Alimentacao = new System.Windows.Forms.TextBox();
+            this.lbl_Valor_Vale_Alimentacao = new System.Windows.Forms.Label();
+            this.txb_Valor_Vale_Transporte = new System.Windows.Forms.TextBox();
+            this.lbl_Valor_Vale_Transporte = new System.Windows.Forms.Label();
+            this.lbl_Beneficios_Descontos = new System.Windows.Forms.Label();
+            this.txb_Valor_Ferias = new System.Windows.Forms.TextBox();
+            this.lbl_Valor_Ferias = new System.Windows.Forms.Label();
+            this.txb_Valor_Horas_Extras = new System.Windows.Forms.TextBox();
+            this.lbl_Valor_Horas_Extras = new System.Windows.Forms.Label();
+            this.txb_Valor_Hora = new System.Windows.Forms.TextBox();
+            this.lbl_Valor_Hora = new System.Windows.Forms.Label();
+            this.txb_Horas_Extras = new System.Windows.Forms.TextBox();
+            this.lbl_Horas_Extras = new System.Windows.Forms.Label();
+            this.txb_Horas_Trabalhadas = new System.Windows.Forms.TextBox();
+            this.lbl_Horas_Trabalhadas = new System.Windows.Forms.Label();
+            this.txb_Data_Pagamento = new System.Windows.Forms.TextBox();
+            this.lbl_Data = new System.Windows.Forms.Label();
+            this.lbl_Financeiras = new System.Windows.Forms.Label();
+            this.txb_CPF = new System.Windows.Forms.TextBox();
+            this.lbl_CPF = new System.Windows.Forms.Label();
+            this.lbl_Nome = new System.Windows.Forms.Label();
+            this.txb_Nome = new System.Windows.Forms.TextBox();
+            this.lbl_Funcionario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Voltar
@@ -107,17 +107,17 @@
             this.btn_Voltar.UseVisualStyleBackColor = false;
             this.btn_Voltar.Click += new System.EventHandler(this.btn_Voltar_Click);
             // 
-            // label1
+            // lbl_Visualizar_Editar_Excluir
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(40, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(662, 41);
-            this.label1.TabIndex = 176;
-            this.label1.Text = "Visualizar, editar e excluir Folhas de Pagamento";
+            this.lbl_Visualizar_Editar_Excluir.AutoSize = true;
+            this.lbl_Visualizar_Editar_Excluir.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Visualizar_Editar_Excluir.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_Visualizar_Editar_Excluir.Location = new System.Drawing.Point(40, 9);
+            this.lbl_Visualizar_Editar_Excluir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Visualizar_Editar_Excluir.Name = "lbl_Visualizar_Editar_Excluir";
+            this.lbl_Visualizar_Editar_Excluir.Size = new System.Drawing.Size(662, 41);
+            this.lbl_Visualizar_Editar_Excluir.TabIndex = 176;
+            this.lbl_Visualizar_Editar_Excluir.Text = "Visualizar, editar e excluir Folhas de Pagamento";
             // 
             // btn_Editar
             // 
@@ -132,558 +132,6 @@
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
             // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(17, 164);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(197, 22);
-            this.textBox26.TabIndex = 301;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label33.Location = new System.Drawing.Point(14, 89);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(208, 22);
-            this.label33.TabIndex = 300;
-            this.label33.Text = "Selecionar Funcionário:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(18, 113);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(196, 24);
-            this.comboBox4.TabIndex = 299;
-            // 
-            // textBox29
-            // 
-            this.textBox29.Location = new System.Drawing.Point(636, 161);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(153, 22);
-            this.textBox29.TabIndex = 298;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(633, 141);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(72, 18);
-            this.label37.TabIndex = 297;
-            this.label37.Text = "Matrícula:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label32.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label32.Location = new System.Drawing.Point(18, 141);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(177, 18);
-            this.label32.TabIndex = 296;
-            this.label32.Text = "Número de Dependentes:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(460, 141);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(53, 18);
-            this.label30.TabIndex = 295;
-            this.label30.Text = "Cargo:";
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(464, 163);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(153, 22);
-            this.textBox24.TabIndex = 294;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(460, 93);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(106, 18);
-            this.label29.TabIndex = 293;
-            this.label29.Text = "Departamento:";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(464, 112);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(153, 22);
-            this.textBox23.TabIndex = 292;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(234, 163);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 22);
-            this.textBox2.TabIndex = 291;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(230, 141);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 18);
-            this.label4.TabIndex = 290;
-            this.label4.Text = "CPF:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(230, 93);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 18);
-            this.label3.TabIndex = 289;
-            this.label3.Text = "Nome completo:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(234, 112);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 22);
-            this.textBox1.TabIndex = 288;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(617, 576);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(153, 22);
-            this.textBox22.TabIndex = 344;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(613, 553);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(109, 18);
-            this.label28.TabIndex = 343;
-            this.label28.Text = "Salário Líquido:";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(617, 525);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(155, 22);
-            this.textBox21.TabIndex = 342;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(613, 503);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(98, 18);
-            this.label27.TabIndex = 341;
-            this.label27.Text = "Salário Bruto:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label26.Location = new System.Drawing.Point(612, 470);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 24);
-            this.label26.TabIndex = 340;
-            this.label26.Text = "Totais:";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(616, 433);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(154, 22);
-            this.textBox20.TabIndex = 339;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(614, 401);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(158, 18);
-            this.label25.TabIndex = 338;
-            this.label25.Text = "Desconto horas faltas:";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(616, 364);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(154, 22);
-            this.textBox19.TabIndex = 337;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(613, 336);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(92, 18);
-            this.label24.TabIndex = 336;
-            this.label24.Text = "Horas faltas:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(613, 281);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(115, 18);
-            this.label22.TabIndex = 335;
-            this.label22.Text = "Desconto IRRF:";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(617, 304);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(153, 22);
-            this.textBox18.TabIndex = 334;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(617, 253);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(153, 22);
-            this.textBox17.TabIndex = 333;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(613, 231);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(121, 18);
-            this.label21.TabIndex = 332;
-            this.label21.Text = "Desconto FGTS:";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(315, 583);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(153, 22);
-            this.textBox16.TabIndex = 331;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(312, 561);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(115, 18);
-            this.label20.TabIndex = 330;
-            this.label20.Text = "Desconto INSS:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(311, 511);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(177, 18);
-            this.label19.TabIndex = 329;
-            this.label19.Text = "Desconto seguro de vida:";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(315, 533);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(153, 22);
-            this.textBox15.TabIndex = 328;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(312, 460);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(121, 18);
-            this.label18.TabIndex = 327;
-            this.label18.Text = "Valor 13º Salário:";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(315, 481);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(153, 22);
-            this.textBox14.TabIndex = 326;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(21, 583);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(153, 22);
-            this.textBox13.TabIndex = 325;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(17, 561);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(82, 18);
-            this.label17.TabIndex = 324;
-            this.label17.Text = "Dias férias:";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(315, 432);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(153, 22);
-            this.textBox12.TabIndex = 323;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(312, 410);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(191, 18);
-            this.label16.TabIndex = 322;
-            this.label16.Text = "Desconto vale alimentação:";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(315, 331);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(153, 22);
-            this.textBox11.TabIndex = 321;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(311, 308);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(178, 18);
-            this.label15.TabIndex = 320;
-            this.label15.Text = "Desconto vale transporte:";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(315, 381);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(153, 22);
-            this.textBox10.TabIndex = 319;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(311, 363);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(160, 18);
-            this.label14.TabIndex = 318;
-            this.label14.Text = "Valor vale alimentação:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(315, 279);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(153, 22);
-            this.textBox9.TabIndex = 317;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(311, 257);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(147, 18);
-            this.label13.TabIndex = 316;
-            this.label13.Text = "Valor vale transporte:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label12.Location = new System.Drawing.Point(311, 213);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(212, 24);
-            this.label12.TabIndex = 315;
-            this.label12.Text = "Benefícios e Descontos:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(21, 533);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(153, 22);
-            this.textBox8.TabIndex = 314;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(17, 511);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 18);
-            this.label11.TabIndex = 313;
-            this.label11.Text = "Valor férias:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(21, 481);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(153, 22);
-            this.textBox7.TabIndex = 312;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 459);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 18);
-            this.label10.TabIndex = 311;
-            this.label10.Text = "Valor horas extras:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(21, 331);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(153, 22);
-            this.textBox6.TabIndex = 310;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 308);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 18);
-            this.label9.TabIndex = 309;
-            this.label9.Text = "Valor hora:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(21, 432);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(153, 22);
-            this.textBox5.TabIndex = 308;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 410);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(231, 18);
-            this.label8.TabIndex = 307;
-            this.label8.Text = "Horas extras trabalhadas no mês:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(21, 381);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 22);
-            this.textBox4.TabIndex = 306;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 359);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 18);
-            this.label7.TabIndex = 305;
-            this.label7.Text = "Horas trabalhadas no mês:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(21, 279);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 22);
-            this.textBox3.TabIndex = 304;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 257);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 18);
-            this.label6.TabIndex = 303;
-            this.label6.Text = "Data do pagamento:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(17, 213);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(213, 24);
-            this.label5.TabIndex = 302;
-            this.label5.Text = "Informações financeiras:";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
@@ -697,85 +145,649 @@
             this.button1.Text = "Deletar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // txb_Dependentes
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(13, 50);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(251, 24);
-            this.label2.TabIndex = 369;
-            this.label2.Text = "Informações do Funcionário:";
+            this.txb_Dependentes.Location = new System.Drawing.Point(17, 184);
+            this.txb_Dependentes.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Dependentes.Name = "txb_Dependentes";
+            this.txb_Dependentes.ReadOnly = true;
+            this.txb_Dependentes.Size = new System.Drawing.Size(197, 22);
+            this.txb_Dependentes.TabIndex = 426;
+            // 
+            // lbl_Selecionar_Funcionario
+            // 
+            this.lbl_Selecionar_Funcionario.AutoSize = true;
+            this.lbl_Selecionar_Funcionario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Selecionar_Funcionario.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_Selecionar_Funcionario.Location = new System.Drawing.Point(14, 109);
+            this.lbl_Selecionar_Funcionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Selecionar_Funcionario.Name = "lbl_Selecionar_Funcionario";
+            this.lbl_Selecionar_Funcionario.Size = new System.Drawing.Size(208, 22);
+            this.lbl_Selecionar_Funcionario.TabIndex = 425;
+            this.lbl_Selecionar_Funcionario.Text = "Selecionar Funcionário:";
+            // 
+            // cmb_Selecionar_Funcionario
+            // 
+            this.cmb_Selecionar_Funcionario.FormattingEnabled = true;
+            this.cmb_Selecionar_Funcionario.Location = new System.Drawing.Point(18, 133);
+            this.cmb_Selecionar_Funcionario.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_Selecionar_Funcionario.Name = "cmb_Selecionar_Funcionario";
+            this.cmb_Selecionar_Funcionario.Size = new System.Drawing.Size(196, 24);
+            this.cmb_Selecionar_Funcionario.TabIndex = 424;
+            // 
+            // txb_Matricula
+            // 
+            this.txb_Matricula.Location = new System.Drawing.Point(637, 184);
+            this.txb_Matricula.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Matricula.Name = "txb_Matricula";
+            this.txb_Matricula.ReadOnly = true;
+            this.txb_Matricula.Size = new System.Drawing.Size(153, 22);
+            this.txb_Matricula.TabIndex = 423;
+            // 
+            // lbl_Matricula
+            // 
+            this.lbl_Matricula.AutoSize = true;
+            this.lbl_Matricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Matricula.Location = new System.Drawing.Point(634, 162);
+            this.lbl_Matricula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Matricula.Name = "lbl_Matricula";
+            this.lbl_Matricula.Size = new System.Drawing.Size(72, 18);
+            this.lbl_Matricula.TabIndex = 422;
+            this.lbl_Matricula.Text = "Matrícula:";
+            // 
+            // lbl_Numero_Dependentes
+            // 
+            this.lbl_Numero_Dependentes.AutoSize = true;
+            this.lbl_Numero_Dependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lbl_Numero_Dependentes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_Numero_Dependentes.Location = new System.Drawing.Point(18, 161);
+            this.lbl_Numero_Dependentes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Numero_Dependentes.Name = "lbl_Numero_Dependentes";
+            this.lbl_Numero_Dependentes.Size = new System.Drawing.Size(177, 18);
+            this.lbl_Numero_Dependentes.TabIndex = 421;
+            this.lbl_Numero_Dependentes.Text = "Número de Dependentes:";
+            // 
+            // lbl_Cargo
+            // 
+            this.lbl_Cargo.AutoSize = true;
+            this.lbl_Cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cargo.Location = new System.Drawing.Point(459, 162);
+            this.lbl_Cargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Cargo.Name = "lbl_Cargo";
+            this.lbl_Cargo.Size = new System.Drawing.Size(53, 18);
+            this.lbl_Cargo.TabIndex = 420;
+            this.lbl_Cargo.Text = "Cargo:";
+            // 
+            // txb_Cargo
+            // 
+            this.txb_Cargo.Location = new System.Drawing.Point(463, 184);
+            this.txb_Cargo.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Cargo.Name = "txb_Cargo";
+            this.txb_Cargo.ReadOnly = true;
+            this.txb_Cargo.Size = new System.Drawing.Size(153, 22);
+            this.txb_Cargo.TabIndex = 419;
+            // 
+            // lbl_Departamento
+            // 
+            this.lbl_Departamento.AutoSize = true;
+            this.lbl_Departamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Departamento.Location = new System.Drawing.Point(459, 114);
+            this.lbl_Departamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Departamento.Name = "lbl_Departamento";
+            this.lbl_Departamento.Size = new System.Drawing.Size(106, 18);
+            this.lbl_Departamento.TabIndex = 418;
+            this.lbl_Departamento.Text = "Departamento:";
+            // 
+            // txb_Departamento
+            // 
+            this.txb_Departamento.Location = new System.Drawing.Point(463, 133);
+            this.txb_Departamento.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Departamento.Name = "txb_Departamento";
+            this.txb_Departamento.ReadOnly = true;
+            this.txb_Departamento.Size = new System.Drawing.Size(153, 22);
+            this.txb_Departamento.TabIndex = 417;
+            // 
+            // txb_Salario_Liquido
+            // 
+            this.txb_Salario_Liquido.Location = new System.Drawing.Point(602, 591);
+            this.txb_Salario_Liquido.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Salario_Liquido.Name = "txb_Salario_Liquido";
+            this.txb_Salario_Liquido.Size = new System.Drawing.Size(153, 22);
+            this.txb_Salario_Liquido.TabIndex = 416;
+            // 
+            // lbl_Salario_Liquido
+            // 
+            this.lbl_Salario_Liquido.AutoSize = true;
+            this.lbl_Salario_Liquido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Salario_Liquido.Location = new System.Drawing.Point(598, 568);
+            this.lbl_Salario_Liquido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Salario_Liquido.Name = "lbl_Salario_Liquido";
+            this.lbl_Salario_Liquido.Size = new System.Drawing.Size(109, 18);
+            this.lbl_Salario_Liquido.TabIndex = 415;
+            this.lbl_Salario_Liquido.Text = "Salário Líquido:";
+            // 
+            // txb_Salario_Bruto
+            // 
+            this.txb_Salario_Bruto.Location = new System.Drawing.Point(602, 540);
+            this.txb_Salario_Bruto.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Salario_Bruto.Name = "txb_Salario_Bruto";
+            this.txb_Salario_Bruto.Size = new System.Drawing.Size(153, 22);
+            this.txb_Salario_Bruto.TabIndex = 414;
+            // 
+            // lbl_Salario_Bruto
+            // 
+            this.lbl_Salario_Bruto.AutoSize = true;
+            this.lbl_Salario_Bruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Salario_Bruto.Location = new System.Drawing.Point(598, 518);
+            this.lbl_Salario_Bruto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Salario_Bruto.Name = "lbl_Salario_Bruto";
+            this.lbl_Salario_Bruto.Size = new System.Drawing.Size(98, 18);
+            this.lbl_Salario_Bruto.TabIndex = 413;
+            this.lbl_Salario_Bruto.Text = "Salário Bruto:";
+            // 
+            // lbl_Totais
+            // 
+            this.lbl_Totais.AutoSize = true;
+            this.lbl_Totais.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Totais.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_Totais.Location = new System.Drawing.Point(597, 485);
+            this.lbl_Totais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Totais.Name = "lbl_Totais";
+            this.lbl_Totais.Size = new System.Drawing.Size(65, 24);
+            this.lbl_Totais.TabIndex = 412;
+            this.lbl_Totais.Text = "Totais:";
+            // 
+            // txb_Desconto_Horas_Faltas
+            // 
+            this.txb_Desconto_Horas_Faltas.Location = new System.Drawing.Point(600, 439);
+            this.txb_Desconto_Horas_Faltas.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Desconto_Horas_Faltas.Name = "txb_Desconto_Horas_Faltas";
+            this.txb_Desconto_Horas_Faltas.ReadOnly = true;
+            this.txb_Desconto_Horas_Faltas.Size = new System.Drawing.Size(154, 22);
+            this.txb_Desconto_Horas_Faltas.TabIndex = 411;
+            // 
+            // lbl_Desconto_Horas_Faltas
+            // 
+            this.lbl_Desconto_Horas_Faltas.AutoSize = true;
+            this.lbl_Desconto_Horas_Faltas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Desconto_Horas_Faltas.Location = new System.Drawing.Point(598, 407);
+            this.lbl_Desconto_Horas_Faltas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Desconto_Horas_Faltas.Name = "lbl_Desconto_Horas_Faltas";
+            this.lbl_Desconto_Horas_Faltas.Size = new System.Drawing.Size(158, 18);
+            this.lbl_Desconto_Horas_Faltas.TabIndex = 410;
+            this.lbl_Desconto_Horas_Faltas.Text = "Desconto horas faltas:";
+            // 
+            // txb_Horas_Faltas
+            // 
+            this.txb_Horas_Faltas.Location = new System.Drawing.Point(600, 370);
+            this.txb_Horas_Faltas.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Horas_Faltas.Name = "txb_Horas_Faltas";
+            this.txb_Horas_Faltas.ReadOnly = true;
+            this.txb_Horas_Faltas.Size = new System.Drawing.Size(154, 22);
+            this.txb_Horas_Faltas.TabIndex = 409;
+            // 
+            // lbl_Horas_Faltas
+            // 
+            this.lbl_Horas_Faltas.AutoSize = true;
+            this.lbl_Horas_Faltas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Horas_Faltas.Location = new System.Drawing.Point(597, 342);
+            this.lbl_Horas_Faltas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Horas_Faltas.Name = "lbl_Horas_Faltas";
+            this.lbl_Horas_Faltas.Size = new System.Drawing.Size(92, 18);
+            this.lbl_Horas_Faltas.TabIndex = 408;
+            this.lbl_Horas_Faltas.Text = "Horas faltas:";
+            // 
+            // lbl_Desconto_IRRF
+            // 
+            this.lbl_Desconto_IRRF.AutoSize = true;
+            this.lbl_Desconto_IRRF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Desconto_IRRF.Location = new System.Drawing.Point(597, 287);
+            this.lbl_Desconto_IRRF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Desconto_IRRF.Name = "lbl_Desconto_IRRF";
+            this.lbl_Desconto_IRRF.Size = new System.Drawing.Size(115, 18);
+            this.lbl_Desconto_IRRF.TabIndex = 407;
+            this.lbl_Desconto_IRRF.Text = "Desconto IRRF:";
+            // 
+            // txb_Desconto_IRRF
+            // 
+            this.txb_Desconto_IRRF.Location = new System.Drawing.Point(601, 310);
+            this.txb_Desconto_IRRF.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Desconto_IRRF.Name = "txb_Desconto_IRRF";
+            this.txb_Desconto_IRRF.Size = new System.Drawing.Size(153, 22);
+            this.txb_Desconto_IRRF.TabIndex = 406;
+            // 
+            // txb_Desconto_FGTS
+            // 
+            this.txb_Desconto_FGTS.Location = new System.Drawing.Point(601, 259);
+            this.txb_Desconto_FGTS.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Desconto_FGTS.Name = "txb_Desconto_FGTS";
+            this.txb_Desconto_FGTS.Size = new System.Drawing.Size(153, 22);
+            this.txb_Desconto_FGTS.TabIndex = 405;
+            // 
+            // lbl_Desconto_FGTS
+            // 
+            this.lbl_Desconto_FGTS.AutoSize = true;
+            this.lbl_Desconto_FGTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Desconto_FGTS.Location = new System.Drawing.Point(597, 237);
+            this.lbl_Desconto_FGTS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Desconto_FGTS.Name = "lbl_Desconto_FGTS";
+            this.lbl_Desconto_FGTS.Size = new System.Drawing.Size(121, 18);
+            this.lbl_Desconto_FGTS.TabIndex = 404;
+            this.lbl_Desconto_FGTS.Text = "Desconto FGTS:";
+            // 
+            // txb_Desconto_INSS
+            // 
+            this.txb_Desconto_INSS.Location = new System.Drawing.Point(317, 590);
+            this.txb_Desconto_INSS.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Desconto_INSS.Name = "txb_Desconto_INSS";
+            this.txb_Desconto_INSS.Size = new System.Drawing.Size(153, 22);
+            this.txb_Desconto_INSS.TabIndex = 403;
+            // 
+            // lbl_Desconto_INSS
+            // 
+            this.lbl_Desconto_INSS.AutoSize = true;
+            this.lbl_Desconto_INSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Desconto_INSS.Location = new System.Drawing.Point(314, 568);
+            this.lbl_Desconto_INSS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Desconto_INSS.Name = "lbl_Desconto_INSS";
+            this.lbl_Desconto_INSS.Size = new System.Drawing.Size(115, 18);
+            this.lbl_Desconto_INSS.TabIndex = 402;
+            this.lbl_Desconto_INSS.Text = "Desconto INSS:";
+            // 
+            // lbl_Desconto_Seguro_Vida
+            // 
+            this.lbl_Desconto_Seguro_Vida.AutoSize = true;
+            this.lbl_Desconto_Seguro_Vida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Desconto_Seguro_Vida.Location = new System.Drawing.Point(313, 518);
+            this.lbl_Desconto_Seguro_Vida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Desconto_Seguro_Vida.Name = "lbl_Desconto_Seguro_Vida";
+            this.lbl_Desconto_Seguro_Vida.Size = new System.Drawing.Size(177, 18);
+            this.lbl_Desconto_Seguro_Vida.TabIndex = 401;
+            this.lbl_Desconto_Seguro_Vida.Text = "Desconto seguro de vida:";
+            // 
+            // txb_Desconto_Seguro_Vida
+            // 
+            this.txb_Desconto_Seguro_Vida.Location = new System.Drawing.Point(317, 540);
+            this.txb_Desconto_Seguro_Vida.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Desconto_Seguro_Vida.Name = "txb_Desconto_Seguro_Vida";
+            this.txb_Desconto_Seguro_Vida.Size = new System.Drawing.Size(153, 22);
+            this.txb_Desconto_Seguro_Vida.TabIndex = 400;
+            // 
+            // lbl_13_Salario
+            // 
+            this.lbl_13_Salario.AutoSize = true;
+            this.lbl_13_Salario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_13_Salario.Location = new System.Drawing.Point(314, 467);
+            this.lbl_13_Salario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_13_Salario.Name = "lbl_13_Salario";
+            this.lbl_13_Salario.Size = new System.Drawing.Size(121, 18);
+            this.lbl_13_Salario.TabIndex = 399;
+            this.lbl_13_Salario.Text = "Valor 13º Salário:";
+            // 
+            // txb_13_Salario
+            // 
+            this.txb_13_Salario.Location = new System.Drawing.Point(317, 488);
+            this.txb_13_Salario.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_13_Salario.Name = "txb_13_Salario";
+            this.txb_13_Salario.Size = new System.Drawing.Size(153, 22);
+            this.txb_13_Salario.TabIndex = 398;
+            // 
+            // txb_Dias_Ferias
+            // 
+            this.txb_Dias_Ferias.Location = new System.Drawing.Point(22, 590);
+            this.txb_Dias_Ferias.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Dias_Ferias.Name = "txb_Dias_Ferias";
+            this.txb_Dias_Ferias.Size = new System.Drawing.Size(153, 22);
+            this.txb_Dias_Ferias.TabIndex = 397;
+            // 
+            // lbl_Dias_Ferias
+            // 
+            this.lbl_Dias_Ferias.AutoSize = true;
+            this.lbl_Dias_Ferias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Dias_Ferias.Location = new System.Drawing.Point(18, 568);
+            this.lbl_Dias_Ferias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Dias_Ferias.Name = "lbl_Dias_Ferias";
+            this.lbl_Dias_Ferias.Size = new System.Drawing.Size(82, 18);
+            this.lbl_Dias_Ferias.TabIndex = 396;
+            this.lbl_Dias_Ferias.Text = "Dias férias:";
+            // 
+            // txb_Desconto_Vale_Alimentacao
+            // 
+            this.txb_Desconto_Vale_Alimentacao.Location = new System.Drawing.Point(317, 439);
+            this.txb_Desconto_Vale_Alimentacao.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Desconto_Vale_Alimentacao.Name = "txb_Desconto_Vale_Alimentacao";
+            this.txb_Desconto_Vale_Alimentacao.Size = new System.Drawing.Size(153, 22);
+            this.txb_Desconto_Vale_Alimentacao.TabIndex = 395;
+            // 
+            // lbl_Desconto_Vale_Alimentacao
+            // 
+            this.lbl_Desconto_Vale_Alimentacao.AutoSize = true;
+            this.lbl_Desconto_Vale_Alimentacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Desconto_Vale_Alimentacao.Location = new System.Drawing.Point(314, 417);
+            this.lbl_Desconto_Vale_Alimentacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Desconto_Vale_Alimentacao.Name = "lbl_Desconto_Vale_Alimentacao";
+            this.lbl_Desconto_Vale_Alimentacao.Size = new System.Drawing.Size(191, 18);
+            this.lbl_Desconto_Vale_Alimentacao.TabIndex = 394;
+            this.lbl_Desconto_Vale_Alimentacao.Text = "Desconto vale alimentação:";
+            // 
+            // txb_Desconto_Vale_Transporte
+            // 
+            this.txb_Desconto_Vale_Transporte.Location = new System.Drawing.Point(317, 338);
+            this.txb_Desconto_Vale_Transporte.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Desconto_Vale_Transporte.Name = "txb_Desconto_Vale_Transporte";
+            this.txb_Desconto_Vale_Transporte.Size = new System.Drawing.Size(153, 22);
+            this.txb_Desconto_Vale_Transporte.TabIndex = 393;
+            // 
+            // lbl_Desconto_Vale_Transporte
+            // 
+            this.lbl_Desconto_Vale_Transporte.AutoSize = true;
+            this.lbl_Desconto_Vale_Transporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Desconto_Vale_Transporte.Location = new System.Drawing.Point(313, 315);
+            this.lbl_Desconto_Vale_Transporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Desconto_Vale_Transporte.Name = "lbl_Desconto_Vale_Transporte";
+            this.lbl_Desconto_Vale_Transporte.Size = new System.Drawing.Size(178, 18);
+            this.lbl_Desconto_Vale_Transporte.TabIndex = 392;
+            this.lbl_Desconto_Vale_Transporte.Text = "Desconto vale transporte:";
+            // 
+            // txb_Valor_Vale_Alimentacao
+            // 
+            this.txb_Valor_Vale_Alimentacao.Location = new System.Drawing.Point(317, 388);
+            this.txb_Valor_Vale_Alimentacao.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Valor_Vale_Alimentacao.Name = "txb_Valor_Vale_Alimentacao";
+            this.txb_Valor_Vale_Alimentacao.Size = new System.Drawing.Size(153, 22);
+            this.txb_Valor_Vale_Alimentacao.TabIndex = 391;
+            // 
+            // lbl_Valor_Vale_Alimentacao
+            // 
+            this.lbl_Valor_Vale_Alimentacao.AutoSize = true;
+            this.lbl_Valor_Vale_Alimentacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Valor_Vale_Alimentacao.Location = new System.Drawing.Point(313, 370);
+            this.lbl_Valor_Vale_Alimentacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Valor_Vale_Alimentacao.Name = "lbl_Valor_Vale_Alimentacao";
+            this.lbl_Valor_Vale_Alimentacao.Size = new System.Drawing.Size(160, 18);
+            this.lbl_Valor_Vale_Alimentacao.TabIndex = 390;
+            this.lbl_Valor_Vale_Alimentacao.Text = "Valor vale alimentação:";
+            // 
+            // txb_Valor_Vale_Transporte
+            // 
+            this.txb_Valor_Vale_Transporte.Location = new System.Drawing.Point(317, 286);
+            this.txb_Valor_Vale_Transporte.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Valor_Vale_Transporte.Name = "txb_Valor_Vale_Transporte";
+            this.txb_Valor_Vale_Transporte.Size = new System.Drawing.Size(153, 22);
+            this.txb_Valor_Vale_Transporte.TabIndex = 389;
+            // 
+            // lbl_Valor_Vale_Transporte
+            // 
+            this.lbl_Valor_Vale_Transporte.AutoSize = true;
+            this.lbl_Valor_Vale_Transporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Valor_Vale_Transporte.Location = new System.Drawing.Point(313, 264);
+            this.lbl_Valor_Vale_Transporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Valor_Vale_Transporte.Name = "lbl_Valor_Vale_Transporte";
+            this.lbl_Valor_Vale_Transporte.Size = new System.Drawing.Size(147, 18);
+            this.lbl_Valor_Vale_Transporte.TabIndex = 388;
+            this.lbl_Valor_Vale_Transporte.Text = "Valor vale transporte:";
+            // 
+            // lbl_Beneficios_Descontos
+            // 
+            this.lbl_Beneficios_Descontos.AutoSize = true;
+            this.lbl_Beneficios_Descontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Beneficios_Descontos.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_Beneficios_Descontos.Location = new System.Drawing.Point(313, 220);
+            this.lbl_Beneficios_Descontos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Beneficios_Descontos.Name = "lbl_Beneficios_Descontos";
+            this.lbl_Beneficios_Descontos.Size = new System.Drawing.Size(212, 24);
+            this.lbl_Beneficios_Descontos.TabIndex = 387;
+            this.lbl_Beneficios_Descontos.Text = "Benefícios e Descontos:";
+            // 
+            // txb_Valor_Ferias
+            // 
+            this.txb_Valor_Ferias.Location = new System.Drawing.Point(22, 540);
+            this.txb_Valor_Ferias.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Valor_Ferias.Name = "txb_Valor_Ferias";
+            this.txb_Valor_Ferias.Size = new System.Drawing.Size(153, 22);
+            this.txb_Valor_Ferias.TabIndex = 386;
+            // 
+            // lbl_Valor_Ferias
+            // 
+            this.lbl_Valor_Ferias.AutoSize = true;
+            this.lbl_Valor_Ferias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Valor_Ferias.Location = new System.Drawing.Point(18, 518);
+            this.lbl_Valor_Ferias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Valor_Ferias.Name = "lbl_Valor_Ferias";
+            this.lbl_Valor_Ferias.Size = new System.Drawing.Size(86, 18);
+            this.lbl_Valor_Ferias.TabIndex = 385;
+            this.lbl_Valor_Ferias.Text = "Valor férias:";
+            // 
+            // txb_Valor_Horas_Extras
+            // 
+            this.txb_Valor_Horas_Extras.Location = new System.Drawing.Point(22, 488);
+            this.txb_Valor_Horas_Extras.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Valor_Horas_Extras.Name = "txb_Valor_Horas_Extras";
+            this.txb_Valor_Horas_Extras.ReadOnly = true;
+            this.txb_Valor_Horas_Extras.Size = new System.Drawing.Size(153, 22);
+            this.txb_Valor_Horas_Extras.TabIndex = 384;
+            // 
+            // lbl_Valor_Horas_Extras
+            // 
+            this.lbl_Valor_Horas_Extras.AutoSize = true;
+            this.lbl_Valor_Horas_Extras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Valor_Horas_Extras.Location = new System.Drawing.Point(18, 466);
+            this.lbl_Valor_Horas_Extras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Valor_Horas_Extras.Name = "lbl_Valor_Horas_Extras";
+            this.lbl_Valor_Horas_Extras.Size = new System.Drawing.Size(132, 18);
+            this.lbl_Valor_Horas_Extras.TabIndex = 383;
+            this.lbl_Valor_Horas_Extras.Text = "Valor horas extras:";
+            // 
+            // txb_Valor_Hora
+            // 
+            this.txb_Valor_Hora.Location = new System.Drawing.Point(22, 338);
+            this.txb_Valor_Hora.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Valor_Hora.Name = "txb_Valor_Hora";
+            this.txb_Valor_Hora.Size = new System.Drawing.Size(153, 22);
+            this.txb_Valor_Hora.TabIndex = 382;
+            this.txb_Valor_Hora.TextChanged += new System.EventHandler(this.txb_Valor_Hora_TextChanged);
+            // 
+            // lbl_Valor_Hora
+            // 
+            this.lbl_Valor_Hora.AutoSize = true;
+            this.lbl_Valor_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Valor_Hora.Location = new System.Drawing.Point(18, 315);
+            this.lbl_Valor_Hora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Valor_Hora.Name = "lbl_Valor_Hora";
+            this.lbl_Valor_Hora.Size = new System.Drawing.Size(80, 18);
+            this.lbl_Valor_Hora.TabIndex = 381;
+            this.lbl_Valor_Hora.Text = "Valor hora:";
+            // 
+            // txb_Horas_Extras
+            // 
+            this.txb_Horas_Extras.Location = new System.Drawing.Point(22, 439);
+            this.txb_Horas_Extras.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Horas_Extras.Name = "txb_Horas_Extras";
+            this.txb_Horas_Extras.ReadOnly = true;
+            this.txb_Horas_Extras.Size = new System.Drawing.Size(153, 22);
+            this.txb_Horas_Extras.TabIndex = 380;
+            // 
+            // lbl_Horas_Extras
+            // 
+            this.lbl_Horas_Extras.AutoSize = true;
+            this.lbl_Horas_Extras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Horas_Extras.Location = new System.Drawing.Point(18, 417);
+            this.lbl_Horas_Extras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Horas_Extras.Name = "lbl_Horas_Extras";
+            this.lbl_Horas_Extras.Size = new System.Drawing.Size(231, 18);
+            this.lbl_Horas_Extras.TabIndex = 379;
+            this.lbl_Horas_Extras.Text = "Horas extras trabalhadas no mês:";
+            // 
+            // txb_Horas_Trabalhadas
+            // 
+            this.txb_Horas_Trabalhadas.Location = new System.Drawing.Point(22, 388);
+            this.txb_Horas_Trabalhadas.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Horas_Trabalhadas.Name = "txb_Horas_Trabalhadas";
+            this.txb_Horas_Trabalhadas.Size = new System.Drawing.Size(153, 22);
+            this.txb_Horas_Trabalhadas.TabIndex = 378;
+            this.txb_Horas_Trabalhadas.TextChanged += new System.EventHandler(this.txb_Horas_Trabalhadas_TextChanged);
+            // 
+            // lbl_Horas_Trabalhadas
+            // 
+            this.lbl_Horas_Trabalhadas.AutoSize = true;
+            this.lbl_Horas_Trabalhadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Horas_Trabalhadas.Location = new System.Drawing.Point(18, 366);
+            this.lbl_Horas_Trabalhadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Horas_Trabalhadas.Name = "lbl_Horas_Trabalhadas";
+            this.lbl_Horas_Trabalhadas.Size = new System.Drawing.Size(187, 18);
+            this.lbl_Horas_Trabalhadas.TabIndex = 377;
+            this.lbl_Horas_Trabalhadas.Text = "Horas trabalhadas no mês:";
+            // 
+            // txb_Data_Pagamento
+            // 
+            this.txb_Data_Pagamento.Location = new System.Drawing.Point(22, 286);
+            this.txb_Data_Pagamento.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Data_Pagamento.Name = "txb_Data_Pagamento";
+            this.txb_Data_Pagamento.Size = new System.Drawing.Size(153, 22);
+            this.txb_Data_Pagamento.TabIndex = 376;
+            // 
+            // lbl_Data
+            // 
+            this.lbl_Data.AutoSize = true;
+            this.lbl_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Data.Location = new System.Drawing.Point(18, 264);
+            this.lbl_Data.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Data.Name = "lbl_Data";
+            this.lbl_Data.Size = new System.Drawing.Size(142, 18);
+            this.lbl_Data.TabIndex = 375;
+            this.lbl_Data.Text = "Data do pagamento:";
+            // 
+            // lbl_Financeiras
+            // 
+            this.lbl_Financeiras.AutoSize = true;
+            this.lbl_Financeiras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Financeiras.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_Financeiras.Location = new System.Drawing.Point(18, 220);
+            this.lbl_Financeiras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Financeiras.Name = "lbl_Financeiras";
+            this.lbl_Financeiras.Size = new System.Drawing.Size(213, 24);
+            this.lbl_Financeiras.TabIndex = 374;
+            this.lbl_Financeiras.Text = "Informações financeiras:";
+            // 
+            // txb_CPF
+            // 
+            this.txb_CPF.Location = new System.Drawing.Point(231, 184);
+            this.txb_CPF.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_CPF.Name = "txb_CPF";
+            this.txb_CPF.ReadOnly = true;
+            this.txb_CPF.Size = new System.Drawing.Size(213, 22);
+            this.txb_CPF.TabIndex = 373;
+            // 
+            // lbl_CPF
+            // 
+            this.lbl_CPF.AutoSize = true;
+            this.lbl_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CPF.Location = new System.Drawing.Point(227, 162);
+            this.lbl_CPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_CPF.Name = "lbl_CPF";
+            this.lbl_CPF.Size = new System.Drawing.Size(42, 18);
+            this.lbl_CPF.TabIndex = 372;
+            this.lbl_CPF.Text = "CPF:";
+            // 
+            // lbl_Nome
+            // 
+            this.lbl_Nome.AutoSize = true;
+            this.lbl_Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nome.Location = new System.Drawing.Point(227, 114);
+            this.lbl_Nome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Nome.Name = "lbl_Nome";
+            this.lbl_Nome.Size = new System.Drawing.Size(119, 18);
+            this.lbl_Nome.TabIndex = 371;
+            this.lbl_Nome.Text = "Nome completo:";
+            // 
+            // txb_Nome
+            // 
+            this.txb_Nome.Location = new System.Drawing.Point(231, 133);
+            this.txb_Nome.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Nome.Name = "txb_Nome";
+            this.txb_Nome.ReadOnly = true;
+            this.txb_Nome.Size = new System.Drawing.Size(213, 22);
+            this.txb_Nome.TabIndex = 370;
+            // 
+            // lbl_Funcionario
+            // 
+            this.lbl_Funcionario.AutoSize = true;
+            this.lbl_Funcionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Funcionario.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_Funcionario.Location = new System.Drawing.Point(13, 69);
+            this.lbl_Funcionario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Funcionario.Name = "lbl_Funcionario";
+            this.lbl_Funcionario.Size = new System.Drawing.Size(251, 24);
+            this.lbl_Funcionario.TabIndex = 369;
+            this.lbl_Funcionario.Text = "Informações do Funcionário:";
             // 
             // frm_Visualizar_Folhas_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 724);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txb_Dependentes);
+            this.Controls.Add(this.lbl_Selecionar_Funcionario);
+            this.Controls.Add(this.cmb_Selecionar_Funcionario);
+            this.Controls.Add(this.txb_Matricula);
+            this.Controls.Add(this.lbl_Matricula);
+            this.Controls.Add(this.lbl_Numero_Dependentes);
+            this.Controls.Add(this.lbl_Cargo);
+            this.Controls.Add(this.txb_Cargo);
+            this.Controls.Add(this.lbl_Departamento);
+            this.Controls.Add(this.txb_Departamento);
+            this.Controls.Add(this.txb_Salario_Liquido);
+            this.Controls.Add(this.lbl_Salario_Liquido);
+            this.Controls.Add(this.txb_Salario_Bruto);
+            this.Controls.Add(this.lbl_Salario_Bruto);
+            this.Controls.Add(this.lbl_Totais);
+            this.Controls.Add(this.txb_Desconto_Horas_Faltas);
+            this.Controls.Add(this.lbl_Desconto_Horas_Faltas);
+            this.Controls.Add(this.txb_Horas_Faltas);
+            this.Controls.Add(this.lbl_Horas_Faltas);
+            this.Controls.Add(this.lbl_Desconto_IRRF);
+            this.Controls.Add(this.txb_Desconto_IRRF);
+            this.Controls.Add(this.txb_Desconto_FGTS);
+            this.Controls.Add(this.lbl_Desconto_FGTS);
+            this.Controls.Add(this.txb_Desconto_INSS);
+            this.Controls.Add(this.lbl_Desconto_INSS);
+            this.Controls.Add(this.lbl_Desconto_Seguro_Vida);
+            this.Controls.Add(this.txb_Desconto_Seguro_Vida);
+            this.Controls.Add(this.lbl_13_Salario);
+            this.Controls.Add(this.txb_13_Salario);
+            this.Controls.Add(this.txb_Dias_Ferias);
+            this.Controls.Add(this.lbl_Dias_Ferias);
+            this.Controls.Add(this.txb_Desconto_Vale_Alimentacao);
+            this.Controls.Add(this.lbl_Desconto_Vale_Alimentacao);
+            this.Controls.Add(this.txb_Desconto_Vale_Transporte);
+            this.Controls.Add(this.lbl_Desconto_Vale_Transporte);
+            this.Controls.Add(this.txb_Valor_Vale_Alimentacao);
+            this.Controls.Add(this.lbl_Valor_Vale_Alimentacao);
+            this.Controls.Add(this.txb_Valor_Vale_Transporte);
+            this.Controls.Add(this.lbl_Valor_Vale_Transporte);
+            this.Controls.Add(this.lbl_Beneficios_Descontos);
+            this.Controls.Add(this.txb_Valor_Ferias);
+            this.Controls.Add(this.lbl_Valor_Ferias);
+            this.Controls.Add(this.txb_Valor_Horas_Extras);
+            this.Controls.Add(this.lbl_Valor_Horas_Extras);
+            this.Controls.Add(this.txb_Valor_Hora);
+            this.Controls.Add(this.lbl_Valor_Hora);
+            this.Controls.Add(this.txb_Horas_Extras);
+            this.Controls.Add(this.lbl_Horas_Extras);
+            this.Controls.Add(this.txb_Horas_Trabalhadas);
+            this.Controls.Add(this.lbl_Horas_Trabalhadas);
+            this.Controls.Add(this.txb_Data_Pagamento);
+            this.Controls.Add(this.lbl_Data);
+            this.Controls.Add(this.lbl_Financeiras);
+            this.Controls.Add(this.txb_CPF);
+            this.Controls.Add(this.lbl_CPF);
+            this.Controls.Add(this.lbl_Nome);
+            this.Controls.Add(this.txb_Nome);
+            this.Controls.Add(this.lbl_Funcionario);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Voltar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Visualizar_Editar_Excluir);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Visualizar_Folhas_Pagamento";
@@ -789,66 +801,66 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Voltar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Visualizar_Editar_Excluir;
         private System.Windows.Forms.Button btn_Editar;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txb_Dependentes;
+        private System.Windows.Forms.Label lbl_Selecionar_Funcionario;
+        private System.Windows.Forms.ComboBox cmb_Selecionar_Funcionario;
+        private System.Windows.Forms.TextBox txb_Matricula;
+        private System.Windows.Forms.Label lbl_Matricula;
+        private System.Windows.Forms.Label lbl_Numero_Dependentes;
+        private System.Windows.Forms.Label lbl_Cargo;
+        private System.Windows.Forms.TextBox txb_Cargo;
+        private System.Windows.Forms.Label lbl_Departamento;
+        private System.Windows.Forms.TextBox txb_Departamento;
+        private System.Windows.Forms.TextBox txb_Salario_Liquido;
+        private System.Windows.Forms.Label lbl_Salario_Liquido;
+        private System.Windows.Forms.TextBox txb_Salario_Bruto;
+        private System.Windows.Forms.Label lbl_Salario_Bruto;
+        private System.Windows.Forms.Label lbl_Totais;
+        private System.Windows.Forms.TextBox txb_Desconto_Horas_Faltas;
+        private System.Windows.Forms.Label lbl_Desconto_Horas_Faltas;
+        private System.Windows.Forms.TextBox txb_Horas_Faltas;
+        private System.Windows.Forms.Label lbl_Horas_Faltas;
+        private System.Windows.Forms.Label lbl_Desconto_IRRF;
+        private System.Windows.Forms.TextBox txb_Desconto_IRRF;
+        private System.Windows.Forms.TextBox txb_Desconto_FGTS;
+        private System.Windows.Forms.Label lbl_Desconto_FGTS;
+        private System.Windows.Forms.TextBox txb_Desconto_INSS;
+        private System.Windows.Forms.Label lbl_Desconto_INSS;
+        private System.Windows.Forms.Label lbl_Desconto_Seguro_Vida;
+        private System.Windows.Forms.TextBox txb_Desconto_Seguro_Vida;
+        private System.Windows.Forms.Label lbl_13_Salario;
+        private System.Windows.Forms.TextBox txb_13_Salario;
+        private System.Windows.Forms.TextBox txb_Dias_Ferias;
+        private System.Windows.Forms.Label lbl_Dias_Ferias;
+        private System.Windows.Forms.TextBox txb_Desconto_Vale_Alimentacao;
+        private System.Windows.Forms.Label lbl_Desconto_Vale_Alimentacao;
+        private System.Windows.Forms.TextBox txb_Desconto_Vale_Transporte;
+        private System.Windows.Forms.Label lbl_Desconto_Vale_Transporte;
+        private System.Windows.Forms.TextBox txb_Valor_Vale_Alimentacao;
+        private System.Windows.Forms.Label lbl_Valor_Vale_Alimentacao;
+        private System.Windows.Forms.TextBox txb_Valor_Vale_Transporte;
+        private System.Windows.Forms.Label lbl_Valor_Vale_Transporte;
+        private System.Windows.Forms.Label lbl_Beneficios_Descontos;
+        private System.Windows.Forms.TextBox txb_Valor_Ferias;
+        private System.Windows.Forms.Label lbl_Valor_Ferias;
+        private System.Windows.Forms.TextBox txb_Valor_Horas_Extras;
+        private System.Windows.Forms.Label lbl_Valor_Horas_Extras;
+        private System.Windows.Forms.TextBox txb_Valor_Hora;
+        private System.Windows.Forms.Label lbl_Valor_Hora;
+        private System.Windows.Forms.TextBox txb_Horas_Extras;
+        private System.Windows.Forms.Label lbl_Horas_Extras;
+        private System.Windows.Forms.TextBox txb_Horas_Trabalhadas;
+        private System.Windows.Forms.Label lbl_Horas_Trabalhadas;
+        private System.Windows.Forms.TextBox txb_Data_Pagamento;
+        private System.Windows.Forms.Label lbl_Data;
+        private System.Windows.Forms.Label lbl_Financeiras;
+        private System.Windows.Forms.TextBox txb_CPF;
+        private System.Windows.Forms.Label lbl_CPF;
+        private System.Windows.Forms.Label lbl_Nome;
+        private System.Windows.Forms.TextBox txb_Nome;
+        private System.Windows.Forms.Label lbl_Funcionario;
     }
 }

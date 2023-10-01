@@ -34,14 +34,34 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             muda ou oculta elementos da tela */
             if (!Funcionario_Ataron_DAO.Cargo.ToLower().Contains("gerente"))
             {
-                lbl_Visualizar.Text = "Visualizar Perfil";
-                lbl_Visualizar.Location = new Point (175, 25);
+                lbl_Visualizar_Editar_Excluir.Text = "Visualizar Perfil";
+                lbl_Visualizar_Editar_Excluir.Location = new Point (175, 25);
                 lbl_Selecionar_Perfil.Visible = false;
                 cmb_Selecionar_Perfil.Visible = false;
                 btn_Voltar.Location = new Point (260, 460);
                 btn_Deletar.Visible = false;
                 btn_Editar.Visible = false;
                 btn_Editar.Visible = false;
+                txb_Senha.Visible = false;
+                lbl_Senha.Visible = false;
+                lbl_Maximo.Visible = false;
+                txb_Cargo.ReadOnly = true;
+                txb_Carteira_Trabalho.ReadOnly = true;
+                txb_CEP.ReadOnly = true;
+                txb_CPF.ReadOnly = true;
+                txb_Data_Admissao.ReadOnly = true;
+                txb_Data_Nascimento.ReadOnly = true;
+                txb_Departamento.ReadOnly = true;
+                txb_Email.ReadOnly = true;
+                txb_Matricula.ReadOnly = true;
+                txb_Nome.ReadOnly = true;
+                txb_PIS.ReadOnly = true;
+                txb_RA_Militar.ReadOnly = true;
+                txb_RG.ReadOnly = true;
+                txb_Sexo.ReadOnly = true;
+                txb_Telefone_Celular.ReadOnly = true;
+                txb_Telefone_Fixo.ReadOnly = true;
+                txb_Titulo_Eleitor.ReadOnly = true;
             }
         }
     }
