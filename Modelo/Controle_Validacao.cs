@@ -14,10 +14,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 {
     public class Controle_Validacao
     {
+        public static bool Login_Validado { get; set; }
         public static bool Email_Validado { get; set; }
         public static int Codigo_Gerado { get; set; }
         public static string Codigo_Seguranca { get; set; }
         public static bool Codigo_Validado { get; set; }
+        public static bool Senha_Validada { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
         {
@@ -52,7 +54,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     funcionario_ataron.Senha.ToLower().Contains("delete") ||
                     funcionario_ataron.Senha.ToLower().Contains("drop"))
             {
-                MessageBox.Show("CPF ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("CPF ou senha inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             /* cria uma instância da classe funcionario_ataron_dao na canada dal e chama o método
@@ -60,33 +62,35 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             o acesso é válido */
             else
             {
+                Login_Validado = true;
+
                 Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
                 funcionario_ataron_dao.Fazer_Login(funcionario_ataron);
             }
         }
 
-        public void Verificar_Email(Funcionario_Ataron funcionario_email)
+        public void Verificar_Email(Funcionario_Ataron funcionario_ataron)
         {
-            if (funcionario_email.Email == "")
+            if (funcionario_ataron.Email == "")
             {
                 MessageBox.Show("Email é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_email.Email.Length > 40)
+            else if (funcionario_ataron.Email.Length > 40)
             {
                 MessageBox.Show("Email deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_email.Email.ToLower().Contains("select") ||
-                    funcionario_email.Email.ToLower().Contains("insert") ||
-                    funcionario_email.Email.ToLower().Contains("update") ||
-                    funcionario_email.Email.ToLower().Contains("delete") ||
-                    funcionario_email.Email.ToLower().Contains("drop"))
+            else if (funcionario_ataron.Email.ToLower().Contains("select") ||
+                    funcionario_ataron.Email.ToLower().Contains("insert") ||
+                    funcionario_ataron.Email.ToLower().Contains("update") ||
+                    funcionario_ataron.Email.ToLower().Contains("delete") ||
+                    funcionario_ataron.Email.ToLower().Contains("drop"))
             {
-                MessageBox.Show("Email inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Email inválido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (!funcionario_email.Email.ToLower().Contains("@") || !funcionario_email.Email.ToLower().Contains("."))
+            else if (!funcionario_ataron.Email.ToLower().Contains("@") || !funcionario_ataron.Email.ToLower().Contains("."))
             {
                 MessageBox.Show("Email precisa ter @ e .", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -103,7 +107,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     // Enviar o e-mail com o código
                     MailMessage mailMessage = new MailMessage();
                     mailMessage.From = new MailAddress("bokuranteoficial@gmail.com");
-                    mailMessage.To.Add(funcionario_email.Email);
+                    mailMessage.To.Add(funcionario_ataron.Email);
                     mailMessage.Subject = "Ataron - Código de Segurança - Redefinição de Senha ";
                     mailMessage.Body = $"Seu Código de Segurança é: {Codigo_Seguranca}";
 
@@ -186,7 +190,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     funcionario_ataron.Senha.ToLower().Contains("delete") ||
                     funcionario_ataron.Senha.ToLower().Contains("drop"))
             {
-                MessageBox.Show("Campos inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (Repetir_Senha.ToLower().Contains("select") ||
@@ -195,7 +199,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     Repetir_Senha.ToLower().Contains("delete") ||
                     Repetir_Senha.ToLower().Contains("drop"))
             {
-                MessageBox.Show("Campos inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (funcionario_ataron.Senha != Repetir_Senha)
@@ -209,6 +213,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
                 if (pergunta == DialogResult.Yes)
                 {
+                    Senha_Validada = true;
+
                     Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
                     funcionario_ataron_dao.Redefinir_Senha(funcionario_ataron);
                 }

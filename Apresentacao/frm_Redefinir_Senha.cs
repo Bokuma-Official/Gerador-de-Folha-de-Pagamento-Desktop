@@ -45,14 +45,16 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Enviar_Email_Click(object sender, EventArgs e)
         {
-            Funcionario_Ataron funcionario_email = new Funcionario_Ataron();
-            funcionario_email.Email = txb_Email.Text;
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+            funcionario_ataron.Email = txb_Email.Text;
 
-            Controle_Validacao validar_email = new Controle_Validacao();
-            validar_email.Verificar_Email(funcionario_email);
+            Controle_Validacao controle = new Controle_Validacao();
+            controle.Verificar_Email(funcionario_ataron);
 
             if (Controle_Validacao.Email_Validado == true)
             {
+                Controle_Validacao.Email_Validado = false;
+
                 lbl_Email.Visible = false;
                 txb_Email.Visible = false;
                 btn_Enviar_Email.Visible = false;
@@ -67,11 +69,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             Codigo_Seguranca = txb_Codigo.Text;
 
-            Controle_Validacao validar_codigo = new Controle_Validacao();
-            validar_codigo.Verificar_Codigo(Codigo_Seguranca);
+            Controle_Validacao controle = new Controle_Validacao();
+            controle.Verificar_Codigo(Codigo_Seguranca);
 
             if (Controle_Validacao.Codigo_Validado == true)
             {
+                Controle_Validacao.Codigo_Validado = false;
+
                 lbl_Codigo.Visible = false;
                 txb_Codigo.Visible = false;
                 btn_Validar_Codigo.Visible = false;
@@ -89,15 +93,17 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             Repetir_Senha = txb_Repetir_Senha.Text;
 
-            Funcionario_Ataron funcionario_senha = new Funcionario_Ataron();
-            funcionario_senha.Email = txb_Email.Text;
-            funcionario_senha.Senha = txb_Senha.Text;
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+            funcionario_ataron.Email = txb_Email.Text;
+            funcionario_ataron.Senha = txb_Senha.Text;
 
-            Controle_Validacao redefinir_senha = new Controle_Validacao();
-            redefinir_senha.Verificar_Senha(funcionario_senha, Repetir_Senha);
+            Controle_Validacao controle = new Controle_Validacao();
+            controle.Verificar_Senha(funcionario_ataron, Repetir_Senha);
 
-            if (Funcionario_Ataron_DAO.Senha_Mudada == true)
+            if (Controle_Validacao.Senha_Validada == true && Funcionario_Ataron_DAO.Senha_Mudada == true)
             {
+                Controle_Validacao.Senha_Validada = false;
+
                 this.Hide();
                 frm_Login frm_login = new frm_Login();
                 frm_login.Show();

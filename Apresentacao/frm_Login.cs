@@ -38,8 +38,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
             /* verifica se a variavel estática cargo da classe funcionario_ataron_dao na camada dal tem
             o valor diferente de nulo para fechar a tela de login e abrir a tela de menu */
-            if (Funcionario_Ataron_DAO.Cargo != null)
+            if (Controle_Validacao.Login_Validado == true && Funcionario_Ataron_DAO.Cargo != null)
             {
+                Controle_Validacao.Login_Validado = false;
+
                 this.Hide();
                 frm_Menu frm_menu = new frm_Menu();
                 frm_menu.Show();
@@ -69,6 +71,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             // iniciar a tela com o foco do mouse no campo de cpf
             txb_CPF.Focus();
+
+            Funcionario_Ataron_DAO.Cargo = "";
+            Funcionario_Ataron_DAO.CPF = "";
         }
 
         private void txb_CPF_KeyDown(object sender, KeyEventArgs e)

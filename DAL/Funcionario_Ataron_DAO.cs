@@ -55,7 +55,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             }
         }
 
-        public void Redefinir_Senha(Funcionario_Ataron funcionario_senha)
+        public void Redefinir_Senha(Funcionario_Ataron funcionario_ataron)
         {
             try
             {
@@ -66,14 +66,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 // selecionar o cpf que tenha o mesmo email digitado e salvar na variavel cpf
                 SqlCommand command1 = new SqlCommand("select CPF from Funcionario_Ataron where Email = @Email", conexao);
 
-                command1.Parameters.AddWithValue("@Email", funcionario_senha.Email);
+                command1.Parameters.AddWithValue("@Email", funcionario_ataron.Email);
 
                 CPF = (string)command1.ExecuteScalar();
 
                 // atualizar a senha que tenha o mesmo cpf salvo na variável
                 SqlCommand command2 = new SqlCommand("update Funcionario_Ataron set Senha = @Senha where CPF = @CPF", conexao);
 
-                command2.Parameters.AddWithValue("@Senha", funcionario_senha.Senha);
+                command2.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
                 command2.Parameters.AddWithValue("@CPF", CPF);
 
                 int linhas_afetadas = command2.ExecuteNonQuery();
@@ -83,6 +83,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 if (linhas_afetadas > 0)
                 {
                     MessageBox.Show("A Senha foi redefinida com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     Senha_Mudada = true;
                 }
             }
