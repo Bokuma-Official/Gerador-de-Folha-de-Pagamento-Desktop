@@ -135,8 +135,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Hora_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -160,8 +159,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Horas_Extras_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -169,8 +167,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Ferias_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -186,8 +183,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Vale_Transporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -195,8 +191,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_Vale_Transporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -204,8 +199,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Vale_Alimentacao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -213,8 +207,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_Vale_Alimentacao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -222,8 +215,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_13_Salario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -231,8 +223,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_Seguro_Vida_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -240,8 +231,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_INSS_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -249,8 +239,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_FGTS_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -258,8 +247,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_IRRF_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -275,8 +263,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_Horas_Faltas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -284,8 +271,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Salario_Bruto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -293,8 +279,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Salario_Liquido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'R'
-                && e.KeyChar != 'r' && e.KeyChar != '$' && e.KeyChar != ',' && e.KeyChar != ' ')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -124,6 +125,28 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_Cadastrar_Click(object sender, EventArgs e)
+        {
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+            funcionario_ataron.CPF = txb_CPF.Text;
+            funcionario_ataron.Senha = txb_Senha.Text;
+            funcionario_ataron.Nome = txb_Nome.Text;
+            funcionario_ataron.RG = txb_RG.Text;
+            funcionario_ataron.PIS = txb_PIS.Text;
+            funcionario_ataron.Carteira_Trabalho = txb_Carteira_Trabalho.Text;
+            funcionario_ataron.Titulo_Eleitor = txb_Titulo_Eleitor.Text;
+            funcionario_ataron.Sexo = txb_Sexo.Text;
+            funcionario_ataron.Certificado_Militar = txb_RA_Militar.Text;
+            funcionario_ataron.Data_Nascimento = txb_Data_Nascimento.Text;
+            funcionario_ataron.Telefone_Fixo = txb_Telefone_Fixo.Text;
+            funcionario_ataron.Email = txb_Email.Text;
+            funcionario_ataron.Matricula = Convert.ToInt32(txb_Matricula.Text);
+            funcionario_ataron.Departamento = txb_Departamento.Text;
+            funcionario_ataron.Cargo = txb_Cargo.Text;
+            funcionario_ataron.Data_Admissao = txb_Data_Admissao.Text;
+            funcionario_ataron.CEP = txb_CEP.Text;
         }
     }
 }
