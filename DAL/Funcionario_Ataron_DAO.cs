@@ -17,6 +17,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         public static string Cargo { get; set; }
         public static string CPF { get; set; }
         public static bool Senha_Mudada { get; set; }
+        public static bool Cadastro_Realizado { get; set; }
 
         public void Fazer_Login(Funcionario_Ataron funcionario_ataron)
         {
@@ -92,6 +93,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             {
                 MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void Cadastrar_Funcionario(Funcionario_Ataron funcionario_ataron)
+        {
+            // @"insert into pessoas (nome, rg, cpf) values (@nome, @rg, @cpf)";
+            // cmd.ExecuteNonQuery();
+
+
         }
     }
 }

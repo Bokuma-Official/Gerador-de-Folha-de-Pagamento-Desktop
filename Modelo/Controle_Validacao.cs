@@ -20,6 +20,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public static string Codigo_Seguranca { get; set; }
         public static bool Codigo_Validado { get; set; }
         public static bool Senha_Validada { get; set; }
+        public static bool Cadastro_Validado { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
         {
@@ -171,7 +172,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
             else if (Repetir_Senha.Length > 20)
             {
-                MessageBox.Show("Campo de repetição de Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Repetição de Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (funcionario_ataron.Senha.Length < 8)
@@ -181,19 +182,16 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
             else if (Repetir_Senha.Length < 8)
             {
-                MessageBox.Show("Campo de repetição de Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Repetição de Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (funcionario_ataron.Senha.ToLower().Contains("select") ||
                     funcionario_ataron.Senha.ToLower().Contains("insert") ||
                     funcionario_ataron.Senha.ToLower().Contains("update") ||
                     funcionario_ataron.Senha.ToLower().Contains("delete") ||
-                    funcionario_ataron.Senha.ToLower().Contains("drop"))
-            {
-                MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                    funcionario_ataron.Senha.ToLower().Contains("drop") ||
 
-            else if (Repetir_Senha.ToLower().Contains("select") ||
+                    Repetir_Senha.ToLower().Contains("select") ||
                     Repetir_Senha.ToLower().Contains("insert") ||
                     Repetir_Senha.ToLower().Contains("update") ||
                     Repetir_Senha.ToLower().Contains("delete") ||
@@ -219,6 +217,267 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     funcionario_ataron_dao.Redefinir_Senha(funcionario_ataron);
                 }
             }
-        } 
+        }
+
+        public void Verificar_Cadastro_Funcionario(Funcionario_Ataron funcionario_ataron, string Repetir_Senha)
+        {
+            #region Campos Vazios
+            if (funcionario_ataron.Nome == "")
+            {
+                MessageBox.Show("Nome é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.CPF == "")
+            {
+                MessageBox.Show("CPF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.RG == "")
+            {
+                MessageBox.Show("RG é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.PIS == "")
+            {
+                MessageBox.Show("PIS é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Carteira_Trabalho == "")
+            {
+                MessageBox.Show("Carteira de Trabalho é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Titulo_Eleitor == "")
+            {
+                MessageBox.Show("Título de Eleitor é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Certificado_Militar == "" && funcionario_ataron.Sexo.ToLower().Contains("masculino") ||
+                funcionario_ataron.Certificado_Militar == "" && funcionario_ataron.Sexo.ToLower().Contains("homem"))
+            {
+                MessageBox.Show("Certificado Militar é obrigatório para pessoas do Sexo Masculino", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Sexo == "")
+            {
+                MessageBox.Show("Sexo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Data_Nascimento == "")
+            {
+                MessageBox.Show("Data de Nascimento é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Telefone_Celular == "")
+            {
+                MessageBox.Show("Telefone Celular é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Email == "")
+            {
+                MessageBox.Show("Email é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.CEP == "")
+            {
+                MessageBox.Show("CEP é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
+            else if (funcionario_ataron.Matricula == 0)
+            {
+                MessageBox.Show("Matrícula é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Departamento == "")
+            {
+                MessageBox.Show("Departamento é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Cargo == "")
+            {
+                MessageBox.Show("Cargo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Data_Admissao == "")
+            {
+                MessageBox.Show("Data de Admissão é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Senha == "")
+            {
+                MessageBox.Show("Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (Repetir_Senha == "")
+            {
+                MessageBox.Show("Repetir a Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            #region Limite de Caracteres
+            else if (funcionario_ataron.Nome.Length > 40)
+            {
+                MessageBox.Show("Nome deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.CPF.Length > 14)
+            {
+                MessageBox.Show("CPF deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.RG.Length > 11)
+            {
+                MessageBox.Show("RG deve ter menos que 11 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.PIS.Length > 14)
+            {
+                MessageBox.Show("PIS deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Carteira_Trabalho.Length > 20)
+            {
+                MessageBox.Show("Carteira de Trabalho deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Titulo_Eleitor.Length > 14)
+            {
+                MessageBox.Show("Título de Eleitor deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Certificado_Militar.Length > 15)
+            {
+                MessageBox.Show("Certificado Militar deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Sexo.Length > 15)
+            {
+                MessageBox.Show("Sexo deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Data_Nascimento.Length > 10)
+            {
+                MessageBox.Show("Data de Nascimento deve ter menos que 10 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Telefone_Celular.Length > 15)
+            {
+                MessageBox.Show("Telefone Celular deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Telefone_Fixo.Length > 14)
+            {
+                MessageBox.Show("Telefone Fixo deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Email.Length > 40)
+            {
+                MessageBox.Show("Email deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.CEP.Length > 9)
+            {
+                MessageBox.Show("CEP deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Departamento.Length > 40)
+            {
+                MessageBox.Show("Departamento deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Cargo.Length > 40)
+            {
+                MessageBox.Show("Cargo deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Data_Admissao.Length > 10)
+            {
+                MessageBox.Show("Data de Admissão deve ter menos que 10 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Senha.Length > 20)
+            {
+                MessageBox.Show("Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (Repetir_Senha.Length > 20)
+            {
+                MessageBox.Show("Repetir Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Senha.Length < 8)
+            {
+                MessageBox.Show("Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (Repetir_Senha.Length < 8)
+            {
+                MessageBox.Show("Repetir Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            else if (funcionario_ataron.Nome.ToLower().Contains("select") ||
+                    funcionario_ataron.Nome.ToLower().Contains("insert") ||
+                    funcionario_ataron.Nome.ToLower().Contains("update") ||
+                    funcionario_ataron.Nome.ToLower().Contains("delete") ||
+                    funcionario_ataron.Nome.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("select") ||
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("insert") ||
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("update") ||
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("delete") ||
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Email.ToLower().Contains("select") ||
+                    funcionario_ataron.Email.ToLower().Contains("insert") ||
+                    funcionario_ataron.Email.ToLower().Contains("update") ||
+                    funcionario_ataron.Email.ToLower().Contains("delete") ||
+                    funcionario_ataron.Email.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Departamento.ToLower().Contains("select") ||
+                    funcionario_ataron.Departamento.ToLower().Contains("insert") ||
+                    funcionario_ataron.Departamento.ToLower().Contains("update") ||
+                    funcionario_ataron.Departamento.ToLower().Contains("delete") ||
+                    funcionario_ataron.Departamento.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Cargo.ToLower().Contains("select") ||
+                    funcionario_ataron.Cargo.ToLower().Contains("insert") ||
+                    funcionario_ataron.Cargo.ToLower().Contains("update") ||
+                    funcionario_ataron.Cargo.ToLower().Contains("delete") ||
+                    funcionario_ataron.Cargo.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Senha.ToLower().Contains("select") ||
+                    funcionario_ataron.Senha.ToLower().Contains("insert") ||
+                    funcionario_ataron.Senha.ToLower().Contains("update") ||
+                    funcionario_ataron.Senha.ToLower().Contains("delete") ||
+                    funcionario_ataron.Senha.ToLower().Contains("drop") ||
+
+                    Repetir_Senha.ToLower().Contains("select") ||
+                    Repetir_Senha.ToLower().Contains("insert") ||
+                    Repetir_Senha.ToLower().Contains("update") ||
+                    Repetir_Senha.ToLower().Contains("delete") ||
+                    Repetir_Senha.ToLower().Contains("drop"))
+            {
+                MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Senha != Repetir_Senha)
+            {
+                MessageBox.Show("As Senhas não são iguais", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                DialogResult pergunta = MessageBox.Show("Deseja cadastrar o funcionário?", "Cadastrar Funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (pergunta == DialogResult.Yes)
+                {
+                    Cadastro_Validado = true;
+
+                    Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
+                    funcionario_ataron_dao.Cadastrar_Funcionario(funcionario_ataron);
+                }
+            }
+        }
     }
 }

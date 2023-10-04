@@ -48,8 +48,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
             funcionario_ataron.Email = txb_Email.Text;
 
-            Controle_Validacao controle = new Controle_Validacao();
-            controle.Verificar_Email(funcionario_ataron);
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Email(funcionario_ataron);
 
             if (Controle_Validacao.Email_Validado == true)
             {
@@ -69,8 +69,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             Codigo_Seguranca = txb_Codigo.Text;
 
-            Controle_Validacao controle = new Controle_Validacao();
-            controle.Verificar_Codigo(Codigo_Seguranca);
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Codigo(Codigo_Seguranca);
 
             if (Controle_Validacao.Codigo_Validado == true)
             {
@@ -97,12 +97,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             funcionario_ataron.Email = txb_Email.Text;
             funcionario_ataron.Senha = txb_Senha.Text;
 
-            Controle_Validacao controle = new Controle_Validacao();
-            controle.Verificar_Senha(funcionario_ataron, Repetir_Senha);
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Senha(funcionario_ataron, Repetir_Senha);
 
             if (Controle_Validacao.Senha_Validada == true && Funcionario_Ataron_DAO.Senha_Mudada == true)
             {
                 Controle_Validacao.Senha_Validada = false;
+                Funcionario_Ataron_DAO.Senha_Mudada = false;
 
                 this.Hide();
                 frm_Login frm_login = new frm_Login();

@@ -1,4 +1,5 @@
-﻿using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
+﻿using Gerador_de_Folha_de_Pagamento_Desktop.DAL;
+using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Cadastrar_Perfis : Form
     {
+        public string Repetir_Senha { get; set; }
+
         public frm_Cadastrar_Perfis()
         {
             InitializeComponent();
@@ -129,6 +132,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
+            Repetir_Senha = txb_Repetir_Senha.Text;
+
             Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
             funcionario_ataron.CPF = txb_CPF.Text;
             funcionario_ataron.Senha = txb_Senha.Text;
@@ -141,12 +146,42 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             funcionario_ataron.Certificado_Militar = txb_RA_Militar.Text;
             funcionario_ataron.Data_Nascimento = txb_Data_Nascimento.Text;
             funcionario_ataron.Telefone_Fixo = txb_Telefone_Fixo.Text;
+            funcionario_ataron.Telefone_Celular = txb_Telefone_Celular.Text;
             funcionario_ataron.Email = txb_Email.Text;
             funcionario_ataron.Matricula = Convert.ToInt32(txb_Matricula.Text);
             funcionario_ataron.Departamento = txb_Departamento.Text;
             funcionario_ataron.Cargo = txb_Cargo.Text;
             funcionario_ataron.Data_Admissao = txb_Data_Admissao.Text;
             funcionario_ataron.CEP = txb_CEP.Text;
+
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Cadastro_Funcionario(funcionario_ataron, Repetir_Senha);
+
+            if (Controle_Validacao.Cadastro_Validado == true && Funcionario_Ataron_DAO.Cadastro_Realizado == true)
+            {
+                Controle_Validacao.Cadastro_Validado = false;
+                Funcionario_Ataron_DAO.Cadastro_Realizado = false;
+
+                txb_Repetir_Senha.Clear();
+                txb_CPF.Clear();
+                txb_Senha.Clear();
+                txb_Nome.Clear();
+                txb_RG.Clear();
+                txb_PIS.Clear();
+                txb_Carteira_Trabalho.Clear();
+                txb_Titulo_Eleitor.Clear();
+                txb_Sexo.Clear();
+                txb_RA_Militar.Clear();
+                txb_Data_Nascimento.Clear();
+                txb_Telefone_Fixo.Clear();
+                txb_Telefone_Celular.Clear();
+                txb_Email.Clear();
+                txb_Matricula.Clear();
+                txb_Departamento.Clear();
+                txb_Cargo.Clear();
+                txb_Data_Admissao.Clear();
+                txb_CEP.Clear();
+            }
         }
     }
 }
