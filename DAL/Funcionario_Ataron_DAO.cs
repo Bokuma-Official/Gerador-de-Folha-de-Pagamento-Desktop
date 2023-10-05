@@ -97,10 +97,49 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
         public void Cadastrar_Funcionario(Funcionario_Ataron funcionario_ataron)
         {
-            // @"insert into pessoas (nome, rg, cpf) values (@nome, @rg, @cpf)";
-            // cmd.ExecuteNonQuery();
+            try
+            {
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
 
+                conexao.Open();
 
+                
+                SqlCommand command = new SqlCommand("insert into Funcionario_Ataron) values (@CPF, @Senha, @Nome, @RG, @PIS, " +
+                    "@Carteira_Trabalho, @Titulo_Eleitor, @Sexo, @Certificado_Militar, @Data_Nascimento, @Telefone_Fixo," +
+                    " @Telefone_Celular, @Email, @Matricula, @Departamento, @Cargo, @Data_Admissao, @CEP)", conexao);
+
+                command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
+                command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
+                command.Parameters.AddWithValue("@Nome", funcionario_ataron.Nome);
+                command.Parameters.AddWithValue("@RG", funcionario_ataron.RG);
+                command.Parameters.AddWithValue("@PIS", funcionario_ataron.PIS);
+                command.Parameters.AddWithValue("@Carteira_Trabalho", funcionario_ataron.Carteira_Trabalho);
+                command.Parameters.AddWithValue("@Titulo_Eleitor", funcionario_ataron.Titulo_Eleitor);
+                command.Parameters.AddWithValue("@Sexo", funcionario_ataron.Sexo);
+                command.Parameters.AddWithValue("@Certificado_Militar", funcionario_ataron.Certificado_Militar);
+                command.Parameters.AddWithValue("@Data_Nascimento", funcionario_ataron.Data_Nascimento);
+                command.Parameters.AddWithValue("@Telefone_Fixo", funcionario_ataron.Telefone_Fixo);
+                command.Parameters.AddWithValue("@Telefone_Celular", funcionario_ataron.Telefone_Celular);
+                command.Parameters.AddWithValue("@Email", funcionario_ataron.Email);
+                command.Parameters.AddWithValue("@Matricula", funcionario_ataron.Matricula);
+                command.Parameters.AddWithValue("@Departamento", funcionario_ataron.Departamento);
+                command.Parameters.AddWithValue("@Cargo", funcionario_ataron.Cargo);
+                command.Parameters.AddWithValue("@Data_Admissao", funcionario_ataron.Data_Admissao);
+                command.Parameters.AddWithValue("@CEP", funcionario_ataron.CEP);
+
+                command.ExecuteNonQuery();
+
+                conexao.Close();
+
+                MessageBox.Show("O funcionário foi cadasstrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Cadastro_Realizado = true;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
