@@ -439,7 +439,7 @@
             this.txb_Email.Location = new System.Drawing.Point(317, 429);
             this.txb_Email.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Email.Name = "txb_Email";
-            this.txb_Email.Size = new System.Drawing.Size(219, 22);
+            this.txb_Email.Size = new System.Drawing.Size(257, 22);
             this.txb_Email.TabIndex = 384;
             // 
             // lbl_Email
@@ -572,7 +572,7 @@
             this.txb_Nome.Location = new System.Drawing.Point(28, 198);
             this.txb_Nome.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Nome.Name = "txb_Nome";
-            this.txb_Nome.Size = new System.Drawing.Size(271, 22);
+            this.txb_Nome.Size = new System.Drawing.Size(281, 22);
             this.txb_Nome.TabIndex = 369;
             // 
             // lbl_Pessoais

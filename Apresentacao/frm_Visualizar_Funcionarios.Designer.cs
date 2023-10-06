@@ -123,7 +123,7 @@
             // 
             this.cmb_Selecionar_Funcionario.FormattingEnabled = true;
             this.cmb_Selecionar_Funcionario.Location = new System.Drawing.Point(17, 98);
-            this.cmb_Selecionar_Funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Selecionar_Funcionario.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Selecionar_Funcionario.Name = "cmb_Selecionar_Funcionario";
             this.cmb_Selecionar_Funcionario.Size = new System.Drawing.Size(264, 24);
             this.cmb_Selecionar_Funcionario.TabIndex = 171;
@@ -146,7 +146,7 @@
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btn_Editar.Location = new System.Drawing.Point(835, 711);
-            this.btn_Editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(135, 70);
             this.btn_Editar.TabIndex = 174;
@@ -159,7 +159,7 @@
             this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btn_Voltar.Location = new System.Drawing.Point(464, 711);
-            this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(121, 70);
             this.btn_Voltar.TabIndex = 175;
@@ -173,7 +173,7 @@
             this.btn_Deletar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Deletar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btn_Deletar.Location = new System.Drawing.Point(100, 711);
-            this.btn_Deletar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Deletar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Deletar.Name = "btn_Deletar";
             this.btn_Deletar.Size = new System.Drawing.Size(135, 70);
             this.btn_Deletar.TabIndex = 389;
@@ -205,7 +205,7 @@
             // txb_Sexo
             // 
             this.txb_Sexo.Location = new System.Drawing.Point(15, 614);
-            this.txb_Sexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Sexo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Sexo.Name = "txb_Sexo";
             this.txb_Sexo.Size = new System.Drawing.Size(215, 22);
             this.txb_Sexo.TabIndex = 457;
@@ -213,7 +213,7 @@
             // txb_Estado
             // 
             this.txb_Estado.Location = new System.Drawing.Point(573, 423);
-            this.txb_Estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Estado.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Estado.Name = "txb_Estado";
             this.txb_Estado.Size = new System.Drawing.Size(196, 22);
             this.txb_Estado.TabIndex = 456;
@@ -221,7 +221,7 @@
             // txb_Tipo_Contrato
             // 
             this.txb_Tipo_Contrato.Location = new System.Drawing.Point(295, 514);
-            this.txb_Tipo_Contrato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Tipo_Contrato.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Tipo_Contrato.Name = "txb_Tipo_Contrato";
             this.txb_Tipo_Contrato.Size = new System.Drawing.Size(196, 22);
             this.txb_Tipo_Contrato.TabIndex = 455;
@@ -240,7 +240,7 @@
             // txb_Senha
             // 
             this.txb_Senha.Location = new System.Drawing.Point(833, 423);
-            this.txb_Senha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Senha.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Senha.Name = "txb_Senha";
             this.txb_Senha.PasswordChar = '*';
             this.txb_Senha.Size = new System.Drawing.Size(212, 22);
@@ -260,7 +260,7 @@
             // txb_Dependentes
             // 
             this.txb_Dependentes.Location = new System.Drawing.Point(296, 196);
-            this.txb_Dependentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Dependentes.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Dependentes.Name = "txb_Dependentes";
             this.txb_Dependentes.Size = new System.Drawing.Size(212, 22);
             this.txb_Dependentes.TabIndex = 449;
@@ -292,7 +292,7 @@
             // txb_Numero_Conta
             // 
             this.txb_Numero_Conta.Location = new System.Drawing.Point(836, 295);
-            this.txb_Numero_Conta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Numero_Conta.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Numero_Conta.Name = "txb_Numero_Conta";
             this.txb_Numero_Conta.Size = new System.Drawing.Size(212, 22);
             this.txb_Numero_Conta.TabIndex = 446;
@@ -312,7 +312,7 @@
             // txb_Numero_Agencia
             // 
             this.txb_Numero_Agencia.Location = new System.Drawing.Point(836, 242);
-            this.txb_Numero_Agencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Numero_Agencia.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Numero_Agencia.Name = "txb_Numero_Agencia";
             this.txb_Numero_Agencia.Size = new System.Drawing.Size(212, 22);
             this.txb_Numero_Agencia.TabIndex = 444;
@@ -332,7 +332,7 @@
             // txb_Agencia
             // 
             this.txb_Agencia.Location = new System.Drawing.Point(836, 188);
-            this.txb_Agencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Agencia.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Agencia.Name = "txb_Agencia";
             this.txb_Agencia.Size = new System.Drawing.Size(212, 22);
             this.txb_Agencia.TabIndex = 442;
@@ -363,7 +363,7 @@
             // txb_Complemento
             // 
             this.txb_Complemento.Location = new System.Drawing.Point(573, 679);
-            this.txb_Complemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Complemento.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Complemento.Name = "txb_Complemento";
             this.txb_Complemento.Size = new System.Drawing.Size(196, 22);
             this.txb_Complemento.TabIndex = 439;
@@ -404,7 +404,7 @@
             // txb_Admissao
             // 
             this.txb_Admissao.Location = new System.Drawing.Point(295, 463);
-            this.txb_Admissao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Admissao.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Admissao.Name = "txb_Admissao";
             this.txb_Admissao.Size = new System.Drawing.Size(196, 22);
             this.txb_Admissao.TabIndex = 435;
@@ -424,7 +424,7 @@
             // txb_Matricula
             // 
             this.txb_Matricula.Location = new System.Drawing.Point(296, 295);
-            this.txb_Matricula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Matricula.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Matricula.Name = "txb_Matricula";
             this.txb_Matricula.Size = new System.Drawing.Size(196, 22);
             this.txb_Matricula.TabIndex = 433;
@@ -444,7 +444,7 @@
             // txb_Cargo
             // 
             this.txb_Cargo.Location = new System.Drawing.Point(296, 404);
-            this.txb_Cargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Cargo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Cargo.Name = "txb_Cargo";
             this.txb_Cargo.Size = new System.Drawing.Size(196, 22);
             this.txb_Cargo.TabIndex = 431;
@@ -463,7 +463,7 @@
             // txb_Departamento
             // 
             this.txb_Departamento.Location = new System.Drawing.Point(296, 350);
-            this.txb_Departamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Departamento.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Departamento.Name = "txb_Departamento";
             this.txb_Departamento.Size = new System.Drawing.Size(196, 22);
             this.txb_Departamento.TabIndex = 429;
@@ -494,7 +494,7 @@
             // txb_Data_Nascimento
             // 
             this.txb_Data_Nascimento.Location = new System.Drawing.Point(17, 354);
-            this.txb_Data_Nascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Data_Nascimento.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Data_Nascimento.Name = "txb_Data_Nascimento";
             this.txb_Data_Nascimento.Size = new System.Drawing.Size(213, 22);
             this.txb_Data_Nascimento.TabIndex = 426;
@@ -514,7 +514,7 @@
             // txb_Numero
             // 
             this.txb_Numero.Location = new System.Drawing.Point(573, 635);
-            this.txb_Numero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Numero.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Numero.Name = "txb_Numero";
             this.txb_Numero.Size = new System.Drawing.Size(196, 22);
             this.txb_Numero.TabIndex = 424;
@@ -534,7 +534,7 @@
             // txb_RA_Militar
             // 
             this.txb_RA_Militar.Location = new System.Drawing.Point(17, 562);
-            this.txb_RA_Militar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_RA_Militar.Margin = new System.Windows.Forms.Padding(4);
             this.txb_RA_Militar.Name = "txb_RA_Militar";
             this.txb_RA_Militar.Size = new System.Drawing.Size(213, 22);
             this.txb_RA_Militar.TabIndex = 422;
@@ -554,7 +554,7 @@
             // txb_Titulo_Eleitor
             // 
             this.txb_Titulo_Eleitor.Location = new System.Drawing.Point(17, 512);
-            this.txb_Titulo_Eleitor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Titulo_Eleitor.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Titulo_Eleitor.Name = "txb_Titulo_Eleitor";
             this.txb_Titulo_Eleitor.Size = new System.Drawing.Size(213, 22);
             this.txb_Titulo_Eleitor.TabIndex = 420;
@@ -574,7 +574,7 @@
             // txb_Carteira_Trabalho
             // 
             this.txb_Carteira_Trabalho.Location = new System.Drawing.Point(17, 462);
-            this.txb_Carteira_Trabalho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Carteira_Trabalho.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Carteira_Trabalho.Name = "txb_Carteira_Trabalho";
             this.txb_Carteira_Trabalho.Size = new System.Drawing.Size(213, 22);
             this.txb_Carteira_Trabalho.TabIndex = 418;
@@ -594,7 +594,7 @@
             // txb_PIS
             // 
             this.txb_PIS.Location = new System.Drawing.Point(17, 414);
-            this.txb_PIS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_PIS.Margin = new System.Windows.Forms.Padding(4);
             this.txb_PIS.Name = "txb_PIS";
             this.txb_PIS.Size = new System.Drawing.Size(213, 22);
             this.txb_PIS.TabIndex = 416;
@@ -614,7 +614,7 @@
             // txb_RG
             // 
             this.txb_RG.Location = new System.Drawing.Point(17, 302);
-            this.txb_RG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_RG.Margin = new System.Windows.Forms.Padding(4);
             this.txb_RG.Name = "txb_RG";
             this.txb_RG.Size = new System.Drawing.Size(213, 22);
             this.txb_RG.TabIndex = 414;
@@ -634,7 +634,7 @@
             // txb_Logradouro
             // 
             this.txb_Logradouro.Location = new System.Drawing.Point(573, 587);
-            this.txb_Logradouro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Logradouro.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Logradouro.Name = "txb_Logradouro";
             this.txb_Logradouro.Size = new System.Drawing.Size(196, 22);
             this.txb_Logradouro.TabIndex = 412;
@@ -653,7 +653,7 @@
             // txb_Bairro
             // 
             this.txb_Bairro.Location = new System.Drawing.Point(573, 527);
-            this.txb_Bairro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Bairro.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Bairro.Name = "txb_Bairro";
             this.txb_Bairro.Size = new System.Drawing.Size(196, 22);
             this.txb_Bairro.TabIndex = 410;
@@ -672,7 +672,7 @@
             // txb_Cidade
             // 
             this.txb_Cidade.Location = new System.Drawing.Point(573, 475);
-            this.txb_Cidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Cidade.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Cidade.Name = "txb_Cidade";
             this.txb_Cidade.Size = new System.Drawing.Size(196, 22);
             this.txb_Cidade.TabIndex = 408;
@@ -702,7 +702,7 @@
             // txb_CEP
             // 
             this.txb_CEP.Location = new System.Drawing.Point(573, 367);
-            this.txb_CEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_CEP.Margin = new System.Windows.Forms.Padding(4);
             this.txb_CEP.Name = "txb_CEP";
             this.txb_CEP.Size = new System.Drawing.Size(196, 22);
             this.txb_CEP.TabIndex = 405;
@@ -745,9 +745,9 @@
             // txb_Email
             // 
             this.txb_Email.Location = new System.Drawing.Point(573, 188);
-            this.txb_Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Email.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Email.Name = "txb_Email";
-            this.txb_Email.Size = new System.Drawing.Size(196, 22);
+            this.txb_Email.Size = new System.Drawing.Size(255, 22);
             this.txb_Email.TabIndex = 401;
             // 
             // lbl_Email
@@ -764,7 +764,7 @@
             // txb_Telefone_Fixo
             // 
             this.txb_Telefone_Fixo.Location = new System.Drawing.Point(573, 295);
-            this.txb_Telefone_Fixo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Telefone_Fixo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Telefone_Fixo.Name = "txb_Telefone_Fixo";
             this.txb_Telefone_Fixo.Size = new System.Drawing.Size(195, 22);
             this.txb_Telefone_Fixo.TabIndex = 399;
@@ -784,7 +784,7 @@
             // txb_Telefone_Celular
             // 
             this.txb_Telefone_Celular.Location = new System.Drawing.Point(573, 242);
-            this.txb_Telefone_Celular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Telefone_Celular.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Telefone_Celular.Name = "txb_Telefone_Celular";
             this.txb_Telefone_Celular.Size = new System.Drawing.Size(196, 22);
             this.txb_Telefone_Celular.TabIndex = 397;
@@ -816,7 +816,7 @@
             // txb_CPF
             // 
             this.txb_CPF.Location = new System.Drawing.Point(17, 249);
-            this.txb_CPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_CPF.Margin = new System.Windows.Forms.Padding(4);
             this.txb_CPF.Name = "txb_CPF";
             this.txb_CPF.Size = new System.Drawing.Size(213, 22);
             this.txb_CPF.TabIndex = 394;
@@ -847,7 +847,7 @@
             // txb_Nome
             // 
             this.txb_Nome.Location = new System.Drawing.Point(17, 194);
-            this.txb_Nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Nome.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Nome.Name = "txb_Nome";
             this.txb_Nome.Size = new System.Drawing.Size(264, 22);
             this.txb_Nome.TabIndex = 391;
@@ -867,7 +867,7 @@
             // txb_CBO_Cargo
             // 
             this.txb_CBO_Cargo.Location = new System.Drawing.Point(295, 562);
-            this.txb_CBO_Cargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_CBO_Cargo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_CBO_Cargo.Name = "txb_CBO_Cargo";
             this.txb_CBO_Cargo.Size = new System.Drawing.Size(196, 22);
             this.txb_CBO_Cargo.TabIndex = 461;
@@ -966,7 +966,7 @@
             this.Controls.Add(this.cmb_Selecionar_Funcionario);
             this.Controls.Add(this.lbl_Visualizar_Editar_Excluir);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Visualizar_Funcionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
