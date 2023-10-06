@@ -135,7 +135,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 if (linhas_afetadas > 0)
                 {
-                    MessageBox.Show("O perfil foi cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("O Perfil foi cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Cadastro_Perfil_Realizado = true;
                 }
@@ -269,7 +269,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 if (linhas_afetadas > 0)
                 {
-                    MessageBox.Show("O perfil foi deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("O Perfil foi deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Perfil_Deletado = true;
                 }

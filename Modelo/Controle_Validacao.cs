@@ -136,17 +136,17 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         {
             if (codigo_seguranca.ToString() == "")
             {
-                MessageBox.Show("Código de segurança é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Código de Segurança é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (codigo_seguranca.ToString().Length > 6)
             {
-                MessageBox.Show("O Código de segurança deve ter menos que 6 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("O Código de Segurança deve ter menos que 6 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (Codigo_Seguranca != codigo_seguranca)
             {
-                MessageBox.Show("Código de segurança inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Código de Segurança inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
@@ -209,7 +209,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
             else
             {
-                DialogResult pergunta = MessageBox.Show("Deseja redefinir a senha?", "Redefinição de senha", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                DialogResult pergunta = MessageBox.Show("Deseja redefinir a Senha?", "Redefinição de Senha", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if (pergunta == DialogResult.Yes)
                 {
@@ -485,7 +485,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
             else
             {
-                DialogResult pergunta = MessageBox.Show("Deseja cadastrar o perfil?", "Cadastrar Perfil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                DialogResult pergunta = MessageBox.Show("Deseja cadastrar o Perfil?", "Cadastrar Perfil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if (pergunta == DialogResult.Yes)
                 {
@@ -513,17 +513,17 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         {
             if (cpf_perfil_selecionado == "")
             {
-                MessageBox.Show("Selecione um perfil para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione um Perfil para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (Funcionario_Ataron_DAO.CPF_Perfil_Logado == cpf_perfil_selecionado)
             {
-                MessageBox.Show("Você não pode deletar o seu próprio perfil", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Você não pode deletar o seu próprio Perfil", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else
             {
-                DialogResult pergunta = MessageBox.Show("Deseja excluir o perfil?", "Redefinição de senha", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                DialogResult pergunta = MessageBox.Show("Deseja deletar o Perfil?", "Deletar Perfil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if (pergunta == DialogResult.Yes)
                 {
