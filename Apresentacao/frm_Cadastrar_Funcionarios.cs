@@ -165,5 +165,34 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 e.Handled = true;
             }
         }
+
+        // alterar check de outras checkbox se uma foi checada
+        private void chk_Masculino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Feminino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Feminino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Nao_Binario_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Feminino.Checked = false;
+        }
+
+        private void chk_Nao_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Sim.Checked = false;
+        }
+
+        private void chk_Sim_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Nao.Checked = false;
+        }
     }
 }

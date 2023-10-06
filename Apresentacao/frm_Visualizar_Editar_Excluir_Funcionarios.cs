@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    public partial class frm_Visualizar_Funcionarios : Form
+    public partial class frm_Visualizar_Editar_Excluir_Funcionarios : Form
     {
-        public frm_Visualizar_Funcionarios()
+        public frm_Visualizar_Editar_Excluir_Funcionarios()
         {
             InitializeComponent();
         }
@@ -23,11 +23,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             this.Hide();
             frm_Menu frm_menu = new frm_Menu();
             frm_menu.Show();
-        }
-
-        private void frm_Visualizar_Funcionarios_Shown(object sender, EventArgs e)
-        {
-            txb_Nome.Focus();
         }
 
         private void txb_CPF_KeyPress(object sender, KeyPressEventArgs e)
@@ -164,6 +159,34 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             {
                 e.Handled = true;
             }
+        }
+
+        private void chk_Masculino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Feminino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Feminino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Nao_Binario_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Feminino.Checked = false;
+        }
+
+        private void chk_Nao_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Sim.Checked = false;
+        }
+
+        private void chk_Sim_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Nao.Checked = false;
         }
     }
 }

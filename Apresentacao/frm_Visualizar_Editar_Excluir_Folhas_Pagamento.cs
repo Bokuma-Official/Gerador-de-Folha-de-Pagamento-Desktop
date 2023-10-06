@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    public partial class frm_Visualizar_Folhas_Pagamento : Form
+    public partial class frm_Visualizar_Editar_Excluir_Folhas_Pagamento : Form
     {
-        public frm_Visualizar_Folhas_Pagamento()
+        public frm_Visualizar_Editar_Excluir_Folhas_Pagamento()
         {
             InitializeComponent();
         }
@@ -115,11 +115,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             {
                 txb_Desconto_Horas_Faltas.Text = "";
             }
-        }
-
-        private void frm_Visualizar_Folhas_Pagamento_Shown(object sender, EventArgs e)
-        {
-            txb_Data_Pagamento.Focus();
         }
 
         private void txb_Data_Pagamento_KeyPress(object sender, KeyPressEventArgs e)

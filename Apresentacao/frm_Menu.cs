@@ -55,21 +55,21 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void btn_Visualizar_Funcionarios_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_Visualizar_Funcionarios frm_visualizar_funcionarios = new frm_Visualizar_Funcionarios();
+            frm_Visualizar_Editar_Excluir_Funcionarios frm_visualizar_funcionarios = new frm_Visualizar_Editar_Excluir_Funcionarios();
             frm_visualizar_funcionarios.Show();
         }
 
         private void btn_Visualizar_Folhas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_Visualizar_Folhas_Pagamento frm_visualizar_folhas_pagamento = new frm_Visualizar_Folhas_Pagamento();
+            frm_Visualizar_Editar_Excluir_Folhas_Pagamento frm_visualizar_folhas_pagamento = new frm_Visualizar_Editar_Excluir_Folhas_Pagamento();
             frm_visualizar_folhas_pagamento.Show();
         }
 
         private void btn_Visualizar_Perfis_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_Visualizar_Perfis frm_visualizar_perfis = new frm_Visualizar_Perfis();
+            frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
             frm_visualizar_perfis.Show();
         }
 

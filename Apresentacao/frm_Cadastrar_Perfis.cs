@@ -142,7 +142,27 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             funcionario_ataron.PIS = txb_PIS.Text;
             funcionario_ataron.Carteira_Trabalho = txb_Carteira_Trabalho.Text;
             funcionario_ataron.Titulo_Eleitor = txb_Titulo_Eleitor.Text;
-            funcionario_ataron.Sexo = txb_Sexo.Text;
+
+            if (chk_Masculino.Checked == true)
+            {
+                funcionario_ataron.Sexo = chk_Masculino.Text;
+            }
+
+            else if (chk_Feminino.Checked == true)
+            {
+                funcionario_ataron.Sexo = chk_Feminino.Text;
+            }
+
+            else if (chk_Nao_Binario.Checked == true)
+            {
+                funcionario_ataron.Sexo = chk_Nao_Binario.Text;
+            }
+
+            else
+            {
+                funcionario_ataron.Sexo = "";
+            }
+
             funcionario_ataron.Certificado_Militar = txb_RA_Militar.Text;
             funcionario_ataron.Data_Nascimento = txb_Data_Nascimento.Text;
             funcionario_ataron.Telefone_Fixo = txb_Telefone_Fixo.Text;
@@ -170,7 +190,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_PIS.Clear();
                 txb_Carteira_Trabalho.Clear();
                 txb_Titulo_Eleitor.Clear();
-                txb_Sexo.Clear();
+                chk_Masculino.Checked = true;
+                chk_Feminino.Checked = false;
+                chk_Nao_Binario.Checked = false;
                 txb_RA_Militar.Clear();
                 txb_Data_Nascimento.Clear();
                 txb_Telefone_Fixo.Clear();
@@ -182,6 +204,24 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_Data_Admissao.Clear();
                 txb_CEP.Clear();
             }
+        }
+
+        private void chk_Masculino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Feminino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Feminino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Nao_Binario_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Feminino.Checked = false;
         }
     }
 }

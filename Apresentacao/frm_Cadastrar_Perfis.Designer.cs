@@ -74,7 +74,9 @@
             this.lbl_Data = new System.Windows.Forms.Label();
             this.txb_Departamento = new System.Windows.Forms.TextBox();
             this.txb_Cargo = new System.Windows.Forms.TextBox();
-            this.txb_Sexo = new System.Windows.Forms.TextBox();
+            this.chk_Masculino = new System.Windows.Forms.CheckBox();
+            this.chk_Feminino = new System.Windows.Forms.CheckBox();
+            this.chk_Nao_Binario = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lbl_Cadastrar
@@ -82,7 +84,7 @@
             this.lbl_Cadastrar.AutoSize = true;
             this.lbl_Cadastrar.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Cadastrar.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_Cadastrar.Location = new System.Drawing.Point(217, 9);
+            this.lbl_Cadastrar.Location = new System.Drawing.Point(338, 9);
             this.lbl_Cadastrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Cadastrar.Name = "lbl_Cadastrar";
             this.lbl_Cadastrar.Size = new System.Drawing.Size(340, 59);
@@ -104,9 +106,9 @@
             // txb_Nome
             // 
             this.txb_Nome.Location = new System.Drawing.Point(27, 156);
-            this.txb_Nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Nome.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Nome.Name = "txb_Nome";
-            this.txb_Nome.Size = new System.Drawing.Size(272, 22);
+            this.txb_Nome.Size = new System.Drawing.Size(292, 22);
             this.txb_Nome.TabIndex = 2;
             // 
             // lbl_Nome
@@ -134,9 +136,9 @@
             // txb_CPF
             // 
             this.txb_CPF.Location = new System.Drawing.Point(27, 210);
-            this.txb_CPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_CPF.Margin = new System.Windows.Forms.Padding(4);
             this.txb_CPF.Name = "txb_CPF";
-            this.txb_CPF.Size = new System.Drawing.Size(232, 22);
+            this.txb_CPF.Size = new System.Drawing.Size(292, 22);
             this.txb_CPF.TabIndex = 5;
             this.txb_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CPF_KeyPress);
             // 
@@ -144,7 +146,7 @@
             // 
             this.lbl_Senha.AutoSize = true;
             this.lbl_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Senha.Location = new System.Drawing.Point(565, 399);
+            this.lbl_Senha.Location = new System.Drawing.Point(737, 402);
             this.lbl_Senha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Senha.Name = "lbl_Senha";
             this.lbl_Senha.Size = new System.Drawing.Size(54, 18);
@@ -153,18 +155,18 @@
             // 
             // txb_Senha
             // 
-            this.txb_Senha.Location = new System.Drawing.Point(571, 422);
-            this.txb_Senha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Senha.Location = new System.Drawing.Point(740, 429);
+            this.txb_Senha.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Senha.Name = "txb_Senha";
             this.txb_Senha.PasswordChar = '*';
-            this.txb_Senha.Size = new System.Drawing.Size(223, 22);
+            this.txb_Senha.Size = new System.Drawing.Size(292, 22);
             this.txb_Senha.TabIndex = 7;
             // 
             // lbl_Maximo
             // 
             this.lbl_Maximo.AutoSize = true;
             this.lbl_Maximo.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbl_Maximo.Location = new System.Drawing.Point(661, 399);
+            this.lbl_Maximo.Location = new System.Drawing.Point(901, 402);
             this.lbl_Maximo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Maximo.Name = "lbl_Maximo";
             this.lbl_Maximo.Size = new System.Drawing.Size(127, 16);
@@ -175,7 +177,7 @@
             // 
             this.lbl_Repetir_Senha.AutoSize = true;
             this.lbl_Repetir_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Repetir_Senha.Location = new System.Drawing.Point(565, 450);
+            this.lbl_Repetir_Senha.Location = new System.Drawing.Point(737, 458);
             this.lbl_Repetir_Senha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Repetir_Senha.Name = "lbl_Repetir_Senha";
             this.lbl_Repetir_Senha.Size = new System.Drawing.Size(105, 18);
@@ -184,11 +186,11 @@
             // 
             // txb_Repetir_Senha
             // 
-            this.txb_Repetir_Senha.Location = new System.Drawing.Point(571, 473);
-            this.txb_Repetir_Senha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Repetir_Senha.Location = new System.Drawing.Point(740, 480);
+            this.txb_Repetir_Senha.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Repetir_Senha.Name = "txb_Repetir_Senha";
             this.txb_Repetir_Senha.PasswordChar = '*';
-            this.txb_Repetir_Senha.Size = new System.Drawing.Size(223, 22);
+            this.txb_Repetir_Senha.Size = new System.Drawing.Size(292, 22);
             this.txb_Repetir_Senha.TabIndex = 10;
             // 
             // lbl_Contato
@@ -196,7 +198,7 @@
             this.lbl_Contato.AutoSize = true;
             this.lbl_Contato.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Contato.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbl_Contato.Location = new System.Drawing.Point(301, 233);
+            this.lbl_Contato.Location = new System.Drawing.Point(382, 247);
             this.lbl_Contato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Contato.Name = "lbl_Contato";
             this.lbl_Contato.Size = new System.Drawing.Size(81, 22);
@@ -207,7 +209,7 @@
             // 
             this.lbl_Celular.AutoSize = true;
             this.lbl_Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Celular.Location = new System.Drawing.Point(301, 261);
+            this.lbl_Celular.Location = new System.Drawing.Point(380, 268);
             this.lbl_Celular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Celular.Name = "lbl_Celular";
             this.lbl_Celular.Size = new System.Drawing.Size(119, 18);
@@ -216,10 +218,10 @@
             // 
             // txb_Telefone_Celular
             // 
-            this.txb_Telefone_Celular.Location = new System.Drawing.Point(307, 283);
-            this.txb_Telefone_Celular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Telefone_Celular.Location = new System.Drawing.Point(386, 290);
+            this.txb_Telefone_Celular.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Telefone_Celular.Name = "txb_Telefone_Celular";
-            this.txb_Telefone_Celular.Size = new System.Drawing.Size(219, 22);
+            this.txb_Telefone_Celular.Size = new System.Drawing.Size(292, 22);
             this.txb_Telefone_Celular.TabIndex = 13;
             this.txb_Telefone_Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Telefone_Celular_KeyPress);
             // 
@@ -227,7 +229,7 @@
             // 
             this.lbl_Fixo.AutoSize = true;
             this.lbl_Fixo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Fixo.Location = new System.Drawing.Point(301, 313);
+            this.lbl_Fixo.Location = new System.Drawing.Point(380, 316);
             this.lbl_Fixo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Fixo.Name = "lbl_Fixo";
             this.lbl_Fixo.Size = new System.Drawing.Size(101, 18);
@@ -236,10 +238,10 @@
             // 
             // txb_Telefone_Fixo
             // 
-            this.txb_Telefone_Fixo.Location = new System.Drawing.Point(307, 334);
-            this.txb_Telefone_Fixo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Telefone_Fixo.Location = new System.Drawing.Point(386, 335);
+            this.txb_Telefone_Fixo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Telefone_Fixo.Name = "txb_Telefone_Fixo";
-            this.txb_Telefone_Fixo.Size = new System.Drawing.Size(219, 22);
+            this.txb_Telefone_Fixo.Size = new System.Drawing.Size(292, 22);
             this.txb_Telefone_Fixo.TabIndex = 15;
             this.txb_Telefone_Fixo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Telefone_Fixo_KeyPress);
             // 
@@ -247,7 +249,7 @@
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.Location = new System.Drawing.Point(301, 361);
+            this.lbl_Email.Location = new System.Drawing.Point(380, 363);
             this.lbl_Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(49, 18);
@@ -256,10 +258,10 @@
             // 
             // txb_Email
             // 
-            this.txb_Email.Location = new System.Drawing.Point(307, 383);
-            this.txb_Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Email.Location = new System.Drawing.Point(383, 383);
+            this.txb_Email.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Email.Name = "txb_Email";
-            this.txb_Email.Size = new System.Drawing.Size(260, 22);
+            this.txb_Email.Size = new System.Drawing.Size(292, 22);
             this.txb_Email.TabIndex = 17;
             // 
             // lbl_Endereco
@@ -267,7 +269,7 @@
             this.lbl_Endereco.AutoSize = true;
             this.lbl_Endereco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Endereco.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbl_Endereco.Location = new System.Drawing.Point(301, 418);
+            this.lbl_Endereco.Location = new System.Drawing.Point(380, 425);
             this.lbl_Endereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Endereco.Name = "lbl_Endereco";
             this.lbl_Endereco.Size = new System.Drawing.Size(98, 22);
@@ -278,7 +280,7 @@
             // 
             this.lbl_CEP.AutoSize = true;
             this.lbl_CEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CEP.Location = new System.Drawing.Point(303, 449);
+            this.lbl_CEP.Location = new System.Drawing.Point(386, 461);
             this.lbl_CEP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_CEP.Name = "lbl_CEP";
             this.lbl_CEP.Size = new System.Drawing.Size(43, 18);
@@ -287,10 +289,10 @@
             // 
             // txb_CEP
             // 
-            this.txb_CEP.Location = new System.Drawing.Point(307, 471);
-            this.txb_CEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_CEP.Location = new System.Drawing.Point(386, 483);
+            this.txb_CEP.Margin = new System.Windows.Forms.Padding(4);
             this.txb_CEP.Name = "txb_CEP";
-            this.txb_CEP.Size = new System.Drawing.Size(219, 22);
+            this.txb_CEP.Size = new System.Drawing.Size(292, 22);
             this.txb_CEP.TabIndex = 22;
             this.txb_CEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CEP_KeyPress);
             // 
@@ -299,8 +301,8 @@
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Voltar.Location = new System.Drawing.Point(221, 517);
-            this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Voltar.Location = new System.Drawing.Point(248, 518);
+            this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(135, 70);
             this.btn_Voltar.TabIndex = 31;
@@ -313,8 +315,8 @@
             this.btn_Cadastrar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Cadastrar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cadastrar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Cadastrar.Location = new System.Drawing.Point(421, 517);
-            this.btn_Cadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cadastrar.Location = new System.Drawing.Point(630, 518);
+            this.btn_Cadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cadastrar.Name = "btn_Cadastrar";
             this.btn_Cadastrar.Size = new System.Drawing.Size(135, 70);
             this.btn_Cadastrar.TabIndex = 32;
@@ -336,9 +338,9 @@
             // txb_RG
             // 
             this.txb_RG.Location = new System.Drawing.Point(27, 265);
-            this.txb_RG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_RG.Margin = new System.Windows.Forms.Padding(4);
             this.txb_RG.Name = "txb_RG";
-            this.txb_RG.Size = new System.Drawing.Size(233, 22);
+            this.txb_RG.Size = new System.Drawing.Size(292, 22);
             this.txb_RG.TabIndex = 34;
             this.txb_RG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_RG_KeyPress);
             // 
@@ -356,9 +358,9 @@
             // txb_PIS
             // 
             this.txb_PIS.Location = new System.Drawing.Point(27, 325);
-            this.txb_PIS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_PIS.Margin = new System.Windows.Forms.Padding(4);
             this.txb_PIS.Name = "txb_PIS";
-            this.txb_PIS.Size = new System.Drawing.Size(233, 22);
+            this.txb_PIS.Size = new System.Drawing.Size(292, 22);
             this.txb_PIS.TabIndex = 36;
             this.txb_PIS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_PIS_KeyPress);
             // 
@@ -376,9 +378,9 @@
             // txb_Carteira_Trabalho
             // 
             this.txb_Carteira_Trabalho.Location = new System.Drawing.Point(27, 373);
-            this.txb_Carteira_Trabalho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Carteira_Trabalho.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Carteira_Trabalho.Name = "txb_Carteira_Trabalho";
-            this.txb_Carteira_Trabalho.Size = new System.Drawing.Size(232, 22);
+            this.txb_Carteira_Trabalho.Size = new System.Drawing.Size(292, 22);
             this.txb_Carteira_Trabalho.TabIndex = 39;
             this.txb_Carteira_Trabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Carteira_Trabalho_KeyPress);
             // 
@@ -396,9 +398,9 @@
             // txb_Titulo_Eleitor
             // 
             this.txb_Titulo_Eleitor.Location = new System.Drawing.Point(29, 418);
-            this.txb_Titulo_Eleitor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Titulo_Eleitor.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Titulo_Eleitor.Name = "txb_Titulo_Eleitor";
-            this.txb_Titulo_Eleitor.Size = new System.Drawing.Size(231, 22);
+            this.txb_Titulo_Eleitor.Size = new System.Drawing.Size(292, 22);
             this.txb_Titulo_Eleitor.TabIndex = 41;
             this.txb_Titulo_Eleitor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Titulo_Eleitor_KeyPress);
             // 
@@ -416,9 +418,9 @@
             // txb_RA_Militar
             // 
             this.txb_RA_Militar.Location = new System.Drawing.Point(29, 473);
-            this.txb_RA_Militar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_RA_Militar.Margin = new System.Windows.Forms.Padding(4);
             this.txb_RA_Militar.Name = "txb_RA_Militar";
-            this.txb_RA_Militar.Size = new System.Drawing.Size(231, 22);
+            this.txb_RA_Militar.Size = new System.Drawing.Size(292, 22);
             this.txb_RA_Militar.TabIndex = 43;
             this.txb_RA_Militar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_RA_Militar_KeyPress);
             // 
@@ -426,7 +428,7 @@
             // 
             this.lbl_Sexo.AutoSize = true;
             this.lbl_Sexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Sexo.Location = new System.Drawing.Point(301, 130);
+            this.lbl_Sexo.Location = new System.Drawing.Point(380, 137);
             this.lbl_Sexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Sexo.Name = "lbl_Sexo";
             this.lbl_Sexo.Size = new System.Drawing.Size(46, 18);
@@ -435,10 +437,10 @@
             // 
             // txb_Data_Admissao
             // 
-            this.txb_Data_Admissao.Location = new System.Drawing.Point(571, 329);
-            this.txb_Data_Admissao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Data_Admissao.Location = new System.Drawing.Point(740, 336);
+            this.txb_Data_Admissao.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Data_Admissao.Name = "txb_Data_Admissao";
-            this.txb_Data_Admissao.Size = new System.Drawing.Size(223, 22);
+            this.txb_Data_Admissao.Size = new System.Drawing.Size(292, 22);
             this.txb_Data_Admissao.TabIndex = 118;
             this.txb_Data_Admissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Data_Admissao_KeyPress);
             // 
@@ -446,7 +448,7 @@
             // 
             this.lbl_Admissao.AutoSize = true;
             this.lbl_Admissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Admissao.Location = new System.Drawing.Point(567, 305);
+            this.lbl_Admissao.Location = new System.Drawing.Point(736, 312);
             this.lbl_Admissao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Admissao.Name = "lbl_Admissao";
             this.lbl_Admissao.Size = new System.Drawing.Size(132, 18);
@@ -455,10 +457,10 @@
             // 
             // txb_Matricula
             // 
-            this.txb_Matricula.Location = new System.Drawing.Point(571, 156);
-            this.txb_Matricula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Matricula.Location = new System.Drawing.Point(736, 163);
+            this.txb_Matricula.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Matricula.Name = "txb_Matricula";
-            this.txb_Matricula.Size = new System.Drawing.Size(223, 22);
+            this.txb_Matricula.Size = new System.Drawing.Size(292, 22);
             this.txb_Matricula.TabIndex = 116;
             this.txb_Matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Matricula_KeyPress);
             // 
@@ -466,7 +468,7 @@
             // 
             this.lbl_Matricula.AutoSize = true;
             this.lbl_Matricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Matricula.Location = new System.Drawing.Point(565, 133);
+            this.lbl_Matricula.Location = new System.Drawing.Point(733, 137);
             this.lbl_Matricula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Matricula.Name = "lbl_Matricula";
             this.lbl_Matricula.Size = new System.Drawing.Size(72, 18);
@@ -477,7 +479,7 @@
             // 
             this.lbl_Cargo.AutoSize = true;
             this.lbl_Cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cargo.Location = new System.Drawing.Point(565, 242);
+            this.lbl_Cargo.Location = new System.Drawing.Point(737, 250);
             this.lbl_Cargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Cargo.Name = "lbl_Cargo";
             this.lbl_Cargo.Size = new System.Drawing.Size(53, 18);
@@ -488,7 +490,7 @@
             // 
             this.lbl_Departamento.AutoSize = true;
             this.lbl_Departamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Departamento.Location = new System.Drawing.Point(565, 191);
+            this.lbl_Departamento.Location = new System.Drawing.Point(734, 198);
             this.lbl_Departamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Departamento.Name = "lbl_Departamento";
             this.lbl_Departamento.Size = new System.Drawing.Size(106, 18);
@@ -500,7 +502,7 @@
             this.lbl_Profissionais.AutoSize = true;
             this.lbl_Profissionais.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Profissionais.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbl_Profissionais.Location = new System.Drawing.Point(564, 98);
+            this.lbl_Profissionais.Location = new System.Drawing.Point(732, 98);
             this.lbl_Profissionais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Profissionais.Name = "lbl_Profissionais";
             this.lbl_Profissionais.Size = new System.Drawing.Size(228, 22);
@@ -509,10 +511,10 @@
             // 
             // txb_Data_Nascimento
             // 
-            this.txb_Data_Nascimento.Location = new System.Drawing.Point(307, 203);
-            this.txb_Data_Nascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Data_Nascimento.Location = new System.Drawing.Point(383, 207);
+            this.txb_Data_Nascimento.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Data_Nascimento.Name = "txb_Data_Nascimento";
-            this.txb_Data_Nascimento.Size = new System.Drawing.Size(223, 22);
+            this.txb_Data_Nascimento.Size = new System.Drawing.Size(292, 22);
             this.txb_Data_Nascimento.TabIndex = 120;
             this.txb_Data_Nascimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Data_Nascimento_KeyPress);
             // 
@@ -520,7 +522,7 @@
             // 
             this.lbl_Data.AutoSize = true;
             this.lbl_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Data.Location = new System.Drawing.Point(303, 181);
+            this.lbl_Data.Location = new System.Drawing.Point(380, 185);
             this.lbl_Data.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Data.Name = "lbl_Data";
             this.lbl_Data.Size = new System.Drawing.Size(147, 18);
@@ -529,34 +531,66 @@
             // 
             // txb_Departamento
             // 
-            this.txb_Departamento.Location = new System.Drawing.Point(567, 210);
-            this.txb_Departamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Departamento.Location = new System.Drawing.Point(736, 217);
+            this.txb_Departamento.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Departamento.Name = "txb_Departamento";
-            this.txb_Departamento.Size = new System.Drawing.Size(223, 22);
+            this.txb_Departamento.Size = new System.Drawing.Size(292, 22);
             this.txb_Departamento.TabIndex = 318;
             // 
             // txb_Cargo
             // 
-            this.txb_Cargo.Location = new System.Drawing.Point(568, 265);
-            this.txb_Cargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txb_Cargo.Location = new System.Drawing.Point(737, 272);
+            this.txb_Cargo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Cargo.Name = "txb_Cargo";
-            this.txb_Cargo.Size = new System.Drawing.Size(223, 22);
+            this.txb_Cargo.Size = new System.Drawing.Size(292, 22);
             this.txb_Cargo.TabIndex = 319;
             // 
-            // txb_Sexo
+            // chk_Masculino
             // 
-            this.txb_Sexo.Location = new System.Drawing.Point(307, 153);
-            this.txb_Sexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txb_Sexo.Name = "txb_Sexo";
-            this.txb_Sexo.Size = new System.Drawing.Size(223, 22);
-            this.txb_Sexo.TabIndex = 320;
+            this.chk_Masculino.AutoSize = true;
+            this.chk_Masculino.Checked = true;
+            this.chk_Masculino.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Masculino.Location = new System.Drawing.Point(383, 163);
+            this.chk_Masculino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chk_Masculino.Name = "chk_Masculino";
+            this.chk_Masculino.Size = new System.Drawing.Size(90, 20);
+            this.chk_Masculino.TabIndex = 335;
+            this.chk_Masculino.Text = "Masculino";
+            this.chk_Masculino.UseVisualStyleBackColor = true;
+            this.chk_Masculino.CheckedChanged += new System.EventHandler(this.chk_Masculino_CheckedChanged);
+            // 
+            // chk_Feminino
+            // 
+            this.chk_Feminino.AutoSize = true;
+            this.chk_Feminino.Location = new System.Drawing.Point(479, 163);
+            this.chk_Feminino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chk_Feminino.Name = "chk_Feminino";
+            this.chk_Feminino.Size = new System.Drawing.Size(84, 20);
+            this.chk_Feminino.TabIndex = 336;
+            this.chk_Feminino.Text = "Feminino";
+            this.chk_Feminino.UseVisualStyleBackColor = true;
+            this.chk_Feminino.CheckedChanged += new System.EventHandler(this.chk_Feminino_CheckedChanged);
+            // 
+            // chk_Nao_Binario
+            // 
+            this.chk_Nao_Binario.AutoSize = true;
+            this.chk_Nao_Binario.Location = new System.Drawing.Point(569, 163);
+            this.chk_Nao_Binario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chk_Nao_Binario.Name = "chk_Nao_Binario";
+            this.chk_Nao_Binario.Size = new System.Drawing.Size(100, 20);
+            this.chk_Nao_Binario.TabIndex = 337;
+            this.chk_Nao_Binario.Text = "Não Binário";
+            this.chk_Nao_Binario.UseVisualStyleBackColor = true;
+            this.chk_Nao_Binario.CheckedChanged += new System.EventHandler(this.chk_Nao_Binario_CheckedChanged);
             // 
             // frm_Cadastrar_Perfis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 601);
-            this.Controls.Add(this.txb_Sexo);
+            this.ClientSize = new System.Drawing.Size(1063, 601);
+            this.Controls.Add(this.chk_Nao_Binario);
+            this.Controls.Add(this.chk_Feminino);
+            this.Controls.Add(this.chk_Masculino);
             this.Controls.Add(this.txb_Cargo);
             this.Controls.Add(this.txb_Departamento);
             this.Controls.Add(this.txb_Data_Nascimento);
@@ -603,7 +637,7 @@
             this.Controls.Add(this.lbl_Pessoais);
             this.Controls.Add(this.lbl_Cadastrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Cadastrar_Perfis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
@@ -660,6 +694,8 @@
         private System.Windows.Forms.Label lbl_Data;
         private System.Windows.Forms.TextBox txb_Departamento;
         private System.Windows.Forms.TextBox txb_Cargo;
-        private System.Windows.Forms.TextBox txb_Sexo;
+        private System.Windows.Forms.CheckBox chk_Masculino;
+        private System.Windows.Forms.CheckBox chk_Feminino;
+        private System.Windows.Forms.CheckBox chk_Nao_Binario;
     }
 }

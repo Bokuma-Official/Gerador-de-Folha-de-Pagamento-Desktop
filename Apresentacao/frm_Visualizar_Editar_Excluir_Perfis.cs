@@ -17,11 +17,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    public partial class frm_Visualizar_Perfis : Form
+    public partial class frm_Visualizar_Editar_Excluir_Perfis : Form
     {
-        public static string Nome_Perfil { get; set; }
+        public string Nome_Perfil { get; set; }
 
-        public frm_Visualizar_Perfis()
+        public frm_Visualizar_Editar_Excluir_Perfis()
         {
             InitializeComponent();
         }
@@ -63,7 +63,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_PIS.ReadOnly = true;
                 txb_RA_Militar.ReadOnly = true;
                 txb_RG.ReadOnly = true;
-                txb_Sexo.ReadOnly = true;
+                chk_Masculino.AutoCheck = false;
+                chk_Feminino.AutoCheck = false;
+                chk_Nao_Binario.AutoCheck = false;
                 txb_Telefone_Celular.ReadOnly = true;
                 txb_Telefone_Fixo.ReadOnly = true;
                 txb_Titulo_Eleitor.ReadOnly = true;
@@ -81,7 +83,28 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_PIS.Text = funcionario_ataron.PIS;
                 txb_Carteira_Trabalho.Text = funcionario_ataron.Carteira_Trabalho;
                 txb_Titulo_Eleitor.Text = funcionario_ataron.Titulo_Eleitor;
-                txb_Sexo.Text = funcionario_ataron.Sexo;
+
+                if (funcionario_ataron.Sexo == "Masculino")
+                {
+                    chk_Masculino.Checked = true;
+                    chk_Feminino.Checked = false;
+                    chk_Nao_Binario.Checked = false;
+                }
+
+                else if (funcionario_ataron.Sexo == "Feminino")
+                {
+                    chk_Feminino.Checked = true;
+                    chk_Masculino.Checked = false;
+                    chk_Nao_Binario.Checked = false;
+                }
+
+                else
+                {
+                    chk_Nao_Binario.Checked = true;
+                    chk_Masculino.Checked = false;
+                    chk_Feminino.Checked = false;
+                }
+
                 txb_RA_Militar.Text = funcionario_ataron.Certificado_Militar;
                 txb_Data_Nascimento.Text = funcionario_ataron.Data_Nascimento;
                 txb_Telefone_Fixo.Text = funcionario_ataron.Telefone_Fixo;
@@ -118,7 +141,28 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             txb_PIS.Text = funcionario_ataron.PIS;
             txb_Carteira_Trabalho.Text = funcionario_ataron.Carteira_Trabalho;
             txb_Titulo_Eleitor.Text = funcionario_ataron.Titulo_Eleitor;
-            txb_Sexo.Text = funcionario_ataron.Sexo;
+
+            if (funcionario_ataron.Sexo == "Masculino")
+            {
+                chk_Masculino.Checked = true;
+                chk_Feminino.Checked = false;
+                chk_Nao_Binario.Checked = false;
+            }
+
+            else if (funcionario_ataron.Sexo == "Feminino")
+            {
+                chk_Feminino.Checked = true;
+                chk_Masculino.Checked = false;
+                chk_Nao_Binario.Checked = false;
+            }
+
+            else
+            {
+                chk_Nao_Binario.Checked = true;
+                chk_Masculino.Checked = false;
+                chk_Feminino.Checked = false;
+            }
+
             txb_RA_Militar.Text = funcionario_ataron.Certificado_Militar;
             txb_Data_Nascimento.Text = funcionario_ataron.Data_Nascimento;
             txb_Telefone_Fixo.Text = funcionario_ataron.Telefone_Fixo;
@@ -129,11 +173,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             txb_Cargo.Text = funcionario_ataron.Cargo;
             txb_Data_Admissao.Text = funcionario_ataron.Data_Admissao;
             txb_CEP.Text = funcionario_ataron.CEP;
-        }
-
-        private void frm_Visualizar_Perfis_Shown(object sender, EventArgs e)
-        {
-            txb_Nome.Focus();
         }
 
         private void txb_CPF_KeyPress(object sender, KeyPressEventArgs e)
@@ -230,6 +269,24 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             {
                 e.Handled = true;
             }
+        }
+
+        private void chk_Masculino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Feminino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Feminino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Nao_Binario_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Feminino.Checked = false;
         }
     }
 }
