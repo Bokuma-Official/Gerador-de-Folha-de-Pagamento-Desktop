@@ -130,6 +130,24 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             }
         }
 
+        private void chk_Masculino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Feminino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Feminino_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Nao_Binario.Checked = false;
+        }
+
+        private void chk_Nao_Binario_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Masculino.Checked = false;
+            chk_Feminino.Checked = false;
+        }
+
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
             Repetir_Senha = txb_Repetir_Senha.Text;
@@ -204,24 +222,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_Data_Admissao.Clear();
                 txb_CEP.Clear();
             }
-        }
-
-        private void chk_Masculino_CheckedChanged(object sender, EventArgs e)
-        {
-            chk_Feminino.Checked = false;
-            chk_Nao_Binario.Checked = false;
-        }
-
-        private void chk_Feminino_CheckedChanged(object sender, EventArgs e)
-        {
-            chk_Masculino.Checked = false;
-            chk_Nao_Binario.Checked = false;
-        }
-
-        private void chk_Nao_Binario_CheckedChanged(object sender, EventArgs e)
-        {
-            chk_Masculino.Checked = false;
-            chk_Feminino.Checked = false;
         }
     }
 }

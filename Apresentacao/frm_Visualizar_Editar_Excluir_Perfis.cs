@@ -88,22 +88,31 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 if (funcionario_ataron.Sexo == "Masculino")
                 {
                     chk_Masculino.Checked = true;
+                    chk_Masculino.CheckState = CheckState.Checked;
                     chk_Feminino.Checked = false;
+                    chk_Feminino.CheckState = CheckState.Unchecked;
                     chk_Nao_Binario.Checked = false;
+                    chk_Nao_Binario.CheckState = CheckState.Unchecked;
                 }
 
                 else if (funcionario_ataron.Sexo == "Feminino")
                 {
                     chk_Feminino.Checked = true;
+                    chk_Feminino.CheckState = CheckState.Checked;
                     chk_Masculino.Checked = false;
+                    chk_Masculino.CheckState = CheckState.Unchecked;
                     chk_Nao_Binario.Checked = false;
+                    chk_Nao_Binario.CheckState = CheckState.Unchecked;
                 }
 
                 else
                 {
                     chk_Nao_Binario.Checked = true;
+                    chk_Nao_Binario.CheckState = CheckState.Checked;
                     chk_Masculino.Checked = false;
+                    chk_Masculino.CheckState = CheckState.Unchecked;
                     chk_Feminino.Checked = false;
+                    chk_Feminino.CheckState = CheckState.Unchecked;
                 }
 
                 txb_Certificado_Militar.Text = funcionario_ataron.Certificado_Militar;
@@ -146,22 +155,31 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             if (funcionario_ataron.Sexo == "Masculino")
             {
                 chk_Masculino.Checked = true;
+                chk_Masculino.CheckState = CheckState.Checked;
                 chk_Feminino.Checked = false;
+                chk_Feminino.CheckState = CheckState.Unchecked;
                 chk_Nao_Binario.Checked = false;
+                chk_Nao_Binario.CheckState = CheckState.Unchecked;
             }
 
             else if (funcionario_ataron.Sexo == "Feminino")
             {
                 chk_Feminino.Checked = true;
+                chk_Feminino.CheckState = CheckState.Checked;
                 chk_Masculino.Checked = false;
+                chk_Masculino.CheckState = CheckState.Unchecked;
                 chk_Nao_Binario.Checked = false;
+                chk_Nao_Binario.CheckState = CheckState.Unchecked;
             }
 
             else
             {
                 chk_Nao_Binario.Checked = true;
+                chk_Nao_Binario.CheckState = CheckState.Checked;
                 chk_Masculino.Checked = false;
+                chk_Masculino.CheckState = CheckState.Unchecked;
                 chk_Feminino.Checked = false;
+                chk_Feminino.CheckState = CheckState.Unchecked;
             }
 
             txb_Certificado_Militar.Text = funcionario_ataron.Certificado_Militar;
@@ -174,6 +192,90 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             txb_Cargo.Text = funcionario_ataron.Cargo;
             txb_Data_Admissao.Text = funcionario_ataron.Data_Admissao;
             txb_CEP.Text = funcionario_ataron.CEP;
+
+            CPF_Perfil_Selecionado = txb_CPF.Text;
+        }
+
+        private void btn_Deletar_Click(object sender, EventArgs e)
+        {
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Exclusao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
+
+            if (Controle_Validacao.Deletar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Deletado == true)
+            {
+                Controle_Validacao.Deletar_Perfil_Validado = false;
+                Funcionario_Ataron_DAO.Perfil_Deletado = false;
+
+                this.Hide();
+                frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_editar_excluir_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
+                frm_visualizar_editar_excluir_perfis.Show();
+            }
+        }
+
+        private void btn_Editar_Click(object sender, EventArgs e)
+        {
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Edicao_Perfil_Vazio(CPF_Perfil_Selecionado);
+
+            if (Controle_Validacao.Perfil_Nao_Vazio == true)
+            {
+                Controle_Validacao.Perfil_Nao_Vazio = false;
+
+                Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+                funcionario_ataron.CPF = txb_CPF.Text;
+                funcionario_ataron.Senha = txb_Senha.Text;
+                funcionario_ataron.Nome = txb_Nome.Text;
+                funcionario_ataron.RG = txb_RG.Text;
+                funcionario_ataron.PIS = txb_PIS.Text;
+                funcionario_ataron.Carteira_Trabalho = txb_Carteira_Trabalho.Text;
+                funcionario_ataron.Titulo_Eleitor = txb_Titulo_Eleitor.Text;
+
+                if (chk_Masculino.Checked == true)
+                {
+                    funcionario_ataron.Sexo = chk_Masculino.Text;
+                }
+
+                else if (chk_Feminino.Checked == true)
+                {
+                    funcionario_ataron.Sexo = chk_Feminino.Text;
+                }
+
+                else if (chk_Nao_Binario.Checked == true)
+                {
+                    funcionario_ataron.Sexo = chk_Nao_Binario.Text;
+                }
+
+                else
+                {
+                    funcionario_ataron.Sexo = "";
+                }
+
+                funcionario_ataron.Certificado_Militar = txb_Certificado_Militar.Text;
+                funcionario_ataron.Data_Nascimento = txb_Data_Nascimento.Text;
+                funcionario_ataron.Telefone_Fixo = txb_Telefone_Fixo.Text;
+                funcionario_ataron.Telefone_Celular = txb_Telefone_Celular.Text;
+                funcionario_ataron.Email = txb_Email.Text;
+                funcionario_ataron.Matricula = Convert.ToInt32(txb_Matricula.Text);
+                funcionario_ataron.Departamento = txb_Departamento.Text;
+                funcionario_ataron.Cargo = txb_Cargo.Text;
+                funcionario_ataron.Data_Admissao = txb_Data_Admissao.Text;
+                funcionario_ataron.CEP = txb_CEP.Text;
+
+                Controle_Validacao controle_validacao2 = new Controle_Validacao();
+                controle_validacao2.Verificar_Edicao_Perfil_Nao_Vazio(funcionario_ataron, CPF_Perfil_Selecionado);
+
+                if (Controle_Validacao.Editar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Atualizado == true)
+                {
+                    Controle_Validacao.Editar_Perfil_Validado = false;
+                    Funcionario_Ataron_DAO.Perfil_Atualizado = false;
+
+                    this.Hide();
+                    frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_editar_excluir_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
+                    frm_visualizar_editar_excluir_perfis.Show();
+                }
+            }
         }
 
         private void txb_CPF_KeyPress(object sender, KeyPressEventArgs e)
@@ -288,36 +390,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             chk_Masculino.Checked = false;
             chk_Feminino.Checked = false;
-        }
-
-        private void btn_Deletar_Click(object sender, EventArgs e)
-        {
-            CPF_Perfil_Selecionado = txb_CPF.Text;
-
-            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
-
-            Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Exclusao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
-
-            if (Controle_Validacao.Deletar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Deletado == true)
-            {
-                Controle_Validacao.Deletar_Perfil_Validado = false;
-                Funcionario_Ataron_DAO.Perfil_Deletado = false;
-
-                this.Hide();
-                frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_editar_excluir_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
-                frm_visualizar_editar_excluir_perfis.Show();
-            }
-        }
-
-        private void btn_Editar_Click(object sender, EventArgs e)
-        {
-            CPF_Perfil_Selecionado = txb_CPF.Text;
-
-            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
-
-            Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Edicao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
         }
     }
 }

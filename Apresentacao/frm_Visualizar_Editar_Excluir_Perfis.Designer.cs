@@ -301,7 +301,7 @@
             // 
             // txb_Certificado_Militar
             // 
-            this.txb_Certificado_Militar.Location = new System.Drawing.Point(31, 514);
+            this.txb_Certificado_Militar.Location = new System.Drawing.Point(26, 514);
             this.txb_Certificado_Militar.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Certificado_Militar.Name = "txb_Certificado_Militar";
             this.txb_Certificado_Militar.Size = new System.Drawing.Size(292, 22);
@@ -312,7 +312,7 @@
             // 
             this.lbl_Certificado_Militar.AutoSize = true;
             this.lbl_Certificado_Militar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Certificado_Militar.Location = new System.Drawing.Point(27, 497);
+            this.lbl_Certificado_Militar.Location = new System.Drawing.Point(25, 492);
             this.lbl_Certificado_Militar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Certificado_Militar.Name = "lbl_Certificado_Militar";
             this.lbl_Certificado_Militar.Size = new System.Drawing.Size(126, 18);
@@ -321,7 +321,7 @@
             // 
             // txb_Titulo_Eleitor
             // 
-            this.txb_Titulo_Eleitor.Location = new System.Drawing.Point(31, 460);
+            this.txb_Titulo_Eleitor.Location = new System.Drawing.Point(26, 463);
             this.txb_Titulo_Eleitor.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Titulo_Eleitor.Name = "txb_Titulo_Eleitor";
             this.txb_Titulo_Eleitor.Size = new System.Drawing.Size(292, 22);
@@ -332,7 +332,7 @@
             // 
             this.lbl_Titulo.AutoSize = true;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(27, 441);
+            this.lbl_Titulo.Location = new System.Drawing.Point(24, 441);
             this.lbl_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(112, 18);

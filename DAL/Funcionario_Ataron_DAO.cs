@@ -106,9 +106,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 conexao.Open();
                 
-                SqlCommand command = new SqlCommand("insert into Funcionario_Ataron values (@CPF, @Senha, @Nome, @RG, @PIS, " +
+                SqlCommand command = new SqlCommand("insert into Funcionario_Ataron values (@CPF, @Senha, @Nome, @RG, @PIS," +
                     "@Carteira_Trabalho, @Titulo_Eleitor, @Sexo, @Certificado_Militar, @Data_Nascimento, @Telefone_Fixo," +
-                    " @Telefone_Celular, @Email, @Matricula, @Departamento, @Cargo, @Data_Admissao, @CEP)", conexao);
+                    "@Telefone_Celular, @Email, @Matricula, @Departamento, @Cargo, @Data_Admissao, @CEP)", conexao);
 
                 command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
                 command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
@@ -178,7 +178,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                     funcionario_ataron.Titulo_Eleitor = data_reader["Titulo_Eleitor"].ToString();
                     funcionario_ataron.Sexo = data_reader["Sexo"].ToString();
                     funcionario_ataron.Certificado_Militar = data_reader["Certificado_Militar"].ToString();
-                    funcionario_ataron.Data_Nascimento = data_reader["Data_Admissao"].ToString();
+                    funcionario_ataron.Data_Nascimento = data_reader["Data_Nascimento"].ToString();
                     funcionario_ataron.Telefone_Fixo = data_reader["Telefone_Fixo"].ToString();
                     funcionario_ataron.Telefone_Celular = data_reader["Telefone_Celular"].ToString();
                     funcionario_ataron.Email = data_reader["Email"].ToString();
@@ -229,7 +229,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                     funcionario_ataron.Titulo_Eleitor = data_reader["Titulo_Eleitor"].ToString();
                     funcionario_ataron.Sexo = data_reader["Sexo"].ToString();
                     funcionario_ataron.Certificado_Militar = data_reader["Certificado_Militar"].ToString();
-                    funcionario_ataron.Data_Nascimento = data_reader["Data_Admissao"].ToString();
+                    funcionario_ataron.Data_Nascimento = data_reader["Data_Nascimento"].ToString();
                     funcionario_ataron.Telefone_Fixo = data_reader["Telefone_Fixo"].ToString();
                     funcionario_ataron.Telefone_Celular = data_reader["Telefone_Celular"].ToString();
                     funcionario_ataron.Email = data_reader["Email"].ToString();
@@ -283,7 +283,59 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
         public void Editar_Perfil(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
         {
+            try
+            {
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
 
+                conexao.Open();
+
+                SqlCommand command = new SqlCommand("update Funcionario_Ataron set CPF = @CPF, Senha = @Senha," +
+                    "Nome = @Nome, RG = @RG, PIS = @PIS, Carteira_Trabalho = @Carteira_Trabalho, Titulo_Eleitor = @Titulo_Eleitor," +
+                    "Sexo = @Sexo, Certificado_Militar = @Certificado_Militar, Data_Nascimento = @Data_Nascimento," +
+                    "Telefone_Fixo = @Telefone_Fixo, Telefone_Celular = @Telefone_Celular, Email = @Email, Matricula = @Matricula," +
+                    "Departamento = @Departamento, Cargo = @Cargo, Data_Admissao = @Data_Admissao, CEP = @CEP where CPF = @CPF_Perfil_Selecionado", conexao);
+
+                command.Parameters.AddWithValue("@CPF_Perfil_Selecionado", cpf_perfil_selecionado);
+                command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
+                command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
+                command.Parameters.AddWithValue("@Nome", funcionario_ataron.Nome);
+                command.Parameters.AddWithValue("@RG", funcionario_ataron.RG);
+                command.Parameters.AddWithValue("@PIS", funcionario_ataron.PIS);
+                command.Parameters.AddWithValue("@Carteira_Trabalho", funcionario_ataron.Carteira_Trabalho);
+                command.Parameters.AddWithValue("@Titulo_Eleitor", funcionario_ataron.Titulo_Eleitor);
+                command.Parameters.AddWithValue("@Sexo", funcionario_ataron.Sexo);
+                command.Parameters.AddWithValue("@Certificado_Militar", funcionario_ataron.Certificado_Militar);
+                command.Parameters.AddWithValue("@Data_Nascimento", funcionario_ataron.Data_Nascimento);
+                command.Parameters.AddWithValue("@Telefone_Fixo", funcionario_ataron.Telefone_Fixo);
+                command.Parameters.AddWithValue("@Telefone_Celular", funcionario_ataron.Telefone_Celular);
+                command.Parameters.AddWithValue("@Email", funcionario_ataron.Email);
+                command.Parameters.AddWithValue("@Matricula", funcionario_ataron.Matricula);
+                command.Parameters.AddWithValue("@Departamento", funcionario_ataron.Departamento);
+                command.Parameters.AddWithValue("@Cargo", funcionario_ataron.Cargo);
+                command.Parameters.AddWithValue("@Data_Admissao", funcionario_ataron.Data_Admissao);
+                command.Parameters.AddWithValue("@CEP", funcionario_ataron.CEP);
+
+                if (CPF_Perfil_Logado == cpf_perfil_selecionado)
+                {
+                    CPF_Perfil_Logado = funcionario_ataron.CPF;
+                }
+
+                int linhas_afetadas = command.ExecuteNonQuery();
+
+                conexao.Close();
+
+                if (linhas_afetadas > 0)
+                {
+                    MessageBox.Show("O Perfil foi editado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Perfil_Atualizado = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

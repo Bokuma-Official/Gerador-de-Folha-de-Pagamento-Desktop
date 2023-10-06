@@ -283,7 +283,7 @@
             // 
             this.lbl_Valor_Vale_Alimentacao.AutoSize = true;
             this.lbl_Valor_Vale_Alimentacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Valor_Vale_Alimentacao.Location = new System.Drawing.Point(344, 397);
+            this.lbl_Valor_Vale_Alimentacao.Location = new System.Drawing.Point(344, 393);
             this.lbl_Valor_Vale_Alimentacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Valor_Vale_Alimentacao.Name = "lbl_Valor_Vale_Alimentacao";
             this.lbl_Valor_Vale_Alimentacao.Size = new System.Drawing.Size(160, 18);
@@ -323,7 +323,7 @@
             // 
             this.lbl_Desconto_Vale_Alimentacao.AutoSize = true;
             this.lbl_Desconto_Vale_Alimentacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Desconto_Vale_Alimentacao.Location = new System.Drawing.Point(345, 444);
+            this.lbl_Desconto_Vale_Alimentacao.Location = new System.Drawing.Point(344, 441);
             this.lbl_Desconto_Vale_Alimentacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Desconto_Vale_Alimentacao.Name = "lbl_Desconto_Vale_Alimentacao";
             this.lbl_Desconto_Vale_Alimentacao.Size = new System.Drawing.Size(191, 18);
@@ -606,7 +606,7 @@
             // 
             // txb_Dependentes
             // 
-            this.txb_Dependentes.Location = new System.Drawing.Point(684, 198);
+            this.txb_Dependentes.Location = new System.Drawing.Point(682, 198);
             this.txb_Dependentes.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Dependentes.Name = "txb_Dependentes";
             this.txb_Dependentes.ReadOnly = true;
@@ -638,7 +638,7 @@
             // 
             // txb_Cargo
             // 
-            this.txb_Cargo.Location = new System.Drawing.Point(348, 198);
+            this.txb_Cargo.Location = new System.Drawing.Point(347, 198);
             this.txb_Cargo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Cargo.Name = "txb_Cargo";
             this.txb_Cargo.ReadOnly = true;

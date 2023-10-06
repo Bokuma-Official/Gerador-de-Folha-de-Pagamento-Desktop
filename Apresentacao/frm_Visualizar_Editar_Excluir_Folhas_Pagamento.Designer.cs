@@ -120,7 +120,7 @@
             this.btn_Editar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Editar.Location = new System.Drawing.Point(763, 716);
+            this.btn_Editar.Location = new System.Drawing.Point(753, 716);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(135, 70);
@@ -143,7 +143,7 @@
             // 
             // txb_Dependentes
             // 
-            this.txb_Dependentes.Location = new System.Drawing.Point(690, 248);
+            this.txb_Dependentes.Location = new System.Drawing.Point(692, 248);
             this.txb_Dependentes.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Dependentes.Name = "txb_Dependentes";
             this.txb_Dependentes.ReadOnly = true;
@@ -197,7 +197,7 @@
             // 
             // txb_Cargo
             // 
-            this.txb_Cargo.Location = new System.Drawing.Point(351, 248);
+            this.txb_Cargo.Location = new System.Drawing.Point(350, 248);
             this.txb_Cargo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Cargo.Name = "txb_Cargo";
             this.txb_Cargo.ReadOnly = true;
@@ -425,7 +425,7 @@
             this.txb_Desconto_Vale_Alimentacao.Location = new System.Drawing.Point(351, 517);
             this.txb_Desconto_Vale_Alimentacao.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Desconto_Vale_Alimentacao.Name = "txb_Desconto_Vale_Alimentacao";
-            this.txb_Desconto_Vale_Alimentacao.Size = new System.Drawing.Size(153, 22);
+            this.txb_Desconto_Vale_Alimentacao.Size = new System.Drawing.Size(291, 22);
             this.txb_Desconto_Vale_Alimentacao.TabIndex = 395;
             this.txb_Desconto_Vale_Alimentacao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Desconto_Vale_Alimentacao_KeyPress);
             // 
@@ -433,7 +433,7 @@
             // 
             this.lbl_Desconto_Vale_Alimentacao.AutoSize = true;
             this.lbl_Desconto_Vale_Alimentacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Desconto_Vale_Alimentacao.Location = new System.Drawing.Point(348, 495);
+            this.lbl_Desconto_Vale_Alimentacao.Location = new System.Drawing.Point(348, 492);
             this.lbl_Desconto_Vale_Alimentacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Desconto_Vale_Alimentacao.Name = "lbl_Desconto_Vale_Alimentacao";
             this.lbl_Desconto_Vale_Alimentacao.Size = new System.Drawing.Size(191, 18);

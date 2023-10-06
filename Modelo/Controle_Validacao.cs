@@ -22,6 +22,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public static bool Senha_Validada { get; set; }
         public static bool Cadastro_Perfil_Validado { get; set; }
         public static bool Deletar_Perfil_Validado { get; set; }
+        public static bool Perfil_Nao_Vazio { get; set; }
         public static bool Editar_Perfil_Validado { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
@@ -535,12 +536,266 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
         }
 
-        public void Verificar_Edicao_Perfil(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        public void Verificar_Edicao_Perfil_Vazio(string cpf_perfil_selecionado)
         {
-            Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
-            funcionario_ataron_dao.Editar_Perfil(funcionario_ataron, cpf_perfil_selecionado);
+            if (cpf_perfil_selecionado == "")
+            {
+                MessageBox.Show("Selecione um Perfil para editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-            Editar_Perfil_Validado = true;
+            else
+            {
+                Perfil_Nao_Vazio = true;
+            }
+        }
+
+        public void Verificar_Edicao_Perfil_Nao_Vazio(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        {
+            #region Campos Vazios
+            if (funcionario_ataron.Nome == "")
+            {
+                MessageBox.Show("Nome é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.CPF == "")
+            {
+                MessageBox.Show("CPF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.RG == "")
+            {
+                MessageBox.Show("RG é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.PIS == "")
+            {
+                MessageBox.Show("PIS é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Carteira_Trabalho == "")
+            {
+                MessageBox.Show("Carteira de Trabalho é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Titulo_Eleitor == "")
+            {
+                MessageBox.Show("Título de Eleitor é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Certificado_Militar == "" && funcionario_ataron.Sexo == "Masculino")
+            {
+                MessageBox.Show("Certificado Militar é obrigatório para pessoas do Sexo Masculino", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Sexo == "")
+            {
+                MessageBox.Show("Sexo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Data_Nascimento == "")
+            {
+                MessageBox.Show("Data de Nascimento é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Telefone_Celular == "")
+            {
+                MessageBox.Show("Telefone Celular é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Email == "")
+            {
+                MessageBox.Show("Email é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.CEP == "")
+            {
+                MessageBox.Show("CEP é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Matricula.ToString() == "")
+            {
+                MessageBox.Show("Matrícula é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Departamento == "")
+            {
+                MessageBox.Show("Departamento é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Cargo == "")
+            {
+                MessageBox.Show("Cargo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Data_Admissao == "")
+            {
+                MessageBox.Show("Data de Admissão é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Senha == "")
+            {
+                MessageBox.Show("Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            #region Limite de Caracteres
+            else if (funcionario_ataron.Nome.Length > 40)
+            {
+                MessageBox.Show("Nome deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.CPF.Length > 14)
+            {
+                MessageBox.Show("CPF deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.RG.Length > 12)
+            {
+                MessageBox.Show("RG deve ter menos que 12 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.PIS.Length > 14)
+            {
+                MessageBox.Show("PIS deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Carteira_Trabalho.Length > 20)
+            {
+                MessageBox.Show("Carteira de Trabalho deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Titulo_Eleitor.Length > 14)
+            {
+                MessageBox.Show("Título de Eleitor deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Certificado_Militar.Length > 15)
+            {
+                MessageBox.Show("Certificado Militar deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Data_Nascimento.Length > 10)
+            {
+                MessageBox.Show("Data de Nascimento deve ter menos que 10 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Telefone_Celular.Length > 15)
+            {
+                MessageBox.Show("Telefone Celular deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Telefone_Fixo.Length > 14)
+            {
+                MessageBox.Show("Telefone Fixo deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Email.Length > 40)
+            {
+                MessageBox.Show("Email deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.CEP.Length > 9)
+            {
+                MessageBox.Show("CEP deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Matricula.ToString().Length > 6)
+            {
+                MessageBox.Show("Matrícula deve ter menos que 6 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Departamento.Length > 40)
+            {
+                MessageBox.Show("Departamento deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Cargo.Length > 40)
+            {
+                MessageBox.Show("Cargo deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Data_Admissao.Length > 10)
+            {
+                MessageBox.Show("Data de Admissão deve ter menos que 10 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Senha.Length > 20)
+            {
+                MessageBox.Show("Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Senha.Length < 8)
+            {
+                MessageBox.Show("Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            else if (funcionario_ataron.Nome.ToLower().Contains("select") ||
+                    funcionario_ataron.Nome.ToLower().Contains("insert") ||
+                    funcionario_ataron.Nome.ToLower().Contains("update") ||
+                    funcionario_ataron.Nome.ToLower().Contains("delete") ||
+                    funcionario_ataron.Nome.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("select") ||
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("insert") ||
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("update") ||
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("delete") ||
+                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Email.ToLower().Contains("select") ||
+                    funcionario_ataron.Email.ToLower().Contains("insert") ||
+                    funcionario_ataron.Email.ToLower().Contains("update") ||
+                    funcionario_ataron.Email.ToLower().Contains("delete") ||
+                    funcionario_ataron.Email.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Departamento.ToLower().Contains("select") ||
+                    funcionario_ataron.Departamento.ToLower().Contains("insert") ||
+                    funcionario_ataron.Departamento.ToLower().Contains("update") ||
+                    funcionario_ataron.Departamento.ToLower().Contains("delete") ||
+                    funcionario_ataron.Departamento.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Cargo.ToLower().Contains("select") ||
+                    funcionario_ataron.Cargo.ToLower().Contains("insert") ||
+                    funcionario_ataron.Cargo.ToLower().Contains("update") ||
+                    funcionario_ataron.Cargo.ToLower().Contains("delete") ||
+                    funcionario_ataron.Cargo.ToLower().Contains("drop") ||
+
+                    funcionario_ataron.Senha.ToLower().Contains("select") ||
+                    funcionario_ataron.Senha.ToLower().Contains("insert") ||
+                    funcionario_ataron.Senha.ToLower().Contains("update") ||
+                    funcionario_ataron.Senha.ToLower().Contains("delete") ||
+                    funcionario_ataron.Senha.ToLower().Contains("drop"))
+            {
+                MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!funcionario_ataron.Email.ToLower().Contains("@") || !funcionario_ataron.Email.ToLower().Contains("."))
+            {
+                MessageBox.Show("Email precisa ter @ e .", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!funcionario_ataron.Data_Nascimento.Contains("/"))
+            {
+                MessageBox.Show("Data de Nascimento precisa ter /", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!funcionario_ataron.Data_Admissao.Contains("/"))
+            {
+                MessageBox.Show("Data de Admissão precisa ter /", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                DialogResult pergunta = MessageBox.Show("Deseja editar o Perfil?", "Editar Perfil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (pergunta == DialogResult.Yes)
+                {
+                    Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
+                    funcionario_ataron_dao.Editar_Perfil(funcionario_ataron, cpf_perfil_selecionado);
+
+                    Editar_Perfil_Validado = true;
+                }
+            }
         }
     }
  }
