@@ -50,7 +50,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
             // se colocar palavras do banco de dados na senha
             else if (funcionario_ataron.Senha.ToLower().Contains("select") ||
-                    funcionario_ataron.Senha.ToLower().Contains("insert") || 
+                    funcionario_ataron.Senha.ToLower().Contains("insert") ||
                     funcionario_ataron.Senha.ToLower().Contains("update") ||
                     funcionario_ataron.Senha.ToLower().Contains("delete") ||
                     funcionario_ataron.Senha.ToLower().Contains("drop"))
@@ -63,10 +63,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             o acesso é válido */
             else
             {
-                Login_Validado = true;
-
                 Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
                 funcionario_ataron_dao.Fazer_Login(funcionario_ataron);
+
+                Login_Validado = true;
             }
         }
 
@@ -211,16 +211,17 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
                 if (pergunta == DialogResult.Yes)
                 {
-                    Senha_Validada = true;
-
                     Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
                     funcionario_ataron_dao.Redefinir_Senha(funcionario_ataron);
+
+                    Senha_Validada = true;
                 }
             }
         }
 
-        public void Verificar_Cadastro_Funcionario(Funcionario_Ataron funcionario_ataron, string Repetir_Senha)
+        public void Verificar_Cadastro_Perfil(Funcionario_Ataron funcionario_ataron, string Repetir_Senha)
         {
+            // uso de blocos region para ocultar grandes códigos e separar eles por categoria
             #region Campos Vazios
             if (funcionario_ataron.Nome == "")
             {
@@ -282,8 +283,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             {
                 MessageBox.Show("CEP é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
-            else if (funcionario_ataron.Matricula == 0)
+
+            else if (funcionario_ataron.Matricula.ToString() == "")
             {
                 MessageBox.Show("Matrícula é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -325,9 +326,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("CPF deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.RG.Length > 11)
+            else if (funcionario_ataron.RG.Length > 12)
             {
-                MessageBox.Show("RG deve ter menos que 11 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("RG deve ter menos que 12 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (funcionario_ataron.PIS.Length > 14)
@@ -378,6 +379,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             else if (funcionario_ataron.CEP.Length > 9)
             {
                 MessageBox.Show("CEP deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario_ataron.Matricula.ToString().Length > 6)
+            {
+                MessageBox.Show("Matrícula deve ter menos que 6 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (funcionario_ataron.Departamento.Length > 40)
@@ -461,6 +467,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+            else if (!funcionario_ataron.Email.ToLower().Contains("@") || !funcionario_ataron.Email.ToLower().Contains("."))
+            {
+                MessageBox.Show("Email precisa ter @ e .", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             else if (funcionario_ataron.Senha != Repetir_Senha)
             {
                 MessageBox.Show("As Senhas não são iguais", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -468,16 +479,28 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
             else
             {
-                DialogResult pergunta = MessageBox.Show("Deseja cadastrar o funcionário?", "Cadastrar Funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                DialogResult pergunta = MessageBox.Show("Deseja cadastrar o perfil?", "Cadastrar Perfil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if (pergunta == DialogResult.Yes)
                 {
-                    Cadastro_Validado = true;
-
                     Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
-                    funcionario_ataron_dao.Cadastrar_Funcionario(funcionario_ataron);
+                    funcionario_ataron_dao.Cadastrar_Perfil(funcionario_ataron);
+
+                    Cadastro_Validado = true;
                 }
             }
         }
+
+        public void Verificar_Visualizacao_Perfil_Para_Nao_Gerente(Funcionario_Ataron funcionario_ataron)
+        {
+            Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
+            funcionario_ataron_dao.Visualizar_Perfil_Para_Nao_Gerente(funcionario_ataron);
+        }
+
+        public void Verificar_Visualizacao_Perfil_Para_Gerente(Funcionario_Ataron funcionario_ataron, string nome_perfil)
+        {
+            Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
+            funcionario_ataron_dao.Visualizar_Perfil_Para_Gerente(funcionario_ataron, nome_perfil);
+        }
     }
-}
+ }

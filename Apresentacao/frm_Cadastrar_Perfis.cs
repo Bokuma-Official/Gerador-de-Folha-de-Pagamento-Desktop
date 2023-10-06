@@ -92,7 +92,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Telefone_Celular_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-' && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }
@@ -100,7 +100,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Telefone_Fixo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-' && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }
@@ -148,14 +148,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             funcionario_ataron.Telefone_Fixo = txb_Telefone_Fixo.Text;
             funcionario_ataron.Telefone_Celular = txb_Telefone_Celular.Text;
             funcionario_ataron.Email = txb_Email.Text;
-            funcionario_ataron.Matricula = int.Parse(txb_Matricula.Text);
+            funcionario_ataron.Matricula = Convert.ToInt32(txb_Matricula.Text);
             funcionario_ataron.Departamento = txb_Departamento.Text;
             funcionario_ataron.Cargo = txb_Cargo.Text;
             funcionario_ataron.Data_Admissao = txb_Data_Admissao.Text;
             funcionario_ataron.CEP = txb_CEP.Text;
 
             Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Cadastro_Funcionario(funcionario_ataron, Repetir_Senha);
+            controle_validacao.Verificar_Cadastro_Perfil(funcionario_ataron, Repetir_Senha);
 
             if (Controle_Validacao.Cadastro_Validado == true && Funcionario_Ataron_DAO.Cadastro_Realizado == true)
             {

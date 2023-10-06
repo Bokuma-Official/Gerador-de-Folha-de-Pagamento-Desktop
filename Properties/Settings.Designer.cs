@@ -22,5 +22,16 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MATHEUS-C5\\SQLEXPRESS;Initial Catalog=Acesso_Ataron;Integrated Securi" +
+            "ty=True")]
+        public string Acesso_AtaronConnectionString {
+            get {
+                return ((string)(this["Acesso_AtaronConnectionString"]));
+            }
+        }
     }
 }

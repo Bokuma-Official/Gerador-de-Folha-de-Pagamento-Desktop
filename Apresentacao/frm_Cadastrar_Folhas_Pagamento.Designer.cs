@@ -600,12 +600,12 @@
             this.cmb_Selecionar_Funcionario.Location = new System.Drawing.Point(13, 140);
             this.cmb_Selecionar_Funcionario.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Selecionar_Funcionario.Name = "cmb_Selecionar_Funcionario";
-            this.cmb_Selecionar_Funcionario.Size = new System.Drawing.Size(196, 24);
+            this.cmb_Selecionar_Funcionario.Size = new System.Drawing.Size(270, 24);
             this.cmb_Selecionar_Funcionario.TabIndex = 217;
             // 
             // txb_Dependentes
             // 
-            this.txb_Dependentes.Location = new System.Drawing.Point(595, 142);
+            this.txb_Dependentes.Location = new System.Drawing.Point(614, 140);
             this.txb_Dependentes.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Dependentes.Name = "txb_Dependentes";
             this.txb_Dependentes.ReadOnly = true;
@@ -615,12 +615,12 @@
             // lbl_Numero_Dependentes
             // 
             this.lbl_Numero_Dependentes.AutoSize = true;
-            this.lbl_Numero_Dependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lbl_Numero_Dependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Numero_Dependentes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_Numero_Dependentes.Location = new System.Drawing.Point(594, 121);
+            this.lbl_Numero_Dependentes.Location = new System.Drawing.Point(611, 123);
             this.lbl_Numero_Dependentes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Numero_Dependentes.Name = "lbl_Numero_Dependentes";
-            this.lbl_Numero_Dependentes.Size = new System.Drawing.Size(177, 18);
+            this.lbl_Numero_Dependentes.Size = new System.Drawing.Size(162, 16);
             this.lbl_Numero_Dependentes.TabIndex = 431;
             this.lbl_Numero_Dependentes.Text = "Número de Dependentes:";
             // 
@@ -628,7 +628,7 @@
             // 
             this.lbl_Cargo.AutoSize = true;
             this.lbl_Cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cargo.Location = new System.Drawing.Point(419, 121);
+            this.lbl_Cargo.Location = new System.Drawing.Point(453, 121);
             this.lbl_Cargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Cargo.Name = "lbl_Cargo";
             this.lbl_Cargo.Size = new System.Drawing.Size(53, 18);
@@ -637,7 +637,7 @@
             // 
             // txb_Cargo
             // 
-            this.txb_Cargo.Location = new System.Drawing.Point(422, 140);
+            this.txb_Cargo.Location = new System.Drawing.Point(453, 140);
             this.txb_Cargo.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Cargo.Name = "txb_Cargo";
             this.txb_Cargo.ReadOnly = true;
@@ -646,7 +646,7 @@
             // 
             // txb_CPF
             // 
-            this.txb_CPF.Location = new System.Drawing.Point(228, 142);
+            this.txb_CPF.Location = new System.Drawing.Point(291, 140);
             this.txb_CPF.Margin = new System.Windows.Forms.Padding(4);
             this.txb_CPF.Name = "txb_CPF";
             this.txb_CPF.ReadOnly = true;
@@ -657,7 +657,7 @@
             // 
             this.lbl_CPF.AutoSize = true;
             this.lbl_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CPF.Location = new System.Drawing.Point(225, 120);
+            this.lbl_CPF.Location = new System.Drawing.Point(288, 121);
             this.lbl_CPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_CPF.Name = "lbl_CPF";
             this.lbl_CPF.Size = new System.Drawing.Size(42, 18);

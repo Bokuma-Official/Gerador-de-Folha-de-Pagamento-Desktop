@@ -1,21 +1,26 @@
 ﻿using Gerador_de_Folha_de_Pagamento_Desktop.DAL;
 using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Visualizar_Perfis : Form
     {
+        public static string Nome_Perfil { get; set; }
+
         public frm_Visualizar_Perfis()
         {
             InitializeComponent();
@@ -62,7 +67,68 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_Telefone_Celular.ReadOnly = true;
                 txb_Telefone_Fixo.ReadOnly = true;
                 txb_Titulo_Eleitor.ReadOnly = true;
+
+                // exibir o perfil para não gerentes
+                Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+
+                Controle_Validacao controle_validacao = new Controle_Validacao();
+                controle_validacao.Verificar_Visualizacao_Perfil_Para_Nao_Gerente(funcionario_ataron);
+
+                txb_CPF.Text = funcionario_ataron.CPF;
+                txb_Senha.Text = funcionario_ataron.Senha;
+                txb_Nome.Text = funcionario_ataron.Nome;
+                txb_RG.Text = funcionario_ataron.RG;
+                txb_PIS.Text = funcionario_ataron.PIS;
+                txb_Carteira_Trabalho.Text = funcionario_ataron.Carteira_Trabalho;
+                txb_Titulo_Eleitor.Text = funcionario_ataron.Titulo_Eleitor;
+                txb_Sexo.Text = funcionario_ataron.Sexo;
+                txb_RA_Militar.Text = funcionario_ataron.Certificado_Militar;
+                txb_Data_Nascimento.Text = funcionario_ataron.Data_Nascimento;
+                txb_Telefone_Fixo.Text = funcionario_ataron.Telefone_Fixo;
+                txb_Telefone_Celular.Text = funcionario_ataron.Telefone_Celular;
+                txb_Email.Text = funcionario_ataron.Email;
+                txb_Matricula.Text = funcionario_ataron.Matricula.ToString();
+                txb_Departamento.Text = funcionario_ataron.Departamento;
+                txb_Cargo.Text = funcionario_ataron.Cargo;
+                txb_Data_Admissao.Text = funcionario_ataron.Data_Admissao;
+                txb_CEP.Text = funcionario_ataron.CEP;
             }
+        }
+
+        private void cmb_Selecionar_Perfil_DropDown(object sender, EventArgs e)
+        {
+            // carregar a coluna nome da tabela funcionarios_ataron e exibir na combobox
+            this.funcionario_AtaronTableAdapter.Fill(this.acesso_AtaronDataSet.Funcionario_Ataron);
+        }
+
+        private void cmb_Selecionar_Perfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // ao selecionar um nome na combobox vai preencher todos os campos
+            Nome_Perfil = cmb_Selecionar_Perfil.Text;
+
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Visualizacao_Perfil_Para_Gerente(funcionario_ataron, Nome_Perfil);
+
+            txb_CPF.Text = funcionario_ataron.CPF;
+            txb_Senha.Text = funcionario_ataron.Senha;
+            txb_Nome.Text = funcionario_ataron.Nome;
+            txb_RG.Text = funcionario_ataron.RG;
+            txb_PIS.Text = funcionario_ataron.PIS;
+            txb_Carteira_Trabalho.Text = funcionario_ataron.Carteira_Trabalho;
+            txb_Titulo_Eleitor.Text = funcionario_ataron.Titulo_Eleitor;
+            txb_Sexo.Text = funcionario_ataron.Sexo;
+            txb_RA_Militar.Text = funcionario_ataron.Certificado_Militar;
+            txb_Data_Nascimento.Text = funcionario_ataron.Data_Nascimento;
+            txb_Telefone_Fixo.Text = funcionario_ataron.Telefone_Fixo;
+            txb_Telefone_Celular.Text = funcionario_ataron.Telefone_Celular;
+            txb_Email.Text = funcionario_ataron.Email;
+            txb_Matricula.Text = funcionario_ataron.Matricula.ToString();
+            txb_Departamento.Text = funcionario_ataron.Departamento;
+            txb_Cargo.Text = funcionario_ataron.Cargo;
+            txb_Data_Admissao.Text = funcionario_ataron.Data_Admissao;
+            txb_CEP.Text = funcionario_ataron.CEP;
         }
 
         private void frm_Visualizar_Perfis_Shown(object sender, EventArgs e)
@@ -128,7 +194,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Telefone_Celular_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-' && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }
@@ -136,7 +202,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Telefone_Fixo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-' && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }
