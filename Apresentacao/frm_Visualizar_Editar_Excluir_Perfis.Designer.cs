@@ -124,6 +124,7 @@
             this.btn_Editar.TabIndex = 319;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // lbl_Selecionar_Perfil
             // 
@@ -175,6 +176,7 @@
             this.btn_Deletar.TabIndex = 367;
             this.btn_Deletar.Text = "Deletar";
             this.btn_Deletar.UseVisualStyleBackColor = false;
+            this.btn_Deletar.Click += new System.EventHandler(this.btn_Deletar_Click);
             // 
             // txb_Cargo
             // 

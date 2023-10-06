@@ -49,7 +49,7 @@
             this.lbl_Menu.AutoSize = true;
             this.lbl_Menu.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Menu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_Menu.Location = new System.Drawing.Point(270, 9);
+            this.lbl_Menu.Location = new System.Drawing.Point(257, 9);
             this.lbl_Menu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Menu.Name = "lbl_Menu";
             this.lbl_Menu.Size = new System.Drawing.Size(141, 59);
@@ -60,7 +60,7 @@
             // 
             this.pct_Imagem_Menu.BackColor = System.Drawing.Color.Transparent;
             this.pct_Imagem_Menu.Image = global::Gerador_de_Folha_de_Pagamento_Desktop.Properties.Resources.images___Copia;
-            this.pct_Imagem_Menu.Location = new System.Drawing.Point(306, 90);
+            this.pct_Imagem_Menu.Location = new System.Drawing.Point(289, 89);
             this.pct_Imagem_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.pct_Imagem_Menu.Name = "pct_Imagem_Menu";
             this.pct_Imagem_Menu.Size = new System.Drawing.Size(60, 62);

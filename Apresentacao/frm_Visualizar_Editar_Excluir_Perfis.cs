@@ -19,7 +19,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Visualizar_Editar_Excluir_Perfis : Form
     {
-        public string Nome_Perfil { get; set; }
+        public string Nome_Perfil_Selecionado { get; set; }
+        public string CPF_Perfil_Selecionado { get; set; }
 
         public frm_Visualizar_Editar_Excluir_Perfis()
         {
@@ -37,13 +38,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             /* se a variavel cargo da classe funcionario_ataron_dao for diferente de gerente,
             muda ou oculta elementos da tela */
-            if (!Funcionario_Ataron_DAO.Cargo.ToLower().Contains("gerente"))
+            if (!Funcionario_Ataron_DAO.Cargo_Perfil_Logado.ToLower().Contains("gerente"))
             {
                 lbl_Visualizar_Editar_Excluir.Text = "Visualizar Perfil";
-                lbl_Visualizar_Editar_Excluir.Location = new Point (175, 25);
+                lbl_Visualizar_Editar_Excluir.Location = new Point (260, 40);
                 lbl_Selecionar_Perfil.Visible = false;
                 cmb_Selecionar_Perfil.Visible = false;
-                btn_Voltar.Location = new Point (260, 460);
+                btn_Voltar.Location = new Point (345, 460);
                 btn_Deletar.Visible = false;
                 btn_Editar.Visible = false;
                 btn_Editar.Visible = false;
@@ -127,12 +128,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void cmb_Selecionar_Perfil_SelectedIndexChanged(object sender, EventArgs e)
         {
             // ao selecionar um nome na combobox vai preencher todos os campos
-            Nome_Perfil = cmb_Selecionar_Perfil.Text;
+            Nome_Perfil_Selecionado = cmb_Selecionar_Perfil.Text;
 
             Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
 
             Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Visualizacao_Perfil_Para_Gerente(funcionario_ataron, Nome_Perfil);
+            controle_validacao.Verificar_Visualizacao_Perfil_Para_Gerente(funcionario_ataron, Nome_Perfil_Selecionado);
 
             txb_CPF.Text = funcionario_ataron.CPF;
             txb_Senha.Text = funcionario_ataron.Senha;
@@ -287,6 +288,36 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             chk_Masculino.Checked = false;
             chk_Feminino.Checked = false;
+        }
+
+        private void btn_Deletar_Click(object sender, EventArgs e)
+        {
+            CPF_Perfil_Selecionado = txb_CPF.Text;
+
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Exclusao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
+
+            if (Controle_Validacao.Deletar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Deletado == true)
+            {
+                Controle_Validacao.Deletar_Perfil_Validado = false;
+                Funcionario_Ataron_DAO.Perfil_Deletado = false;
+
+                this.Hide();
+                frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_editar_excluir_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
+                frm_visualizar_editar_excluir_perfis.Show();
+            }
+        }
+
+        private void btn_Editar_Click(object sender, EventArgs e)
+        {
+            CPF_Perfil_Selecionado = txb_CPF.Text;
+
+            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Edicao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
         }
     }
 }

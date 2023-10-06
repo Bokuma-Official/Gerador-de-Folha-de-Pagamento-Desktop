@@ -15,10 +15,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
     public class Funcionario_Ataron_DAO
     {
         // variável estática
-        public static string Cargo { get; set; }
-        public static string CPF { get; set; }
-        public static bool Senha_Mudada { get; set; }
-        public static bool Cadastro_Realizado { get; set; }
+        public static string Cargo_Perfil_Logado { get; set; }
+        public static string CPF_Perfil_Logado { get; set; }
+        public static bool Senha_Perfil_Mudada { get; set; }
+        public static bool Cadastro_Perfil_Realizado { get; set; }
+        public static bool Perfil_Deletado { get; set; }
+        public static bool Perfil_Atualizado { get; set; }
 
         public void Fazer_Login(Funcionario_Ataron funcionario_ataron)
         {
@@ -38,14 +40,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
 
                 // obter o valor da coluna cargo e atribuir a variável cargo
-                Cargo = (string)command.ExecuteScalar();
-                CPF = funcionario_ataron.CPF;
+                Cargo_Perfil_Logado = (string)command.ExecuteScalar();
+                CPF_Perfil_Logado = funcionario_ataron.CPF;
 
                 // fecha a conexão com o banco de dados
                 conexao.Close();
 
                 // se cargo for nulo, também não conseguiu validar os valores de cpf e senha com o banco
-                if (Cargo == null)
+                if (Cargo_Perfil_Logado == null)
                 {
                     MessageBox.Show("CPF ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -70,13 +72,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 command1.Parameters.AddWithValue("@Email", funcionario_ataron.Email);
 
-                CPF = (string)command1.ExecuteScalar();
+                CPF_Perfil_Logado = (string)command1.ExecuteScalar();
 
                 // atualizar a senha que tenha o mesmo cpf salvo na variável
                 SqlCommand command2 = new SqlCommand("update Funcionario_Ataron set Senha = @Senha where CPF = @CPF", conexao);
 
                 command2.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
-                command2.Parameters.AddWithValue("@CPF", CPF);
+                command2.Parameters.AddWithValue("@CPF", CPF_Perfil_Logado);
 
                 int linhas_afetadas = command2.ExecuteNonQuery();
 
@@ -86,7 +88,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 {
                     MessageBox.Show("A Senha foi redefinida com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Senha_Mudada = true;
+                    Senha_Perfil_Mudada = true;
                 }
             }
 
@@ -135,7 +137,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 {
                     MessageBox.Show("O perfil foi cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Cadastro_Realizado = true;
+                    Cadastro_Perfil_Realizado = true;
                 }
             }
 
@@ -155,7 +157,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 SqlCommand command = new SqlCommand("select * from Funcionario_Ataron where CPF = @CPF", conexao);
 
-                command.Parameters.AddWithValue("@CPF", CPF);
+                command.Parameters.AddWithValue("@CPF", CPF_Perfil_Logado);
 
                 /* uso do data reader para pegar os valores selecionados do banco
                 e atribuir a classe funcionario_ataron */
@@ -198,7 +200,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             }
         }
 
-        public void Visualizar_Perfil_Para_Gerente(Funcionario_Ataron funcionario_ataron, string nome_perfil)
+        public void Visualizar_Perfil_Para_Gerente(Funcionario_Ataron funcionario_ataron, string nome_perfil_selecionado)
         {
             try
             {
@@ -208,7 +210,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 SqlCommand command = new SqlCommand("select * from Funcionario_Ataron where Nome = @Nome", conexao);
 
-                command.Parameters.AddWithValue("@Nome", nome_perfil);
+                command.Parameters.AddWithValue("@Nome", nome_perfil_selecionado);
 
                 SqlDataReader data_reader;
 
@@ -247,6 +249,41 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             {
                 MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void Deletar_Perfil (Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        {
+            try
+            {
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
+
+                conexao.Open();
+
+                SqlCommand command = new SqlCommand("delete from Funcionario_Ataron where CPF = @CPF", conexao);
+
+                command.Parameters.AddWithValue("@CPF", cpf_perfil_selecionado);
+
+                int linhas_afetadas = command.ExecuteNonQuery();
+
+                conexao.Close();
+
+                if (linhas_afetadas > 0)
+                {
+                    MessageBox.Show("O perfil foi deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Perfil_Deletado = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Editar_Perfil(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        {
+
         }
     }
 }

@@ -177,10 +177,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             Controle_Validacao controle_validacao = new Controle_Validacao();
             controle_validacao.Verificar_Cadastro_Perfil(funcionario_ataron, Repetir_Senha);
 
-            if (Controle_Validacao.Cadastro_Validado == true && Funcionario_Ataron_DAO.Cadastro_Realizado == true)
+            if (Controle_Validacao.Cadastro_Perfil_Validado == true && Funcionario_Ataron_DAO.Cadastro_Perfil_Realizado == true)
             {
-                Controle_Validacao.Cadastro_Validado = false;
-                Funcionario_Ataron_DAO.Cadastro_Realizado = false;
+                Controle_Validacao.Cadastro_Perfil_Validado = false;
+                Funcionario_Ataron_DAO.Cadastro_Perfil_Realizado = false;
 
                 txb_Repetir_Senha.Clear();
                 txb_CPF.Clear();

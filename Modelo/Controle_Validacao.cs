@@ -16,11 +16,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
     {
         public static bool Login_Validado { get; set; }
         public static bool Email_Validado { get; set; }
-        public static int Codigo_Gerado { get; set; }
+        public int Codigo_Gerado { get; set; }
         public static string Codigo_Seguranca { get; set; }
         public static bool Codigo_Validado { get; set; }
         public static bool Senha_Validada { get; set; }
-        public static bool Cadastro_Validado { get; set; }
+        public static bool Cadastro_Perfil_Validado { get; set; }
+        public static bool Deletar_Perfil_Validado { get; set; }
+        public static bool Editar_Perfil_Validado { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
         {
@@ -109,7 +111,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     MailMessage mailMessage = new MailMessage();
                     mailMessage.From = new MailAddress("bokuranteoficial@gmail.com");
                     mailMessage.To.Add(funcionario_ataron.Email);
-                    mailMessage.Subject = "Ataron - Código de Segurança - Redefinição de Senha ";
+                    mailMessage.Subject = "Ataron - Folhas de Pagamento - Código de Segurança para Redefinição de Senha de Perfil";
                     mailMessage.Body = $"Seu Código de Segurança é: {Codigo_Seguranca}";
 
                     SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
@@ -490,7 +492,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
                     funcionario_ataron_dao.Cadastrar_Perfil(funcionario_ataron);
 
-                    Cadastro_Validado = true;
+                    Cadastro_Perfil_Validado = true;
                 }
             }
         }
@@ -501,10 +503,44 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             funcionario_ataron_dao.Visualizar_Perfil_Para_Nao_Gerente(funcionario_ataron);
         }
 
-        public void Verificar_Visualizacao_Perfil_Para_Gerente(Funcionario_Ataron funcionario_ataron, string nome_perfil)
+        public void Verificar_Visualizacao_Perfil_Para_Gerente(Funcionario_Ataron funcionario_ataron, string nome_perfil_selecionado)
         {
             Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
-            funcionario_ataron_dao.Visualizar_Perfil_Para_Gerente(funcionario_ataron, nome_perfil);
+            funcionario_ataron_dao.Visualizar_Perfil_Para_Gerente(funcionario_ataron, nome_perfil_selecionado);
+        }
+
+        public void Verificar_Exclusao_Perfil (Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        {
+            if (cpf_perfil_selecionado == "")
+            {
+                MessageBox.Show("Selecione um perfil para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (Funcionario_Ataron_DAO.CPF_Perfil_Logado == cpf_perfil_selecionado)
+            {
+                MessageBox.Show("Você não pode deletar o seu próprio perfil", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                DialogResult pergunta = MessageBox.Show("Deseja excluir o perfil?", "Redefinição de senha", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (pergunta == DialogResult.Yes)
+                {
+                    Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
+                    funcionario_ataron_dao.Deletar_Perfil(funcionario_ataron, cpf_perfil_selecionado);
+
+                    Deletar_Perfil_Validado = true;
+                }
+            }
+        }
+
+        public void Verificar_Edicao_Perfil(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        {
+            Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
+            funcionario_ataron_dao.Editar_Perfil(funcionario_ataron, cpf_perfil_selecionado);
+
+            Editar_Perfil_Validado = true;
         }
     }
  }

@@ -100,10 +100,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             Controle_Validacao controle_validacao = new Controle_Validacao();
             controle_validacao.Verificar_Senha(funcionario_ataron, Repetir_Senha);
 
-            if (Controle_Validacao.Senha_Validada == true && Funcionario_Ataron_DAO.Senha_Mudada == true)
+            if (Controle_Validacao.Senha_Validada == true && Funcionario_Ataron_DAO.Senha_Perfil_Mudada == true)
             {
                 Controle_Validacao.Senha_Validada = false;
-                Funcionario_Ataron_DAO.Senha_Mudada = false;
+                Funcionario_Ataron_DAO.Senha_Perfil_Mudada = false;
 
                 this.Hide();
                 frm_Login frm_login = new frm_Login();
