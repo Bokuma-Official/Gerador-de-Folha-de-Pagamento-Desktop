@@ -61,7 +61,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_Matricula.ReadOnly = true;
                 txb_Nome.ReadOnly = true;
                 txb_PIS.ReadOnly = true;
-                txb_RA_Militar.ReadOnly = true;
+                txb_Certificado_Militar.ReadOnly = true;
                 txb_RG.ReadOnly = true;
                 chk_Masculino.AutoCheck = false;
                 chk_Feminino.AutoCheck = false;
@@ -105,7 +105,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                     chk_Feminino.Checked = false;
                 }
 
-                txb_RA_Militar.Text = funcionario_ataron.Certificado_Militar;
+                txb_Certificado_Militar.Text = funcionario_ataron.Certificado_Militar;
                 txb_Data_Nascimento.Text = funcionario_ataron.Data_Nascimento;
                 txb_Telefone_Fixo.Text = funcionario_ataron.Telefone_Fixo;
                 txb_Telefone_Celular.Text = funcionario_ataron.Telefone_Celular;
@@ -163,7 +163,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 chk_Feminino.Checked = false;
             }
 
-            txb_RA_Militar.Text = funcionario_ataron.Certificado_Militar;
+            txb_Certificado_Militar.Text = funcionario_ataron.Certificado_Militar;
             txb_Data_Nascimento.Text = funcionario_ataron.Data_Nascimento;
             txb_Telefone_Fixo.Text = funcionario_ataron.Telefone_Fixo;
             txb_Telefone_Celular.Text = funcionario_ataron.Telefone_Celular;

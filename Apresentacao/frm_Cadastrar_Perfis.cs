@@ -163,7 +163,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 funcionario_ataron.Sexo = "";
             }
 
-            funcionario_ataron.Certificado_Militar = txb_RA_Militar.Text;
+            funcionario_ataron.Certificado_Militar = txb_Certificado_Militar.Text;
             funcionario_ataron.Data_Nascimento = txb_Data_Nascimento.Text;
             funcionario_ataron.Telefone_Fixo = txb_Telefone_Fixo.Text;
             funcionario_ataron.Telefone_Celular = txb_Telefone_Celular.Text;
@@ -193,7 +193,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 chk_Masculino.Checked = true;
                 chk_Feminino.Checked = false;
                 chk_Nao_Binario.Checked = false;
-                txb_RA_Militar.Clear();
+                txb_Certificado_Militar.Clear();
                 txb_Data_Nascimento.Clear();
                 txb_Telefone_Fixo.Clear();
                 txb_Telefone_Celular.Clear();

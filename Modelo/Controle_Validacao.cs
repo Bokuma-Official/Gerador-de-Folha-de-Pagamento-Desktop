@@ -253,8 +253,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Título de Eleitor é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.Certificado_Militar == "" && funcionario_ataron.Sexo.ToLower().Contains("masculino") ||
-                funcionario_ataron.Certificado_Militar == "" && funcionario_ataron.Sexo.ToLower().Contains("homem"))
+            else if (funcionario_ataron.Certificado_Militar == "" && funcionario_ataron.Sexo == "Masculino")
             {
                 MessageBox.Show("Certificado Militar é obrigatório para pessoas do Sexo Masculino", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -465,6 +464,16 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             else if (!funcionario_ataron.Email.ToLower().Contains("@") || !funcionario_ataron.Email.ToLower().Contains("."))
             {
                 MessageBox.Show("Email precisa ter @ e .", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!funcionario_ataron.Data_Nascimento.Contains("/"))
+            {
+                MessageBox.Show("Data de Nascimento precisa ter /", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!funcionario_ataron.Data_Admissao.Contains("/"))
+            {
+                MessageBox.Show("Data de Admissão precisa ter /", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (funcionario_ataron.Senha != Repetir_Senha)

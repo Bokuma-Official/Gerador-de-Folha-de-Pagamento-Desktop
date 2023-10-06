@@ -50,8 +50,8 @@
             this.lbl_Departamento = new System.Windows.Forms.Label();
             this.lbl_Profissionais = new System.Windows.Forms.Label();
             this.lbl_Sexo = new System.Windows.Forms.Label();
-            this.txb_RA_Militar = new System.Windows.Forms.TextBox();
-            this.lbl_RA_Militar = new System.Windows.Forms.Label();
+            this.txb_Certificado_Militar = new System.Windows.Forms.TextBox();
+            this.lbl_Certificado_Militar = new System.Windows.Forms.Label();
             this.txb_Titulo_Eleitor = new System.Windows.Forms.TextBox();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.txb_Carteira_Trabalho = new System.Windows.Forms.TextBox();
@@ -297,25 +297,25 @@
             this.lbl_Sexo.TabIndex = 398;
             this.lbl_Sexo.Text = "Sexo:";
             // 
-            // txb_RA_Militar
+            // txb_Certificado_Militar
             // 
-            this.txb_RA_Militar.Location = new System.Drawing.Point(31, 514);
-            this.txb_RA_Militar.Margin = new System.Windows.Forms.Padding(4);
-            this.txb_RA_Militar.Name = "txb_RA_Militar";
-            this.txb_RA_Militar.Size = new System.Drawing.Size(292, 22);
-            this.txb_RA_Militar.TabIndex = 397;
-            this.txb_RA_Militar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_RA_Militar_KeyPress);
+            this.txb_Certificado_Militar.Location = new System.Drawing.Point(31, 514);
+            this.txb_Certificado_Militar.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_Certificado_Militar.Name = "txb_Certificado_Militar";
+            this.txb_Certificado_Militar.Size = new System.Drawing.Size(292, 22);
+            this.txb_Certificado_Militar.TabIndex = 397;
+            this.txb_Certificado_Militar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_RA_Militar_KeyPress);
             // 
-            // lbl_RA_Militar
+            // lbl_Certificado_Militar
             // 
-            this.lbl_RA_Militar.AutoSize = true;
-            this.lbl_RA_Militar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_RA_Militar.Location = new System.Drawing.Point(27, 497);
-            this.lbl_RA_Militar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_RA_Militar.Name = "lbl_RA_Militar";
-            this.lbl_RA_Militar.Size = new System.Drawing.Size(75, 18);
-            this.lbl_RA_Militar.TabIndex = 396;
-            this.lbl_RA_Militar.Text = "RA militar:";
+            this.lbl_Certificado_Militar.AutoSize = true;
+            this.lbl_Certificado_Militar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Certificado_Militar.Location = new System.Drawing.Point(27, 497);
+            this.lbl_Certificado_Militar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Certificado_Militar.Name = "lbl_Certificado_Militar";
+            this.lbl_Certificado_Militar.Size = new System.Drawing.Size(126, 18);
+            this.lbl_Certificado_Militar.TabIndex = 396;
+            this.lbl_Certificado_Militar.Text = "Certificado militar:";
             // 
             // txb_Titulo_Eleitor
             // 
@@ -644,8 +644,8 @@
             this.Controls.Add(this.lbl_Departamento);
             this.Controls.Add(this.lbl_Profissionais);
             this.Controls.Add(this.lbl_Sexo);
-            this.Controls.Add(this.txb_RA_Militar);
-            this.Controls.Add(this.lbl_RA_Militar);
+            this.Controls.Add(this.txb_Certificado_Militar);
+            this.Controls.Add(this.lbl_Certificado_Militar);
             this.Controls.Add(this.txb_Titulo_Eleitor);
             this.Controls.Add(this.lbl_Titulo);
             this.Controls.Add(this.txb_Carteira_Trabalho);
@@ -711,8 +711,8 @@
         private System.Windows.Forms.Label lbl_Departamento;
         private System.Windows.Forms.Label lbl_Profissionais;
         private System.Windows.Forms.Label lbl_Sexo;
-        private System.Windows.Forms.TextBox txb_RA_Militar;
-        private System.Windows.Forms.Label lbl_RA_Militar;
+        private System.Windows.Forms.TextBox txb_Certificado_Militar;
+        private System.Windows.Forms.Label lbl_Certificado_Militar;
         private System.Windows.Forms.TextBox txb_Titulo_Eleitor;
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.TextBox txb_Carteira_Trabalho;
