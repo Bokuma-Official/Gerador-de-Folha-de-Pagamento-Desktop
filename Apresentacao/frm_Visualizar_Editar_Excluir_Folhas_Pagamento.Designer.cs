@@ -696,13 +696,13 @@
             // cmb_Pagamento
             // 
             this.cmb_Pagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Pagamento.Enabled = false;
             this.cmb_Pagamento.FormattingEnabled = true;
             this.cmb_Pagamento.Location = new System.Drawing.Point(18, 196);
             this.cmb_Pagamento.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Pagamento.Name = "cmb_Pagamento";
             this.cmb_Pagamento.Size = new System.Drawing.Size(292, 24);
             this.cmb_Pagamento.TabIndex = 429;
-            this.cmb_Pagamento.Visible = false;
             // 
             // frm_Visualizar_Editar_Excluir_Folhas_Pagamento
             // 
