@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.Modelo.Funcionario_Ataron">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAECBgAAEGgAAAAACAACgABACBAAACAAGAAAA=</HashCode>
+      <FileName>Modelo\Funcionario_Ataron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.Modelo.Funcionario">
+    <Position X="0.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAECAgIAECgAAAAACAACgABACAAAAAIAGAAAA=</HashCode>
+      <FileName>Modelo\Funcionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.Modelo.Folha_Pagamento">
+    <Position X="0.5" Y="9.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAGAAACQIAACBASEAEADCAAAAAAAIEEggBAAAgAAA=</HashCode>
+      <FileName>Modelo\Folha_Pagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.Modelo.Endereco">
+    <Position X="7.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAIAAAAgAAAAACIAAAAAAACAAAAAAAAAAAAAAAABAAg=</HashCode>
+      <FileName>Modelo\Endereco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.Modelo.Departamento">
+    <Position X="7.5" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABACAAAAAAAIAAAAAAAEAAAA=</HashCode>
+      <FileName>Modelo\Departamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.Modelo.Contrato_Empresa">
+    <Position X="7.5" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gQAAAAABAAAAAAAAAAAABACAAAAAAAIAAAACAAAAAAA=</HashCode>
+      <FileName>Modelo\Contrato_Empresa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.Modelo.Cargo">
+    <Position X="7.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Modelo\Cargo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.Modelo.Controle_Validacao">
+    <Position X="12" Y="7" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQQAAAAUAAAAABGCAAAAAAEACCAAQAAAgAABAKMBA=</HashCode>
+      <FileName>Modelo\Controle_Validacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Funcionario_Ataron_DAO">
+    <Position X="3.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIABkIAADAAEAAAAAAAABAEAAAAAIAAAAgA=</HashCode>
+      <FileName>DAL\Funcionario_Ataron_DAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Funcionario_DAO">
+    <Position X="3.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Funcionario_DAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Folha_Pagamento_DAO">
+    <Position X="3.5" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Folha_Pagamento_DAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Endereco_DAO">
+    <Position X="9.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Endereco_DAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Departamento_DAO">
+    <Position X="9.75" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Departamento_DAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Contrato_Empresa_DAO">
+    <Position X="9.75" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Contrato_Empresa_DAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Cargo_DAO">
+    <Position X="9.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Cargo_DAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Conexao_Banco_Acesso">
+    <Position X="14.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Conexao_Banco_Acesso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gerador_de_Folha_de_Pagamento_Desktop.DAL.Conexao_Banco_Folha">
+    <Position X="12" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Conexao_Banco_Folha.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -63,9 +63,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap images___Copia {
+        internal static System.Drawing.Bitmap Logo_Ataron {
             get {
-                object obj = ResourceManager.GetObject("images - Copia", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo_Ataron", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

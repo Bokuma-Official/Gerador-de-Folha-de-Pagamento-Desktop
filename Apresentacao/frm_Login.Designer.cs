@@ -37,6 +37,8 @@
             this.lnk_Redefinir = new System.Windows.Forms.LinkLabel();
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_Fechar = new System.Windows.Forms.Button();
+            this.pct_Imagem_Menu = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pct_Imagem_Menu)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Login
@@ -95,10 +97,18 @@
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
             // 
+            // pct_Imagem_Menu
+            // 
+            this.pct_Imagem_Menu.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pct_Imagem_Menu, "pct_Imagem_Menu");
+            this.pct_Imagem_Menu.Name = "pct_Imagem_Menu";
+            this.pct_Imagem_Menu.TabStop = false;
+            // 
             // frm_Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pct_Imagem_Menu);
             this.Controls.Add(this.btn_Fechar);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.lnk_Redefinir);
@@ -109,6 +119,7 @@
             this.Controls.Add(this.lbl_Login);
             this.Name = "frm_Login";
             this.Shown += new System.EventHandler(this.frm_Login_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.pct_Imagem_Menu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,6 +135,7 @@
         private System.Windows.Forms.LinkLabel lnk_Redefinir;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Button btn_Fechar;
+        private System.Windows.Forms.PictureBox pct_Imagem_Menu;
     }
 }
 

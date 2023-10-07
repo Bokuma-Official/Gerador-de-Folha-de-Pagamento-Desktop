@@ -25,7 +25,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop
 
             else
             {
-                MessageBox.Show("Uma janela do programa já esta aberta!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Uma janela do programa já esta aberta!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

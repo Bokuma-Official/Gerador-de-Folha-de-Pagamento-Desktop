@@ -49,7 +49,7 @@
             this.lbl_Menu.AutoSize = true;
             this.lbl_Menu.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Menu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_Menu.Location = new System.Drawing.Point(257, 9);
+            this.lbl_Menu.Location = new System.Drawing.Point(259, 101);
             this.lbl_Menu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Menu.Name = "lbl_Menu";
             this.lbl_Menu.Size = new System.Drawing.Size(141, 59);
@@ -59,11 +59,11 @@
             // pct_Imagem_Menu
             // 
             this.pct_Imagem_Menu.BackColor = System.Drawing.Color.Transparent;
-            this.pct_Imagem_Menu.Image = global::Gerador_de_Folha_de_Pagamento_Desktop.Properties.Resources.images___Copia;
-            this.pct_Imagem_Menu.Location = new System.Drawing.Point(289, 89);
+            this.pct_Imagem_Menu.Image = ((System.Drawing.Image)(resources.GetObject("pct_Imagem_Menu.Image")));
+            this.pct_Imagem_Menu.Location = new System.Drawing.Point(269, 13);
             this.pct_Imagem_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.pct_Imagem_Menu.Name = "pct_Imagem_Menu";
-            this.pct_Imagem_Menu.Size = new System.Drawing.Size(60, 62);
+            this.pct_Imagem_Menu.Size = new System.Drawing.Size(115, 84);
             this.pct_Imagem_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pct_Imagem_Menu.TabIndex = 18;
             this.pct_Imagem_Menu.TabStop = false;
@@ -72,7 +72,7 @@
             // 
             this.btn_Cadastrar_Perfis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cadastrar_Perfis.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Cadastrar_Perfis.Location = new System.Drawing.Point(473, 249);
+            this.btn_Cadastrar_Perfis.Location = new System.Drawing.Point(473, 246);
             this.btn_Cadastrar_Perfis.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cadastrar_Perfis.Name = "btn_Cadastrar_Perfis";
             this.btn_Cadastrar_Perfis.Size = new System.Drawing.Size(172, 85);
@@ -86,24 +86,24 @@
             this.lbl_Ataron.AutoSize = true;
             this.lbl_Ataron.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Ataron.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_Ataron.Location = new System.Drawing.Point(285, 643);
+            this.lbl_Ataron.Location = new System.Drawing.Point(444, 641);
             this.lbl_Ataron.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Ataron.Name = "lbl_Ataron";
-            this.lbl_Ataron.Size = new System.Drawing.Size(334, 20);
+            this.lbl_Ataron.Size = new System.Drawing.Size(190, 20);
             this.lbl_Ataron.TabIndex = 42;
-            this.lbl_Ataron.Text = "Copyright Ataron™  2023 - Do not distribute.";
+            this.lbl_Ataron.Text = "Copyright Ataron™  2023";
             // 
             // btn_Sair
             // 
             this.btn_Sair.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_Sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sair.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Sair.Location = new System.Drawing.Point(254, 551);
+            this.btn_Sair.Location = new System.Drawing.Point(254, 548);
             this.btn_Sair.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(172, 83);
             this.btn_Sair.TabIndex = 41;
-            this.btn_Sair.Text = "Sair da conta";
+            this.btn_Sair.Text = "Sair da Conta";
             this.btn_Sair.UseVisualStyleBackColor = false;
             this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
@@ -111,7 +111,7 @@
             // 
             this.btn_Visualizar_Perfis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Visualizar_Perfis.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Visualizar_Perfis.Location = new System.Drawing.Point(473, 427);
+            this.btn_Visualizar_Perfis.Location = new System.Drawing.Point(473, 424);
             this.btn_Visualizar_Perfis.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Visualizar_Perfis.Name = "btn_Visualizar_Perfis";
             this.btn_Visualizar_Perfis.Size = new System.Drawing.Size(172, 85);
@@ -124,7 +124,7 @@
             // 
             this.btn_Visualizar_Folhas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Visualizar_Folhas.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Visualizar_Folhas.Location = new System.Drawing.Point(254, 427);
+            this.btn_Visualizar_Folhas.Location = new System.Drawing.Point(254, 424);
             this.btn_Visualizar_Folhas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Visualizar_Folhas.Name = "btn_Visualizar_Folhas";
             this.btn_Visualizar_Folhas.Size = new System.Drawing.Size(172, 83);
@@ -137,7 +137,7 @@
             // 
             this.btn_Visualizar_Funcionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Visualizar_Funcionarios.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Visualizar_Funcionarios.Location = new System.Drawing.Point(27, 427);
+            this.btn_Visualizar_Funcionarios.Location = new System.Drawing.Point(27, 424);
             this.btn_Visualizar_Funcionarios.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Visualizar_Funcionarios.Name = "btn_Visualizar_Funcionarios";
             this.btn_Visualizar_Funcionarios.Size = new System.Drawing.Size(172, 85);
@@ -152,7 +152,7 @@
             this.lbl_Visualizacoes.BackColor = System.Drawing.SystemColors.Highlight;
             this.lbl_Visualizacoes.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Visualizacoes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Visualizacoes.Location = new System.Drawing.Point(183, 372);
+            this.lbl_Visualizacoes.Location = new System.Drawing.Point(183, 369);
             this.lbl_Visualizacoes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Visualizacoes.Name = "lbl_Visualizacoes";
             this.lbl_Visualizacoes.Size = new System.Drawing.Size(272, 26);
@@ -163,7 +163,7 @@
             // 
             this.btn_Cadastrar_Folhas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cadastrar_Folhas.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Cadastrar_Folhas.Location = new System.Drawing.Point(254, 249);
+            this.btn_Cadastrar_Folhas.Location = new System.Drawing.Point(254, 246);
             this.btn_Cadastrar_Folhas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cadastrar_Folhas.Name = "btn_Cadastrar_Folhas";
             this.btn_Cadastrar_Folhas.Size = new System.Drawing.Size(172, 85);
@@ -176,7 +176,7 @@
             // 
             this.btn_Cadastrar_Funcionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cadastrar_Funcionarios.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Cadastrar_Funcionarios.Location = new System.Drawing.Point(27, 249);
+            this.btn_Cadastrar_Funcionarios.Location = new System.Drawing.Point(27, 246);
             this.btn_Cadastrar_Funcionarios.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cadastrar_Funcionarios.Name = "btn_Cadastrar_Funcionarios";
             this.btn_Cadastrar_Funcionarios.Size = new System.Drawing.Size(172, 85);
@@ -191,7 +191,7 @@
             this.lbl_Cadastros.BackColor = System.Drawing.SystemColors.Highlight;
             this.lbl_Cadastros.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Cadastros.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Cadastros.Location = new System.Drawing.Point(275, 191);
+            this.lbl_Cadastros.Location = new System.Drawing.Point(275, 188);
             this.lbl_Cadastros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Cadastros.Name = "lbl_Cadastros";
             this.lbl_Cadastros.Size = new System.Drawing.Size(114, 26);
@@ -203,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(671, 675);
+            this.ClientSize = new System.Drawing.Size(671, 679);
             this.Controls.Add(this.lbl_Ataron);
             this.Controls.Add(this.btn_Sair);
             this.Controls.Add(this.btn_Visualizar_Perfis);
