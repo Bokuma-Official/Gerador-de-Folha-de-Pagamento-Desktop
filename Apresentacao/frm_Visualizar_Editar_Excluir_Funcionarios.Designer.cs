@@ -537,7 +537,7 @@
             this.txb_Certificado_Militar.Name = "txb_Certificado_Militar";
             this.txb_Certificado_Militar.Size = new System.Drawing.Size(292, 22);
             this.txb_Certificado_Militar.TabIndex = 422;
-            this.txb_Certificado_Militar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_RA_Militar_KeyPress);
+            this.txb_Certificado_Militar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Certificado_Militar_KeyPress);
             // 
             // lbl_Certificado_Militar
             // 

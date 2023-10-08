@@ -81,7 +81,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_Horas_Extras.Text = "";
                 txb_Valor_Horas_Extras.Text = "";
                 txb_Horas_Faltas.Text = "";
-                txb_Desconto_Horas_Faltas.Text = "";
+                txb_Desconto_Faltas.Text = "";
 
                 txb_Valor_Hora_TextChanged(txb_Valor_Hora, EventArgs.Empty);
             }
@@ -97,7 +97,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             {
                 if (horas_faltas > 0)
                 {
-                    txb_Desconto_Horas_Faltas.Text = (valor_hora * horas_faltas).ToString();
+                    txb_Desconto_Faltas.Text = (valor_hora * horas_faltas).ToString();
 
                     txb_Horas_Extras.ReadOnly = true;
                     txb_Valor_Horas_Extras.ReadOnly = true;
@@ -107,13 +107,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
                 else
                 {
-                    txb_Desconto_Horas_Faltas.Text = "0,00";
+                    txb_Desconto_Faltas.Text = "0,00";
                 }
             }
 
             else
             {
-                txb_Desconto_Horas_Faltas.Text = "";
+                txb_Desconto_Faltas.Text = "";
             }
         }
 
@@ -150,14 +150,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         }
 
         private void txb_Valor_Horas_Extras_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_Valor_Ferias_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
@@ -205,71 +197,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             }
         }
 
-        private void txb_13_Salario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
         private void txb_Desconto_Seguro_Vida_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_Desconto_INSS_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_Desconto_FGTS_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_Desconto_IRRF_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_Horas_Faltas_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_Desconto_Horas_Faltas_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_Salario_Bruto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txb_Salario_Liquido_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
@@ -288,18 +216,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             }
         }
 
-        private void txb_Valor_Ferias_TextChanged(object sender, EventArgs e)
+        private void chk_Nao_CheckedChanged(object sender, EventArgs e)
         {
-            if (txb_Valor_Ferias.Text != "")
-            {
-                txb_Dias_Ferias.ReadOnly = false;
-            }
+            chk_Sim.Checked = false;
+        }
 
-            else
-            {
-                txb_Dias_Ferias.ReadOnly = true;
-                txb_Dias_Ferias.Text = "";
-            }
+        private void chk_Sim_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Nao.Checked = false;
         }
     }
 }
