@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gerador_de_Folha_de_Pagamento_Desktop.DAL;
+using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Cadastrar_Funcionarios : Form
     {
+        public string Repetir_Senha { get; set; }
         public frm_Cadastrar_Funcionarios()
         {
             InitializeComponent();
@@ -193,6 +196,125 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void chk_Sim_CheckedChanged(object sender, EventArgs e)
         {
             chk_Nao.Checked = false;
+        }
+
+        private void btn_Cadastrar_Click(object sender, EventArgs e)
+        {
+            Repetir_Senha = txb_Repetir_Senha.Text;
+            Funcionario funcionario = new Funcionario();
+            Endereco endereco = new Endereco();
+            Cargo cargo = new Cargo();
+            Departamento departamento = new Departamento();
+            Contrato_Empresa contrato_empresa = new Contrato_Empresa();
+
+            funcionario.Nome = txb_Nome.Text;
+            funcionario.CPF = txb_CPF.Text;
+            funcionario.RG = txb_RG.Text;
+            funcionario.Data_Nascimento = txb_Data_Nascimento.Text;
+            funcionario.PIS = txb_PIS.Text;
+            funcionario.Carteira_Trabalho = txb_Carteira_Trabalho.Text;
+            funcionario.Titulo_Eleitor = txb_Titulo_Eleitor.Text;
+            funcionario.Certificado_Militar = txb_Certificado_Militar.Text;
+            funcionario.Dependentes = Convert.ToInt32(txb_Dependentes.Text);
+            funcionario.Matricula = Convert.ToInt32(txb_Matricula.Text);
+            departamento.Nome = txb_Departamento.Text;
+            cargo.Nome = txb_Cargo.Text;
+            contrato_empresa.Data_Admissao = txb_Admissao.Text;
+            contrato_empresa.Tipo_Contrato = txb_Tipo_Contrato.Text;
+            cargo.CBO_Cargo = txb_CBO_Cargo.Text;
+            funcionario.Email = txb_Email.Text;
+            funcionario.Telefone_Celular = txb_Telefone_Celular.Text;
+            funcionario.Telefone_Fixo = txb_Telefone_Fixo.Text;
+            endereco.CEP = txb_CEP.Text;
+            endereco.Estado = txb_Estado.Text;
+            endereco.Cidade = txb_Cidade.Text;
+            endereco.Bairro = txb_Bairro.Text;
+            endereco.Logradouro = txb_Logradouro.Text;
+            endereco.Numero = Convert.ToInt32(txb_Numero.Text);
+            endereco.Complemento = txb_Complemento.Text;
+            contrato_empresa.Nome_Agencia = txb_Agencia.Text;
+            contrato_empresa.Numero_Agencia = Convert.ToInt32(txb_Numero_Agencia.Text);
+            contrato_empresa.Numero_Conta = txb_Numero_Conta.Text;
+            funcionario.Senha = txb_Senha.Text;
+
+            if (chk_Masculino.Checked == true)
+            {
+                funcionario.Sexo = chk_Masculino.Text;
+            }
+
+            else if (chk_Feminino.Checked == true)
+            {
+                funcionario.Sexo = chk_Feminino.Text;
+            }
+
+            else if (chk_Nao_Binario.Checked == true)
+            {
+                funcionario.Sexo = chk_Nao_Binario.Text;
+            }
+
+            else
+            {
+                funcionario.Sexo = "";
+            }
+
+            if(chk_Nao.Checked == true)
+            {
+                funcionario.PCD = chk_Nao.Text;
+            }
+            
+            else if(chk_Sim.Checked == true)
+            {
+                funcionario.PCD = chk_Sim.Text;
+            }
+
+            else
+            {
+                funcionario.PCD = "";
+            }
+
+            Controle_Validacao controle_validacao = new Controle_Validacao();
+            controle_validacao.Verificar_Cadastro_Funcionario(funcionario, Repetir_Senha);
+
+            if (Controle_Validacao.Cadastro_Funcionario_Validado == true && Funcionario_DAO.Cadastro_Funcionario_Realizado == true)
+            {
+                Controle_Validacao.Cadastro_Funcionario_Validado = false;
+                Funcionario_DAO.Cadastro_Funcionario_Realizado = false;
+
+                txb_Nome.Clear();
+                txb_CPF.Clear();
+                txb_RG.Clear();
+                txb_Data_Nascimento.Clear();
+                txb_PIS.Clear();
+                txb_Carteira_Trabalho.Clear();
+                txb_Titulo_Eleitor.Clear();
+                txb_Certificado_Militar.Clear();
+                txb_Dependentes.Clear();
+                txb_Matricula.Clear();
+                txb_Departamento.Clear();
+                txb_Cargo.Clear();
+                txb_Admissao.Clear();
+                txb_Tipo_Contrato.Clear();
+                txb_CBO_Cargo.Clear();
+                txb_Email.Clear();
+                txb_Telefone_Celular.Clear();
+                txb_Telefone_Fixo.Clear();
+                txb_CEP.Clear();
+                txb_Estado.Clear();
+                txb_Cidade.Clear();
+                txb_Bairro.Clear();
+                txb_Logradouro.Clear();
+                txb_Numero.Clear();
+                txb_Complemento.Clear();
+                txb_Agencia.Clear();
+                txb_Numero_Agencia.Clear();
+                txb_Numero_Conta.Clear();
+                txb_Senha.Clear();
+                chk_Masculino.Checked = true;
+                chk_Feminino.Checked = false;
+                chk_Nao_Binario.Checked = false;
+                chk_Nao.Checked = true;
+                chk_Sim.Checked = false;
+            }
         }
     }
 }

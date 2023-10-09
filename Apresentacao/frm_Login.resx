@@ -126,14 +126,10 @@
     <value>Impact, 36pt</value>
   </data>
   <data name="lbl_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 112</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>100, 91</value>
   </data>
   <data name="lbl_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 75</value>
+    <value>131, 60</value>
   </data>
   <data name="lbl_Login.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -163,13 +159,10 @@
     <value>Arial, 12.25pt</value>
   </data>
   <data name="lbl_CPF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 217</value>
-  </data>
-  <data name="lbl_CPF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>42, 176</value>
   </data>
   <data name="lbl_CPF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 24</value>
+    <value>47, 19</value>
   </data>
   <data name="lbl_CPF.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -190,13 +183,10 @@
     <value>7</value>
   </data>
   <data name="txb_CPF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 242</value>
-  </data>
-  <data name="txb_CPF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>46, 197</value>
   </data>
   <data name="txb_CPF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 22</value>
+    <value>242, 20</value>
   </data>
   <data name="txb_CPF.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -220,13 +210,10 @@
     <value>Arial, 12pt</value>
   </data>
   <data name="lbl_Senha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 292</value>
-  </data>
-  <data name="lbl_Senha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>44, 237</value>
   </data>
   <data name="lbl_Senha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 23</value>
+    <value>57, 18</value>
   </data>
   <data name="lbl_Senha.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -247,16 +234,13 @@
     <value>5</value>
   </data>
   <data name="txb_Senha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 317</value>
-  </data>
-  <data name="txb_Senha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>46, 258</value>
   </data>
   <data name="txb_Senha.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="txb_Senha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 22</value>
+    <value>242, 20</value>
   </data>
   <data name="txb_Senha.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -280,13 +264,10 @@
     <value>Microsoft Sans Serif, 10.2pt</value>
   </data>
   <data name="lnk_Redefinir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 386</value>
-  </data>
-  <data name="lnk_Redefinir.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>34, 314</value>
   </data>
   <data name="lnk_Redefinir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>311, 20</value>
+    <value>266, 17</value>
   </data>
   <data name="lnk_Redefinir.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -310,13 +291,10 @@
     <value>Arial, 9.75pt</value>
   </data>
   <data name="btn_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 444</value>
-  </data>
-  <data name="btn_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>186, 361</value>
   </data>
   <data name="btn_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 70</value>
+    <value>101, 57</value>
   </data>
   <data name="btn_Login.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -340,13 +318,10 @@
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_Fechar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 444</value>
-  </data>
-  <data name="btn_Fechar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>45, 361</value>
   </data>
   <data name="btn_Fechar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 70</value>
+    <value>101, 57</value>
   </data>
   <data name="btn_Fechar.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -1045,14 +1020,12 @@
 </value>
   </data>
   <data name="pct_Imagem_Menu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 13</value>
-  </data>
-  <data name="pct_Imagem_Menu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>118, 11</value>
   </data>
   <data name="pct_Imagem_Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 84</value>
+    <value>86, 68</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pct_Imagem_Menu.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
@@ -1075,10 +1048,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>448, 529</value>
+    <value>336, 430</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5449,9 +5422,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

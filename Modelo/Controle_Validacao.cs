@@ -24,6 +24,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public static bool Deletar_Perfil_Validado { get; set; }
         public static bool Perfil_Nao_Vazio { get; set; }
         public static bool Editar_Perfil_Validado { get; set; }
+        public static bool Cadastro_Funcionario_Validado { get; set; }
+        public static bool Deletar_Funcionario_Validado { get; set; }
+        public static bool Funcionario_Nao_Vazio { get; set; }
+        public static bool Editar_Funcionario_Validado { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
         {
@@ -796,6 +800,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     Editar_Perfil_Validado = true;
                 }
             }
+        }
+        public void Verificar_Cadastro_Funcionario(Funcionario funcionario, string repetir_senha)
+        {
+
         }
     }
  }

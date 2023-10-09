@@ -9,7 +9,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
     public class Endereco
     {
         public int ID_Endereco { get; set; }
-        public string CEP_Varchar { get; set; }
+        public string CEP { get; set; }
         public string Logradouro { get; set; }
         public int Numero { get; set; }
         public string Bairro { get; set; }

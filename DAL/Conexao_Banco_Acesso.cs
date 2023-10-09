@@ -12,7 +12,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         {
             get
             {
-                return @"Data Source=Matheus-C5\SQLEXPRESS;" +
+                return @"Data Source=localhost\SQLEXPRESS01;" +
                         @"Initial Catalog=Acesso_Ataron;" +
                         @"TrustServerCertificate=True;" +
                         @"Integrated Security=True";
