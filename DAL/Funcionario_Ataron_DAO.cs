@@ -251,7 +251,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             }
         }
 
-        public void Deletar_Perfil (Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        public void Deletar_Perfil (string cpf_perfil_selecionado)
         {
             try
             {

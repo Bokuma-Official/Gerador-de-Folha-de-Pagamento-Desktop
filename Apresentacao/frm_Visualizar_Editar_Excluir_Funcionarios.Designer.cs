@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Editar_Excluir_Funcionarios));
             this.lbl_Visualizar_Editar_Excluir = new System.Windows.Forms.Label();
             this.cmb_Selecionar_Funcionario = new System.Windows.Forms.ComboBox();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.folha_Pagamento_Ataron_Funcionario_DataSet = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionario_DataSet();
             this.lbl_Selecionar_Funcionario = new System.Windows.Forms.Label();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btn_Voltar = new System.Windows.Forms.Button();
@@ -108,11 +110,9 @@
             this.chk_Nao_Binario = new System.Windows.Forms.CheckBox();
             this.chk_Feminino = new System.Windows.Forms.CheckBox();
             this.chk_Masculino = new System.Windows.Forms.CheckBox();
-            this.folha_Pagamento_Ataron_Funcionario_DataSet = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionario_DataSet();
-            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionarioTableAdapter = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionario_DataSetTableAdapters.FuncionarioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Visualizar_Editar_Excluir
@@ -140,6 +140,16 @@
             this.cmb_Selecionar_Funcionario.Size = new System.Drawing.Size(292, 24);
             this.cmb_Selecionar_Funcionario.TabIndex = 171;
             this.cmb_Selecionar_Funcionario.ValueMember = "Nome";
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "Funcionario";
+            this.funcionarioBindingSource.DataSource = this.folha_Pagamento_Ataron_Funcionario_DataSet;
+            // 
+            // folha_Pagamento_Ataron_Funcionario_DataSet
+            // 
+            this.folha_Pagamento_Ataron_Funcionario_DataSet.DataSetName = "Folha_Pagamento_Ataron_Funcionario_DataSet";
+            this.folha_Pagamento_Ataron_Funcionario_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_Selecionar_Funcionario
             // 
@@ -931,16 +941,6 @@
             this.chk_Masculino.UseVisualStyleBackColor = true;
             this.chk_Masculino.CheckedChanged += new System.EventHandler(this.chk_Masculino_CheckedChanged);
             // 
-            // folha_Pagamento_Ataron_Funcionario_DataSet
-            // 
-            this.folha_Pagamento_Ataron_Funcionario_DataSet.DataSetName = "Folha_Pagamento_Ataron_Funcionario_DataSet";
-            this.folha_Pagamento_Ataron_Funcionario_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "Funcionario";
-            this.funcionarioBindingSource.DataSource = this.folha_Pagamento_Ataron_Funcionario_DataSet;
-            // 
             // funcionarioTableAdapter
             // 
             this.funcionarioTableAdapter.ClearBeforeFill = true;
@@ -1034,8 +1034,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
             this.Load += new System.EventHandler(this.frm_Visualizar_Editar_Excluir_Funcionarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

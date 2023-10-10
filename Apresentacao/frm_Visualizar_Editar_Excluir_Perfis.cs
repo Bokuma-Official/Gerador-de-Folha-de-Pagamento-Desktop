@@ -198,35 +198,37 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Deletar_Click(object sender, EventArgs e)
         {
-            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
-            funcionario_ataron.CPF = txb_CPF.Text;
-
-            Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Exclusao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
-
-            if (Controle_Validacao.Deletar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Deletado == true)
+            if (cmb_Selecionar_Perfil.SelectedItem == null)
             {
-                Controle_Validacao.Deletar_Perfil_Validado = false;
-                Funcionario_Ataron_DAO.Perfil_Deletado = false;
+                MessageBox.Show("Selecione um Perfil para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-                this.Hide();
-                frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_editar_excluir_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
-                frm_visualizar_editar_excluir_perfis.Show();
+            else
+            {
+                Controle_Validacao controle_validacao = new Controle_Validacao();
+                controle_validacao.Verificar_Exclusao_Perfil(CPF_Perfil_Selecionado);
+
+                if (Controle_Validacao.Deletar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Deletado == true)
+                {
+                    Controle_Validacao.Deletar_Perfil_Validado = false;
+                    Funcionario_Ataron_DAO.Perfil_Deletado = false;
+
+                    this.Hide();
+                    frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_editar_excluir_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
+                    frm_visualizar_editar_excluir_perfis.Show();
+                }
             }
         }
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            Funcionario_Ataron funcionario_ataron_cpf = new Funcionario_Ataron();
-            funcionario_ataron_cpf.CPF = txb_CPF.Text;
-
-            Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Edicao_Perfil_Vazio(funcionario_ataron_cpf, CPF_Perfil_Selecionado);
-
-            if (Controle_Validacao.Perfil_Nao_Vazio == true)
+            if (cmb_Selecionar_Perfil.SelectedItem == null)
             {
-                Controle_Validacao.Perfil_Nao_Vazio = false;
+                MessageBox.Show("Selecione um Perfil para editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
+            else 
+            {
                 Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
                 funcionario_ataron.CPF = txb_CPF.Text;
                 funcionario_ataron.Senha = txb_Senha.Text;
@@ -278,7 +280,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 funcionario_ataron.CEP = txb_CEP.Text;
 
                 Controle_Validacao controle_validacao2 = new Controle_Validacao();
-                controle_validacao2.Verificar_Edicao_Perfil_Nao_Vazio(funcionario_ataron, CPF_Perfil_Selecionado);
+                controle_validacao2.Verificar_Edicao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
 
                 if (Controle_Validacao.Editar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Atualizado == true)
                 {

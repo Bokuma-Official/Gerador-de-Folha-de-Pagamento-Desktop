@@ -219,6 +219,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_Carteira_Trabalho.Clear();
                 txb_Titulo_Eleitor.Clear();
                 chk_Masculino.Checked = true;
+                chk_Masculino.CheckState = CheckState.Checked;
                 chk_Feminino.Checked = false;
                 chk_Nao_Binario.Checked = false;
                 txb_Certificado_Militar.Clear();

@@ -22,11 +22,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public static bool Senha_Validada { get; set; }
         public static bool Cadastro_Perfil_Validado { get; set; }
         public static bool Deletar_Perfil_Validado { get; set; }
-        public static bool Perfil_Nao_Vazio { get; set; }
         public static bool Editar_Perfil_Validado { get; set; }
         public static bool Cadastro_Funcionario_Validado { get; set; }
         public static bool Deletar_Funcionario_Validado { get; set; }
-        public static bool Funcionario_Nao_Vazio { get; set; }
         public static bool Editar_Funcionario_Validado { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
@@ -508,14 +506,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             funcionario_ataron_dao.Visualizar_Perfil_Para_Gerente(funcionario_ataron, nome_perfil_selecionado);
         }
 
-        public void Verificar_Exclusao_Perfil (Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        public void Verificar_Exclusao_Perfil (string cpf_perfil_selecionado)
         {
-            if (cpf_perfil_selecionado == "" || funcionario_ataron.CPF == "")
-            {
-                MessageBox.Show("Selecione um Perfil para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            else if (Funcionario_Ataron_DAO.CPF_Perfil_Logado == cpf_perfil_selecionado)
+            if (Funcionario_Ataron_DAO.CPF_Perfil_Logado == cpf_perfil_selecionado)
             {
                 MessageBox.Show("Você não pode deletar o seu próprio Perfil", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -527,27 +520,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 if (pergunta == DialogResult.Yes)
                 {
                     Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
-                    funcionario_ataron_dao.Deletar_Perfil(funcionario_ataron, cpf_perfil_selecionado);
+                    funcionario_ataron_dao.Deletar_Perfil(cpf_perfil_selecionado);
 
                     Deletar_Perfil_Validado = true;
                 }
             }
         }
 
-        public void Verificar_Edicao_Perfil_Vazio(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
-        {
-            if (cpf_perfil_selecionado == "" || funcionario_ataron.CPF == "")
-            {
-                MessageBox.Show("Selecione um Perfil para editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            else
-            {
-                Perfil_Nao_Vazio = true;
-            }
-        }
-
-        public void Verificar_Edicao_Perfil_Nao_Vazio(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
+        public void Verificar_Edicao_Perfil(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
         {
             #region Campos Vazios
             if (funcionario_ataron.Nome == "")

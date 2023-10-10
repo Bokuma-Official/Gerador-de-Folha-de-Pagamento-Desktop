@@ -352,9 +352,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_Numero_Conta.Clear();
                 txb_Senha.Clear();
                 chk_Masculino.Checked = true;
+                chk_Masculino.CheckState = CheckState.Checked;
                 chk_Feminino.Checked = false;
                 chk_Nao_Binario.Checked = false;
                 chk_Nao.Checked = true;
+                chk_Nao.CheckState = CheckState.Checked;
                 chk_Sim.Checked = false;
             }
         }
