@@ -90,7 +90,6 @@
             this.chk_Sim = new System.Windows.Forms.CheckBox();
             this.chk_Nao = new System.Windows.Forms.CheckBox();
             this.lbl_13 = new System.Windows.Forms.Label();
-            this.btn_Preencher_Valores_Restantes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Voltar
@@ -98,7 +97,7 @@
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Voltar.Location = new System.Drawing.Point(283, 745);
+            this.btn_Voltar.Location = new System.Drawing.Point(432, 745);
             this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(135, 70);
@@ -122,10 +121,9 @@
             // btn_Editar
             // 
             this.btn_Editar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Editar.Enabled = false;
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Editar.Location = new System.Drawing.Point(849, 745);
+            this.btn_Editar.Location = new System.Drawing.Point(768, 745);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(135, 70);
@@ -138,7 +136,7 @@
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(17, 745);
+            this.button1.Location = new System.Drawing.Point(87, 745);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 70);
@@ -742,25 +740,11 @@
             this.lbl_13.TabIndex = 430;
             this.lbl_13.Text = "13º Salário:";
             // 
-            // btn_Preencher_Valores_Restantes
-            // 
-            this.btn_Preencher_Valores_Restantes.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Preencher_Valores_Restantes.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Preencher_Valores_Restantes.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Preencher_Valores_Restantes.Location = new System.Drawing.Point(573, 745);
-            this.btn_Preencher_Valores_Restantes.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Preencher_Valores_Restantes.Name = "btn_Preencher_Valores_Restantes";
-            this.btn_Preencher_Valores_Restantes.Size = new System.Drawing.Size(135, 70);
-            this.btn_Preencher_Valores_Restantes.TabIndex = 437;
-            this.btn_Preencher_Valores_Restantes.Text = "Preencher valores restantes";
-            this.btn_Preencher_Valores_Restantes.UseVisualStyleBackColor = false;
-            // 
             // frm_Visualizar_Editar_Excluir_Folhas_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 828);
-            this.Controls.Add(this.btn_Preencher_Valores_Restantes);
             this.Controls.Add(this.chk_Sim);
             this.Controls.Add(this.chk_Nao);
             this.Controls.Add(this.lbl_13);
@@ -895,6 +879,5 @@
         private System.Windows.Forms.CheckBox chk_Sim;
         private System.Windows.Forms.CheckBox chk_Nao;
         private System.Windows.Forms.Label lbl_13;
-        private System.Windows.Forms.Button btn_Preencher_Valores_Restantes;
     }
 }
