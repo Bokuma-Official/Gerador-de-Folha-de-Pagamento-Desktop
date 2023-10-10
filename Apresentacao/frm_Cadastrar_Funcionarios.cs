@@ -201,6 +201,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
             Repetir_Senha = txb_Repetir_Senha.Text;
+
             Funcionario funcionario = new Funcionario();
             Endereco endereco = new Endereco();
             Cargo cargo = new Cargo();
@@ -215,8 +216,28 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             funcionario.Carteira_Trabalho = txb_Carteira_Trabalho.Text;
             funcionario.Titulo_Eleitor = txb_Titulo_Eleitor.Text;
             funcionario.Certificado_Militar = txb_Certificado_Militar.Text;
-            funcionario.Dependentes = Convert.ToInt32(txb_Dependentes.Text);
-            funcionario.Matricula = Convert.ToInt32(txb_Matricula.Text);
+
+            if (txb_Dependentes.Text.Length == 0)
+            {
+                txb_Dependentes.Text = "0";
+                funcionario.Dependentes = Convert.ToInt32(txb_Dependentes.Text);
+            }
+
+            else
+            {
+                funcionario.Dependentes = Convert.ToInt32(txb_Dependentes.Text);
+            }
+
+            if (txb_Matricula.Text.Length == 0)
+            {
+                funcionario.Matricula = 0;
+            }
+
+            else
+            {
+                funcionario.Matricula = Convert.ToInt32(txb_Matricula.Text);
+            }
+
             departamento.Nome = txb_Departamento.Text;
             cargo.Nome = txb_Cargo.Text;
             contrato_empresa.Data_Admissao = txb_Admissao.Text;
@@ -230,10 +251,30 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             endereco.Cidade = txb_Cidade.Text;
             endereco.Bairro = txb_Bairro.Text;
             endereco.Logradouro = txb_Logradouro.Text;
-            endereco.Numero = Convert.ToInt32(txb_Numero.Text);
+
+            if (txb_Numero.Text.Length == 0)
+            {
+                endereco.Numero = 0;
+            }
+
+            else
+            {
+                endereco.Numero = Convert.ToInt32(txb_Numero.Text);
+            }
+
             endereco.Complemento = txb_Complemento.Text;
             contrato_empresa.Nome_Agencia = txb_Agencia.Text;
-            contrato_empresa.Numero_Agencia = Convert.ToInt32(txb_Numero_Agencia.Text);
+
+            if (txb_Numero_Agencia.Text.Length == 0)
+            {
+                contrato_empresa.Numero_Agencia = 0;
+            }
+
+            else
+            {
+                contrato_empresa.Numero_Agencia = Convert.ToInt32(txb_Numero_Agencia.Text);
+            }
+
             contrato_empresa.Numero_Conta = txb_Numero_Conta.Text;
             funcionario.Senha = txb_Senha.Text;
 
@@ -273,13 +314,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             }
 
             Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Cadastro_Funcionario(funcionario, Repetir_Senha);
+            controle_validacao.Verificar_Cadastro_Funcionario(funcionario, endereco, cargo, departamento, contrato_empresa, Repetir_Senha);
 
             if (Controle_Validacao.Cadastro_Funcionario_Validado == true && Funcionario_DAO.Cadastro_Funcionario_Realizado == true)
             {
                 Controle_Validacao.Cadastro_Funcionario_Validado = false;
                 Funcionario_DAO.Cadastro_Funcionario_Realizado = false;
 
+                txb_Repetir_Senha.Clear();
                 txb_Nome.Clear();
                 txb_CPF.Clear();
                 txb_RG.Clear();

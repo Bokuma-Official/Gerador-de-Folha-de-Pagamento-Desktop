@@ -186,7 +186,17 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             funcionario_ataron.Telefone_Fixo = txb_Telefone_Fixo.Text;
             funcionario_ataron.Telefone_Celular = txb_Telefone_Celular.Text;
             funcionario_ataron.Email = txb_Email.Text;
-            funcionario_ataron.Matricula = Convert.ToInt32(txb_Matricula.Text);
+
+            if (txb_Matricula.Text.Length == 0)
+            {
+                funcionario_ataron.Matricula = 0;
+            }
+
+            else
+            {
+                funcionario_ataron.Matricula = Convert.ToInt32(txb_Matricula.Text);
+            }
+
             funcionario_ataron.Departamento = txb_Departamento.Text;
             funcionario_ataron.Cargo = txb_Cargo.Text;
             funcionario_ataron.Data_Admissao = txb_Data_Admissao.Text;

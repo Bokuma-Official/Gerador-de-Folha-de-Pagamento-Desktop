@@ -188,5 +188,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         {
             chk_Nao.Checked = false;
         }
+
+        private void frm_Visualizar_Editar_Excluir_Funcionarios_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'folha_Pagamento_Ataron_Funcionario_DataSet.Funcionario'. Você pode movê-la ou removê-la conforme necessário.
+            this.funcionarioTableAdapter.Fill(this.folha_Pagamento_Ataron_Funcionario_DataSet.Funcionario);
+
+        }
     }
 }

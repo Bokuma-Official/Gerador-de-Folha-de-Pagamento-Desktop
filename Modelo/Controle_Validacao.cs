@@ -160,14 +160,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
         }
 
-        public void Verificar_Senha(Funcionario_Ataron funcionario_ataron, string Repetir_Senha)
+        public void Verificar_Senha(Funcionario_Ataron funcionario_ataron, string repetir_senha)
         {
             if (funcionario_ataron.Senha == "")
             {
                 MessageBox.Show("Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (Repetir_Senha == "")
+            else if (repetir_senha == "")
             {
                 MessageBox.Show("Repetir a Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -177,7 +177,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (Repetir_Senha.Length > 20)
+            else if (repetir_senha.Length > 20)
             {
                 MessageBox.Show("Repetição de Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -187,7 +187,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (Repetir_Senha.Length < 8)
+            else if (repetir_senha.Length < 8)
             {
                 MessageBox.Show("Repetição de Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -198,16 +198,16 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     funcionario_ataron.Senha.ToLower().Contains("delete") ||
                     funcionario_ataron.Senha.ToLower().Contains("drop") ||
 
-                    Repetir_Senha.ToLower().Contains("select") ||
-                    Repetir_Senha.ToLower().Contains("insert") ||
-                    Repetir_Senha.ToLower().Contains("update") ||
-                    Repetir_Senha.ToLower().Contains("delete") ||
-                    Repetir_Senha.ToLower().Contains("drop"))
+                    repetir_senha.ToLower().Contains("select") ||
+                    repetir_senha.ToLower().Contains("insert") ||
+                    repetir_senha.ToLower().Contains("update") ||
+                    repetir_senha.ToLower().Contains("delete") ||
+                    repetir_senha.ToLower().Contains("drop"))
             {
                 MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.Senha != Repetir_Senha)
+            else if (funcionario_ataron.Senha != repetir_senha)
             {
                 MessageBox.Show("As Senhas não são iguais", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -226,7 +226,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
         }
 
-        public void Verificar_Cadastro_Perfil(Funcionario_Ataron funcionario_ataron, string Repetir_Senha)
+        public void Verificar_Cadastro_Perfil(Funcionario_Ataron funcionario_ataron, string repetir_senha)
         {
             // uso de blocos region para ocultar grandes códigos e separar eles por categoria
             #region Campos Vazios
@@ -290,7 +290,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("CEP é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.Matricula.ToString() == "")
+            else if (funcionario_ataron.Matricula == 0)
             {
                 MessageBox.Show("Matrícula é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -315,7 +315,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (Repetir_Senha == "")
+            else if (repetir_senha == "")
             {
                 MessageBox.Show("Repetir a Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -407,7 +407,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (Repetir_Senha.Length > 20)
+            else if (repetir_senha.Length > 20)
             {
                 MessageBox.Show("Repetir Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -417,7 +417,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (Repetir_Senha.Length < 8)
+            else if (repetir_senha.Length < 8)
             {
                 MessageBox.Show("Repetir Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -428,12 +428,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     funcionario_ataron.Nome.ToLower().Contains("update") ||
                     funcionario_ataron.Nome.ToLower().Contains("delete") ||
                     funcionario_ataron.Nome.ToLower().Contains("drop") ||
-
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("select") ||
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("insert") ||
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("update") ||
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("delete") ||
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("drop") ||
 
                     funcionario_ataron.Email.ToLower().Contains("select") ||
                     funcionario_ataron.Email.ToLower().Contains("insert") ||
@@ -459,11 +453,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     funcionario_ataron.Senha.ToLower().Contains("delete") ||
                     funcionario_ataron.Senha.ToLower().Contains("drop") ||
 
-                    Repetir_Senha.ToLower().Contains("select") ||
-                    Repetir_Senha.ToLower().Contains("insert") ||
-                    Repetir_Senha.ToLower().Contains("update") ||
-                    Repetir_Senha.ToLower().Contains("delete") ||
-                    Repetir_Senha.ToLower().Contains("drop"))
+                    repetir_senha.ToLower().Contains("select") ||
+                    repetir_senha.ToLower().Contains("insert") ||
+                    repetir_senha.ToLower().Contains("update") ||
+                    repetir_senha.ToLower().Contains("delete") ||
+                    repetir_senha.ToLower().Contains("drop"))
             {
                 MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -483,7 +477,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Data de Admissão precisa ter /", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.Senha != Repetir_Senha)
+            else if (funcionario_ataron.Senha != repetir_senha)
             {
                 MessageBox.Show("As Senhas não são iguais", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -516,7 +510,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
 
         public void Verificar_Exclusao_Perfil (Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
         {
-            if (cpf_perfil_selecionado == "")
+            if (cpf_perfil_selecionado == "" || funcionario_ataron.CPF == "")
             {
                 MessageBox.Show("Selecione um Perfil para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -540,9 +534,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
         }
 
-        public void Verificar_Edicao_Perfil_Vazio(string cpf_perfil_selecionado)
+        public void Verificar_Edicao_Perfil_Vazio(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
         {
-            if (cpf_perfil_selecionado == "")
+            if (cpf_perfil_selecionado == "" || funcionario_ataron.CPF == "")
             {
                 MessageBox.Show("Selecione um Perfil para editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -616,7 +610,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("CEP é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (funcionario_ataron.Matricula.ToString() == "")
+            else if (funcionario_ataron.Matricula == 0)
             {
                 MessageBox.Show("Matrícula é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -740,12 +734,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     funcionario_ataron.Nome.ToLower().Contains("delete") ||
                     funcionario_ataron.Nome.ToLower().Contains("drop") ||
 
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("select") ||
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("insert") ||
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("update") ||
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("delete") ||
-                    funcionario_ataron.Carteira_Trabalho.ToLower().Contains("drop") ||
-
                     funcionario_ataron.Email.ToLower().Contains("select") ||
                     funcionario_ataron.Email.ToLower().Contains("insert") ||
                     funcionario_ataron.Email.ToLower().Contains("update") ||
@@ -801,9 +789,425 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 }
             }
         }
-        public void Verificar_Cadastro_Funcionario(Funcionario funcionario, string repetir_senha)
+        public void Verificar_Cadastro_Funcionario(Funcionario funcionario, Endereco endereco, Cargo cargo,
+            Departamento departamento, Contrato_Empresa contrato_empresa, string repetir_senha)
         {
+            #region Campos Vazios
+            if (repetir_senha == "")
+            {
+                MessageBox.Show("Repetir a Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
+            else if (funcionario.Nome == "")
+            {
+                MessageBox.Show("Nome é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.CPF == "")
+            {
+                MessageBox.Show("CPF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.RG == "")
+            {
+                MessageBox.Show("RG é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Data_Nascimento == "")
+            {
+                MessageBox.Show("Data de Nascimento é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.PIS == "")
+            {
+                MessageBox.Show("PIS é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Carteira_Trabalho == "")
+            {
+                MessageBox.Show("Carteira de Trabalho é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Titulo_Eleitor == "")
+            {
+                MessageBox.Show("Título de Eleitor é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Certificado_Militar == "" && funcionario.Sexo == "Masculino")
+            {
+                MessageBox.Show("Certificado Militar é obrigatório para pessoas do Sexo Masculino", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Sexo == "")
+            {
+                MessageBox.Show("Sexo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.PCD == "")
+            {
+                MessageBox.Show("PCD é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Matricula == 0)
+            {
+                MessageBox.Show("Matrícula é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (departamento.Nome == "")
+            {
+                MessageBox.Show("Departamento é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (cargo.Nome == "")
+            {
+                MessageBox.Show("Cargo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Data_Admissao == "")
+            {
+                MessageBox.Show("Data de Admissão é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Tipo_Contrato == "")
+            {
+                MessageBox.Show("Tipo de Contrato é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (cargo.CBO_Cargo == "")
+            {
+                MessageBox.Show("CBO do Cargo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Email == "")
+            {
+                MessageBox.Show("Email é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Telefone_Celular == "")
+            {
+                MessageBox.Show("Telefone Celular é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.CEP == "")
+            {
+                MessageBox.Show("CEP é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Estado == "")
+            {
+                MessageBox.Show("Estado é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Cidade == "")
+            {
+                MessageBox.Show("Cidade é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Bairro == "")
+            {
+                MessageBox.Show("Bairro é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Logradouro == "")
+            {
+                MessageBox.Show("Logradouro é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Numero == 0)
+            {
+                MessageBox.Show("Numero é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Nome_Agencia == "")
+            {
+                MessageBox.Show("Nome da Agência é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Numero_Agencia == 0)
+            {
+                MessageBox.Show("Numero da Agência é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Numero_Conta == "")
+            {
+                MessageBox.Show("Numero da Conta é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Senha == "")
+            {
+                MessageBox.Show("Senha é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            #region Limite de Caracteres
+            else if (repetir_senha.Length > 20)
+            {
+                MessageBox.Show("Repetir Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (repetir_senha.Length < 8)
+            {
+                MessageBox.Show("Repetir Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Nome.Length > 40)
+            {
+                MessageBox.Show("Nome deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.CPF.Length > 14)
+            {
+                MessageBox.Show("CPF deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.RG.Length > 12)
+            {
+                MessageBox.Show("RG deve ter menos que 12 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Data_Nascimento.Length > 10)
+            {
+                MessageBox.Show("Data de Nascimento deve ter menos que 10 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.PIS.Length > 14)
+            {
+                MessageBox.Show("PIS deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Carteira_Trabalho.Length > 20)
+            {
+                MessageBox.Show("Carteira de Trabalho deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Titulo_Eleitor.Length > 14)
+            {
+                MessageBox.Show("Título de Eleitor deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Certificado_Militar.Length > 15)
+            {
+                MessageBox.Show("Certificado Militar deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Dependentes.ToString().Length > 2)
+            {
+                MessageBox.Show("Dependentes deve ter menos que 2 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Matricula.ToString().Length > 6)
+            {
+                MessageBox.Show("Matrícula deve ter menos que 6 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (departamento.Nome.Length > 40)
+            {
+                MessageBox.Show("Departamento deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (cargo.Nome.Length > 40)
+            {
+                MessageBox.Show("Cargo deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Data_Admissao.Length > 10)
+            {
+                MessageBox.Show("Data de Admissão deve ter menos que 10 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Tipo_Contrato.Length > 15)
+            {
+                MessageBox.Show("Tipo de Contrato deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (cargo.CBO_Cargo.Length > 7)
+            {
+                MessageBox.Show("CBO do Cargo deve ter menos que 7 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Email.Length > 40)
+            {
+                MessageBox.Show("Email deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Telefone_Celular.Length > 15)
+            {
+                MessageBox.Show("Telefone Celular deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Telefone_Fixo.Length > 14)
+            {
+                MessageBox.Show("Telefone Fixo deve ter menos que 14 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.CEP.Length > 9)
+            {
+                MessageBox.Show("CEP deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Estado.Length > 20)
+            {
+                MessageBox.Show("Estado deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Cidade.Length > 25)
+            {
+                MessageBox.Show("Cidade deve ter menos que 25 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Bairro.Length > 25)
+            {
+                MessageBox.Show("Bairro deve ter menos que 25 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Logradouro.Length > 40)
+            {
+                MessageBox.Show("Logradouro deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Numero.ToString().Length > 5)
+            {
+                MessageBox.Show("Número do Endereço deve ter menos que 5 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (endereco.Complemento.Length > 20)
+            {
+                MessageBox.Show("Complemento deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Nome_Agencia.Length > 20)
+            {
+                MessageBox.Show("Nome da Agência deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Numero_Agencia.ToString().Length > 4)
+            {
+                MessageBox.Show("Numero da Agência deve ter menos que 4 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (contrato_empresa.Numero_Conta.Length > 9)
+            {
+                MessageBox.Show("Numero da Conta deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Senha.Length > 20)
+            {
+                MessageBox.Show("Senha deve ter menos que 20 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Senha.Length < 8)
+            {
+                MessageBox.Show("Senha deve ter no mínimo 8 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            else if (repetir_senha.ToLower().Contains("select") ||
+                    repetir_senha.ToLower().Contains("insert") ||
+                    repetir_senha.ToLower().Contains("update") ||
+                    repetir_senha.ToLower().Contains("delete") ||
+                    repetir_senha.ToLower().Contains("drop") ||
+
+                    funcionario.Nome.ToLower().Contains("select") ||
+                    funcionario.Nome.ToLower().Contains("insert") ||
+                    funcionario.Nome.ToLower().Contains("update") ||
+                    funcionario.Nome.ToLower().Contains("delete") ||
+                    funcionario.Nome.ToLower().Contains("drop") ||
+
+                    funcionario.Email.ToLower().Contains("select") ||
+                    funcionario.Email.ToLower().Contains("insert") ||
+                    funcionario.Email.ToLower().Contains("update") ||
+                    funcionario.Email.ToLower().Contains("delete") ||
+                    funcionario.Email.ToLower().Contains("drop") ||
+
+                    funcionario.Senha.ToLower().Contains("select") ||
+                    funcionario.Senha.ToLower().Contains("insert") ||
+                    funcionario.Senha.ToLower().Contains("update") ||
+                    funcionario.Senha.ToLower().Contains("delete") ||
+                    funcionario.Senha.ToLower().Contains("drop") ||
+
+                    endereco.Logradouro.ToLower().Contains("select") ||
+                    endereco.Logradouro.ToLower().Contains("insert") ||
+                    endereco.Logradouro.ToLower().Contains("update") ||
+                    endereco.Logradouro.ToLower().Contains("delete") ||
+                    endereco.Logradouro.ToLower().Contains("drop") ||
+
+                    endereco.Bairro.ToLower().Contains("select") ||
+                    endereco.Bairro.ToLower().Contains("insert") ||
+                    endereco.Bairro.ToLower().Contains("update") ||
+                    endereco.Bairro.ToLower().Contains("delete") ||
+                    endereco.Bairro.ToLower().Contains("drop") ||
+
+                    endereco.Complemento.ToLower().Contains("select") ||
+                    endereco.Complemento.ToLower().Contains("insert") ||
+                    endereco.Complemento.ToLower().Contains("update") ||
+                    endereco.Complemento.ToLower().Contains("delete") ||
+                    endereco.Complemento.ToLower().Contains("drop") ||
+
+                    endereco.Cidade.ToLower().Contains("select") ||
+                    endereco.Cidade.ToLower().Contains("insert") ||
+                    endereco.Cidade.ToLower().Contains("update") ||
+                    endereco.Cidade.ToLower().Contains("delete") ||
+                    endereco.Cidade.ToLower().Contains("drop") ||
+
+                    endereco.Estado.ToLower().Contains("select") ||
+                    endereco.Estado.ToLower().Contains("insert") ||
+                    endereco.Estado.ToLower().Contains("update") ||
+                    endereco.Estado.ToLower().Contains("delete") ||
+                    endereco.Estado.ToLower().Contains("drop") ||
+
+                    departamento.Nome.ToLower().Contains("select") ||
+                    departamento.Nome.ToLower().Contains("insert") ||
+                    departamento.Nome.ToLower().Contains("update") ||
+                    departamento.Nome.ToLower().Contains("delete") ||
+                    departamento.Nome.ToLower().Contains("drop") ||
+
+                    cargo.Nome.ToLower().Contains("select") ||
+                    cargo.Nome.ToLower().Contains("insert") ||
+                    cargo.Nome.ToLower().Contains("update") ||
+                    cargo.Nome.ToLower().Contains("delete") ||
+                    cargo.Nome.ToLower().Contains("drop") ||
+
+                    contrato_empresa.Nome_Agencia.ToLower().Contains("select") ||
+                    contrato_empresa.Nome_Agencia.ToLower().Contains("insert") ||
+                    contrato_empresa.Nome_Agencia.ToLower().Contains("update") ||
+                    contrato_empresa.Nome_Agencia.ToLower().Contains("delete") ||
+                    contrato_empresa.Nome_Agencia.ToLower().Contains("drop"))
+            {
+                MessageBox.Show("Campos inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!funcionario.Email.ToLower().Contains("@") || !funcionario.Email.ToLower().Contains("."))
+            {
+                MessageBox.Show("Email precisa ter @ e .", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!funcionario.Data_Nascimento.Contains("/"))
+            {
+                MessageBox.Show("Data de Nascimento precisa ter /", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!contrato_empresa.Data_Admissao.Contains("/"))
+            {
+                MessageBox.Show("Data de Admissão precisa ter /", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (funcionario.Senha != repetir_senha)
+            {
+                MessageBox.Show("As Senhas não são iguais", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                DialogResult pergunta = MessageBox.Show("Deseja cadastrar o Funcionário?", "Cadastrar Funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (pergunta == DialogResult.Yes)
+                {
+                    Funcionario_DAO funcionario_dao = new Funcionario_DAO();
+                    funcionario_dao.Cadastrar_Funcionario(funcionario, endereco, cargo, departamento, contrato_empresa);
+
+                    Cadastro_Funcionario_Validado = true;
+                }
+            }
         }
     }
  }

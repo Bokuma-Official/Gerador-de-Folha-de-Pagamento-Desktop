@@ -199,6 +199,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void btn_Deletar_Click(object sender, EventArgs e)
         {
             Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+            funcionario_ataron.CPF = txb_CPF.Text;
 
             Controle_Validacao controle_validacao = new Controle_Validacao();
             controle_validacao.Verificar_Exclusao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
@@ -216,8 +217,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
+            Funcionario_Ataron funcionario_ataron_cpf = new Funcionario_Ataron();
+            funcionario_ataron_cpf.CPF = txb_CPF.Text;
+
             Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Edicao_Perfil_Vazio(CPF_Perfil_Selecionado);
+            controle_validacao.Verificar_Edicao_Perfil_Vazio(funcionario_ataron_cpf, CPF_Perfil_Selecionado);
 
             if (Controle_Validacao.Perfil_Nao_Vazio == true)
             {
@@ -257,7 +261,17 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 funcionario_ataron.Telefone_Fixo = txb_Telefone_Fixo.Text;
                 funcionario_ataron.Telefone_Celular = txb_Telefone_Celular.Text;
                 funcionario_ataron.Email = txb_Email.Text;
-                funcionario_ataron.Matricula = Convert.ToInt32(txb_Matricula.Text);
+
+                if (txb_Matricula.Text.Length == 0)
+                {
+                    funcionario_ataron.Matricula = 0;
+                }
+
+                else
+                {
+                    funcionario_ataron.Matricula = Convert.ToInt32(txb_Matricula.Text);
+                }
+
                 funcionario_ataron.Departamento = txb_Departamento.Text;
                 funcionario_ataron.Cargo = txb_Cargo.Text;
                 funcionario_ataron.Data_Admissao = txb_Data_Admissao.Text;

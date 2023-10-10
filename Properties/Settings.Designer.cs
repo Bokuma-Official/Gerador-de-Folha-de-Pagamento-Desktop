@@ -33,5 +33,16 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Properties {
                 return ((string)(this["Acesso_AtaronConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MATHEUS-C5\\SQLEXPRESS;Initial Catalog=Folha_Pagamento_Ataron;Integrat" +
+            "ed Security=True")]
+        public string Folha_Pagamento_Ataron_Funcionario_ConnectionString {
+            get {
+                return ((string)(this["Folha_Pagamento_Ataron_Funcionario_ConnectionString"]));
+            }
+        }
     }
 }
