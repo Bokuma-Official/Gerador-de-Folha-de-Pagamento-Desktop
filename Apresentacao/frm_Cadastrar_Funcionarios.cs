@@ -16,6 +16,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
     public partial class frm_Cadastrar_Funcionarios : Form
     {
         public string Repetir_Senha { get; set; }
+
         public frm_Cadastrar_Funcionarios()
         {
             InitializeComponent();

@@ -34,11 +34,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 // selecionar tabela funcionario_ataron
                 SqlCommand command = new SqlCommand("Select Cargo from Funcionario_Ataron where CPF = @CPF AND Senha = @Senha", conexao);
-
                 // adiciona os parâmetros à consulta
                 command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
                 command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
-
                 // obter o valor da coluna cargo e atribuir a variável cargo
                 Cargo_Perfil_Logado = (string)command.ExecuteScalar();
                 CPF_Perfil_Logado = funcionario_ataron.CPF;
@@ -69,17 +67,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 // selecionar o cpf que tenha o mesmo email digitado e salvar na variavel cpf
                 SqlCommand command1 = new SqlCommand("select CPF from Funcionario_Ataron where Email = @Email", conexao);
-
                 command1.Parameters.AddWithValue("@Email", funcionario_ataron.Email);
-
                 CPF_Perfil_Logado = (string)command1.ExecuteScalar();
 
                 // atualizar a senha que tenha o mesmo cpf salvo na variável
                 SqlCommand command2 = new SqlCommand("update Funcionario_Ataron set Senha = @Senha where CPF = @CPF", conexao);
-
                 command2.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
                 command2.Parameters.AddWithValue("@CPF", CPF_Perfil_Logado);
-
                 int linhas_afetadas = command2.ExecuteNonQuery();
 
                 conexao.Close();
@@ -109,7 +103,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 SqlCommand command = new SqlCommand("insert into Funcionario_Ataron values (@CPF, @Senha, @Nome, @RG, @PIS," +
                     "@Carteira_Trabalho, @Titulo_Eleitor, @Sexo, @Certificado_Militar, @Data_Nascimento, @Telefone_Fixo," +
                     "@Telefone_Celular, @Email, @Matricula, @Departamento, @Cargo, @Data_Admissao, @CEP)", conexao);
-
                 command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
                 command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);
                 command.Parameters.AddWithValue("@Nome", funcionario_ataron.Nome);
@@ -128,7 +121,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 command.Parameters.AddWithValue("@Cargo", funcionario_ataron.Cargo);
                 command.Parameters.AddWithValue("@Data_Admissao", funcionario_ataron.Data_Admissao);
                 command.Parameters.AddWithValue("@CEP", funcionario_ataron.CEP);
-
                 int linhas_afetadas = command.ExecuteNonQuery();
 
                 conexao.Close();
@@ -156,13 +148,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 conexao.Open();
 
                 SqlCommand command = new SqlCommand("select * from Funcionario_Ataron where CPF = @CPF", conexao);
-
                 command.Parameters.AddWithValue("@CPF", CPF_Perfil_Logado);
 
                 /* uso do data reader para pegar os valores selecionados do banco
                 e atribuir a classe funcionario_ataron */
                 SqlDataReader data_reader;
-
                 data_reader = command.ExecuteReader();
 
                 if (data_reader.HasRows)
@@ -209,17 +199,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 conexao.Open();
 
                 SqlCommand command1 = new SqlCommand("select CPF from Funcionario_Ataron where Nome = @Nome", conexao);
-
                 command1.Parameters.AddWithValue("@Nome", nome_perfil_selecionado);
-
                 string cpf = (string)command1.ExecuteScalar();
 
                 SqlCommand command2 = new SqlCommand("select * from Funcionario_Ataron where CPF = @CPF", conexao);
-
                 command2.Parameters.AddWithValue("@CPF", cpf);
 
                 SqlDataReader data_reader;
-
                 data_reader = command2.ExecuteReader();
 
                 if (data_reader.HasRows)
@@ -266,9 +252,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 conexao.Open();
 
                 SqlCommand command = new SqlCommand("delete from Funcionario_Ataron where CPF = @CPF", conexao);
-
                 command.Parameters.AddWithValue("@CPF", cpf_perfil_selecionado);
-
                 int linhas_afetadas = command.ExecuteNonQuery();
 
                 conexao.Close();
@@ -300,7 +284,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                     "Sexo = @Sexo, Certificado_Militar = @Certificado_Militar, Data_Nascimento = @Data_Nascimento," +
                     "Telefone_Fixo = @Telefone_Fixo, Telefone_Celular = @Telefone_Celular, Email = @Email, Matricula = @Matricula," +
                     "Departamento = @Departamento, Cargo = @Cargo, Data_Admissao = @Data_Admissao, CEP = @CEP where CPF = @CPF_Perfil_Selecionado", conexao);
-
                 command.Parameters.AddWithValue("@CPF_Perfil_Selecionado", cpf_perfil_selecionado);
                 command.Parameters.AddWithValue("@CPF", funcionario_ataron.CPF);
                 command.Parameters.AddWithValue("@Senha", funcionario_ataron.Senha);

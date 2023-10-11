@@ -27,7 +27,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 SqlCommand command1 = new SqlCommand("insert into Funcionario values (@CPF, @Senha, @Nome," +
                     "@Data_Nascimento, @Sexo, @PCD, @PIS, @RG, @Carteira_Trabalho, @Titulo_Eleitor," +
                     "@Certificado_Militar, @Matricula, @Telefone_Fixo, @Telefone_Celular, @Email, @Dependentes)", conexao);
-
                 command1.Parameters.AddWithValue("@CPF", funcionario.CPF);
                 command1.Parameters.AddWithValue("@Senha", funcionario.Senha);
                 command1.Parameters.AddWithValue("@Nome", funcionario.Nome);
@@ -44,13 +43,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 command1.Parameters.AddWithValue("@Telefone_Celular", funcionario.Telefone_Celular);
                 command1.Parameters.AddWithValue("@Email", funcionario.Email);
                 command1.Parameters.AddWithValue("@Dependentes", funcionario.Dependentes);
-
                 int linhas_afetadas_tabela_funcionario = command1.ExecuteNonQuery();
 
                 SqlCommand command2 = new SqlCommand("insert into Endereco (CEP, Logradouro, Numero," +
                     "Bairro, Complemento, Cidade, Estado, CPF) values (@CEP, @Logradouro, @Numero, @Bairro," +
                     "@Complemento, @Cidade, @Estado, @CPF)", conexao);
-
                 command2.Parameters.AddWithValue("@CEP", endereco.CEP);
                 command2.Parameters.AddWithValue("@Logradouro", endereco.Logradouro);
                 command2.Parameters.AddWithValue("@Numero", endereco.Numero);
@@ -59,14 +56,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 command2.Parameters.AddWithValue("@Cidade", endereco.Cidade);
                 command2.Parameters.AddWithValue("@Estado", endereco.Estado);
                 command2.Parameters.AddWithValue("@CPF", funcionario.CPF);
-
                 int linhas_afetadas_tabela_endereco = command2.ExecuteNonQuery();
 
                 SqlCommand command3 = new SqlCommand("insert into Contrato_Empresa (Data_Admissao," +
                     "Numero_Conta, Numero_Agencia, Nome_Agencia, Tipo_Contrato, Cargo, CBO_Cargo," +
                     "Departamento, CPF) values (@Data_Admissao, @Numero_Conta, @Numero_Agencia, @Nome_Agencia," +
                     "@Tipo_Contrato, @Cargo, @CBO_Cargo, @Departamento, @CPF)", conexao);
-
                 command3.Parameters.AddWithValue("@Data_Admissao", contrato_empresa.Data_Admissao);
                 command3.Parameters.AddWithValue("@Numero_Conta", contrato_empresa.Numero_Conta);
                 command3.Parameters.AddWithValue("@Numero_Agencia", contrato_empresa.Numero_Agencia);
@@ -76,7 +71,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 command3.Parameters.AddWithValue("@CBO_Cargo", contrato_empresa.CBO_Cargo);
                 command3.Parameters.AddWithValue("@Departamento", contrato_empresa.Departamento);
                 command3.Parameters.AddWithValue("@CPF", funcionario.CPF);
-
                 int linhas_afetadas_tabela_contrato_empresa = command3.ExecuteNonQuery();
 
                 conexao.Close();
@@ -97,7 +91,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         }
 
         public void Visualizar_Funcionario(Funcionario funcionario, Endereco endereco,
-            Contrato_Empresa contrato_empresa, string nome_perfil_selecionado)
+            Contrato_Empresa contrato_empresa, string nome_funcionario_selecionado)
         {
             try
             {
@@ -106,19 +100,15 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 conexao.Open();
 
                 SqlCommand command1 = new SqlCommand("select CPF from Funcionario where Nome = @Nome", conexao);
-
-                command1.Parameters.AddWithValue("@Nome", nome_perfil_selecionado);
-
+                command1.Parameters.AddWithValue("@Nome", nome_funcionario_selecionado);
                 string cpf = (string)command1.ExecuteScalar();
 
                 SqlCommand command2 = new SqlCommand("SELECT CPF, Senha, Nome, Data_Nascimento, Sexo," +
                     "PCD, PIS, RG, Carteira_Trabalho, Titulo_Eleitor, Certificado_Militar, Matricula," +
                     "Telefone_Fixo, Telefone_Celular, Email, Dependentes FROM Funcionario WHERE CPF = @CPF", conexao);
-
                 command2.Parameters.AddWithValue("@CPF", cpf);
 
                 SqlDataReader data_reader1;
-
                 data_reader1 = command2.ExecuteReader();
 
                 if (data_reader1.HasRows)
@@ -147,11 +137,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 SqlCommand command3 = new SqlCommand("SELECT CEP, Logradouro, Numero, Bairro, Complemento," +
                     "Cidade, Estado FROM Endereco WHERE CPF = @CPF", conexao);
-
                 command3.Parameters.AddWithValue("@CPF", cpf);
 
                 SqlDataReader data_reader2;
-
                 data_reader2 = command3.ExecuteReader();
 
                 if (data_reader2.HasRows)
@@ -171,11 +159,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 SqlCommand command4 = new SqlCommand("SELECT Data_Admissao, Numero_Conta, Numero_Agencia," +
                     "Nome_Agencia, Tipo_Contrato, Cargo, CBO_Cargo, Departamento FROM Contrato_Empresa WHERE CPF = @CPF", conexao);
-
                 command4.Parameters.AddWithValue("@CPF", cpf);
 
                 SqlDataReader data_reader3;
-
                 data_reader3 = command4.ExecuteReader();
 
                 if (data_reader3.HasRows)
@@ -194,6 +180,126 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                     data_reader3.Close();
                 }
                 conexao.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Deletar_Funcionario(string cpf_funcionario_selecionado)
+        {
+            try
+            {
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Folha.String_Conexao);
+
+                conexao.Open();
+
+                SqlCommand command1 = new SqlCommand("delete from Folha_Pagamento where CPF = @CPF", conexao);
+                command1.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
+                int linhas_afetadas_tabela_folha_pagamento = command1.ExecuteNonQuery();
+
+                SqlCommand command2 = new SqlCommand("delete from Contrato_Empresa where CPF = @CPF", conexao);
+                command2.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
+                int linhas_afetadas_tabela_contrato_empresa = command2.ExecuteNonQuery();
+
+                SqlCommand command3 = new SqlCommand("delete from Endereco where CPF = @CPF", conexao);
+                command3.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
+                int linhas_afetadas_tabela_endereco = command3.ExecuteNonQuery();
+
+                SqlCommand command4 = new SqlCommand("delete from Funcionario where CPF = @CPF", conexao);
+                command4.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
+                int linhas_afetadas_tabela_funcionario = command4.ExecuteNonQuery();
+
+                conexao.Close();
+
+                if (linhas_afetadas_tabela_funcionario > 0 && linhas_afetadas_tabela_endereco > 0
+                    && linhas_afetadas_tabela_contrato_empresa > 0)
+                {
+                    MessageBox.Show("O Funcionário foi deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Funcionario_Deletado = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Editar_Funcionario(Funcionario funcionario, Endereco endereco,
+            Contrato_Empresa contrato_empresa, string cpf_Funcionario_selecionado)
+        {
+            try
+            {
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Folha.String_Conexao);
+
+                conexao.Open();
+
+                SqlCommand command1 = new SqlCommand("update Contrato_Empresa set Data_Admissao = @Data_Admissao," +
+                    "Numero_Conta = @Numero_Conta, Numero_Agencia = @Numero_Agencia, Nome_Agencia = @Nome_Agencia," +
+                    "Tipo_Contrato = @Tipo_Contrato, Cargo = @Cargo, CBO_Cargo = @CBO_Cargo, Departamento = @Departamento " +
+                    "where CPF = @CPF_Funcionario_Selecionado", conexao);
+                command1.Parameters.AddWithValue("@CPF_Funcionario_Selecionado", cpf_Funcionario_selecionado);
+                command1.Parameters.AddWithValue("@Data_Admissao", contrato_empresa.Data_Admissao);
+                command1.Parameters.AddWithValue("@Numero_Conta", contrato_empresa.Numero_Conta);
+                command1.Parameters.AddWithValue("@Numero_Agencia", contrato_empresa.Numero_Agencia);
+                command1.Parameters.AddWithValue("@Nome_Agencia", contrato_empresa.Nome_Agencia);
+                command1.Parameters.AddWithValue("@Tipo_Contrato", contrato_empresa.Tipo_Contrato);
+                command1.Parameters.AddWithValue("@Cargo", contrato_empresa.Cargo);
+                command1.Parameters.AddWithValue("@CBO_Cargo", contrato_empresa.CBO_Cargo);
+                command1.Parameters.AddWithValue("@Departamento", contrato_empresa.Departamento);
+                int linhas_afetadas_tabela_contrato_empresa = command1.ExecuteNonQuery();
+
+                SqlCommand command2 = new SqlCommand("update Endereco set CEP = @CEP, Logradouro = @Logradouro," +
+                    "Numero = @Numero, Bairro = @Bairro, Complemento = @Complemento, Cidade = @Cidade," +
+                    "Estado = @Estado where CPF = @CPF_Funcionario_Selecionado", conexao);
+                command2.Parameters.AddWithValue("@CPF_Funcionario_Selecionado", cpf_Funcionario_selecionado);
+                command2.Parameters.AddWithValue("@CEP", endereco.CEP);
+                command2.Parameters.AddWithValue("@Logradouro", endereco.Logradouro);
+                command2.Parameters.AddWithValue("@Numero", endereco.Numero);
+                command2.Parameters.AddWithValue("@Bairro", endereco.Bairro);
+                command2.Parameters.AddWithValue("@Complemento", endereco.Complemento);
+                command2.Parameters.AddWithValue("@Cidade", endereco.Cidade);
+                command2.Parameters.AddWithValue("@Estado", endereco.Estado);
+                int linhas_afetadas_tabela_endereco = command2.ExecuteNonQuery();
+
+                SqlCommand command3 = new SqlCommand("update Funcionario set Senha = @Senha," +
+                    "Nome = @Nome, Data_Nascimento = @Data_Nascimento, Sexo = @Sexo, PCD = @PCD," +
+                    "PIS = @PIS, RG = @RG, Carteira_Trabalho = @Carteira_Trabalho," +
+                    "Titulo_Eleitor = @Titulo_Eleitor, Certificado_Militar = @Certificado_Militar," +
+                    "Matricula = @Matricula, Telefone_Fixo = @Telefone_Fixo, Telefone_Celular = @Telefone_Celular," +
+                    "Email = @Email, Dependentes = @Dependentes where CPF = @CPF_Funcionario_Selecionado", conexao);
+                command3.Parameters.AddWithValue("@CPF_Funcionario_Selecionado", cpf_Funcionario_selecionado);
+                command3.Parameters.AddWithValue("@CPF", funcionario.CPF);
+                command3.Parameters.AddWithValue("@Senha", funcionario.Senha);
+                command3.Parameters.AddWithValue("@Nome", funcionario.Nome);
+                command3.Parameters.AddWithValue("@Data_Nascimento", funcionario.Data_Nascimento);
+                command3.Parameters.AddWithValue("@Sexo", funcionario.Sexo);
+                command3.Parameters.AddWithValue("@PCD", funcionario.PCD);
+                command3.Parameters.AddWithValue("@PIS", funcionario.PIS);
+                command3.Parameters.AddWithValue("@RG", funcionario.RG);
+                command3.Parameters.AddWithValue("@Carteira_Trabalho", funcionario.Carteira_Trabalho);
+                command3.Parameters.AddWithValue("@Titulo_Eleitor", funcionario.Titulo_Eleitor);
+                command3.Parameters.AddWithValue("@Certificado_Militar", funcionario.Certificado_Militar);
+                command3.Parameters.AddWithValue("@Matricula", funcionario.Matricula);
+                command3.Parameters.AddWithValue("@Telefone_Fixo", funcionario.Telefone_Fixo);
+                command3.Parameters.AddWithValue("@Telefone_Celular", funcionario.Telefone_Celular);
+                command3.Parameters.AddWithValue("@Email", funcionario.Email);
+                command3.Parameters.AddWithValue("@Dependentes", funcionario.Dependentes);
+                int linhas_afetadas_tabela_funcionario = command3.ExecuteNonQuery();
+
+                conexao.Close();
+
+                if (linhas_afetadas_tabela_funcionario > 0 && linhas_afetadas_tabela_endereco > 0
+                    && linhas_afetadas_tabela_contrato_empresa > 0)
+                {
+                    MessageBox.Show("O Funcionário foi editado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Funcionario_Atualizado = true;
+                }
             }
 
             catch (Exception ex)

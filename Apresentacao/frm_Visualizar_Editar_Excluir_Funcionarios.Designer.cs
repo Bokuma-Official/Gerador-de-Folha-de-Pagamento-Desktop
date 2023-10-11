@@ -841,6 +841,7 @@
             this.txb_CPF.Location = new System.Drawing.Point(17, 249);
             this.txb_CPF.Margin = new System.Windows.Forms.Padding(4);
             this.txb_CPF.Name = "txb_CPF";
+            this.txb_CPF.ReadOnly = true;
             this.txb_CPF.Size = new System.Drawing.Size(292, 22);
             this.txb_CPF.TabIndex = 394;
             this.txb_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_CPF_KeyPress);

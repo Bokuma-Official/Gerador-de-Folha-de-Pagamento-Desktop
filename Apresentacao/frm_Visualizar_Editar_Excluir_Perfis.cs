@@ -287,8 +287,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 funcionario_ataron.Data_Admissao = txb_Data_Admissao.Text;
                 funcionario_ataron.CEP = txb_CEP.Text;
 
-                Controle_Validacao controle_validacao2 = new Controle_Validacao();
-                controle_validacao2.Verificar_Edicao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
+                Controle_Validacao controle_validacao = new Controle_Validacao();
+                controle_validacao.Verificar_Edicao_Perfil(funcionario_ataron, CPF_Perfil_Selecionado);
 
                 if (Controle_Validacao.Editar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Atualizado == true)
                 {
