@@ -140,6 +140,8 @@
             this.cmb_Selecionar_Funcionario.Size = new System.Drawing.Size(292, 24);
             this.cmb_Selecionar_Funcionario.TabIndex = 171;
             this.cmb_Selecionar_Funcionario.ValueMember = "Nome";
+            this.cmb_Selecionar_Funcionario.DropDown += new System.EventHandler(this.cmb_Selecionar_Funcionario_DropDown);
+            this.cmb_Selecionar_Funcionario.SelectedIndexChanged += new System.EventHandler(this.cmb_Selecionar_Funcionario_SelectedIndexChanged);
             // 
             // funcionarioBindingSource
             // 
@@ -175,6 +177,7 @@
             this.btn_Editar.TabIndex = 174;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btn_Voltar
             // 
@@ -202,6 +205,7 @@
             this.btn_Deletar.TabIndex = 389;
             this.btn_Deletar.Text = "Deletar";
             this.btn_Deletar.UseVisualStyleBackColor = false;
+            this.btn_Deletar.Click += new System.EventHandler(this.btn_Deletar_Click);
             // 
             // chk_Sim
             // 
@@ -1033,7 +1037,6 @@
             this.Name = "frm_Visualizar_Editar_Excluir_Funcionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
-            this.Load += new System.EventHandler(this.frm_Visualizar_Editar_Excluir_Funcionarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).EndInit();
             this.ResumeLayout(false);

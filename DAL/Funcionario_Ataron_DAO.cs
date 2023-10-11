@@ -208,13 +208,19 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                 conexao.Open();
 
-                SqlCommand command = new SqlCommand("select * from Funcionario_Ataron where Nome = @Nome", conexao);
+                SqlCommand command1 = new SqlCommand("select CPF from Funcionario_Ataron where Nome = @Nome", conexao);
 
-                command.Parameters.AddWithValue("@Nome", nome_perfil_selecionado);
+                command1.Parameters.AddWithValue("@Nome", nome_perfil_selecionado);
+
+                string cpf = (string)command1.ExecuteScalar();
+
+                SqlCommand command2 = new SqlCommand("select * from Funcionario_Ataron where CPF = @CPF", conexao);
+
+                command2.Parameters.AddWithValue("@CPF", cpf);
 
                 SqlDataReader data_reader;
 
-                data_reader = command.ExecuteReader();
+                data_reader = command2.ExecuteReader();
 
                 if (data_reader.HasRows)
                 {

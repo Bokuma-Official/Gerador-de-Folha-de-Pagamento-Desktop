@@ -204,8 +204,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
             Funcionario funcionario = new Funcionario();
             Endereco endereco = new Endereco();
-            Cargo cargo = new Cargo();
-            Departamento departamento = new Departamento();
             Contrato_Empresa contrato_empresa = new Contrato_Empresa();
 
             funcionario.Nome = txb_Nome.Text;
@@ -238,11 +236,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 funcionario.Matricula = Convert.ToInt32(txb_Matricula.Text);
             }
 
-            departamento.Nome = txb_Departamento.Text;
-            cargo.Nome = txb_Cargo.Text;
+            contrato_empresa.Departamento = txb_Departamento.Text;
+            contrato_empresa.Cargo = txb_Cargo.Text;
             contrato_empresa.Data_Admissao = txb_Admissao.Text;
             contrato_empresa.Tipo_Contrato = txb_Tipo_Contrato.Text;
-            cargo.CBO_Cargo = txb_CBO_Cargo.Text;
+            contrato_empresa.CBO_Cargo = txb_CBO_Cargo.Text;
             funcionario.Email = txb_Email.Text;
             funcionario.Telefone_Celular = txb_Telefone_Celular.Text;
             funcionario.Telefone_Fixo = txb_Telefone_Fixo.Text;
@@ -298,12 +296,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 funcionario.Sexo = "";
             }
 
-            if(chk_Nao.Checked == true)
+            if (chk_Nao.Checked == true)
             {
                 funcionario.PCD = chk_Nao.Text;
             }
             
-            else if(chk_Sim.Checked == true)
+            else if (chk_Sim.Checked == true)
             {
                 funcionario.PCD = chk_Sim.Text;
             }
@@ -314,7 +312,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             }
 
             Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Cadastro_Funcionario(funcionario, endereco, cargo, departamento, contrato_empresa, Repetir_Senha);
+            controle_validacao.Verificar_Cadastro_Funcionario(funcionario, endereco, contrato_empresa, Repetir_Senha);
 
             if (Controle_Validacao.Cadastro_Funcionario_Validado == true && Funcionario_DAO.Cadastro_Funcionario_Realizado == true)
             {

@@ -137,63 +137,71 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void cmb_Selecionar_Perfil_SelectedIndexChanged(object sender, EventArgs e)
         {
             // ao selecionar um nome na combobox vai preencher todos os campos
-            Nome_Perfil_Selecionado = cmb_Selecionar_Perfil.Text;
-
-            Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
-
-            Controle_Validacao controle_validacao = new Controle_Validacao();
-            controle_validacao.Verificar_Visualizacao_Perfil_Para_Gerente(funcionario_ataron, Nome_Perfil_Selecionado);
-
-            txb_CPF.Text = funcionario_ataron.CPF;
-            txb_Senha.Text = funcionario_ataron.Senha;
-            txb_Nome.Text = funcionario_ataron.Nome;
-            txb_RG.Text = funcionario_ataron.RG;
-            txb_PIS.Text = funcionario_ataron.PIS;
-            txb_Carteira_Trabalho.Text = funcionario_ataron.Carteira_Trabalho;
-            txb_Titulo_Eleitor.Text = funcionario_ataron.Titulo_Eleitor;
-
-            if (funcionario_ataron.Sexo == "Masculino")
+            if (cmb_Selecionar_Perfil.SelectedIndex != -1)
             {
-                chk_Masculino.Checked = true;
-                chk_Masculino.CheckState = CheckState.Checked;
-                chk_Feminino.Checked = false;
-                chk_Feminino.CheckState = CheckState.Unchecked;
-                chk_Nao_Binario.Checked = false;
-                chk_Nao_Binario.CheckState = CheckState.Unchecked;
-            }
+                Nome_Perfil_Selecionado = cmb_Selecionar_Perfil.Text;
 
-            else if (funcionario_ataron.Sexo == "Feminino")
-            {
-                chk_Feminino.Checked = true;
-                chk_Feminino.CheckState = CheckState.Checked;
-                chk_Masculino.Checked = false;
-                chk_Masculino.CheckState = CheckState.Unchecked;
-                chk_Nao_Binario.Checked = false;
-                chk_Nao_Binario.CheckState = CheckState.Unchecked;
+                Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
+
+                Controle_Validacao controle_validacao = new Controle_Validacao();
+                controle_validacao.Verificar_Visualizacao_Perfil_Para_Gerente(funcionario_ataron, Nome_Perfil_Selecionado);
+
+                txb_CPF.Text = funcionario_ataron.CPF;
+                txb_Senha.Text = funcionario_ataron.Senha;
+                txb_Nome.Text = funcionario_ataron.Nome;
+                txb_RG.Text = funcionario_ataron.RG;
+                txb_PIS.Text = funcionario_ataron.PIS;
+                txb_Carteira_Trabalho.Text = funcionario_ataron.Carteira_Trabalho;
+                txb_Titulo_Eleitor.Text = funcionario_ataron.Titulo_Eleitor;
+
+                if (funcionario_ataron.Sexo == "Masculino")
+                {
+                    chk_Masculino.Checked = true;
+                    chk_Masculino.CheckState = CheckState.Checked;
+                    chk_Feminino.Checked = false;
+                    chk_Feminino.CheckState = CheckState.Unchecked;
+                    chk_Nao_Binario.Checked = false;
+                    chk_Nao_Binario.CheckState = CheckState.Unchecked;
+                }
+
+                else if (funcionario_ataron.Sexo == "Feminino")
+                {
+                    chk_Feminino.Checked = true;
+                    chk_Feminino.CheckState = CheckState.Checked;
+                    chk_Masculino.Checked = false;
+                    chk_Masculino.CheckState = CheckState.Unchecked;
+                    chk_Nao_Binario.Checked = false;
+                    chk_Nao_Binario.CheckState = CheckState.Unchecked;
+                }
+
+                else
+                {
+                    chk_Nao_Binario.Checked = true;
+                    chk_Nao_Binario.CheckState = CheckState.Checked;
+                    chk_Masculino.Checked = false;
+                    chk_Masculino.CheckState = CheckState.Unchecked;
+                    chk_Feminino.Checked = false;
+                    chk_Feminino.CheckState = CheckState.Unchecked;
+                }
+
+                txb_Certificado_Militar.Text = funcionario_ataron.Certificado_Militar;
+                txb_Data_Nascimento.Text = funcionario_ataron.Data_Nascimento;
+                txb_Telefone_Fixo.Text = funcionario_ataron.Telefone_Fixo;
+                txb_Telefone_Celular.Text = funcionario_ataron.Telefone_Celular;
+                txb_Email.Text = funcionario_ataron.Email;
+                txb_Matricula.Text = funcionario_ataron.Matricula.ToString();
+                txb_Departamento.Text = funcionario_ataron.Departamento;
+                txb_Cargo.Text = funcionario_ataron.Cargo;
+                txb_Data_Admissao.Text = funcionario_ataron.Data_Admissao;
+                txb_CEP.Text = funcionario_ataron.CEP;
+
+                CPF_Perfil_Selecionado = txb_CPF.Text;
             }
 
             else
             {
-                chk_Nao_Binario.Checked = true;
-                chk_Nao_Binario.CheckState = CheckState.Checked;
-                chk_Masculino.Checked = false;
-                chk_Masculino.CheckState = CheckState.Unchecked;
-                chk_Feminino.Checked = false;
-                chk_Feminino.CheckState = CheckState.Unchecked;
+                cmb_Selecionar_Perfil.Text = "";
             }
-
-            txb_Certificado_Militar.Text = funcionario_ataron.Certificado_Militar;
-            txb_Data_Nascimento.Text = funcionario_ataron.Data_Nascimento;
-            txb_Telefone_Fixo.Text = funcionario_ataron.Telefone_Fixo;
-            txb_Telefone_Celular.Text = funcionario_ataron.Telefone_Celular;
-            txb_Email.Text = funcionario_ataron.Email;
-            txb_Matricula.Text = funcionario_ataron.Matricula.ToString();
-            txb_Departamento.Text = funcionario_ataron.Departamento;
-            txb_Cargo.Text = funcionario_ataron.Cargo;
-            txb_Data_Admissao.Text = funcionario_ataron.Data_Admissao;
-            txb_CEP.Text = funcionario_ataron.CEP;
-
-            CPF_Perfil_Selecionado = txb_CPF.Text;
         }
 
         private void btn_Deletar_Click(object sender, EventArgs e)

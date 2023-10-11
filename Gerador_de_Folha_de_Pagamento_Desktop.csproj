@@ -210,11 +210,9 @@
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Funcionario_Ataron_DAO.cs" />
-    <Compile Include="DAL\Cargo_DAO.cs" />
     <Compile Include="DAL\Conexao_Banco_Folha.cs" />
     <Compile Include="DAL\Conexao_Banco_Acesso.cs" />
     <Compile Include="DAL\Contrato_Empresa_DAO.cs" />
-    <Compile Include="DAL\Departamento_DAO.cs" />
     <Compile Include="DAL\Endereco_DAO.cs" />
     <Compile Include="DAL\Folha_Pagamento_DAO.cs" />
     <Compile Include="DAL\Funcionario_DAO.cs" />
@@ -224,9 +222,7 @@
       <DependentUpon>Folha_Pagamento_Ataron_Funcionario_DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Funcionario_Ataron.cs" />
-    <Compile Include="Modelo\Cargo.cs" />
     <Compile Include="Modelo\Contrato_Empresa.cs" />
-    <Compile Include="Modelo\Departamento.cs" />
     <Compile Include="Modelo\Endereco.cs" />
     <Compile Include="Modelo\Folha_Pagamento.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
@@ -324,7 +320,7 @@
     <None Include="Acesso_AtaronDataSet.xss">
       <DependentUpon>Acesso_AtaronDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Diagrama_Classes.cd" />
+    <None Include="Diagrama_de_Classes.cd" />
     <None Include="Folha_Pagamento_Ataron_Funcionario_DataSet.xsc">
       <DependentUpon>Folha_Pagamento_Ataron_Funcionario_DataSet.xsd</DependentUpon>
     </None>

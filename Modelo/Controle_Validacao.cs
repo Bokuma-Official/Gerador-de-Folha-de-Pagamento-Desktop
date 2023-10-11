@@ -769,8 +769,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 }
             }
         }
-        public void Verificar_Cadastro_Funcionario(Funcionario funcionario, Endereco endereco, Cargo cargo,
-            Departamento departamento, Contrato_Empresa contrato_empresa, string repetir_senha)
+        public void Verificar_Cadastro_Funcionario(Funcionario funcionario, Endereco endereco,
+            Contrato_Empresa contrato_empresa, string repetir_senha)
         {
             #region Campos Vazios
             if (repetir_senha == "")
@@ -833,12 +833,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Matrícula é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (departamento.Nome == "")
+            else if (contrato_empresa.Departamento == "")
             {
                 MessageBox.Show("Departamento é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (cargo.Nome == "")
+            else if (contrato_empresa.Cargo == "")
             {
                 MessageBox.Show("Cargo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -853,7 +853,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Tipo de Contrato é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (cargo.CBO_Cargo == "")
+            else if (contrato_empresa.CBO_Cargo == "")
             {
                 MessageBox.Show("CBO do Cargo é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -980,12 +980,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Matrícula deve ter menos que 6 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (departamento.Nome.Length > 40)
+            else if (contrato_empresa.Departamento.Length > 40)
             {
                 MessageBox.Show("Departamento deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (cargo.Nome.Length > 40)
+            else if (contrato_empresa.Cargo.Length > 40)
             {
                 MessageBox.Show("Cargo deve ter menos que 40 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -1000,7 +1000,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 MessageBox.Show("Tipo de Contrato deve ter menos que 15 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else if (cargo.CBO_Cargo.Length > 7)
+            else if (contrato_empresa.CBO_Cargo.Length > 7)
             {
                 MessageBox.Show("CBO do Cargo deve ter menos que 7 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -1135,17 +1135,17 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     endereco.Estado.ToLower().Contains("delete") ||
                     endereco.Estado.ToLower().Contains("drop") ||
 
-                    departamento.Nome.ToLower().Contains("select") ||
-                    departamento.Nome.ToLower().Contains("insert") ||
-                    departamento.Nome.ToLower().Contains("update") ||
-                    departamento.Nome.ToLower().Contains("delete") ||
-                    departamento.Nome.ToLower().Contains("drop") ||
+                    contrato_empresa.Departamento.ToLower().Contains("select") ||
+                    contrato_empresa.Departamento.ToLower().Contains("insert") ||
+                    contrato_empresa.Departamento.ToLower().Contains("update") ||
+                    contrato_empresa.Departamento.ToLower().Contains("delete") ||
+                    contrato_empresa.Departamento.ToLower().Contains("drop") ||
 
-                    cargo.Nome.ToLower().Contains("select") ||
-                    cargo.Nome.ToLower().Contains("insert") ||
-                    cargo.Nome.ToLower().Contains("update") ||
-                    cargo.Nome.ToLower().Contains("delete") ||
-                    cargo.Nome.ToLower().Contains("drop") ||
+                    contrato_empresa.Cargo.ToLower().Contains("select") ||
+                    contrato_empresa.Cargo.ToLower().Contains("insert") ||
+                    contrato_empresa.Cargo.ToLower().Contains("update") ||
+                    contrato_empresa.Cargo.ToLower().Contains("delete") ||
+                    contrato_empresa.Cargo.ToLower().Contains("drop") ||
 
                     contrato_empresa.Nome_Agencia.ToLower().Contains("select") ||
                     contrato_empresa.Nome_Agencia.ToLower().Contains("insert") ||
@@ -1183,11 +1183,18 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                 if (pergunta == DialogResult.Yes)
                 {
                     Funcionario_DAO funcionario_dao = new Funcionario_DAO();
-                    funcionario_dao.Cadastrar_Funcionario(funcionario, endereco, cargo, departamento, contrato_empresa);
+                    funcionario_dao.Cadastrar_Funcionario(funcionario, endereco, contrato_empresa);
 
                     Cadastro_Funcionario_Validado = true;
                 }
             }
+        }
+
+        public void Verificar_Visualizacao_Funcionario(Funcionario funcionario, Endereco endereco,
+            Contrato_Empresa contrato_empresa, string nome_perfil_selecionado)
+        {
+            Funcionario_DAO funcionario_dao = new Funcionario_DAO();
+            funcionario_dao.Visualizar_Funcionario(funcionario, endereco, contrato_empresa, nome_perfil_selecionado);
         }
     }
  }
