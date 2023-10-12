@@ -26,6 +26,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public static bool Cadastro_Funcionario_Validado { get; set; }
         public static bool Deletar_Funcionario_Validado { get; set; }
         public static bool Editar_Funcionario_Validado { get; set; }
+        public static bool Cadastro_Folha_De_Pagamento_Validado { get; set; }
+        public static bool Deletar_Folha_De_Pagamento_Validado { get; set; }
+        public static bool Editar_Folha_De_Pagamento_Validado { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
         {
@@ -1603,6 +1606,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
                     Editar_Funcionario_Validado = true;
                 }
             }
+        }
+
+        public void Verificar_Visualizacao_Funcionario_Folha_De_Pagamento(Funcionario funcionario,
+            Contrato_Empresa contrato_empresa, string nome_funcionario_selecionado)
+        {
+            Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
+            folha_pagamento_dao.Visualizar_Funcionario_Folha_De_Pagamento(funcionario, contrato_empresa, nome_funcionario_selecionado);
         }
     }
  }

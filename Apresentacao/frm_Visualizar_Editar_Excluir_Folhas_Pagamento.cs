@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
     public partial class frm_Visualizar_Editar_Excluir_Folhas_Pagamento : Form
     {
+        public string Nome_Funcionario_Selecionado { get; set; }
+        public string CPF_Funcionario_Selecionado { get; set; }
+
         public frm_Visualizar_Editar_Excluir_Folhas_Pagamento()
         {
             InitializeComponent();
@@ -224,6 +228,38 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
         private void chk_Sim_CheckedChanged(object sender, EventArgs e)
         {
             chk_Nao.Checked = false;
+        }
+
+        private void cmb_Selecionar_Funcionario_DropDown(object sender, EventArgs e)
+        {
+            this.funcionarioTableAdapter.Fill(this.folha_Pagamento_Ataron_Funcionario_DataSet.Funcionario);
+        }
+
+        private void cmb_Selecionar_Funcionario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_Selecionar_Funcionario.SelectedIndex != -1)
+            {
+                Nome_Funcionario_Selecionado = cmb_Selecionar_Funcionario.Text;
+
+                cmb_Pagamento.Enabled = true;
+
+                Funcionario funcionario = new Funcionario();
+                Contrato_Empresa contrato_empresa = new Contrato_Empresa();
+
+                Controle_Validacao controle_validacao = new Controle_Validacao();
+                controle_validacao.Verificar_Visualizacao_Funcionario_Folha_De_Pagamento(funcionario, contrato_empresa, Nome_Funcionario_Selecionado);
+
+                txb_CPF.Text = funcionario.CPF;
+                txb_Cargo.Text = contrato_empresa.Cargo;
+                txb_Dependentes.Text = funcionario.Dependentes.ToString();
+
+                CPF_Funcionario_Selecionado = txb_CPF.Text;
+            }
+
+            else
+            {
+                cmb_Selecionar_Funcionario.Text = "";
+            }
         }
     }
 }

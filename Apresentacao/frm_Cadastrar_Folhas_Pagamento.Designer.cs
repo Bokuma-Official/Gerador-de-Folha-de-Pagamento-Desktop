@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Cadastrar_Folhas_Pagamento));
             this.lbl_Cadastrar = new System.Windows.Forms.Label();
             this.lbl_Funcionario = new System.Windows.Forms.Label();
@@ -78,6 +79,9 @@
             this.btn_Voltar = new System.Windows.Forms.Button();
             this.lbl_Selecionar_Funcionario = new System.Windows.Forms.Label();
             this.cmb_Selecionar_Funcionario = new System.Windows.Forms.ComboBox();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.folhaPagamentoAtaronFuncionarioDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.folha_Pagamento_Ataron_Funcionario_DataSet = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionario_DataSet();
             this.txb_Dependentes = new System.Windows.Forms.TextBox();
             this.lbl_Numero_Dependentes = new System.Windows.Forms.Label();
             this.lbl_Cargo = new System.Windows.Forms.Label();
@@ -87,6 +91,10 @@
             this.chk_Sim = new System.Windows.Forms.CheckBox();
             this.chk_Nao = new System.Windows.Forms.CheckBox();
             this.lbl_13 = new System.Windows.Forms.Label();
+            this.funcionarioTableAdapter = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionario_DataSetTableAdapters.FuncionarioTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folhaPagamentoAtaronFuncionarioDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Cadastrar
@@ -595,6 +603,9 @@
             // 
             // cmb_Selecionar_Funcionario
             // 
+            this.cmb_Selecionar_Funcionario.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.funcionarioBindingSource, "Nome", true));
+            this.cmb_Selecionar_Funcionario.DataSource = this.funcionarioBindingSource;
+            this.cmb_Selecionar_Funcionario.DisplayMember = "Nome";
             this.cmb_Selecionar_Funcionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Selecionar_Funcionario.FormattingEnabled = true;
             this.cmb_Selecionar_Funcionario.Location = new System.Drawing.Point(17, 140);
@@ -602,6 +613,24 @@
             this.cmb_Selecionar_Funcionario.Name = "cmb_Selecionar_Funcionario";
             this.cmb_Selecionar_Funcionario.Size = new System.Drawing.Size(292, 24);
             this.cmb_Selecionar_Funcionario.TabIndex = 217;
+            this.cmb_Selecionar_Funcionario.ValueMember = "Nome";
+            this.cmb_Selecionar_Funcionario.DropDown += new System.EventHandler(this.cmb_Selecionar_Funcionario_DropDown);
+            this.cmb_Selecionar_Funcionario.SelectedIndexChanged += new System.EventHandler(this.cmb_Selecionar_Funcionario_SelectedIndexChanged);
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "Funcionario";
+            this.funcionarioBindingSource.DataSource = this.folhaPagamentoAtaronFuncionarioDataSetBindingSource;
+            // 
+            // folhaPagamentoAtaronFuncionarioDataSetBindingSource
+            // 
+            this.folhaPagamentoAtaronFuncionarioDataSetBindingSource.DataSource = this.folha_Pagamento_Ataron_Funcionario_DataSet;
+            this.folhaPagamentoAtaronFuncionarioDataSetBindingSource.Position = 0;
+            // 
+            // folha_Pagamento_Ataron_Funcionario_DataSet
+            // 
+            this.folha_Pagamento_Ataron_Funcionario_DataSet.DataSetName = "Folha_Pagamento_Ataron_Funcionario_DataSet";
+            this.folha_Pagamento_Ataron_Funcionario_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txb_Dependentes
             // 
@@ -701,6 +730,10 @@
             this.lbl_13.TabIndex = 433;
             this.lbl_13.Text = "13º Salário:";
             // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
             // frm_Cadastrar_Folhas_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -770,6 +803,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
             this.Shown += new System.EventHandler(this.frm_Cadastrar_Folhas_Pagamento_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folhaPagamentoAtaronFuncionarioDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -835,5 +871,9 @@
         private System.Windows.Forms.CheckBox chk_Sim;
         private System.Windows.Forms.CheckBox chk_Nao;
         private System.Windows.Forms.Label lbl_13;
+        private Folha_Pagamento_Ataron_Funcionario_DataSet folha_Pagamento_Ataron_Funcionario_DataSet;
+        private System.Windows.Forms.BindingSource folhaPagamentoAtaronFuncionarioDataSetBindingSource;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource;
+        private Folha_Pagamento_Ataron_Funcionario_DataSetTableAdapters.FuncionarioTableAdapter funcionarioTableAdapter;
     }
 }
