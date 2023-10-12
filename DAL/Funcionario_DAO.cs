@@ -103,9 +103,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 command1.Parameters.AddWithValue("@Nome", nome_funcionario_selecionado);
                 string cpf = (string)command1.ExecuteScalar();
 
-                SqlCommand command2 = new SqlCommand("SELECT CPF, Senha, Nome, Data_Nascimento, Sexo," +
+                SqlCommand command2 = new SqlCommand("select CPF, Senha, Nome, Data_Nascimento, Sexo," +
                     "PCD, PIS, RG, Carteira_Trabalho, Titulo_Eleitor, Certificado_Militar, Matricula," +
-                    "Telefone_Fixo, Telefone_Celular, Email, Dependentes FROM Funcionario WHERE CPF = @CPF", conexao);
+                    "Telefone_Fixo, Telefone_Celular, Email, Dependentes from Funcionario where CPF = @CPF", conexao);
                 command2.Parameters.AddWithValue("@CPF", cpf);
 
                 SqlDataReader data_reader1;
@@ -135,8 +135,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                     data_reader1.Close();
                 }
 
-                SqlCommand command3 = new SqlCommand("SELECT CEP, Logradouro, Numero, Bairro, Complemento," +
-                    "Cidade, Estado FROM Endereco WHERE CPF = @CPF", conexao);
+                SqlCommand command3 = new SqlCommand("select CEP, Logradouro, Numero, Bairro, Complemento," +
+                    "Cidade, Estado from Endereco where CPF = @CPF", conexao);
                 command3.Parameters.AddWithValue("@CPF", cpf);
 
                 SqlDataReader data_reader2;
@@ -157,8 +157,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                     data_reader2.Close();
                 }
 
-                SqlCommand command4 = new SqlCommand("SELECT Data_Admissao, Numero_Conta, Numero_Agencia," +
-                    "Nome_Agencia, Tipo_Contrato, Cargo, CBO_Cargo, Departamento FROM Contrato_Empresa WHERE CPF = @CPF", conexao);
+                SqlCommand command4 = new SqlCommand("select Data_Admissao, Numero_Conta, Numero_Agencia," +
+                    "Nome_Agencia, Tipo_Contrato, Cargo, CBO_Cargo," +
+                    "Departamento from Contrato_Empresa where CPF = @CPF", conexao);
                 command4.Parameters.AddWithValue("@CPF", cpf);
 
                 SqlDataReader data_reader3;
@@ -179,6 +180,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
 
                     data_reader3.Close();
                 }
+
                 conexao.Close();
             }
 

@@ -33,7 +33,7 @@
             this.btn_Voltar = new System.Windows.Forms.Button();
             this.lbl_Visualizar_Editar_Excluir = new System.Windows.Forms.Label();
             this.btn_Editar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Deletar = new System.Windows.Forms.Button();
             this.txb_Dependentes = new System.Windows.Forms.TextBox();
             this.lbl_Selecionar_Funcionario = new System.Windows.Forms.Label();
             this.cmb_Selecionar_Funcionario = new System.Windows.Forms.ComboBox();
@@ -138,19 +138,21 @@
             this.btn_Editar.TabIndex = 238;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
-            // button1
+            // btn_Deletar
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(87, 745);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 70);
-            this.button1.TabIndex = 368;
-            this.button1.Text = "Deletar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Deletar.BackColor = System.Drawing.Color.Red;
+            this.btn_Deletar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Deletar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_Deletar.Location = new System.Drawing.Point(87, 745);
+            this.btn_Deletar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Deletar.Name = "btn_Deletar";
+            this.btn_Deletar.Size = new System.Drawing.Size(135, 70);
+            this.btn_Deletar.TabIndex = 368;
+            this.btn_Deletar.Text = "Deletar";
+            this.btn_Deletar.UseVisualStyleBackColor = false;
+            this.btn_Deletar.Click += new System.EventHandler(this.btn_Deletar_Click);
             // 
             // txb_Dependentes
             // 
@@ -731,6 +733,8 @@
             this.cmb_Pagamento.Name = "cmb_Pagamento";
             this.cmb_Pagamento.Size = new System.Drawing.Size(292, 24);
             this.cmb_Pagamento.TabIndex = 429;
+            this.cmb_Pagamento.DropDown += new System.EventHandler(this.cmb_Pagamento_DropDown);
+            this.cmb_Pagamento.SelectedIndexChanged += new System.EventHandler(this.cmb_Pagamento_SelectedIndexChanged);
             // 
             // chk_Sim
             // 
@@ -835,7 +839,7 @@
             this.Controls.Add(this.txb_CPF);
             this.Controls.Add(this.lbl_CPF);
             this.Controls.Add(this.lbl_Funcionario);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Deletar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Voltar);
             this.Controls.Add(this.lbl_Visualizar_Editar_Excluir);
@@ -857,7 +861,7 @@
         private System.Windows.Forms.Button btn_Voltar;
         private System.Windows.Forms.Label lbl_Visualizar_Editar_Excluir;
         private System.Windows.Forms.Button btn_Editar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Deletar;
         private System.Windows.Forms.TextBox txb_Dependentes;
         private System.Windows.Forms.Label lbl_Selecionar_Funcionario;
         private System.Windows.Forms.ComboBox cmb_Selecionar_Funcionario;

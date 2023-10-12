@@ -1608,11 +1608,56 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
         }
 
-        public void Verificar_Visualizacao_Funcionario_Folha_De_Pagamento(Funcionario funcionario,
+        public void Verificar_Visualizacao_Funcionario_Tela_Folha_De_Pagamento(Funcionario funcionario,
             Contrato_Empresa contrato_empresa, string nome_funcionario_selecionado)
         {
             Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
-            folha_pagamento_dao.Visualizar_Funcionario_Folha_De_Pagamento(funcionario, contrato_empresa, nome_funcionario_selecionado);
+            folha_pagamento_dao.Visualizar_Funcionario_Tela_Folha_De_Pagamento(funcionario,
+                contrato_empresa, nome_funcionario_selecionado);
+        }
+
+        public void Verificar_Visualizacao_Data_Pagamento_Tela_Folha_De_Pagamento
+            (string cpf_funcionario_selecionado, List<String> lista_datas_pagamento)
+        {
+            Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
+            folha_pagamento_dao.Visualizar_Data_Pagamento_Tela_Folha_De_Pagamento
+                (cpf_funcionario_selecionado, lista_datas_pagamento);
+        }
+
+        public void Verificar_Visualizacao_Folha_Pagamento_Por_Funcionario_E_Data_Pagamento
+            (Folha_Pagamento folha_pagamento, string cpf_funcionario_selecionado,
+            string data_pagamento_funcionario_selecionado)
+        {
+            Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
+            folha_pagamento_dao.Visualizar_Folha_Pagamento_Por_Funcionario_E_Data_Pagamento
+                (folha_pagamento, cpf_funcionario_selecionado, data_pagamento_funcionario_selecionado);
+        }
+
+        public void Verificar_Exclusao_Folha_Pagamento(string cpf_funcionario_selecionado,
+            string data_pagamento_funcionario_selecionado)
+        {
+            DialogResult pergunta = MessageBox.Show("Deseja deletar a Folha de Pagamento?", "Deletar Folha de Pagamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (pergunta == DialogResult.Yes)
+            {
+                Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
+                folha_pagamento_dao.Deletar_Folha_Pagamento(cpf_funcionario_selecionado,
+                    data_pagamento_funcionario_selecionado);
+
+                Deletar_Folha_De_Pagamento_Validado = true;
+            }
+        }
+
+        public void Verificar_Cadastro_Folha_Pagamento(Folha_Pagamento folha_pagamento,
+            string cpf_funcionario_selecionado)
+        {
+
+        }
+
+        public void Verificar_Edicao_Folha_Pagamento(Folha_Pagamento folha_pagamento,
+            string cpf_funcionario_selecionado, string data_pagamento_funcionario_selecionado)
+        {
+
         }
     }
  }

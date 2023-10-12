@@ -254,7 +254,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 Contrato_Empresa contrato_empresa = new Contrato_Empresa();
 
                 Controle_Validacao controle_validacao = new Controle_Validacao();
-                controle_validacao.Verificar_Visualizacao_Funcionario_Folha_De_Pagamento(funcionario, contrato_empresa, Nome_Funcionario_Selecionado);
+                controle_validacao.Verificar_Visualizacao_Funcionario_Tela_Folha_De_Pagamento(funcionario, contrato_empresa, Nome_Funcionario_Selecionado);
 
                 txb_CPF.Text = funcionario.CPF;
                 txb_Cargo.Text = contrato_empresa.Cargo;
@@ -267,6 +267,11 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             {
                 cmb_Selecionar_Funcionario.Text = "";
             }
+        }
+
+        private void btn_Cadastrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
