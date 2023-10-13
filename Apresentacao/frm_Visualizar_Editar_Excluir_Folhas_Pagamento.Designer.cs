@@ -346,7 +346,6 @@
             this.txb_Desconto_IRRF.Location = new System.Drawing.Point(690, 466);
             this.txb_Desconto_IRRF.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Desconto_IRRF.Name = "txb_Desconto_IRRF";
-            this.txb_Desconto_IRRF.ReadOnly = true;
             this.txb_Desconto_IRRF.Size = new System.Drawing.Size(292, 22);
             this.txb_Desconto_IRRF.TabIndex = 406;
             // 
@@ -375,7 +374,6 @@
             this.txb_Desconto_INSS.Location = new System.Drawing.Point(690, 411);
             this.txb_Desconto_INSS.Margin = new System.Windows.Forms.Padding(4);
             this.txb_Desconto_INSS.Name = "txb_Desconto_INSS";
-            this.txb_Desconto_INSS.ReadOnly = true;
             this.txb_Desconto_INSS.Size = new System.Drawing.Size(292, 22);
             this.txb_Desconto_INSS.TabIndex = 403;
             // 

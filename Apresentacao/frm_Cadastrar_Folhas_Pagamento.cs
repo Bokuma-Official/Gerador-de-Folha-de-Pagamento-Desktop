@@ -1,4 +1,5 @@
-﻿using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
+﻿using Gerador_de_Folha_de_Pagamento_Desktop.DAL;
+using Gerador_de_Folha_de_Pagamento_Desktop.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
     {
         public string Nome_Funcionario_Selecionado { get; set; }
         public string CPF_Funcionario_Selecionado { get; set; }
+        public string Salario_13 { get; set; }
 
         public frm_Cadastrar_Folhas_Pagamento()
         {
@@ -124,6 +126,18 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             }
         }
 
+        private void txb_Dias_Ferias_TextChanged(object sender, EventArgs e)
+        {
+            // quando o campo de dias de férias for maior que 30, voltará a ficar no valor máximo permitido que é 30
+            if (int.TryParse(txb_Dias_Ferias.Text, out int valor) && valor >= 0)
+            {
+                if (valor > 30)
+                {
+                    txb_Dias_Ferias.Text = "30";
+                }
+            }
+        }
+
         private void frm_Cadastrar_Folhas_Pagamento_Shown(object sender, EventArgs e)
         {
             txb_Data_Pagamento.Focus();
@@ -139,8 +153,24 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Hora_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            // Verifica se a tecla pressionada é um número, uma vírgula ou outra tecla
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            // Se a tecla pressionada for uma vírgula, verifica se já existe uma no texto
+            if (virgula)
             {
+                if (txb_Valor_Hora.Text.Contains(","))
+                {
+                    // Se já houver uma vírgula, ignora a tecla pressionada
+                    e.Handled = true;
+                }
+            }
+
+            else if (!numero && !outra_tecla)
+            {
+                // Se a tecla pressionada não for um número nem um controle, ignora a tecla pressionada
                 e.Handled = true;
             }
         }
@@ -163,7 +193,19 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Horas_Extras_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            if (virgula)
+            {
+                if (txb_Valor_Horas_Extras.Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+
+            else if (!numero && !outra_tecla)
             {
                 e.Handled = true;
             }
@@ -179,7 +221,19 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Vale_Transporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            if (virgula)
+            {
+                if (txb_Valor_Vale_Transporte.Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+
+            else if (!numero && !outra_tecla)
             {
                 e.Handled = true;
             }
@@ -187,7 +241,19 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_Vale_Transporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            if (virgula)
+            {
+                if (txb_Desconto_Vale_Transporte.Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+
+            else if (!numero && !outra_tecla)
             {
                 e.Handled = true;
             }
@@ -195,7 +261,19 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Valor_Vale_Alimentacao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            if (virgula)
+            {
+                if (txb_Valor_Vale_Alimentacao.Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+
+            else if (!numero && !outra_tecla)
             {
                 e.Handled = true;
             }
@@ -203,7 +281,19 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_Vale_Alimentacao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            if (virgula)
+            {
+                if (txb_Desconto_Vale_Alimentacao.Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+
+            else if (!numero && !outra_tecla)
             {
                 e.Handled = true;
             }
@@ -211,21 +301,61 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Desconto_Seguro_Vida_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            if (virgula)
+            {
+                if (txb_Desconto_Seguro_Vida.Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+
+            else if (!numero && !outra_tecla)
             {
                 e.Handled = true;
             }
         }
 
-        private void txb_Dias_Ferias_TextChanged(object sender, EventArgs e)
+        private void txb_Desconto_INSS_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // quando o campo de dias de férias for maior que 30, voltará a ficar no valor máximo permitido que é 30
-            if (int.TryParse(txb_Dias_Ferias.Text, out int valor) && valor >= 0)
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            if (virgula)
             {
-                if (valor > 30)
+                if (txb_Desconto_INSS.Text.Contains(","))
                 {
-                    txb_Dias_Ferias.Text = "30";
+                    e.Handled = true;
                 }
+            }
+
+            else if (!numero && !outra_tecla)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_Desconto_IRRF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool numero = Char.IsNumber(e.KeyChar);
+            bool outra_tecla = Char.IsControl(e.KeyChar);
+            bool virgula = e.KeyChar == ',';
+
+            if (virgula)
+            {
+                if (txb_Desconto_IRRF.Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+
+            else if (!numero && !outra_tecla)
+            {
+                e.Handled = true;
             }
         }
 
@@ -271,7 +401,223 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
+            if (cmb_Selecionar_Funcionario.SelectedIndex == -1 || txb_CPF.Text == "")
+            {
+                MessageBox.Show("Selecione um Funcionário para " +
+                    "cadastrar uma Folha de Pagamento", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
+            else
+            {
+                Folha_Pagamento folha_pagamento = new Folha_Pagamento();
+
+                folha_pagamento.Data_Pagamento = txb_Data_Pagamento.Text;
+
+                if (txb_Horas_Trabalhadas.Text.Length == 0)
+                {
+                    folha_pagamento.Horas_Trabalhadas = 0;
+                }
+
+                else
+                {
+                    folha_pagamento.Horas_Trabalhadas = Convert.ToInt32(txb_Horas_Trabalhadas.Text);
+                }
+
+                folha_pagamento.Valor_Hora = txb_Valor_Hora.Text;
+
+                if (txb_Horas_Extras.Text.Length == 0 || txb_Horas_Extras.Text == "0")
+                {
+                    txb_Horas_Extras.Text = "0";
+                    txb_Valor_Horas_Extras.Text = "0,00";
+                    folha_pagamento.Horas_Extras = Convert.ToInt32(txb_Horas_Extras.Text);
+                }
+
+                else
+                {
+                    folha_pagamento.Horas_Extras = Convert.ToInt32(txb_Horas_Extras.Text);
+                }
+
+                if (txb_Valor_Horas_Extras.Text.Length == 0)
+                {
+                    txb_Valor_Horas_Extras.Text = "0,00";
+                    folha_pagamento.Valor_Horas_Extras = txb_Valor_Horas_Extras.Text;
+                }
+
+                else
+                {
+                    folha_pagamento.Valor_Horas_Extras = txb_Valor_Horas_Extras.Text;
+                }
+
+                folha_pagamento.Valor_Vale_Transporte = txb_Valor_Vale_Transporte.Text;
+
+                if (txb_Desconto_Vale_Transporte.Text.Length == 0)
+                {
+                    txb_Desconto_Vale_Transporte.Text = "0,00";
+                    folha_pagamento.Desconto_Vale_Transporte = txb_Desconto_Vale_Transporte.Text;
+                }
+
+                else
+                {
+                    folha_pagamento.Desconto_Vale_Transporte = txb_Desconto_Vale_Transporte.Text;
+                }
+
+                folha_pagamento.Valor_Vale_Alimentacao = txb_Valor_Vale_Alimentacao.Text;
+
+                if (txb_Desconto_Vale_Alimentacao.Text.Length == 0)
+                {
+                    txb_Desconto_Vale_Alimentacao.Text = "0,00";
+                    folha_pagamento.Desconto_Vale_Alimentacao = txb_Desconto_Vale_Alimentacao.Text;
+                }
+
+                else
+                {
+                    folha_pagamento.Desconto_Vale_Alimentacao = txb_Desconto_Vale_Alimentacao.Text;
+                }
+
+                folha_pagamento.Desconto_Seguro_Vida = txb_Desconto_Seguro_Vida.Text;
+
+                if (txb_Dias_Ferias.Text == "")
+                {
+                    txb_Dias_Ferias.Text = "0";
+                    folha_pagamento.Dias_Ferias = Convert.ToInt32(txb_Dias_Ferias.Text);
+
+                }
+
+                else
+                {
+                    folha_pagamento.Dias_Ferias = Convert.ToInt32(txb_Dias_Ferias.Text);
+                }
+
+                if (txb_Horas_Faltas.Text.Length == 0)
+                {
+                    folha_pagamento.Horas_Faltas = 0;
+                }
+
+                else
+                {
+                    folha_pagamento.Horas_Faltas = Convert.ToInt32(txb_Horas_Faltas.Text);
+                }
+
+                folha_pagamento.Desconto_Horas_Faltas = txb_Desconto_Faltas.Text;
+                folha_pagamento.Desconto_INSS = txb_Desconto_INSS.Text;
+                folha_pagamento.Desconto_IRRF = txb_Desconto_IRRF.Text;
+
+                if (chk_Nao.Checked == true)
+                {
+                    Salario_13 = "Não";
+                }
+
+                else if (chk_Sim.Checked == true)
+                {
+                    Salario_13 = "Sim";
+                }
+
+                else
+                {
+                    Salario_13 = "";
+                }
+
+                Controle_Validacao controle_validacao1 = new Controle_Validacao();
+                controle_validacao1.Verificar_Folha_Pagamento(folha_pagamento, Salario_13);
+
+                if (Controle_Validacao.Folha_Pagamento_Validado == true)
+                {
+                    Controle_Validacao.Folha_Pagamento_Validado = false;
+
+                    #region Conta do Valor do Salário Bruto
+                    int horas_trabalhadas = int.Parse(txb_Horas_Trabalhadas.Text);
+                    decimal valor_hora = decimal.Parse(txb_Valor_Hora.Text);
+                    decimal salario_bruto = (horas_trabalhadas * valor_hora);
+                    txb_Salario_Bruto.Text = salario_bruto.ToString("F2");
+                    #endregion
+
+                    #region Conta do Desconto de FGTS
+                    decimal salario_bruto_conta_fgts = Decimal.Parse(txb_Salario_Bruto.Text);
+                    decimal desconto_fgts;
+                    // 8% de desconto
+                    desconto_fgts = salario_bruto_conta_fgts * 0.08m;
+                    txb_Desconto_FGTS.Text = desconto_fgts.ToString("F2");
+                    folha_pagamento.Desconto_FGTS = txb_Desconto_FGTS.Text;
+                    #endregion
+
+                    #region Conta do Valor de Férias
+                    decimal salario_bruto_conta_ferias = decimal.Parse(txb_Salario_Bruto.Text);
+                    int dias_ferias = int.Parse(txb_Dias_Ferias.Text);
+                    decimal desconto_inss_conta_ferias = decimal.Parse(txb_Desconto_INSS.Text);
+                    decimal desconto_irrf_conta_ferias = decimal.Parse(txb_Desconto_IRRF.Text);
+
+                    if (dias_ferias == 0)
+                    {
+                        txb_Valor_Ferias.Text = "0,00";
+                        folha_pagamento.Valor_Ferias = txb_Valor_Ferias.Text;
+                    }
+
+                    else
+                    {
+                        decimal valor_ferias = (salario_bruto_conta_ferias / 30 * dias_ferias / 3 * 4) - desconto_inss_conta_ferias - desconto_irrf_conta_ferias;
+                        txb_Valor_Ferias.Text = valor_ferias.ToString("F2");
+                        folha_pagamento.Valor_Ferias = txb_Valor_Ferias.Text;
+                    }
+                    #endregion
+
+                    #region Conta do Valor do 13º Salário
+                    decimal salario_bruto_conta_13_salario = decimal.Parse(txb_Salario_Bruto.Text);
+                    decimal desconto_inss_conta_13_salario = decimal.Parse(txb_Desconto_INSS.Text);
+                    decimal desconto_irrf_conta_13_salario = decimal.Parse(txb_Desconto_IRRF.Text);
+                    decimal decimo_terceiro_salario = 0.00m;
+
+                    if (chk_Sim.Checked == true)
+                    {
+                        decimo_terceiro_salario = salario_bruto_conta_13_salario - desconto_inss_conta_13_salario - desconto_irrf_conta_13_salario;
+                    }
+
+                    txb_13_Salario.Text = decimo_terceiro_salario.ToString("F2");
+                    folha_pagamento.Valor_13_Salario = txb_13_Salario.Text;
+                    #endregion
+
+                    #region Conta do Valor do Salário Bruto se tiver Horas Extras, 13º Salário ou Férias
+                    decimal salario_bruto_final = decimal.Parse(txb_Salario_Bruto.Text);
+                    int horas_extras = int.Parse(txb_Horas_Extras.Text);
+                    decimal valor_horas_extras = decimal.Parse(txb_Valor_Horas_Extras.Text);
+                    decimal valor_ferias_conta_salario_bruto = decimal.Parse(txb_Valor_Ferias.Text);
+                    decimal decimo_terceiro_salario_conta_salario_bruto = decimal.Parse(txb_13_Salario.Text);
+                    salario_bruto_final = salario_bruto_final + (horas_extras * valor_horas_extras) + valor_ferias_conta_salario_bruto + decimo_terceiro_salario_conta_salario_bruto;
+                    txb_Salario_Bruto.Text = salario_bruto_final.ToString("F2");
+                    folha_pagamento.Salario_Bruto = txb_Salario_Bruto.Text;
+                    #endregion
+
+                    #region Conta do Salário Líquido
+                    decimal salario_bruto_conta_salario_liquido = decimal.Parse(txb_Salario_Bruto.Text);
+                    decimal desconto_faltas = decimal.Parse(txb_Desconto_Faltas.Text);
+                    decimal desconto_vale_transporte = decimal.Parse(txb_Desconto_Vale_Transporte.Text);
+                    decimal desconto_vale_alimentacao = decimal.Parse(txb_Desconto_Vale_Alimentacao.Text);
+                    decimal desconto_seguro_vida = decimal.Parse(txb_Desconto_Seguro_Vida.Text);
+                    decimal desconto_fgts_conta_salario_liquido = decimal.Parse(txb_Desconto_FGTS.Text);
+                    decimal desconto_inss_conta_salario_liquido = decimal.Parse(txb_Desconto_INSS.Text);
+                    decimal desconto_irff_conta_salario_liquido = decimal.Parse(txb_Desconto_IRRF.Text);
+                    int dependentes = int.Parse(txb_Dependentes.Text);
+                    decimal salario_liquido = salario_bruto_conta_salario_liquido -
+                        desconto_faltas - desconto_vale_transporte - desconto_vale_alimentacao -
+                        desconto_seguro_vida - desconto_fgts_conta_salario_liquido -
+                        desconto_inss_conta_salario_liquido - desconto_irff_conta_salario_liquido - (dependentes * 189.59m);
+                    txb_Salario_Liquido.Text = salario_liquido.ToString("F2");
+                    folha_pagamento.Salario_Liquido = txb_Salario_Liquido.Text;
+                    #endregion
+
+                    Controle_Validacao controle_validacao2 = new Controle_Validacao();
+                    controle_validacao2.Verificar_Cadastro_Folha_Pagamento(folha_pagamento, CPF_Funcionario_Selecionado);
+
+                    if (Controle_Validacao.Cadastro_Folha_De_Pagamento_Validado == true && Folha_Pagamento_DAO.Cadastro_Folha_De_Pagamento_Realizado == true)
+                    {
+                        Controle_Validacao.Cadastro_Folha_De_Pagamento_Validado = false;
+                        Folha_Pagamento_DAO.Cadastro_Folha_De_Pagamento_Realizado = false;
+
+                        this.Hide();
+                        frm_Cadastrar_Folhas_Pagamento frm_cadastrar_folhas_pagamento = new frm_Cadastrar_Folhas_Pagamento();
+                        frm_cadastrar_folhas_pagamento.Show();
+                    }
+                }
+            }
         }
     }
 }

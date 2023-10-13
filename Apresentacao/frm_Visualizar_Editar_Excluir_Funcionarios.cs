@@ -113,7 +113,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Telefone_Celular_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-' && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }
@@ -121,7 +121,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void txb_Telefone_Fixo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-' && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }
@@ -300,7 +300,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Deletar_Click(object sender, EventArgs e)
         {
-            if (cmb_Selecionar_Funcionario.SelectedItem == null)
+            if (cmb_Selecionar_Funcionario.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um Funcionário para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -324,7 +324,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            if (cmb_Selecionar_Funcionario.SelectedItem == null)
+            if (cmb_Selecionar_Funcionario.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um Funcionário para editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

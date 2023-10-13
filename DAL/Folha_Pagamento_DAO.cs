@@ -190,13 +190,118 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         public void Cadastrar_Folha_Pagamento(Folha_Pagamento folha_pagamento,
             string cpf_funcionario_selecionado)
         {
+            try
+            {
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Folha.String_Conexao);
 
+                conexao.Open();
+
+                SqlCommand command = new SqlCommand("insert into Folha_Pagamento values (@Data_Pagamento," +
+                    "@Horas_Trabalhadas, @Valor_Hora, @Horas_Faltas, @Desconto_Horas_Faltas, @Horas_Extras," +
+                    "@Valor_Horas_Extras, @Valor_Vale_Transporte, @Valor_Vale_Alimentacao, @Desconto_INSS," +
+                    "@Desconto_FGTS, @Desconto_IRRF, @Desconto_Vale_Transporte, @Desconto_Vale_Alimentacao," +
+                    "@Desconto_Seguro_Vida, @Dias_Ferias, @Valor_Ferias, @Valor_13_Salario, @Salario_Bruto," +
+                    "@Salario_Liquido, @CPF)", conexao);
+                command.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
+                command.Parameters.AddWithValue("@Data_Pagamento", folha_pagamento.Data_Pagamento);
+                command.Parameters.AddWithValue("@Horas_Trabalhadas", folha_pagamento.Horas_Trabalhadas);
+                command.Parameters.AddWithValue("@Valor_Hora", folha_pagamento.Valor_Hora);
+                command.Parameters.AddWithValue("@Horas_Faltas", folha_pagamento.Horas_Faltas);
+                command.Parameters.AddWithValue("@Desconto_Horas_Faltas", folha_pagamento.Desconto_Horas_Faltas);
+                command.Parameters.AddWithValue("@Horas_Extras", folha_pagamento.Horas_Extras);
+                command.Parameters.AddWithValue("@Valor_Horas_Extras", folha_pagamento.Valor_Horas_Extras);
+                command.Parameters.AddWithValue("@Valor_Vale_Transporte", folha_pagamento.Valor_Vale_Transporte);
+                command.Parameters.AddWithValue("@Valor_Vale_Alimentacao", folha_pagamento.Valor_Vale_Alimentacao);
+                command.Parameters.AddWithValue("@Desconto_INSS", folha_pagamento.Desconto_INSS);
+                command.Parameters.AddWithValue("@Desconto_FGTS", folha_pagamento.Desconto_FGTS);
+                command.Parameters.AddWithValue("@Desconto_IRRF", folha_pagamento.Desconto_IRRF);
+                command.Parameters.AddWithValue("@Desconto_Vale_Transporte", folha_pagamento.Desconto_Vale_Transporte);
+                command.Parameters.AddWithValue("@Desconto_Vale_Alimentacao", folha_pagamento.Desconto_Vale_Alimentacao);
+                command.Parameters.AddWithValue("@Desconto_Seguro_Vida", folha_pagamento.Desconto_Seguro_Vida);
+                command.Parameters.AddWithValue("@Dias_Ferias", folha_pagamento.Dias_Ferias);
+                command.Parameters.AddWithValue("@Valor_Ferias", folha_pagamento.Valor_Ferias);
+                command.Parameters.AddWithValue("@Valor_13_Salario", folha_pagamento.Valor_13_Salario);
+                command.Parameters.AddWithValue("@Salario_Bruto", folha_pagamento.Salario_Bruto);
+                command.Parameters.AddWithValue("@Salario_Liquido", folha_pagamento.Salario_Liquido);
+
+                int linhas_afetadas = command.ExecuteNonQuery();
+
+                conexao.Close();
+
+                if (linhas_afetadas > 0)
+                {
+                    MessageBox.Show("A Folha de Pagamento foi cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Cadastro_Folha_De_Pagamento_Realizado = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void Editar_Folha_Pagamento(Folha_Pagamento folha_pagamento,
             string cpf_funcionario_selecionado, string data_pagamento_funcionario_selecionado)
         {
+            try
+            {
+                SqlConnection conexao = new SqlConnection(Conexao_Banco_Folha.String_Conexao);
 
+                conexao.Open();
+
+                SqlCommand command = new SqlCommand("update Folha_Pagamento set Data_Pagamento = @Data_Pagamento," +
+                    "Horas_Trabalhadas = @Horas_Trabalhadas, Valor_Hora = @Valor_Hora, Horas_Faltas = @Horas_Faltas," +
+                    "Desconto_Horas_Faltas = @Desconto_Horas_Faltas, Horas_Extras = @Horas_Extras," +
+                    "Valor_Horas_Extras = @Valor_Horas_Extras, Valor_Vale_Transporte = @Valor_Vale_Transporte," +
+                    "Valor_Vale_Alimentacao = @Valor_Vale_Alimentacao, Desconto_INSS = @Desconto_INSS," +
+                    "Desconto_FGTS = @Desconto_FGTS, Desconto_IRRF = @Desconto_IRRF," +
+                    "Desconto_Vale_Transporte = @Desconto_Vale_Transporte," +
+                    "Desconto_Vale_Alimentacao = @Desconto_Vale_Alimentacao," +
+                    "Desconto_Seguro_Vida = @Desconto_Seguro_Vida, Dias_Ferias = @Dias_Ferias," +
+                    "Valor_Ferias = @Valor_Ferias, Valor_13_Salario = @Valor_13_Salario," +
+                    "Salario_Bruto = @Salario_Bruto, Salario_Liquido = @Salario_Liquido " +
+                    "where CPF = @CPF and Data_Pagamento = @Data_Pagamento_Funcionario_Selecionado", conexao);
+                command.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
+                command.Parameters.AddWithValue("@Data_Pagamento_Funcionario_Selecionado", data_pagamento_funcionario_selecionado);
+                command.Parameters.AddWithValue("@Data_Pagamento", folha_pagamento.Data_Pagamento);
+                command.Parameters.AddWithValue("@Horas_Trabalhadas", folha_pagamento.Horas_Trabalhadas);
+                command.Parameters.AddWithValue("@Valor_Hora", folha_pagamento.Valor_Hora);
+                command.Parameters.AddWithValue("@Horas_Faltas", folha_pagamento.Horas_Faltas);
+                command.Parameters.AddWithValue("@Desconto_Horas_Faltas", folha_pagamento.Desconto_Horas_Faltas);
+                command.Parameters.AddWithValue("@Horas_Extras", folha_pagamento.Horas_Extras);
+                command.Parameters.AddWithValue("@Valor_Horas_Extras", folha_pagamento.Valor_Horas_Extras);
+                command.Parameters.AddWithValue("@Valor_Vale_Transporte", folha_pagamento.Valor_Vale_Transporte);
+                command.Parameters.AddWithValue("@Valor_Vale_Alimentacao", folha_pagamento.Valor_Vale_Alimentacao);
+                command.Parameters.AddWithValue("@Desconto_INSS", folha_pagamento.Desconto_INSS);
+                command.Parameters.AddWithValue("@Desconto_FGTS", folha_pagamento.Desconto_FGTS);
+                command.Parameters.AddWithValue("@Desconto_IRRF", folha_pagamento.Desconto_IRRF);
+                command.Parameters.AddWithValue("@Desconto_Vale_Transporte", folha_pagamento.Desconto_Vale_Transporte);
+                command.Parameters.AddWithValue("@Desconto_Vale_Alimentacao", folha_pagamento.Desconto_Vale_Alimentacao);
+                command.Parameters.AddWithValue("@Desconto_Seguro_Vida", folha_pagamento.Desconto_Seguro_Vida);
+                command.Parameters.AddWithValue("@Dias_Ferias", folha_pagamento.Dias_Ferias);
+                command.Parameters.AddWithValue("@Valor_Ferias", folha_pagamento.Valor_Ferias);
+                command.Parameters.AddWithValue("@Valor_13_Salario", folha_pagamento.Valor_13_Salario);
+                command.Parameters.AddWithValue("@Salario_Bruto", folha_pagamento.Salario_Bruto);
+                command.Parameters.AddWithValue("@Salario_Liquido", folha_pagamento.Salario_Liquido);
+
+                int linhas_afetadas = command.ExecuteNonQuery();
+
+                conexao.Close();
+
+                if (linhas_afetadas > 0)
+                {
+                    MessageBox.Show("A Folha de Pagamento foi editada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Folha_De_Pagamento_Atualizada = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

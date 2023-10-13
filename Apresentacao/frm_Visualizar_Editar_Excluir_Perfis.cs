@@ -41,10 +41,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             if (!Funcionario_Ataron_DAO.Cargo_Perfil_Logado.ToLower().Contains("gerente"))
             {
                 lbl_Visualizar_Editar_Excluir.Text = "Visualizar Perfil";
-                lbl_Visualizar_Editar_Excluir.Location = new Point (260, 40);
+                lbl_Visualizar_Editar_Excluir.Location = new Point(260, 40);
                 lbl_Selecionar_Perfil.Visible = false;
                 cmb_Selecionar_Perfil.Visible = false;
-                btn_Voltar.Location = new Point (345, 460);
+                btn_Voltar.Location = new Point(345, 460);
                 btn_Deletar.Visible = false;
                 btn_Editar.Visible = false;
                 btn_Editar.Visible = false;
@@ -206,7 +206,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Deletar_Click(object sender, EventArgs e)
         {
-            if (cmb_Selecionar_Perfil.SelectedItem == null)
+            if (cmb_Selecionar_Perfil.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um Perfil para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -230,12 +230,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            if (cmb_Selecionar_Perfil.SelectedItem == null)
+            if (cmb_Selecionar_Perfil.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um Perfil para editar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            else 
+            else
             {
                 Funcionario_Ataron funcionario_ataron = new Funcionario_Ataron();
                 funcionario_ataron.CPF = txb_CPF.Text;

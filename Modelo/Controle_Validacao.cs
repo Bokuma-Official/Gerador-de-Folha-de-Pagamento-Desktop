@@ -29,6 +29,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public static bool Cadastro_Folha_De_Pagamento_Validado { get; set; }
         public static bool Deletar_Folha_De_Pagamento_Validado { get; set; }
         public static bool Editar_Folha_De_Pagamento_Validado { get; set; }
+        public static bool Folha_Pagamento_Validado { get; set; }
 
         public void Verificar_Login(Funcionario_Ataron funcionario_ataron)
         {
@@ -509,7 +510,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             funcionario_ataron_dao.Visualizar_Perfil_Para_Gerente(funcionario_ataron, nome_perfil_selecionado);
         }
 
-        public void Verificar_Exclusao_Perfil (string cpf_perfil_selecionado)
+        public void Verificar_Exclusao_Perfil(string cpf_perfil_selecionado)
         {
             if (Funcionario_Ataron_DAO.CPF_Perfil_Logado == cpf_perfil_selecionado)
             {
@@ -1648,16 +1649,198 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             }
         }
 
+        public void Verificar_Folha_Pagamento(Folha_Pagamento folha_pagamento, string salario_13)
+        {
+            #region Campos Vazios
+            if (salario_13 == "")
+            {
+                MessageBox.Show("Marcar uma opção se essa Folha de Pagamento terá o 13º Salário ou não é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Data_Pagamento == "")
+            {
+                MessageBox.Show("Data de Pagamento é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Horas_Trabalhadas == 0)
+            {
+                MessageBox.Show("Horas Trabalhadas é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Valor_Hora == "")
+            {
+                MessageBox.Show("Valor por Hora é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Valor_Vale_Transporte == "")
+            {
+                MessageBox.Show("Valor de Vale Transporte é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Valor_Vale_Alimentacao == "")
+            {
+                MessageBox.Show("Valor de Vale Alimentação é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Desconto_Seguro_Vida == "")
+            {
+                MessageBox.Show("Desconto de Seguro de Vida é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Desconto_INSS == "")
+            {
+                MessageBox.Show("Desconto de INSS é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Desconto_IRRF == "")
+            {
+                MessageBox.Show("Desconto de IRRF é obrigatório", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            #region Limite de Caracteres
+            else if (folha_pagamento.Data_Pagamento.Length > 10)
+            {
+                MessageBox.Show("Data de Pagamento deve ter menos que 10 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Valor_Hora.Length > 9)
+            {
+                MessageBox.Show("Valor por Hora ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Horas_Extras.ToString().Length > 3)
+            {
+                MessageBox.Show("Horas Extras deve ter menos que 3 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Valor_Horas_Extras.Length > 9)
+            {
+                MessageBox.Show("Valor por Hora Extra deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Valor_Vale_Transporte.Length > 9)
+            {
+                MessageBox.Show("Valor de Vale Transporte deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Desconto_Vale_Transporte.Length > 9)
+            {
+                MessageBox.Show("Desconto de Vale Transporte deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Valor_Vale_Alimentacao.Length > 9)
+            {
+                MessageBox.Show("Valor de Vale Alimentacao deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Desconto_Vale_Alimentacao.Length > 9)
+            {
+                MessageBox.Show("Desconto de Vale Alimentação deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Desconto_Seguro_Vida.Length > 9)
+            {
+                MessageBox.Show("Desconto de Seguro de Vida deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Desconto_INSS.Length > 9)
+            {
+                MessageBox.Show("Desconto de INSS deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (folha_pagamento.Desconto_IRRF.Length > 9)
+            {
+                MessageBox.Show("Desconto de IRRF deve ter menos que 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            #region Precisa conter / ou ,
+            else if (!folha_pagamento.Data_Pagamento.Contains("/"))
+            {
+                MessageBox.Show("Data de Pagamento precisa ter /", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Valor_Hora.Contains(","))
+            {
+                MessageBox.Show("Valor por Hora precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Valor_Horas_Extras.Contains(","))
+            {
+                MessageBox.Show("Valor por Hora Extra precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Valor_Vale_Transporte.Contains(","))
+            {
+                MessageBox.Show("Valor de Vale Transporte precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Desconto_Vale_Transporte.Contains(","))
+            {
+                MessageBox.Show("Desconto de Vale Transporte precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Valor_Vale_Alimentacao.Contains(","))
+            {
+                MessageBox.Show("Valor de Vale Alimentação precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Desconto_Vale_Alimentacao.Contains(","))
+            {
+                MessageBox.Show("Desconto de Vale Alimentação precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Desconto_Seguro_Vida.Contains(","))
+            {
+                MessageBox.Show("Desconto de Seguro de Vida precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Desconto_INSS.Contains(","))
+            {
+                MessageBox.Show("Desconto de INSS precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else if (!folha_pagamento.Desconto_IRRF.Contains(","))
+            {
+                MessageBox.Show("Desconto de IRRF precisa ter ,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            #endregion
+
+            else
+            {
+                Folha_Pagamento_Validado = true;
+            }
+        }
+
         public void Verificar_Cadastro_Folha_Pagamento(Folha_Pagamento folha_pagamento,
             string cpf_funcionario_selecionado)
         {
+            DialogResult pergunta = MessageBox.Show("Deseja cadastrar a Folha de Pagamento?", "Cadastrar Folha de Pagamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
+            if (pergunta == DialogResult.Yes)
+            {
+                Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
+                folha_pagamento_dao.Cadastrar_Folha_Pagamento(folha_pagamento,
+                    cpf_funcionario_selecionado);
+
+                Cadastro_Folha_De_Pagamento_Validado = true;
+            }
         }
 
         public void Verificar_Edicao_Folha_Pagamento(Folha_Pagamento folha_pagamento,
             string cpf_funcionario_selecionado, string data_pagamento_funcionario_selecionado)
         {
+            DialogResult pergunta = MessageBox.Show("Deseja editar a Folha de Pagamento?", "Editar Folha de Pagamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
+            if (pergunta == DialogResult.Yes)
+            {
+                Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
+                folha_pagamento_dao.Editar_Folha_Pagamento(folha_pagamento,
+                    cpf_funcionario_selecionado, data_pagamento_funcionario_selecionado);
+
+                Editar_Folha_De_Pagamento_Validado = true;
+            }
         }
     }
- }
+}
