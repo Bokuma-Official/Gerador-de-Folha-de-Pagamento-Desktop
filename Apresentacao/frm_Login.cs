@@ -63,7 +63,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
             if (pergunta == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.ExitThread();
             }
         }
 
