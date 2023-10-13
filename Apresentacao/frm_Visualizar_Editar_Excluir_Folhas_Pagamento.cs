@@ -708,5 +708,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 }
             }
         }
+
+        private void frm_Visualizar_Editar_Excluir_Folhas_Pagamento_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

@@ -641,6 +641,7 @@
             this.Name = "frm_Cadastrar_Perfis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Cadastrar_Perfis_FormClosing);
             this.Shown += new System.EventHandler(this.frm_Cadastrar_Perfis_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();

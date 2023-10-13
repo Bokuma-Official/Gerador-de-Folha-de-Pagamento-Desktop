@@ -415,5 +415,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             chk_Masculino.Checked = false;
             chk_Feminino.Checked = false;
         }
+
+        private void frm_Visualizar_Editar_Excluir_Perfis_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

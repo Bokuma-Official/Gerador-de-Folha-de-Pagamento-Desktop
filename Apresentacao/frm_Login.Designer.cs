@@ -118,6 +118,7 @@
             this.Controls.Add(this.lbl_CPF);
             this.Controls.Add(this.lbl_Login);
             this.Name = "frm_Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Login_FormClosing);
             this.Shown += new System.EventHandler(this.frm_Login_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pct_Imagem_Menu)).EndInit();
             this.ResumeLayout(false);

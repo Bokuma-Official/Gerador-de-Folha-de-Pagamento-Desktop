@@ -685,6 +685,7 @@
             this.Name = "frm_Visualizar_Editar_Excluir_Perfis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Visualizar_Editar_Excluir_Perfis_FormClosing);
             this.Load += new System.EventHandler(this.frm_Visualizar_Perfis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioAtaronBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acesso_AtaronDataSet)).EndInit();

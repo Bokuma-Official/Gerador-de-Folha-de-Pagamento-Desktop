@@ -234,5 +234,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 txb_CEP.Clear();
             }
         }
+
+        private void frm_Cadastrar_Perfis_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

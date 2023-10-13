@@ -993,6 +993,7 @@
             this.Name = "frm_Cadastrar_Funcionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Cadastrar_Funcionarios_FormClosing);
             this.Shown += new System.EventHandler(this.frm_Cadastrar_Funcionarios_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();

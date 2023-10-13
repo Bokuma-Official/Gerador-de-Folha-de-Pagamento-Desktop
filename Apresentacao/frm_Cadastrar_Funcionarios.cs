@@ -359,5 +359,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 chk_Sim.Checked = false;
             }
         }
+
+        private void frm_Cadastrar_Funcionarios_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

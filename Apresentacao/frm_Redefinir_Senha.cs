@@ -188,5 +188,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 btn_Redefinir.PerformClick();
             }
         }
+
+        private void frm_Redefinir_Senha_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

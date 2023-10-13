@@ -247,6 +247,7 @@
             this.Name = "frm_Redefinir_Senha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Redefinir_Senha_FormClosing);
             this.Load += new System.EventHandler(this.frm_Redefinir_Senha_Load);
             this.Shown += new System.EventHandler(this.frm_Redefinir_Senha_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

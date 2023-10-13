@@ -120,5 +120,12 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 e.Handled = true;
             }
         }
+
+        private void frm_Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            /* quando apertar o icone do x, vai acontecer nada,
+            só é possível usar os botões para fechar o programa ou voltar uma tela */
+            e.Cancel = true;
+        }
     }
 }

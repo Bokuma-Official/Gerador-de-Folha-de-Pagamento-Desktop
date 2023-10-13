@@ -1038,6 +1038,7 @@
             this.Name = "frm_Visualizar_Editar_Excluir_Funcionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Visualizar_Editar_Excluir_Funcionarios_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).EndInit();
             this.ResumeLayout(false);

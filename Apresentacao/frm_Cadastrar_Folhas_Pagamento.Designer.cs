@@ -801,6 +801,7 @@
             this.Name = "frm_Cadastrar_Folhas_Pagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Cadastrar_Folhas_Pagamento_FormClosing);
             this.Shown += new System.EventHandler(this.frm_Cadastrar_Folhas_Pagamento_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.folhaPagamentoAtaronFuncionarioDataSetBindingSource)).EndInit();

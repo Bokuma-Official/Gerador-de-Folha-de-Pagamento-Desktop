@@ -81,5 +81,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 btn_Cadastrar_Perfis.Visible = false;
             }
         }
+
+        private void frm_Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
     }
 }

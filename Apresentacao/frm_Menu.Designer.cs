@@ -221,6 +221,7 @@
             this.Name = "frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Menu_FormClosing);
             this.Load += new System.EventHandler(this.frm_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pct_Imagem_Menu)).EndInit();
             this.ResumeLayout(false);
