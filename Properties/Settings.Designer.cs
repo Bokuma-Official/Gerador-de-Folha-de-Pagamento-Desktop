@@ -44,5 +44,16 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Properties {
                 return ((string)(this["Folha_Pagamento_Ataron_Funcionario_ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Folha_Pagamento_Ataron.mssql.somee.com;Initial Catalog=Folha_Pagament" +
+            "o_Ataron;User ID=matheusc5_SQLLogin_4;Password=fr95nw7fgg")]
+        public string Folha_Pagamento_AtaronConnectionString {
+            get {
+                return ((string)(this["Folha_Pagamento_AtaronConnectionString"]));
+            }
+        }
     }
 }

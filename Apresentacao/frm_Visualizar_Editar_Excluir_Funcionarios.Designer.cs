@@ -33,7 +33,7 @@
             this.lbl_Visualizar_Editar_Excluir = new System.Windows.Forms.Label();
             this.cmb_Selecionar_Funcionario = new System.Windows.Forms.ComboBox();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.folha_Pagamento_Ataron_Funcionario_DataSet = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionario_DataSet();
+            this.folha_Pagamento_AtaronDataSet = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_AtaronDataSet();
             this.lbl_Selecionar_Funcionario = new System.Windows.Forms.Label();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btn_Voltar = new System.Windows.Forms.Button();
@@ -110,9 +110,9 @@
             this.chk_Nao_Binario = new System.Windows.Forms.CheckBox();
             this.chk_Feminino = new System.Windows.Forms.CheckBox();
             this.chk_Masculino = new System.Windows.Forms.CheckBox();
-            this.funcionarioTableAdapter = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionario_DataSetTableAdapters.FuncionarioTableAdapter();
+            this.funcionarioTableAdapter = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_AtaronDataSetTableAdapters.FuncionarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_AtaronDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Visualizar_Editar_Excluir
@@ -146,12 +146,12 @@
             // funcionarioBindingSource
             // 
             this.funcionarioBindingSource.DataMember = "Funcionario";
-            this.funcionarioBindingSource.DataSource = this.folha_Pagamento_Ataron_Funcionario_DataSet;
+            this.funcionarioBindingSource.DataSource = this.folha_Pagamento_AtaronDataSet;
             // 
-            // folha_Pagamento_Ataron_Funcionario_DataSet
+            // folha_Pagamento_AtaronDataSet
             // 
-            this.folha_Pagamento_Ataron_Funcionario_DataSet.DataSetName = "Folha_Pagamento_Ataron_Funcionario_DataSet";
-            this.folha_Pagamento_Ataron_Funcionario_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.folha_Pagamento_AtaronDataSet.DataSetName = "Folha_Pagamento_AtaronDataSet";
+            this.folha_Pagamento_AtaronDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_Selecionar_Funcionario
             // 
@@ -1040,7 +1040,7 @@
             this.Text = "Folha de pagamentos Ataron™";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Visualizar_Editar_Excluir_Funcionarios_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_Ataron_Funcionario_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_AtaronDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1125,8 +1125,8 @@
         private System.Windows.Forms.CheckBox chk_Nao_Binario;
         private System.Windows.Forms.CheckBox chk_Feminino;
         private System.Windows.Forms.CheckBox chk_Masculino;
-        private Folha_Pagamento_Ataron_Funcionario_DataSet folha_Pagamento_Ataron_Funcionario_DataSet;
+        private Folha_Pagamento_AtaronDataSet folha_Pagamento_AtaronDataSet;
         private System.Windows.Forms.BindingSource funcionarioBindingSource;
-        private Folha_Pagamento_Ataron_Funcionario_DataSetTableAdapters.FuncionarioTableAdapter funcionarioTableAdapter;
+        private Folha_Pagamento_AtaronDataSetTableAdapters.FuncionarioTableAdapter funcionarioTableAdapter;
     }
 }

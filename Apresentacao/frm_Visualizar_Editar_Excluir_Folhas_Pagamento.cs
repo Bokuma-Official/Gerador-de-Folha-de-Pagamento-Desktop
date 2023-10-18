@@ -360,7 +360,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void cmb_Selecionar_Funcionario_DropDown(object sender, EventArgs e)
         {
-            this.funcionarioTableAdapter.Fill(this.folha_Pagamento_Ataron_Funcionario_DataSet.Funcionario);
+            this.funcionarioTableAdapter.Fill(this.folha_Pagamento_AtaronDataSet.Funcionario);
             cmb_Pagamento.SelectedItem = null;
         }
 
@@ -620,15 +620,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                     txb_Salario_Bruto.Text = salario_bruto.ToString("F2");
                     #endregion
 
-                    #region Conta do Desconto de FGTS
-                    decimal salario_bruto_conta_fgts = Decimal.Parse(txb_Salario_Bruto.Text);
-                    decimal desconto_fgts;
-                    // 8% de desconto
-                    desconto_fgts = salario_bruto_conta_fgts * 0.08m;
-                    txb_Desconto_FGTS.Text = desconto_fgts.ToString("F2");
-                    folha_pagamento.Desconto_FGTS = txb_Desconto_FGTS.Text;
-                    #endregion
-
                     #region Conta do Valor de Férias
                     decimal salario_bruto_conta_ferias = decimal.Parse(txb_Salario_Bruto.Text);
                     int dias_ferias = int.Parse(txb_Dias_Ferias.Text);
@@ -673,6 +664,15 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                     salario_bruto_final = salario_bruto_final + (horas_extras * valor_horas_extras) + valor_ferias_conta_salario_bruto + decimo_terceiro_salario_conta_salario_bruto;
                     txb_Salario_Bruto.Text = salario_bruto_final.ToString("F2");
                     folha_pagamento.Salario_Bruto = txb_Salario_Bruto.Text;
+                    #endregion
+
+                    #region Conta do Desconto de FGTS
+                    decimal salario_bruto_conta_fgts = decimal.Parse(txb_Salario_Bruto.Text);
+                    decimal desconto_fgts;
+                    // 8% de desconto
+                    desconto_fgts = salario_bruto_conta_fgts * 0.08m;
+                    txb_Desconto_FGTS.Text = desconto_fgts.ToString("F2");
+                    folha_pagamento.Desconto_FGTS = txb_Desconto_FGTS.Text;
                     #endregion
 
                     #region Conta do Salário Líquido

@@ -216,10 +216,10 @@
     <Compile Include="DAL\Endereco_DAO.cs" />
     <Compile Include="DAL\Folha_Pagamento_DAO.cs" />
     <Compile Include="DAL\Funcionario_DAO.cs" />
-    <Compile Include="Folha_Pagamento_Ataron_Funcionario_DataSet.Designer.cs">
+    <Compile Include="Folha_Pagamento_AtaronDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Folha_Pagamento_Ataron_Funcionario_DataSet.xsd</DependentUpon>
+      <DependentUpon>Folha_Pagamento_AtaronDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Funcionario_Ataron.cs" />
     <Compile Include="Modelo\Contrato_Empresa.cs" />
@@ -321,16 +321,16 @@
       <DependentUpon>Acesso_AtaronDataSet.xsd</DependentUpon>
     </None>
     <None Include="Diagrama_de_Classes.cd" />
-    <None Include="Folha_Pagamento_Ataron_Funcionario_DataSet.xsc">
-      <DependentUpon>Folha_Pagamento_Ataron_Funcionario_DataSet.xsd</DependentUpon>
+    <None Include="Folha_Pagamento_AtaronDataSet.xsc">
+      <DependentUpon>Folha_Pagamento_AtaronDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Folha_Pagamento_Ataron_Funcionario_DataSet.xsd">
+    <None Include="Folha_Pagamento_AtaronDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Folha_Pagamento_Ataron_Funcionario_DataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>Folha_Pagamento_AtaronDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Folha_Pagamento_Ataron_Funcionario_DataSet.xss">
-      <DependentUpon>Folha_Pagamento_Ataron_Funcionario_DataSet.xsd</DependentUpon>
+    <None Include="Folha_Pagamento_AtaronDataSet.xss">
+      <DependentUpon>Folha_Pagamento_AtaronDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

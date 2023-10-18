@@ -197,7 +197,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 
         private void cmb_Selecionar_Funcionario_DropDown(object sender, EventArgs e)
         {
-            this.funcionarioTableAdapter.Fill(this.folha_Pagamento_Ataron_Funcionario_DataSet.Funcionario);
+            this.funcionarioTableAdapter.Fill(this.folha_Pagamento_AtaronDataSet.Funcionario);
         }
 
         private void cmb_Selecionar_Funcionario_SelectedIndexChanged(object sender, EventArgs e)

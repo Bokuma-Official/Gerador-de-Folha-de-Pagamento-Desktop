@@ -20,9 +20,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Folha_Pagamento_Ataron_Funcionario_DataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Folha_Pagamento_AtaronDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Folha_Pagamento_Ataron_Funcionario_DataSet : global::System.Data.DataSet {
+    public partial class Folha_Pagamento_AtaronDataSet : global::System.Data.DataSet {
         
         private FuncionarioDataTable tableFuncionario;
         
@@ -30,7 +30,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Folha_Pagamento_Ataron_Funcionario_DataSet() {
+        public Folha_Pagamento_AtaronDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected Folha_Pagamento_Ataron_Funcionario_DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Folha_Pagamento_AtaronDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Folha_Pagamento_Ataron_Funcionario_DataSet cln = ((Folha_Pagamento_Ataron_Funcionario_DataSet)(base.Clone()));
+            Folha_Pagamento_AtaronDataSet cln = ((Folha_Pagamento_AtaronDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Folha_Pagamento_Ataron_Funcionario_DataSet";
+            this.DataSetName = "Folha_Pagamento_AtaronDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Folha_Pagamento_Ataron_Funcionario_DataSet.xsd";
+            this.Namespace = "http://tempuri.org/Folha_Pagamento_AtaronDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableFuncionario = new FuncionarioDataTable();
@@ -225,7 +225,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Folha_Pagamento_Ataron_Funcionario_DataSet ds = new Folha_Pagamento_Ataron_Funcionario_DataSet();
+            Folha_Pagamento_AtaronDataSet ds = new Folha_Pagamento_AtaronDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -462,7 +462,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Folha_Pagamento_Ataron_Funcionario_DataSet ds = new Folha_Pagamento_Ataron_Funcionario_DataSet();
+                Folha_Pagamento_AtaronDataSet ds = new Folha_Pagamento_AtaronDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -582,7 +582,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop {
         }
     }
 }
-namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionario_DataSetTableAdapters {
+namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_AtaronDataSetTableAdapters {
     
     
     /// <summary>
@@ -714,7 +714,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Gerador_de_Folha_de_Pagamento_Desktop.Properties.Settings.Default.Folha_Pagamento_Ataron_Funcionario_ConnectionString;
+            this._connection.ConnectionString = global::Gerador_de_Folha_de_Pagamento_Desktop.Properties.Settings.Default.Folha_Pagamento_AtaronConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -731,7 +731,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Folha_Pagamento_Ataron_Funcionario_DataSet.FuncionarioDataTable dataTable) {
+        public virtual int Fill(Folha_Pagamento_AtaronDataSet.FuncionarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -744,9 +744,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Folha_Pagamento_Ataron_Funcionario_DataSet.FuncionarioDataTable GetData() {
+        public virtual Folha_Pagamento_AtaronDataSet.FuncionarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Folha_Pagamento_Ataron_Funcionario_DataSet.FuncionarioDataTable dataTable = new Folha_Pagamento_Ataron_Funcionario_DataSet.FuncionarioDataTable();
+            Folha_Pagamento_AtaronDataSet.FuncionarioDataTable dataTable = new Folha_Pagamento_AtaronDataSet.FuncionarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -820,7 +820,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionar
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(Folha_Pagamento_Ataron_Funcionario_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Folha_Pagamento_AtaronDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -830,7 +830,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionar
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(Folha_Pagamento_Ataron_Funcionario_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Folha_Pagamento_AtaronDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -840,7 +840,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionar
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(Folha_Pagamento_Ataron_Funcionario_DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Folha_Pagamento_AtaronDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -874,7 +874,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_Ataron_Funcionar
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(Folha_Pagamento_Ataron_Funcionario_DataSet dataSet) {
+        public virtual int UpdateAll(Folha_Pagamento_AtaronDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
