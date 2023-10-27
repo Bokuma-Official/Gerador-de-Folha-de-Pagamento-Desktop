@@ -17,6 +17,14 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public string Cargo { get; set; }
         public string CBO_Cargo { get; set; }
         public string Departamento { get; set; }
-        public string CPF { get; set; }    
+        public string CPF { get; set; }
+
+        public DAL.Funcionario_DAO Funcionario_DAO
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

@@ -26,5 +26,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public string Cargo { get; set; }
         public string Data_Admissao { get; set; }
         public string CEP { get; set; }
+
+        public DAL.Funcionario_Ataron_DAO Funcionario_Ataron_DAO
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

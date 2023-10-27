@@ -30,5 +30,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public string Salario_Bruto { get; set; }
         public string Salario_Liquido { get; set; }
         public string CPF { get; set; }
+
+        public DAL.Folha_Pagamento_DAO Folha_Pagamento_DAO
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

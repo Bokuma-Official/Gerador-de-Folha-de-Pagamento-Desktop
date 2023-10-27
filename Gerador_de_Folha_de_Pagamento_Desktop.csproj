@@ -212,8 +212,6 @@
     <Compile Include="DAL\Funcionario_Ataron_DAO.cs" />
     <Compile Include="DAL\Conexao_Banco_Folha.cs" />
     <Compile Include="DAL\Conexao_Banco_Acesso.cs" />
-    <Compile Include="DAL\Contrato_Empresa_DAO.cs" />
-    <Compile Include="DAL\Endereco_DAO.cs" />
     <Compile Include="DAL\Folha_Pagamento_DAO.cs" />
     <Compile Include="DAL\Funcionario_DAO.cs" />
     <Compile Include="Folha_Pagamento_AtaronDataSet.Designer.cs">

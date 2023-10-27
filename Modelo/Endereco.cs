@@ -17,5 +17,13 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public string CPF { get; set; }
+
+        public DAL.Funcionario_DAO Funcionario_DAO
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
