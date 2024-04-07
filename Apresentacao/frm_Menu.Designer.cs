@@ -155,9 +155,9 @@
             this.lbl_Visualizacoes.Location = new System.Drawing.Point(249, 363);
             this.lbl_Visualizacoes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Visualizacoes.Name = "lbl_Visualizacoes";
-            this.lbl_Visualizacoes.Size = new System.Drawing.Size(194, 26);
+            this.lbl_Visualizacoes.Size = new System.Drawing.Size(192, 26);
             this.lbl_Visualizacoes.TabIndex = 36;
-            this.lbl_Visualizacoes.Text = "Visualizar e Editar";
+            this.lbl_Visualizacoes.Text = "Visualizar e editar";
             // 
             // btn_Cadastrar_Folhas
             // 
