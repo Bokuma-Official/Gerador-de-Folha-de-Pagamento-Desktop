@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Editar_Funcionarios));
-            this.lbl_Visualizar_Editar_Excluir = new System.Windows.Forms.Label();
+            this.lbl_Visualizar_Editar_Funcionarios = new System.Windows.Forms.Label();
             this.cmb_Selecionar_Funcionario = new System.Windows.Forms.ComboBox();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.folha_Pagamento_AtaronDataSet = new Gerador_de_Folha_de_Pagamento_Desktop.Folha_Pagamento_AtaronDataSet();
@@ -114,17 +114,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.folha_Pagamento_AtaronDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_Visualizar_Editar_Excluir
+            // lbl_Visualizar_Editar_Funcionarios
             // 
-            this.lbl_Visualizar_Editar_Excluir.AutoSize = true;
-            this.lbl_Visualizar_Editar_Excluir.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Visualizar_Editar_Excluir.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_Visualizar_Editar_Excluir.Location = new System.Drawing.Point(320, 9);
-            this.lbl_Visualizar_Editar_Excluir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Visualizar_Editar_Excluir.Name = "lbl_Visualizar_Editar_Excluir";
-            this.lbl_Visualizar_Editar_Excluir.Size = new System.Drawing.Size(636, 59);
-            this.lbl_Visualizar_Editar_Excluir.TabIndex = 1;
-            this.lbl_Visualizar_Editar_Excluir.Text = "Visualizar e editar Funcionários";
+            this.lbl_Visualizar_Editar_Funcionarios.AutoSize = true;
+            this.lbl_Visualizar_Editar_Funcionarios.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Visualizar_Editar_Funcionarios.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_Visualizar_Editar_Funcionarios.Location = new System.Drawing.Point(320, 9);
+            this.lbl_Visualizar_Editar_Funcionarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Visualizar_Editar_Funcionarios.Name = "lbl_Visualizar_Editar_Funcionarios";
+            this.lbl_Visualizar_Editar_Funcionarios.Size = new System.Drawing.Size(636, 59);
+            this.lbl_Visualizar_Editar_Funcionarios.TabIndex = 1;
+            this.lbl_Visualizar_Editar_Funcionarios.Text = "Visualizar e editar Funcionários";
             // 
             // cmb_Selecionar_Funcionario
             // 
@@ -169,7 +169,7 @@
             this.btn_Editar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Editar.Location = new System.Drawing.Point(676, 721);
+            this.btn_Editar.Location = new System.Drawing.Point(833, 721);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(135, 70);
@@ -1016,7 +1016,7 @@
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.lbl_Selecionar_Funcionario);
             this.Controls.Add(this.cmb_Selecionar_Funcionario);
-            this.Controls.Add(this.lbl_Visualizar_Editar_Excluir);
+            this.Controls.Add(this.lbl_Visualizar_Editar_Funcionarios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Visualizar_Editar_Funcionarios";
@@ -1031,7 +1031,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lbl_Visualizar_Editar_Excluir;
+        private System.Windows.Forms.Label lbl_Visualizar_Editar_Funcionarios;
         private System.Windows.Forms.ComboBox cmb_Selecionar_Funcionario;
         private System.Windows.Forms.Label lbl_Selecionar_Funcionario;
         private System.Windows.Forms.Button btn_Editar;

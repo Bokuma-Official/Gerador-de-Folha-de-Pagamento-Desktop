@@ -13,9 +13,9 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
             get
             {
                 return @"Data Source=MATHEUS-C5\SQLEXPRESS;" +
-                        @"Initial Catalog=Acesso_Ataron;" +
-                        @"TrustServerCertificate=True;" +
-                        @"Integrated Security=True";
+                        "Initial Catalog=Acesso_Ataron;" +
+                        "TrustServerCertificate=True;" +
+                        "Integrated Security=True";
             }
         }
     }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Editar_Folhas_Pagamento));
             this.btn_Voltar = new System.Windows.Forms.Button();
-            this.lbl_Visualizar_Editar_Excluir = new System.Windows.Forms.Label();
+            this.lbl_Visualizar_Editar_Folhas_Pagamento = new System.Windows.Forms.Label();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.txb_Dependentes = new System.Windows.Forms.TextBox();
             this.lbl_Selecionar_Funcionario = new System.Windows.Forms.Label();
@@ -111,17 +111,17 @@
             this.btn_Voltar.UseVisualStyleBackColor = false;
             this.btn_Voltar.Click += new System.EventHandler(this.btn_Voltar_Click);
             // 
-            // lbl_Visualizar_Editar_Excluir
+            // lbl_Visualizar_Editar_Folhas_Pagamento
             // 
-            this.lbl_Visualizar_Editar_Excluir.AutoSize = true;
-            this.lbl_Visualizar_Editar_Excluir.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Visualizar_Editar_Excluir.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_Visualizar_Editar_Excluir.Location = new System.Drawing.Point(207, 9);
-            this.lbl_Visualizar_Editar_Excluir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Visualizar_Editar_Excluir.Name = "lbl_Visualizar_Editar_Excluir";
-            this.lbl_Visualizar_Editar_Excluir.Size = new System.Drawing.Size(558, 41);
-            this.lbl_Visualizar_Editar_Excluir.TabIndex = 176;
-            this.lbl_Visualizar_Editar_Excluir.Text = "Visualizar e editar Folhas de Pagamento";
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.AutoSize = true;
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.Font = new System.Drawing.Font("Impact", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.Location = new System.Drawing.Point(207, 9);
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.Name = "lbl_Visualizar_Editar_Folhas_Pagamento";
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.Size = new System.Drawing.Size(558, 41);
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.TabIndex = 176;
+            this.lbl_Visualizar_Editar_Folhas_Pagamento.Text = "Visualizar e editar Folhas de Pagamento";
             // 
             // btn_Editar
             // 
@@ -817,7 +817,7 @@
             this.Controls.Add(this.lbl_Funcionario);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Voltar);
-            this.Controls.Add(this.lbl_Visualizar_Editar_Excluir);
+            this.Controls.Add(this.lbl_Visualizar_Editar_Folhas_Pagamento);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Visualizar_Editar_Folhas_Pagamento";
@@ -834,7 +834,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Voltar;
-        private System.Windows.Forms.Label lbl_Visualizar_Editar_Excluir;
+        private System.Windows.Forms.Label lbl_Visualizar_Editar_Folhas_Pagamento;
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.TextBox txb_Dependentes;
         private System.Windows.Forms.Label lbl_Selecionar_Funcionario;

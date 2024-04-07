@@ -21,10 +21,10 @@
     <Setting Name="Folha_Pagamento_AtaronConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=Folha_Pagamento_Ataron.mssql.somee.com;Initial Catalog=Folha_Pagamento_Ataron;User ID=matheusc5_SQLLogin_4;Password=fr95nw7fgg&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=Folha_Pagamento_Ataron.mssql.somee.com;Initial Catalog=Folha_Pagamento_Ataron;User ID=matheusc5_SQLLogin_4;Password=wm6ibg2BpCEmNc9&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=Folha_Pagamento_Ataron.mssql.somee.com;Initial Catalog=Folha_Pagamento_Ataron;User ID=matheusc5_SQLLogin_4;Password=fr95nw7fgg</Value>
+      <Value Profile="(Default)">Data Source=Folha_Pagamento_Ataron.mssql.somee.com;Initial Catalog=Folha_Pagamento_Ataron;User ID=matheusc5_SQLLogin_4;Password=wm6ibg2BpCEmNc9</Value>
     </Setting>
   </Settings>
 </SettingsFile>

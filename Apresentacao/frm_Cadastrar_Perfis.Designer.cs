@@ -301,7 +301,7 @@
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Voltar.Location = new System.Drawing.Point(248, 518);
+            this.btn_Voltar.Location = new System.Drawing.Point(186, 518);
             this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(135, 70);
@@ -315,7 +315,7 @@
             this.btn_Cadastrar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Cadastrar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cadastrar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Cadastrar.Location = new System.Drawing.Point(630, 518);
+            this.btn_Cadastrar.Location = new System.Drawing.Point(742, 518);
             this.btn_Cadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cadastrar.Name = "btn_Cadastrar";
             this.btn_Cadastrar.Size = new System.Drawing.Size(135, 70);

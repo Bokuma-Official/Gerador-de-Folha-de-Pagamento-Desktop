@@ -37,7 +37,7 @@
             this.btn_Visualizar_Perfis = new System.Windows.Forms.Button();
             this.btn_Visualizar_Folhas = new System.Windows.Forms.Button();
             this.btn_Visualizar_Funcionarios = new System.Windows.Forms.Button();
-            this.lbl_Visualizacoes = new System.Windows.Forms.Label();
+            this.lbl_Visualizar_Editar = new System.Windows.Forms.Label();
             this.btn_Cadastrar_Folhas = new System.Windows.Forms.Button();
             this.btn_Cadastrar_Funcionarios = new System.Windows.Forms.Button();
             this.lbl_Cadastros = new System.Windows.Forms.Label();
@@ -146,18 +146,18 @@
             this.btn_Visualizar_Funcionarios.UseVisualStyleBackColor = true;
             this.btn_Visualizar_Funcionarios.Click += new System.EventHandler(this.btn_Visualizar_Funcionarios_Click);
             // 
-            // lbl_Visualizacoes
+            // lbl_Visualizar_Editar
             // 
-            this.lbl_Visualizacoes.AutoSize = true;
-            this.lbl_Visualizacoes.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lbl_Visualizacoes.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Visualizacoes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Visualizacoes.Location = new System.Drawing.Point(249, 363);
-            this.lbl_Visualizacoes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Visualizacoes.Name = "lbl_Visualizacoes";
-            this.lbl_Visualizacoes.Size = new System.Drawing.Size(192, 26);
-            this.lbl_Visualizacoes.TabIndex = 36;
-            this.lbl_Visualizacoes.Text = "Visualizar e editar";
+            this.lbl_Visualizar_Editar.AutoSize = true;
+            this.lbl_Visualizar_Editar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lbl_Visualizar_Editar.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Visualizar_Editar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_Visualizar_Editar.Location = new System.Drawing.Point(249, 363);
+            this.lbl_Visualizar_Editar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Visualizar_Editar.Name = "lbl_Visualizar_Editar";
+            this.lbl_Visualizar_Editar.Size = new System.Drawing.Size(192, 26);
+            this.lbl_Visualizar_Editar.TabIndex = 36;
+            this.lbl_Visualizar_Editar.Text = "Visualizar e editar";
             // 
             // btn_Cadastrar_Folhas
             // 
@@ -209,7 +209,7 @@
             this.Controls.Add(this.btn_Visualizar_Perfis);
             this.Controls.Add(this.btn_Visualizar_Folhas);
             this.Controls.Add(this.btn_Visualizar_Funcionarios);
-            this.Controls.Add(this.lbl_Visualizacoes);
+            this.Controls.Add(this.lbl_Visualizar_Editar);
             this.Controls.Add(this.btn_Cadastrar_Folhas);
             this.Controls.Add(this.btn_Cadastrar_Funcionarios);
             this.Controls.Add(this.lbl_Cadastros);
@@ -239,7 +239,7 @@
         private System.Windows.Forms.Button btn_Visualizar_Perfis;
         private System.Windows.Forms.Button btn_Visualizar_Folhas;
         private System.Windows.Forms.Button btn_Visualizar_Funcionarios;
-        private System.Windows.Forms.Label lbl_Visualizacoes;
+        private System.Windows.Forms.Label lbl_Visualizar_Editar;
         private System.Windows.Forms.Button btn_Cadastrar_Folhas;
         private System.Windows.Forms.Button btn_Cadastrar_Funcionarios;
         private System.Windows.Forms.Label lbl_Cadastros;

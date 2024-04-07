@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Editar_Perfis));
-            this.lbl_Visualizar_Editar_Excluir = new System.Windows.Forms.Label();
+            this.lbl_Visualizar_Editar_Perfis = new System.Windows.Forms.Label();
             this.btn_Voltar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.lbl_Selecionar_Perfil = new System.Windows.Forms.Label();
@@ -85,17 +85,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.acesso_AtaronDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_Visualizar_Editar_Excluir
+            // lbl_Visualizar_Editar_Perfis
             // 
-            this.lbl_Visualizar_Editar_Excluir.AutoSize = true;
-            this.lbl_Visualizar_Editar_Excluir.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Visualizar_Editar_Excluir.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_Visualizar_Editar_Excluir.Location = new System.Drawing.Point(259, 9);
-            this.lbl_Visualizar_Editar_Excluir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Visualizar_Editar_Excluir.Name = "lbl_Visualizar_Editar_Excluir";
-            this.lbl_Visualizar_Editar_Excluir.Size = new System.Drawing.Size(497, 59);
-            this.lbl_Visualizar_Editar_Excluir.TabIndex = 3;
-            this.lbl_Visualizar_Editar_Excluir.Text = "Visualizar e editar Perfis";
+            this.lbl_Visualizar_Editar_Perfis.AutoSize = true;
+            this.lbl_Visualizar_Editar_Perfis.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Visualizar_Editar_Perfis.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_Visualizar_Editar_Perfis.Location = new System.Drawing.Point(259, 9);
+            this.lbl_Visualizar_Editar_Perfis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Visualizar_Editar_Perfis.Name = "lbl_Visualizar_Editar_Perfis";
+            this.lbl_Visualizar_Editar_Perfis.Size = new System.Drawing.Size(497, 59);
+            this.lbl_Visualizar_Editar_Perfis.TabIndex = 3;
+            this.lbl_Visualizar_Editar_Perfis.Text = "Visualizar e editar Perfis";
             // 
             // btn_Voltar
             // 
@@ -663,7 +663,7 @@
             this.Controls.Add(this.cmb_Selecionar_Perfil);
             this.Controls.Add(this.btn_Voltar);
             this.Controls.Add(this.btn_Editar);
-            this.Controls.Add(this.lbl_Visualizar_Editar_Excluir);
+            this.Controls.Add(this.lbl_Visualizar_Editar_Perfis);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Visualizar_Editar_Perfis";
@@ -680,7 +680,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_Visualizar_Editar_Excluir;
+        private System.Windows.Forms.Label lbl_Visualizar_Editar_Perfis;
         private System.Windows.Forms.Button btn_Voltar;
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.Label lbl_Selecionar_Perfil;

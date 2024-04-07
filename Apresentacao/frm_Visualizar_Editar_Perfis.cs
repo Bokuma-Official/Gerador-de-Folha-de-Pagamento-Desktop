@@ -40,8 +40,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             muda ou oculta elementos da tela */
             if (!Funcionario_Ataron_DAO.Cargo_Perfil_Logado.ToLower().Contains("gerente"))
             {
-                lbl_Visualizar_Editar_Excluir.Text = "Visualizar Perfil";
-                lbl_Visualizar_Editar_Excluir.Location = new Point(260, 40);
+                lbl_Visualizar_Editar_Perfis.Text = "Visualizar Perfil";
+                lbl_Visualizar_Editar_Perfis.Location = new Point(260, 40);
                 lbl_Selecionar_Perfil.Visible = false;
                 cmb_Selecionar_Perfil.Visible = false;
                 btn_Voltar.Location = new Point(345, 460);

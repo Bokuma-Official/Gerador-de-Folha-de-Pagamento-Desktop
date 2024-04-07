@@ -49,7 +49,7 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Folha_Pagamento_Ataron.mssql.somee.com;Initial Catalog=Folha_Pagament" +
-            "o_Ataron;User ID=matheusc5_SQLLogin_4;Password=fr95nw7fgg")]
+            "o_Ataron;User ID=matheusc5_SQLLogin_4;Password=wm6ibg2BpCEmNc9")]
         public string Folha_Pagamento_AtaronConnectionString {
             get {
                 return ((string)(this["Folha_Pagamento_AtaronConnectionString"]));
