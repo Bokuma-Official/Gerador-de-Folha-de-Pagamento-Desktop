@@ -18,7 +18,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
         public static string CPF_Perfil_Logado { get; set; }
         public static bool Senha_Perfil_Mudada { get; set; }
         public static bool Cadastro_Perfil_Realizado { get; set; }
-        public static bool Perfil_Deletado { get; set; }
         public static bool Perfil_Atualizado { get; set; }
 
         public void Fazer_Login(Funcionario_Ataron funcionario_ataron)
@@ -234,34 +233,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 }
 
                 conexao.Close();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void Deletar_Perfil (string cpf_perfil_selecionado)
-        {
-            try
-            {
-                SqlConnection conexao = new SqlConnection(Conexao_Banco_Acesso.String_Conexao);
-
-                conexao.Open();
-
-                SqlCommand command = new SqlCommand("delete from Funcionario_Ataron where CPF = @CPF", conexao);
-                command.Parameters.AddWithValue("@CPF", cpf_perfil_selecionado);
-                int linhas_afetadas = command.ExecuteNonQuery();
-
-                conexao.Close();
-
-                if (linhas_afetadas > 0)
-                {
-                    MessageBox.Show("O Perfil foi deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    Perfil_Deletado = true;
-                }
             }
 
             catch (Exception ex)

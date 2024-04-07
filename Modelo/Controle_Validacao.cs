@@ -21,13 +21,10 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         public static bool Codigo_Validado { get; set; }
         public static bool Senha_Validada { get; set; }
         public static bool Cadastro_Perfil_Validado { get; set; }
-        public static bool Deletar_Perfil_Validado { get; set; }
         public static bool Editar_Perfil_Validado { get; set; }
         public static bool Cadastro_Funcionario_Validado { get; set; }
-        public static bool Deletar_Funcionario_Validado { get; set; }
         public static bool Editar_Funcionario_Validado { get; set; }
         public static bool Cadastro_Folha_De_Pagamento_Validado { get; set; }
-        public static bool Deletar_Folha_De_Pagamento_Validado { get; set; }
         public static bool Editar_Folha_De_Pagamento_Validado { get; set; }
         public static bool Folha_Pagamento_Validado { get; set; }
 
@@ -508,27 +505,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
         {
             Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
             funcionario_ataron_dao.Visualizar_Perfil_Para_Gerente(funcionario_ataron, nome_perfil_selecionado);
-        }
-
-        public void Verificar_Exclusao_Perfil(string cpf_perfil_selecionado)
-        {
-            if (Funcionario_Ataron_DAO.CPF_Perfil_Logado == cpf_perfil_selecionado)
-            {
-                MessageBox.Show("Você não pode deletar o seu próprio Perfil", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            else
-            {
-                DialogResult pergunta = MessageBox.Show("Deseja deletar o Perfil?", "Deletar Perfil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-                if (pergunta == DialogResult.Yes)
-                {
-                    Funcionario_Ataron_DAO funcionario_ataron_dao = new Funcionario_Ataron_DAO();
-                    funcionario_ataron_dao.Deletar_Perfil(cpf_perfil_selecionado);
-
-                    Deletar_Perfil_Validado = true;
-                }
-            }
         }
 
         public void Verificar_Edicao_Perfil(Funcionario_Ataron funcionario_ataron, string cpf_perfil_selecionado)
@@ -1201,19 +1177,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             funcionario_dao.Visualizar_Funcionario(funcionario, endereco, contrato_empresa, nome_funcionario_selecionado);
         }
 
-        public void Verificar_Exclusao_Funcionario(string cpf_funcionario_selecionado)
-        {
-            DialogResult pergunta = MessageBox.Show("Deseja deletar o Funcionário?", "Deletar Funcionário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (pergunta == DialogResult.Yes)
-            {
-                Funcionario_DAO funcionario_dao = new Funcionario_DAO();
-                funcionario_dao.Deletar_Funcionario(cpf_funcionario_selecionado);
-
-                Deletar_Funcionario_Validado = true;
-            }
-        }
-
         public void Verificar_Edicao_Funcionario(Funcionario funcionario, Endereco endereco,
             Contrato_Empresa contrato_empresa, string cpf_Funcionario_selecionado)
         {
@@ -1632,21 +1595,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Modelo
             Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
             folha_pagamento_dao.Visualizar_Folha_Pagamento_Por_Funcionario_E_Data_Pagamento
                 (folha_pagamento, cpf_funcionario_selecionado, data_pagamento_funcionario_selecionado);
-        }
-
-        public void Verificar_Exclusao_Folha_Pagamento(string cpf_funcionario_selecionado,
-            string data_pagamento_funcionario_selecionado)
-        {
-            DialogResult pergunta = MessageBox.Show("Deseja deletar a Folha de Pagamento?", "Deletar Folha de Pagamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (pergunta == DialogResult.Yes)
-            {
-                Folha_Pagamento_DAO folha_pagamento_dao = new Folha_Pagamento_DAO();
-                folha_pagamento_dao.Deletar_Folha_Pagamento(cpf_funcionario_selecionado,
-                    data_pagamento_funcionario_selecionado);
-
-                Deletar_Folha_De_Pagamento_Validado = true;
-            }
         }
 
         public void Verificar_Folha_Pagamento(Folha_Pagamento folha_pagamento, string salario_13)

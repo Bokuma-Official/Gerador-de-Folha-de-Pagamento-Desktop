@@ -12,7 +12,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
     public class Folha_Pagamento_DAO
     {
         public static bool Cadastro_Folha_De_Pagamento_Realizado { get; set; }
-        public static bool Folha_De_Pagamento_Deletada { get; set; }
         public static bool Folha_De_Pagamento_Atualizada { get; set; }
 
         public void Visualizar_Funcionario_Tela_Folha_De_Pagamento(Funcionario funcionario,
@@ -149,36 +148,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 }
 
                 conexao.Close();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void Deletar_Folha_Pagamento(string cpf_funcionario_selecionado,
-            string data_pagamento_funcionario_selecionado)
-        {
-            try
-            {
-                SqlConnection conexao = new SqlConnection(Conexao_Banco_Folha.String_Conexao);
-
-                conexao.Open();
-
-                SqlCommand command = new SqlCommand("delete from Folha_Pagamento where CPF = @CPF and Data_Pagamento = @Data_Pagamento", conexao);
-                command.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
-                command.Parameters.AddWithValue("@Data_Pagamento", data_pagamento_funcionario_selecionado);
-                int linhas_afetadas = command.ExecuteNonQuery();
-
-                conexao.Close();
-
-                if (linhas_afetadas > 0)
-                {
-                    MessageBox.Show("A Folha de Pagamento foi deletada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    Folha_De_Pagamento_Deletada = true;
-                }
             }
 
             catch (Exception ex)

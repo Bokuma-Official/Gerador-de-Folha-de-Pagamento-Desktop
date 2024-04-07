@@ -45,7 +45,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                 lbl_Selecionar_Perfil.Visible = false;
                 cmb_Selecionar_Perfil.Visible = false;
                 btn_Voltar.Location = new Point(345, 460);
-                btn_Deletar.Visible = false;
                 btn_Editar.Visible = false;
                 btn_Editar.Visible = false;
                 txb_Senha.Visible = false;
@@ -201,30 +200,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             else
             {
                 cmb_Selecionar_Perfil.Text = "";
-            }
-        }
-
-        private void btn_Deletar_Click(object sender, EventArgs e)
-        {
-            if (cmb_Selecionar_Perfil.SelectedIndex == -1)
-            {
-                MessageBox.Show("Selecione um Perfil para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            else
-            {
-                Controle_Validacao controle_validacao = new Controle_Validacao();
-                controle_validacao.Verificar_Exclusao_Perfil(CPF_Perfil_Selecionado);
-
-                if (Controle_Validacao.Deletar_Perfil_Validado == true && Funcionario_Ataron_DAO.Perfil_Deletado == true)
-                {
-                    Controle_Validacao.Deletar_Perfil_Validado = false;
-                    Funcionario_Ataron_DAO.Perfil_Deletado = false;
-
-                    this.Hide();
-                    frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_editar_excluir_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
-                    frm_visualizar_editar_excluir_perfis.Show();
-                }
             }
         }
 

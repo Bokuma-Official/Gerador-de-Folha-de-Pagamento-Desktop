@@ -298,30 +298,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
             }
         }
 
-        private void btn_Deletar_Click(object sender, EventArgs e)
-        {
-            if (cmb_Selecionar_Funcionario.SelectedIndex == -1)
-            {
-                MessageBox.Show("Selecione um Funcionário para deletar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            else
-            {
-                Controle_Validacao controle_validacao = new Controle_Validacao();
-                controle_validacao.Verificar_Exclusao_Funcionario(CPF_Funcionario_Selecionado);
-
-                if (Controle_Validacao.Deletar_Funcionario_Validado == true && Funcionario_DAO.Funcionario_Deletado == true)
-                {
-                    Controle_Validacao.Deletar_Funcionario_Validado = false;
-                    Funcionario_DAO.Funcionario_Deletado = false;
-
-                    this.Hide();
-                    frm_Visualizar_Editar_Excluir_Funcionarios frm_visualizar_editar_excluir_funcionarios = new frm_Visualizar_Editar_Excluir_Funcionarios();
-                    frm_visualizar_editar_excluir_funcionarios.Show();
-                }
-            }
-        }
-
         private void btn_Editar_Click(object sender, EventArgs e)
         {
             if (cmb_Selecionar_Funcionario.SelectedIndex == -1)

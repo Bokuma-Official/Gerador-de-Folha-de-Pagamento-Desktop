@@ -12,7 +12,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
     public class Funcionario_DAO
     {
         public static bool Cadastro_Funcionario_Realizado { get; set; }
-        public static bool Funcionario_Deletado { get; set; }
         public static bool Funcionario_Atualizado { get; set; }
 
         public void Cadastrar_Funcionario(Funcionario funcionario, Endereco endereco,
@@ -182,47 +181,6 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.DAL
                 }
 
                 conexao.Close();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro de Banco de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void Deletar_Funcionario(string cpf_funcionario_selecionado)
-        {
-            try
-            {
-                SqlConnection conexao = new SqlConnection(Conexao_Banco_Folha.String_Conexao);
-
-                conexao.Open();
-
-                SqlCommand command1 = new SqlCommand("delete from Folha_Pagamento where CPF = @CPF", conexao);
-                command1.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
-                int linhas_afetadas_tabela_folha_pagamento = command1.ExecuteNonQuery();
-
-                SqlCommand command2 = new SqlCommand("delete from Contrato_Empresa where CPF = @CPF", conexao);
-                command2.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
-                int linhas_afetadas_tabela_contrato_empresa = command2.ExecuteNonQuery();
-
-                SqlCommand command3 = new SqlCommand("delete from Endereco where CPF = @CPF", conexao);
-                command3.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
-                int linhas_afetadas_tabela_endereco = command3.ExecuteNonQuery();
-
-                SqlCommand command4 = new SqlCommand("delete from Funcionario where CPF = @CPF", conexao);
-                command4.Parameters.AddWithValue("@CPF", cpf_funcionario_selecionado);
-                int linhas_afetadas_tabela_funcionario = command4.ExecuteNonQuery();
-
-                conexao.Close();
-
-                if (linhas_afetadas_tabela_funcionario > 0 && linhas_afetadas_tabela_endereco > 0
-                    && linhas_afetadas_tabela_contrato_empresa > 0)
-                {
-                    MessageBox.Show("O Funcionário foi deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    Funcionario_Deletado = true;
-                }
             }
 
             catch (Exception ex)

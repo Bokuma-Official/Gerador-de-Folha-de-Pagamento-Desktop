@@ -37,7 +37,6 @@
             this.lbl_Selecionar_Funcionario = new System.Windows.Forms.Label();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btn_Voltar = new System.Windows.Forms.Button();
-            this.btn_Deletar = new System.Windows.Forms.Button();
             this.chk_Sim = new System.Windows.Forms.CheckBox();
             this.chk_Nao = new System.Windows.Forms.CheckBox();
             this.txb_Estado = new System.Windows.Forms.TextBox();
@@ -170,7 +169,7 @@
             this.btn_Editar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Editar.Location = new System.Drawing.Point(921, 735);
+            this.btn_Editar.Location = new System.Drawing.Point(676, 721);
             this.btn_Editar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(135, 70);
@@ -184,7 +183,7 @@
             this.btn_Voltar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_Voltar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Voltar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Voltar.Location = new System.Drawing.Point(574, 735);
+            this.btn_Voltar.Location = new System.Drawing.Point(345, 721);
             this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Voltar.Name = "btn_Voltar";
             this.btn_Voltar.Size = new System.Drawing.Size(121, 70);
@@ -192,20 +191,6 @@
             this.btn_Voltar.Text = "Voltar";
             this.btn_Voltar.UseVisualStyleBackColor = false;
             this.btn_Voltar.Click += new System.EventHandler(this.btn_Voltar_Click);
-            // 
-            // btn_Deletar
-            // 
-            this.btn_Deletar.BackColor = System.Drawing.Color.Red;
-            this.btn_Deletar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Deletar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_Deletar.Location = new System.Drawing.Point(228, 735);
-            this.btn_Deletar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Deletar.Name = "btn_Deletar";
-            this.btn_Deletar.Size = new System.Drawing.Size(135, 70);
-            this.btn_Deletar.TabIndex = 389;
-            this.btn_Deletar.Text = "Deletar";
-            this.btn_Deletar.UseVisualStyleBackColor = false;
-            this.btn_Deletar.Click += new System.EventHandler(this.btn_Deletar_Click);
             // 
             // chk_Sim
             // 
@@ -1027,7 +1012,6 @@
             this.Controls.Add(this.lbl_Nome);
             this.Controls.Add(this.txb_Nome);
             this.Controls.Add(this.lbl_Pessoais);
-            this.Controls.Add(this.btn_Deletar);
             this.Controls.Add(this.btn_Voltar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.lbl_Selecionar_Funcionario);
@@ -1052,7 +1036,6 @@
         private System.Windows.Forms.Label lbl_Selecionar_Funcionario;
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.Button btn_Voltar;
-        private System.Windows.Forms.Button btn_Deletar;
         private System.Windows.Forms.CheckBox chk_Sim;
         private System.Windows.Forms.CheckBox chk_Nao;
         private System.Windows.Forms.TextBox txb_Estado;
