@@ -14,14 +14,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    public partial class frm_Visualizar_Editar_Excluir_Folhas_Pagamento : Form
+    public partial class frm_Visualizar_Editar_Folhas_Pagamento : Form
     {
         public string Nome_Funcionario_Selecionado { get; set; }
         public string CPF_Funcionario_Selecionado { get; set; }
         public string Data_Pagamento_Funcionario_Selecionado { get; set; }
         public string Salario_13 { get; set; }
 
-        public frm_Visualizar_Editar_Excluir_Folhas_Pagamento()
+        public frm_Visualizar_Editar_Folhas_Pagamento()
         {
             InitializeComponent();
         }
@@ -676,8 +676,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                         Folha_Pagamento_DAO.Folha_De_Pagamento_Atualizada = false;
 
                         this.Hide();
-                        frm_Visualizar_Editar_Excluir_Folhas_Pagamento frm_visualizar_editar_excluir_folhas_pagamento = new frm_Visualizar_Editar_Excluir_Folhas_Pagamento();
-                        frm_visualizar_editar_excluir_folhas_pagamento.Show();
+                        frm_Visualizar_Editar_Folhas_Pagamento frm_visualizar_editar_folhas_pagamento = new frm_Visualizar_Editar_Folhas_Pagamento();
+                        frm_visualizar_editar_folhas_pagamento.Show();
                     }
                 }
             }

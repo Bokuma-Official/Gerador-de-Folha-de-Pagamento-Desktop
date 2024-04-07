@@ -17,12 +17,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    public partial class frm_Visualizar_Editar_Excluir_Perfis : Form
+    public partial class frm_Visualizar_Editar_Perfis : Form
     {
         public string Nome_Perfil_Selecionado { get; set; }
         public string CPF_Perfil_Selecionado { get; set; }
 
-        public frm_Visualizar_Editar_Excluir_Perfis()
+        public frm_Visualizar_Editar_Perfis()
         {
             InitializeComponent();
         }
@@ -271,8 +271,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                     Funcionario_Ataron_DAO.Perfil_Atualizado = false;
 
                     this.Hide();
-                    frm_Visualizar_Editar_Excluir_Perfis frm_visualizar_editar_excluir_perfis = new frm_Visualizar_Editar_Excluir_Perfis();
-                    frm_visualizar_editar_excluir_perfis.Show();
+                    frm_Visualizar_Editar_Perfis frm_visualizar_editar_perfis = new frm_Visualizar_Editar_Perfis();
+                    frm_visualizar_editar_perfis.Show();
                 }
             }
         }

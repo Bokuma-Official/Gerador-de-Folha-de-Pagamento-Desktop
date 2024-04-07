@@ -374,9 +374,6 @@ C:\Users\Usuario\Desktop\gerador_folha_de_pagamentos_Ataron_desktop\obj\Debug\pt
 C:\Users\Usuario\Desktop\gerador_folha_de_pagamentos_Ataron_desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.csproj.CopyComplete
 C:\Users\Usuario\Desktop\gerador_folha_de_pagamentos_Ataron_desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.exe
 C:\Users\Usuario\Desktop\gerador_folha_de_pagamentos_Ataron_desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.pdb
-C:\Users\mathe\Downloads\Gerador-de-Folha-de-Pagamento-Desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao.frm_Visualizar_Editar_Excluir_Folhas_Pagamento.resources
-C:\Users\mathe\Downloads\Gerador-de-Folha-de-Pagamento-Desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao.frm_Visualizar_Editar_Excluir_Perfis.resources
-C:\Users\mathe\Downloads\Gerador-de-Folha-de-Pagamento-Desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao.frm_Visualizar_Editar_Excluir_Funcionarios.resources
 C:\Users\Usuario\Desktop\gerador_golha_de_pagamentos_desktop\bin\Debug\Gerador_de_Folha_de_Pagamento_Desktop.exe.config
 C:\Users\Usuario\Desktop\gerador_golha_de_pagamentos_desktop\bin\Debug\Gerador_de_Folha_de_Pagamento_Desktop.exe
 C:\Users\Usuario\Desktop\gerador_golha_de_pagamentos_desktop\bin\Debug\Gerador_de_Folha_de_Pagamento_Desktop.pdb
@@ -469,3 +466,6 @@ C:\Users\Usuario\Desktop\gerador_golha_de_pagamentos_desktop\obj\Debug\pt-BR\Ger
 C:\Users\Usuario\Desktop\gerador_golha_de_pagamentos_desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.csproj.CopyComplete
 C:\Users\Usuario\Desktop\gerador_golha_de_pagamentos_desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.exe
 C:\Users\Usuario\Desktop\gerador_golha_de_pagamentos_desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.pdb
+C:\Users\mathe\Downloads\Gerador-de-Folha-de-Pagamento-Desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao.frm_Visualizar_Editar_Folhas_Pagamento.resources
+C:\Users\mathe\Downloads\Gerador-de-Folha-de-Pagamento-Desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao.frm_Visualizar_Editar_Perfis.resources
+C:\Users\mathe\Downloads\Gerador-de-Folha-de-Pagamento-Desktop\obj\Debug\Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao.frm_Visualizar_Editar_Funcionarios.resources

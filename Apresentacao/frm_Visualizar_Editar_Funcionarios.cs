@@ -14,12 +14,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    public partial class frm_Visualizar_Editar_Excluir_Funcionarios : Form
+    public partial class frm_Visualizar_Editar_Funcionarios : Form
     {
         public string Nome_Funcionario_Selecionado { get; set; }
         public string CPF_Funcionario_Selecionado { get; set; }
 
-        public frm_Visualizar_Editar_Excluir_Funcionarios()
+        public frm_Visualizar_Editar_Funcionarios()
         {
             InitializeComponent();
         }
@@ -425,8 +425,8 @@ namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
                     Funcionario_DAO.Funcionario_Atualizado = false;
 
                     this.Hide();
-                    frm_Visualizar_Editar_Excluir_Funcionarios frm_visualizar_editar_excluir_funcionarios = new frm_Visualizar_Editar_Excluir_Funcionarios();
-                    frm_visualizar_editar_excluir_funcionarios.Show();
+                    frm_Visualizar_Editar_Funcionarios frm_visualizar_editar_funcionarios = new frm_Visualizar_Editar_Funcionarios();
+                    frm_visualizar_editar_funcionarios.Show();
                 }
             }
         }

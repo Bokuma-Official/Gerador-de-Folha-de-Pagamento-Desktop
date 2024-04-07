@@ -251,23 +251,23 @@
     <Compile Include="Apresentacao\frm_Redefinir_Senha.Designer.cs">
       <DependentUpon>frm_Redefinir_Senha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Editar_Excluir_Folhas_Pagamento.cs">
+    <Compile Include="Apresentacao\frm_Visualizar_Editar_Folhas_Pagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Editar_Excluir_Folhas_Pagamento.Designer.cs">
-      <DependentUpon>frm_Visualizar_Editar_Excluir_Folhas_Pagamento.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Visualizar_Editar_Folhas_Pagamento.Designer.cs">
+      <DependentUpon>frm_Visualizar_Editar_Folhas_Pagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Editar_Excluir_Perfis.cs">
+    <Compile Include="Apresentacao\frm_Visualizar_Editar_Perfis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Editar_Excluir_Perfis.Designer.cs">
-      <DependentUpon>frm_Visualizar_Editar_Excluir_Perfis.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Visualizar_Editar_Perfis.Designer.cs">
+      <DependentUpon>frm_Visualizar_Editar_Perfis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Editar_Excluir_Funcionarios.cs">
+    <Compile Include="Apresentacao\frm_Visualizar_Editar_Funcionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frm_Visualizar_Editar_Excluir_Funcionarios.Designer.cs">
-      <DependentUpon>frm_Visualizar_Editar_Excluir_Funcionarios.cs</DependentUpon>
+    <Compile Include="Apresentacao\frm_Visualizar_Editar_Funcionarios.Designer.cs">
+      <DependentUpon>frm_Visualizar_Editar_Funcionarios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Apresentacao\frm_Cadastrar_Funcionarios.resx">
       <DependentUpon>frm_Cadastrar_Funcionarios.cs</DependentUpon>
@@ -298,14 +298,14 @@
     <EmbeddedResource Include="Apresentacao\frm_Redefinir_Senha.resx">
       <DependentUpon>frm_Redefinir_Senha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Editar_Excluir_Folhas_Pagamento.resx">
-      <DependentUpon>frm_Visualizar_Editar_Excluir_Folhas_Pagamento.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Editar_Folhas_Pagamento.resx">
+      <DependentUpon>frm_Visualizar_Editar_Folhas_Pagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Editar_Excluir_Perfis.resx">
-      <DependentUpon>frm_Visualizar_Editar_Excluir_Perfis.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Editar_Perfis.resx">
+      <DependentUpon>frm_Visualizar_Editar_Perfis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Editar_Excluir_Funcionarios.resx">
-      <DependentUpon>frm_Visualizar_Editar_Excluir_Funcionarios.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frm_Visualizar_Editar_Funcionarios.resx">
+      <DependentUpon>frm_Visualizar_Editar_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Acesso_AtaronDataSet.xsc">
       <DependentUpon>Acesso_AtaronDataSet.xsd</DependentUpon>

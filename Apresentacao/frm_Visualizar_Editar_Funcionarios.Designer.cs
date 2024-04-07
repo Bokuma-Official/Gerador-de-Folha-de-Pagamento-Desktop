@@ -1,6 +1,6 @@
 ﻿namespace Gerador_de_Folha_de_Pagamento_Desktop.Apresentacao
 {
-    partial class frm_Visualizar_Editar_Excluir_Funcionarios
+    partial class frm_Visualizar_Editar_Funcionarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Editar_Excluir_Funcionarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Visualizar_Editar_Funcionarios));
             this.lbl_Visualizar_Editar_Excluir = new System.Windows.Forms.Label();
             this.cmb_Selecionar_Funcionario = new System.Windows.Forms.ComboBox();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -119,12 +119,12 @@
             this.lbl_Visualizar_Editar_Excluir.AutoSize = true;
             this.lbl_Visualizar_Editar_Excluir.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Visualizar_Editar_Excluir.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbl_Visualizar_Editar_Excluir.Location = new System.Drawing.Point(254, 9);
+            this.lbl_Visualizar_Editar_Excluir.Location = new System.Drawing.Point(320, 9);
             this.lbl_Visualizar_Editar_Excluir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Visualizar_Editar_Excluir.Name = "lbl_Visualizar_Editar_Excluir";
-            this.lbl_Visualizar_Editar_Excluir.Size = new System.Drawing.Size(783, 59);
+            this.lbl_Visualizar_Editar_Excluir.Size = new System.Drawing.Size(636, 59);
             this.lbl_Visualizar_Editar_Excluir.TabIndex = 1;
-            this.lbl_Visualizar_Editar_Excluir.Text = "Visualizar, editar e excluir Funcionários";
+            this.lbl_Visualizar_Editar_Excluir.Text = "Visualizar e editar Funcionários";
             // 
             // cmb_Selecionar_Funcionario
             // 
@@ -935,7 +935,7 @@
             // 
             this.funcionarioTableAdapter.ClearBeforeFill = true;
             // 
-            // frm_Visualizar_Editar_Excluir_Funcionarios
+            // frm_Visualizar_Editar_Funcionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1019,7 +1019,7 @@
             this.Controls.Add(this.lbl_Visualizar_Editar_Excluir);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frm_Visualizar_Editar_Excluir_Funcionarios";
+            this.Name = "frm_Visualizar_Editar_Funcionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de pagamentos Ataron™";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Visualizar_Editar_Excluir_Funcionarios_FormClosing);
